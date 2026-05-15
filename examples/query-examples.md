@@ -182,7 +182,7 @@ python scripts/query-structures.py --lang ar --id representative_office
     Verify at:    misa.gov.sa
 
   OFFICIAL SOURCES
-    1. وزارة الاستثمار (ماسة)
+    1. وزارة الاستثمار (ميسا)
        Role:    تسجيل مكتب التمثيل لدى وزارة الاستثمار والأنشطة المسموح بها
        Portal:  misa.gov.sa
 
