@@ -412,3 +412,157 @@ def api_list(lang: str = "en") -> list:
 `DataLoader` caches datasets in memory after the first load, so repeated queries are served from cache without disk I/O.
 
 See [`prompts/README.md`](../prompts/README.md) for the planned MCP tool definition schema.
+
+---
+
+# Source Gap Report — `scripts/report-source-gaps.py`
+
+Example commands and real terminal output for `scripts/report-source-gaps.py`.
+
+Reports authorities referenced in other datasets that do not yet have a verified entry in `data/sources.en.json`.
+
+**Requirements:** Python 3.7+ — no additional packages needed.
+
+Run all commands from the repository root.
+
+---
+
+## 1. List All Gaps (English, default)
+
+```bash
+python scripts/report-source-gaps.py
+```
+
+```
+Invest Gate KSA — Source Gap Report
+========================================================================
+  7 gap(s)  (all)  |  language: en
+────────────────────────────────────────────────────────────────────────
+
+  1 / 7  cst                                                     [draft]
+  Communications, Space and Technology Commission (CST)
+  (هيئة الاتصالات والفضاء والتقنية)
+  Mentioned in:     sectors
+  Domain to verify: cst.gov.sa
+
+  NEXT STEP
+    Navigate directly to cst.gov.sa. Confirm the domain resolves to the
+    Communications, Space and Technology Commission portal. Review the
+    published licensing framework for technology and digital services
+    businesses. Then add a verified entry to data/sources.en.json using
+    the source review template and remove this gap or set
+    verification_status to verified.
+
+  ...
+```
+
+Each block shows: entry ID with right-aligned status, full name, alternate name, which datasets reference it, the likely domain to verify, and the next actionable verification step.
+
+---
+
+## 2. Filter by Status
+
+```bash
+python scripts/report-source-gaps.py --status draft
+```
+
+Returns only entries with `verification_status == "draft"`. When all entries are draft the output is identical to the default listing.
+
+```bash
+python scripts/report-source-gaps.py --status verified
+```
+
+```
+Invest Gate KSA — Source Gap Report
+========================================================================
+  0 gap(s)  (status: verified)  |  language: en
+
+  No verified gaps found. All entries are still draft.
+```
+
+Exit code is always `0` when the command runs successfully — even when the filter returns no matches.
+
+---
+
+## 3. Detail View — Single Gap Entry
+
+```bash
+python scripts/report-source-gaps.py --id sama
+```
+
+```
+Saudi Central Bank (SAMA)
+────────────────────────────────────────────────────────────────────────
+  ID:               sama
+  Status:           draft
+  Also known as:    البنك المركزي السعودي (ساما)
+  Mentioned in:     sectors
+  Domain to verify: sama.gov.sa
+
+  WHY THIS GAP EXISTS
+    Listed as a likely authority in the sectors/fintech entry as the
+    primary financial regulator for payment services, digital banking,
+    and financial technology operators. SAMA is also referenced in
+    sources/index.md but does not yet have a verified entry in
+    data/sources.en.json. Verifying SAMA's fintech licensing
+    requirements is necessary before the fintech sector entry can move
+    from draft to verified.
+
+  NEXT VERIFICATION STEP
+    Navigate directly to sama.gov.sa. Confirm the domain resolves to the
+    Saudi Central Bank portal. Review the licensing framework for
+    fintech operators, payment service providers, and digital banking
+    entities. Then add a verified entry to data/sources.en.json and
+    remove this gap or set verification_status to verified.
+
+  PLACEHOLDERS  (1 pending)
+    1. likely_official_domain
+       The domain sama.gov.sa is recorded as the likely official portal
+       for the Saudi Central Bank (SAMA) but has not been independently
+       confirmed.
+       → Verify at: sama.gov.sa
+
+  TAGS
+    sama, fintech, payments, central_bank, financial_regulator, source_gap
+
+────────────────────────────────────────────────────────────────────────
+  Source: data/source-gaps.en.json
+```
+
+If the requested ID does not exist, available IDs are printed and exit code remains `0`.
+
+---
+
+## 4. Arabic Language
+
+```bash
+python scripts/report-source-gaps.py --lang ar
+```
+
+Reads `data/source-gaps.ar.json` instead of the English file. All names, descriptions, and next-step text are in Arabic; IDs, domains, and structural fields are identical across both language files.
+
+```bash
+python scripts/report-source-gaps.py --lang ar --id cma
+```
+
+Combines language and detail mode. The source line in the output footer confirms which file was read:
+
+```
+  Source: data/source-gaps.ar.json
+```
+
+---
+
+## Reference: Available Gap IDs
+
+| ID | English Name | Domain to verify |
+|---|---|---|
+| `cst` | Communications, Space and Technology Commission | cst.gov.sa |
+| `sfda` | Saudi Food and Drug Authority | sfda.gov.sa |
+| `rega` | Real Estate General Authority | rega.gov.sa |
+| `ministry_of_education` | Ministry of Education | moe.gov.sa |
+| `ministry_of_health` | Ministry of Health | moh.gov.sa |
+| `sama` | Saudi Central Bank (SAMA) | sama.gov.sa |
+| `cma` | Capital Market Authority (CMA) | cma.org.sa |
+
+All entries are `draft` status. As gaps are resolved, entries should be updated to `verified` or removed and replaced with verified entries in `data/sources.en.json`.
