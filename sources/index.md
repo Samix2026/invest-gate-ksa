@@ -17,6 +17,7 @@ This file tracks all official and authoritative sources used across the Invest G
 | Capital Market Authority (CMA) | Securities, investment funds | cma.org.sa |
 | Ministry of Human Resources (MHRSD) | Labor law, Saudization (Nitaqat) | hrsd.gov.sa |
 | Ministry of Municipal & Rural Affairs (Baladia) | Municipal licenses | baladia.gov.sa |
+| General Organization for Social Insurance (GOSI) | Social insurance registration and contributions | gosi.gov.sa |
 | General Authority for Special Economic Zones | SEZ rules and incentives | gasei.gov.sa |
 | Saudi Vision 2030 | National transformation program | vision2030.gov.sa |
 | Invest Saudi | Official investment promotion portal | investsaudi.sa |

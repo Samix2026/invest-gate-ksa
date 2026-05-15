@@ -11,7 +11,7 @@ This section contains all English-language documentation on investing and doing 
 Documentation will be organized into the following topics:
 
 ### Getting Started
-- Overview of the Saudi investment landscape
+- [Company Setup Overview](company-setup-overview.md) — business structures, key bodies, and the typical setup flow
 - Key regulatory bodies (MISA, SAMA, CMA, ZATCA, etc.)
 - Official entry points for foreign investors
 
