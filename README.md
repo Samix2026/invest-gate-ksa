@@ -2,9 +2,9 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Languages: Arabic | English](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![Status: Early Development](https://img.shields.io/badge/Status-Early%20Development-yellow.svg)
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
-![CI](https://github.com/YOUR_USERNAME/your-invest-gate-ksa/actions/workflows/check.yml/badge.svg)
+
+**Project status:** Early foundation / Draft datasets / Validation enabled / CI pending
 
 **A bilingual, open-source knowledge base that helps foreign investors understand how to set up and operate a business in Saudi Arabia.**
 
@@ -121,3 +121,4 @@ Verifies required files, JSON validity, dataset schema validation, alias integri
 [MIT License](LICENSE) — free to use, adapt, and distribute with attribution.
 
 The content (guides, data, templates) carries an additional disclaimer: it is educational, not advisory. See [LICENSE](LICENSE) for the full content disclaimer.
+
