@@ -65,6 +65,9 @@ REQUIRED_FILES = [
     "data/sectors.en.json",
     "data/sectors.ar.json",
     "schemas/sectors.schema.json",
+    "data/source-gaps.en.json",
+    "data/source-gaps.ar.json",
+    "schemas/source-gaps.schema.json",
 ]
 
 # Markdown link targets to skip (not local paths)

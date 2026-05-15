@@ -18,9 +18,10 @@ This directory holds structured, machine-readable data derived from official sou
 | `sources.ar.json` | Official source registry — Arabic | Draft |
 | `sectors.en.json` | Investment sectors: regulatory context, likely authorities, common confusions — English | Draft |
 | `sectors.ar.json` | Investment sectors — Arabic | Draft |
+| `source-gaps.en.json` | Authorities referenced in other datasets not yet verified in the sources registry — English | Draft |
+| `source-gaps.ar.json` | Source gaps registry — Arabic | Draft |
 | `fees.json` | Official government fees (registration, licensing, permits) | Planned |
 | `timelines.json` | Estimated processing durations for key procedures | Planned |
-| `sectors.json` | Sectors open/restricted/prohibited to foreign investment | Planned |
 | `zones.json` | Economic zones, locations, and key incentives | Planned |
 | `ownership_limits.json` | Foreign ownership thresholds by sector | Planned |
 
@@ -70,7 +71,7 @@ The script enforces the following rules:
 
 Exit code `0` means all checks passed. Exit code `1` means at least one check failed, with details printed to stdout. Suitable for use in CI pipelines.
 
-JSON Schemas live at `schemas/business-structures.schema.json`, `schemas/investment-licenses.schema.json`, and `schemas/sources.schema.json`.
+JSON Schemas live at `schemas/` — one per dataset: `business-structures`, `investment-licenses`, `sources`, `sectors`, `source-gaps`.
 
 ---
 

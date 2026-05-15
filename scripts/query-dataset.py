@@ -64,6 +64,10 @@ DATASETS: Dict[str, Dict[str, str]] = {
         "en": os.path.join(ROOT, "data", "sectors.en.json"),
         "ar": os.path.join(ROOT, "data", "sectors.ar.json"),
     },
+    "source-gaps": {
+        "en": os.path.join(ROOT, "data", "source-gaps.en.json"),
+        "ar": os.path.join(ROOT, "data", "source-gaps.ar.json"),
+    },
 }
 
 # ── Layout constants ──────────────────────────────────────────────────────────

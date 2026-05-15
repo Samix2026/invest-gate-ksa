@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Source Gaps Registry",
+    "description": "Tracks official authorities referenced in other datasets that do not yet have a verified entry in data/sources.en.json. Each entry represents a gap to be closed by verifying the authority's official portal and adding a sources entry.",
+    "language": "en",
+    "last_verified": "[PLACEHOLDER — update when gap entries are resolved]"
+  },
+  "data": [
+    {
+      "id": "cst",
+      "name": "Communications, Space and Technology Commission (CST)",
+      "name_alt": "هيئة الاتصالات والفضاء والتقنية",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/technology entry as the expected sector regulator for communications and technology services. Verifying CST's licensing scope for technology business activities is required before the technology sector entry can move from draft to verified.",
+      "likely_official_domain": "cst.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to cst.gov.sa. Confirm the domain resolves to the Communications, Space and Technology Commission portal. Review the published licensing framework for technology and digital services businesses. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain cst.gov.sa is recorded as the likely official portal for the Communications, Space and Technology Commission but has not been independently confirmed.",
+          "verify_at": "cst.gov.sa"
+        }
+      ],
+      "tags": ["cst", "technology", "communications", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "sfda",
+      "name": "Saudi Food and Drug Authority (SFDA)",
+      "name_alt": "هيئة الغذاء والدواء",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in two sector entries: sectors/food_and_beverage (food product registration and food safety standards) and sectors/healthcare (medical device and pharmaceutical product registration). Both sector entries require SFDA's role to be verified before they can move from draft to verified.",
+      "likely_official_domain": "sfda.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to sfda.gov.sa. Confirm the domain resolves to the Saudi Food and Drug Authority portal. Review food product registration requirements and medical device registration requirements separately. Then add a verified entry to data/sources.en.json covering both documentation areas and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain sfda.gov.sa is recorded as the likely official portal for the Saudi Food and Drug Authority but has not been independently confirmed.",
+          "verify_at": "sfda.gov.sa"
+        }
+      ],
+      "tags": ["sfda", "food_safety", "medical_devices", "pharmaceuticals", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "rega",
+      "name": "Real Estate General Authority (REGA)",
+      "name_alt": "الهيئة العامة للعقار",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/real_estate entry as the sector regulator for real estate licensing — covering brokerage, development, and property management. Verifying REGA's licensing requirements is required before the real_estate sector entry can move from draft to verified.",
+      "likely_official_domain": "rega.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to rega.gov.sa. Confirm the domain resolves to the Real Estate General Authority portal. Review the licensing framework for real estate operators (brokers, developers, property managers). Then add a verified entry to data/sources.en.json and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain rega.gov.sa is recorded as the likely official portal for the Real Estate General Authority but has not been independently confirmed.",
+          "verify_at": "rega.gov.sa"
+        }
+      ],
+      "tags": ["rega", "real_estate", "property", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_education",
+      "name": "Ministry of Education",
+      "name_alt": "وزارة التعليم",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/education entry as the sector approval body for private educational establishments — including K-12, higher education, and vocational training centers. Verifying the Ministry of Education's licensing framework is required before the education sector entry can move from draft to verified.",
+      "likely_official_domain": "moe.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to moe.gov.sa. Confirm the domain resolves to the Ministry of Education portal. Review the approval and licensing framework for private educational institutions by establishment type. Then add a verified entry to data/sources.en.json and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain moe.gov.sa is recorded as the likely official portal for the Ministry of Education but has not been independently confirmed.",
+          "verify_at": "moe.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_education", "education", "schools", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_health",
+      "name": "Ministry of Health",
+      "name_alt": "وزارة الصحة",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/healthcare entry as the licensing authority for private healthcare facilities and practitioners. Verifying the Ministry of Health's licensing framework is required before the healthcare sector entry can move from draft to verified.",
+      "likely_official_domain": "moh.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to moh.gov.sa. Confirm the domain resolves to the Ministry of Health portal. Review the licensing framework for private healthcare facilities by facility type. Then add a verified entry to data/sources.en.json and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain moh.gov.sa is recorded as the likely official portal for the Ministry of Health but has not been independently confirmed.",
+          "verify_at": "moh.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_health", "healthcare", "medical_facilities", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "sama",
+      "name": "Saudi Central Bank (SAMA)",
+      "name_alt": "البنك المركزي السعودي (ساما)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/fintech entry as the primary financial regulator for payment services, digital banking, and financial technology operators. SAMA is also referenced in sources/index.md but does not yet have a verified entry in data/sources.en.json. Verifying SAMA's fintech licensing requirements is necessary before the fintech sector entry can move from draft to verified.",
+      "likely_official_domain": "sama.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to sama.gov.sa. Confirm the domain resolves to the Saudi Central Bank portal. Review the licensing framework for fintech operators, payment service providers, and digital banking entities. Then add a verified entry to data/sources.en.json and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain sama.gov.sa is recorded as the likely official portal for the Saudi Central Bank (SAMA) but has not been independently confirmed.",
+          "verify_at": "sama.gov.sa"
+        }
+      ],
+      "tags": ["sama", "fintech", "payments", "central_bank", "financial_regulator", "source_gap"]
+    },
+    {
+      "id": "cma",
+      "name": "Capital Market Authority (CMA)",
+      "name_alt": "هيئة السوق المالية",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/fintech entry for investment-related fintech platforms, robo-advisory services, and digital investment products. CMA is also referenced in sources/index.md but does not yet have a verified entry in data/sources.en.json. Verifying CMA's regulatory requirements for fintech is necessary before the fintech sector entry can move from draft to verified.",
+      "likely_official_domain": "cma.org.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to cma.org.sa. Confirm the domain resolves to the Capital Market Authority portal. Review the regulatory framework for investment-related fintech activities, robo-advisory, and digital investment services. Then add a verified entry to data/sources.en.json and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain cma.org.sa is recorded as the likely official portal for the Capital Market Authority but has not been independently confirmed. Note: this domain uses .org.sa rather than .gov.sa — confirm the correct domain before creating a sources entry.",
+          "verify_at": "cma.org.sa"
+        }
+      ],
+      "tags": ["cma", "fintech", "capital_markets", "investment", "financial_regulator", "source_gap"]
+    }
+  ]
+}

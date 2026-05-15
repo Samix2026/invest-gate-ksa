@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "سجل الفجوات المصدرية",
+    "description": "يتتبع الجهات الرسمية المشار إليها في مجموعات البيانات الأخرى والتي لا تحتوي بعد على إدخال موثَّق في data/sources.ar.json. كل إدخال يمثل فجوة ينبغي سدّها بالتحقق من البوابة الرسمية للجهة وإضافة إدخال مصادر.",
+    "language": "ar",
+    "last_verified": "[PLACEHOLDER — يُحدَّث عند حل إدخالات الفجوات]"
+  },
+  "data": [
+    {
+      "id": "cst",
+      "name": "هيئة الاتصالات والفضاء والتقنية",
+      "name_alt": "Communications, Space and Technology Commission (CST)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع التقنية بوصفها الجهة التنظيمية المتوقعة لخدمات الاتصالات والتقنية. يستلزم التحقق من نطاق الترخيص لدى الهيئة لأنشطة الأعمال التقنية قبل الانتقال بإدخال قطاع التقنية من مسودة إلى موثَّق.",
+      "likely_official_domain": "cst.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى cst.gov.sa. تأكد من أن النطاق يحل على بوابة هيئة الاتصالات والفضاء والتقنية. راجع الإطار الترخيصي المنشور لأنشطة الأعمال التقنية والخدمات الرقمية. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json واستخدم نموذج مراجعة المصادر، وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق cst.gov.sa على أنه البوابة الرسمية المرجَّحة لهيئة الاتصالات والفضاء والتقنية، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "cst.gov.sa"
+        }
+      ],
+      "tags": ["cst", "technology", "communications", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "sfda",
+      "name": "هيئة الغذاء والدواء",
+      "name_alt": "Saudi Food and Drug Authority (SFDA)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخالَي قطاعَين: الأغذية والمشروبات (تسجيل المنتجات الغذائية ومعايير سلامة الغذاء) والرعاية الصحية (تسجيل الأجهزة الطبية والمنتجات الصيدلانية). يستلزم التحقق من دور الهيئة في كلا السياقين قبل الانتقال بإدخالَي القطاعَين من مسودة إلى موثَّق.",
+      "likely_official_domain": "sfda.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى sfda.gov.sa. تأكد من أن النطاق يحل على بوابة هيئة الغذاء والدواء. راجع متطلبات تسجيل المنتجات الغذائية ومتطلبات تسجيل الأجهزة الطبية بشكل منفصل. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json يشمل كلا مجالَي التوثيق وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق sfda.gov.sa على أنه البوابة الرسمية المرجَّحة لهيئة الغذاء والدواء، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "sfda.gov.sa"
+        }
+      ],
+      "tags": ["sfda", "food_safety", "medical_devices", "pharmaceuticals", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "rega",
+      "name": "الهيئة العامة للعقار",
+      "name_alt": "Real Estate General Authority (REGA)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع العقارات بوصفها الجهة التنظيمية القطاعية المعنية بترخيص العقارات، وتشمل الوساطة والتطوير وإدارة الممتلكات. يستلزم التحقق من متطلبات الترخيص لدى الهيئة قبل الانتقال بإدخال قطاع العقارات من مسودة إلى موثَّق.",
+      "likely_official_domain": "rega.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى rega.gov.sa. تأكد من أن النطاق يحل على بوابة الهيئة العامة للعقار. راجع الإطار الترخيصي للعاملين في قطاع العقارات (وسطاء، مطورون، مديرو ممتلكات). ثم أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق rega.gov.sa على أنه البوابة الرسمية المرجَّحة للهيئة العامة للعقار، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "rega.gov.sa"
+        }
+      ],
+      "tags": ["rega", "real_estate", "property", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_education",
+      "name": "وزارة التعليم",
+      "name_alt": "Ministry of Education",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع التعليم بوصفها جهة الموافقة القطاعية للمؤسسات التعليمية الخاصة، وتشمل مرحلة رياض الأطفال حتى الثانوية، والتعليم العالي، ومراكز التدريب المهني. يستلزم التحقق من الإطار الترخيصي لوزارة التعليم قبل الانتقال بإدخال قطاع التعليم من مسودة إلى موثَّق.",
+      "likely_official_domain": "moe.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى moe.gov.sa. تأكد من أن النطاق يحل على بوابة وزارة التعليم. راجع إطار الموافقة والترخيص للمؤسسات التعليمية الخاصة حسب نوع المؤسسة. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق moe.gov.sa على أنه البوابة الرسمية المرجَّحة لوزارة التعليم، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "moe.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_education", "education", "schools", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_health",
+      "name": "وزارة الصحة",
+      "name_alt": "Ministry of Health",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع الرعاية الصحية بوصفها جهة الترخيص للمنشآت الصحية الخاصة والممارسين. يستلزم التحقق من الإطار الترخيصي لوزارة الصحة قبل الانتقال بإدخال قطاع الرعاية الصحية من مسودة إلى موثَّق.",
+      "likely_official_domain": "moh.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى moh.gov.sa. تأكد من أن النطاق يحل على بوابة وزارة الصحة. راجع الإطار الترخيصي للمنشآت الصحية الخاصة حسب نوع المنشأة. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق moh.gov.sa على أنه البوابة الرسمية المرجَّحة لوزارة الصحة، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "moh.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_health", "healthcare", "medical_facilities", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "sama",
+      "name": "البنك المركزي السعودي (ساما)",
+      "name_alt": "Saudi Central Bank (SAMA)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَج كجهة تنظيمية مرجَّحة في إدخال قطاع التقنية المالية بوصفه المنظِّم المالي الرئيسي لخدمات الدفع والبنوك الرقمية ومشغلي التقنية المالية. كما يرد ساما في sources/index.md غير أنه لا يمتلك بعد إدخالاً موثَّقاً في data/sources.ar.json. يستلزم التحقق من متطلبات الترخيص لدى ساما قبل الانتقال بإدخال قطاع التقنية المالية من مسودة إلى موثَّق.",
+      "likely_official_domain": "sama.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى sama.gov.sa. تأكد من أن النطاق يحل على بوابة البنك المركزي السعودي. راجع الإطار الترخيصي لمشغلي التقنية المالية ومزودي خدمات الدفع والجهات المصرفية الرقمية. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق sama.gov.sa على أنه البوابة الرسمية المرجَّحة للبنك المركزي السعودي (ساما)، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "sama.gov.sa"
+        }
+      ],
+      "tags": ["sama", "fintech", "payments", "central_bank", "financial_regulator", "source_gap"]
+    },
+    {
+      "id": "cma",
+      "name": "هيئة السوق المالية",
+      "name_alt": "Capital Market Authority (CMA)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع التقنية المالية لمنصات التقنية المالية المرتبطة بالاستثمار وخدمات الاستشارة الآلية والمنتجات الاستثمارية الرقمية. كما ترد الهيئة في sources/index.md غير أنها لا تمتلك بعد إدخالاً موثَّقاً في data/sources.ar.json. يستلزم التحقق من متطلابها التنظيمية للتقنية المالية قبل الانتقال بإدخال قطاع التقنية المالية من مسودة إلى موثَّق.",
+      "likely_official_domain": "cma.org.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى cma.org.sa. تأكد من أن النطاق يحل على بوابة هيئة السوق المالية. راجع الإطار التنظيمي لأنشطة التقنية المالية المرتبطة بالاستثمار والاستشارة الآلية والخدمات الاستثمارية الرقمية. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق cma.org.sa على أنه البوابة الرسمية المرجَّحة لهيئة السوق المالية، غير أنه لم يُؤكَّد بصورة مستقلة بعد. ملاحظة: يستخدم هذا النطاق .org.sa بدلاً من .gov.sa — يتطلب التأكد من النطاق الصحيح قبل إنشاء إدخال مصادر.",
+          "verify_at": "cma.org.sa"
+        }
+      ],
+      "tags": ["cma", "fintech", "capital_markets", "investment", "financial_regulator", "source_gap"]
+    }
+  ]
+}

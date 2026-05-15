@@ -70,6 +70,14 @@ DATASETS = [
         "check_aliases": False,
         "check_sources": True,
     },
+    {
+        "name":          "source-gaps",
+        "schema_path":   os.path.join(ROOT, "schemas", "source-gaps.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "source-gaps.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "source-gaps.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # gap entries have no official_sources by definition
+    },
 ]
 
 
