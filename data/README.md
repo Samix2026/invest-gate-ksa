@@ -6,10 +6,12 @@ This directory holds structured, machine-readable data derived from official sou
 
 ---
 
-## Planned Datasets
+## Datasets
 
 | File | Description | Status |
 |------|-------------|--------|
+| `business-structures.en.json` | Legal entity types available to foreign investors — English | Draft |
+| `business-structures.ar.json` | Legal entity types available to foreign investors — Arabic | Draft |
 | `fees.json` | Official government fees (registration, licensing, permits) | Planned |
 | `timelines.json` | Estimated processing durations for key procedures | Planned |
 | `sectors.json` | Sectors open/restricted/prohibited to foreign investment | Planned |

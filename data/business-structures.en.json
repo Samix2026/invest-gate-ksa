@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "title": "Business Structures for Foreign Investors — Saudi Arabia",
+    "description": "Structured reference data on the main legal entity types available to foreign investors in Saudi Arabia. Covers characteristics, use cases, and MISA licensing requirements. Contains placeholder fields where official verification is still required.",
+    "language": "en",
+    "last_verified": "[PLACEHOLDER — add ISO date YYYY-MM-DD when content is verified against current official sources]",
+    "primary_sources": [
+      "misa.gov.sa",
+      "mc.gov.sa"
+    ],
+    "mirror_file": "business-structures.ar.json",
+    "schema_version": "1.0",
+    "status": "draft",
+    "disclaimer": "This dataset is for general educational and informational purposes only. It is not legal, financial, or regulatory advice. Requirements are subject to change. Always verify with official Saudi government sources and qualified professionals before making decisions."
+  },
+  "data": [
+    {
+      "id": "llc",
+      "name": "Limited Liability Company",
+      "name_alt": "Sharika That Mas'uliyya Mahduda (ش.م.م)",
+      "abbreviation": "LLC",
+      "short_description": "The most commonly used structure for foreign investors establishing an operating presence in Saudi Arabia. Partners' liability is generally limited to their capital contribution. Can be established with a single shareholder or multiple partners.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": "sector_dependent",
+        "allows_local_ownership": true,
+        "allows_mixed_ownership": true,
+        "notes": "Full foreign ownership is permitted in many sectors under Vision 2030 reforms. Certain sectors may still require a local partner or remain restricted. Eligibility is determined by MISA's approved activity list."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": true,
+        "liability_model": "limited_to_capital_contribution",
+        "notes": "The LLC is a distinct legal entity from its partners. Partners are generally not personally liable beyond their agreed capital contribution."
+      },
+      "commercial_activities_permitted": true,
+      "typical_use_cases": [
+        "General commercial and trading operations",
+        "Professional and consulting services",
+        "Manufacturing and industrial activities",
+        "Technology and software services",
+        "Real estate activities (sector rules apply)",
+        "Retail and distribution (sector rules apply)"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required_for_foreign_investors",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "Foreign investors must obtain a MISA investment license before registering commercially. The license is activity-specific. Local (Saudi/GCC) investors register directly with the Ministry of Commerce without a MISA license.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "Ministry of Commerce",
+        "portal": "mc.gov.sa",
+        "notes": "Commercial Registration (CR) is issued by the Ministry of Commerce after MISA license approval for foreign investors."
+      },
+      "tags": [
+        "foreign_investment",
+        "limited_liability",
+        "most_common",
+        "operating_entity",
+        "vision_2030",
+        "local_investment"
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license issuance and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration and Companies Law",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "ownership_type.allows_full_foreign_ownership",
+          "description": "The specific list of sectors open to 100% foreign LLC ownership is governed by MISA's approved activities list and may be updated. Verify current sector eligibility before proceeding.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "shareholder_requirements",
+          "description": "Minimum and maximum number of shareholders permitted under current Saudi Companies Law. Subject to legislative amendments.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "minimum_capital",
+          "description": "Minimum capital requirements, if any, for an LLC — including sector-specific thresholds. Not included in this dataset to avoid stating unverified figures.",
+          "verify_at": "misa.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "joint_stock_company",
+      "name": "Joint Stock Company",
+      "name_alt": "Sharika Musahama (ش.م.)",
+      "abbreviation": "JSC",
+      "short_description": "A more complex corporate structure suited to larger enterprises, heavily regulated sectors, or businesses intending to raise public capital or list on the Saudi Exchange (Tadawul). Subject to more rigorous governance requirements than an LLC.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": "sector_dependent",
+        "allows_local_ownership": true,
+        "allows_mixed_ownership": true,
+        "notes": "Foreign ownership is possible but subject to MISA licensing and sector-specific rules. Some regulated sectors may impose foreign ownership caps regardless of structure."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": true,
+        "liability_model": "limited_to_share_value",
+        "notes": "Shareholders' liability is limited to the value of their shares. The JSC is a fully distinct legal entity."
+      },
+      "commercial_activities_permitted": true,
+      "typical_use_cases": [
+        "Large-scale enterprises requiring complex capital structures",
+        "Regulated industries such as banking, insurance, and telecoms",
+        "Companies seeking listing on the Saudi Exchange (Tadawul)",
+        "Businesses requiring broad public or institutional shareholding",
+        "Entities seeking access to Saudi capital markets"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required_for_foreign_investors",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "Foreign investors must obtain a MISA investment license. For listed JSCs, additional requirements from the Capital Market Authority (CMA) apply.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "Ministry of Commerce",
+        "portal": "mc.gov.sa",
+        "notes": "JSCs must also comply with CMA regulations if they intend to offer shares publicly or list on Tadawul."
+      },
+      "tags": [
+        "foreign_investment",
+        "capital_markets",
+        "large_enterprise",
+        "regulated_sectors",
+        "tadawul",
+        "ipo_eligible",
+        "local_investment"
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license for foreign shareholders",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration and Companies Law",
+          "portal": "mc.gov.sa"
+        },
+        {
+          "name": "Capital Market Authority (CMA)",
+          "role": "Regulation of listed and public JSCs",
+          "portal": "cma.org.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "minimum_shareholders",
+          "description": "Minimum number of founding shareholders required under current Saudi Companies Law for a JSC.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "minimum_capital",
+          "description": "Minimum capital requirements for a JSC, including sector-specific thresholds (e.g., banking, insurance). Not included to avoid stating unverified figures.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "governance_requirements",
+          "description": "Specific board composition, audit committee, and AGM requirements under the Companies Law and CMA rules for JSCs.",
+          "verify_at": "mc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "foreign_branch",
+      "name": "Branch of a Foreign Company",
+      "name_alt": "Far' Sharika Ajnabiyya",
+      "abbreviation": null,
+      "short_description": "An extension of a foreign parent company operating in Saudi Arabia. Not a separate legal entity — the parent company bears full legal and financial responsibility for all of the branch's activities in the Kingdom.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": true,
+        "allows_local_ownership": false,
+        "allows_mixed_ownership": false,
+        "notes": "A branch is by definition an extension of a foreign parent entity. Ownership cannot be transferred to a local partner without converting to a different structure."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": false,
+        "liability_model": "full_parent_liability",
+        "notes": "The branch has no independent legal existence from its parent. All obligations, liabilities, and contracts are those of the foreign parent company."
+      },
+      "commercial_activities_permitted": true,
+      "typical_use_cases": [
+        "Operating directly under the foreign parent brand and entity name",
+        "Companies preferring the parent to retain full legal control",
+        "Project-based or contract-driven operations in Saudi Arabia",
+        "Businesses not seeking permanent local incorporation"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "A MISA investment license is required before a foreign company branch can be registered with the Ministry of Commerce.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "Ministry of Commerce",
+        "portal": "mc.gov.sa",
+        "notes": "The branch receives its own Commercial Registration (CR) number even though it is not a separate legal entity."
+      },
+      "tags": [
+        "foreign_investment",
+        "foreign_branch",
+        "no_local_partner",
+        "parent_liability",
+        "direct_extension"
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license for foreign company branch",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Branch commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "permitted_activities_scope",
+          "description": "Whether a branch's permitted activities must exactly mirror those of the parent company or can differ. Verify with MISA.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "document_requirements",
+          "description": "Specific documents required from the parent company (e.g., notarized board resolution, parent financial statements, apostille requirements) for branch registration.",
+          "verify_at": "mc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "representative_office",
+      "name": "Representative Office",
+      "name_alt": "Maktab Tamtheel",
+      "abbreviation": null,
+      "short_description": "A non-commercial presence linked to a foreign parent company, permitted only for promotional, research, or liaison activities. Cannot engage in direct commercial transactions, sign commercial contracts on its own behalf, or generate revenue in Saudi Arabia.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": true,
+        "allows_local_ownership": false,
+        "allows_mixed_ownership": false,
+        "notes": "A representative office is directly linked to and dependent on a foreign parent company. It has no independent ownership structure."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": false,
+        "liability_model": "parent_linked",
+        "notes": "The representative office is not a standalone legal entity. It operates as a presence of the foreign parent and cannot independently hold assets, contracts, or liabilities."
+      },
+      "commercial_activities_permitted": false,
+      "typical_use_cases": [
+        "Market research and feasibility studies",
+        "Brand promotion and marketing liaison",
+        "Coordinating parent company activities and relationships in Saudi Arabia",
+        "Initial market entry before committing to a full commercial structure"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "A MISA license is required for a representative office. The license type may differ from that issued for commercial entities. The office's permitted activities are defined by the license.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "Ministry of Investment (MISA)",
+        "portal": "misa.gov.sa",
+        "notes": "Registration requirements and whether Ministry of Commerce registration is also required should be verified with MISA directly."
+      },
+      "tags": [
+        "foreign_investment",
+        "non_commercial",
+        "market_entry",
+        "liaison",
+        "promotion_only",
+        "no_revenue"
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Representative office license and permitted activities",
+          "portal": "misa.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "license_type_distinction",
+          "description": "The specific MISA license category applicable to a representative office and how it differs from a commercial entity license. Verify with MISA.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "permitted_activities_detail",
+          "description": "The exact scope of activities a representative office may perform (e.g., whether it may sign contracts on behalf of the parent, hire Saudi staff, or lease office space).",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "renewal_and_duration",
+          "description": "Whether a representative office license has a fixed term, renewal requirements, or conditions for conversion to a commercial structure.",
+          "verify_at": "misa.gov.sa"
+        }
+      ]
+    }
+  ]
+}

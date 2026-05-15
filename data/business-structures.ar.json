@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "title": "الهياكل القانونية للمستثمرين الأجانب — المملكة العربية السعودية",
+    "description": "بيانات مرجعية منظّمة عن أنواع الكيانات القانونية الرئيسية المتاحة للمستثمرين الأجانب في المملكة العربية السعودية. تتضمن الخصائص وحالات الاستخدام واشتراطات ترخيص وزارة الاستثمار. تحتوي على حقول مؤجّلة التحقق تستلزم مراجعة المصادر الرسمية.",
+    "language": "ar",
+    "last_verified": "[مطلوب التحقق — أضف التاريخ بصيغة YYYY-MM-DD عند التحقق من المحتوى وفق المصادر الرسمية الحالية]",
+    "primary_sources": [
+      "misa.gov.sa",
+      "mc.gov.sa"
+    ],
+    "mirror_file": "business-structures.en.json",
+    "schema_version": "1.0",
+    "status": "draft",
+    "disclaimer": "هذه البيانات لأغراض تعليمية وإعلامية عامة فحسب. وهي ليست استشارة قانونية أو مالية أو تنظيمية. تخضع المتطلبات للتغيير. تحقق دائماً من المصادر الحكومية السعودية الرسمية واستشر متخصصين مؤهلين قبل اتخاذ أي قرار."
+  },
+  "data": [
+    {
+      "id": "llc",
+      "name": "شركة ذات مسؤولية محدودة",
+      "name_alt": "Limited Liability Company (LLC)",
+      "abbreviation": "ش.م.م",
+      "short_description": "الهيكل الأكثر استخداماً بين المستثمرين الأجانب الراغبين في إنشاء حضور تشغيلي في المملكة العربية السعودية. تكون مسؤولية الشركاء محدودة عموماً بقدر مساهمتهم في رأس المال. يمكن تأسيسها بشريك واحد أو بعدة شركاء.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": "sector_dependent",
+        "allows_local_ownership": true,
+        "allows_mixed_ownership": true,
+        "notes": "تُسمح الملكية الأجنبية الكاملة في كثير من القطاعات في إطار إصلاحات رؤية 2030. وقد تستلزم قطاعات معينة وجود شريك محلي أو تكون مقيّدة كلياً. يُحدَّد الأهلية وفق قائمة الأنشطة المعتمدة لدى وزارة الاستثمار."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": true,
+        "liability_model": "limited_to_capital_contribution",
+        "notes": "تُعدّ الشركة ذات المسؤولية المحدودة كياناً قانونياً مستقلاً عن شركائها. لا يتحمل الشركاء عموماً مسؤولية شخصية تتجاوز حصتهم المتفق عليها في رأس المال."
+      },
+      "commercial_activities_permitted": true,
+      "typical_use_cases": [
+        "الأنشطة التجارية والتداول العام",
+        "الخدمات المهنية والاستشارية",
+        "الأنشطة الصناعية والتحويلية",
+        "خدمات التقنية والبرمجيات",
+        "الأنشطة العقارية (تخضع لأنظمة القطاع)",
+        "التجزئة والتوزيع (تخضع لأنظمة القطاع)"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required_for_foreign_investors",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "يجب على المستثمرين الأجانب الحصول على رخصة استثمار من وزارة الاستثمار قبل التسجيل التجاري. الرخصة مرتبطة بالنشاط المحدد. يُسجّل المستثمرون المحليون (السعوديون ومواطنو دول مجلس التعاون الخليجي) مباشرةً لدى وزارة التجارة دون الحاجة إلى رخصة من وزارة الاستثمار.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "وزارة التجارة",
+        "portal": "mc.gov.sa",
+        "notes": "يُصدر السجل التجاري من وزارة التجارة بعد اعتماد رخصة الاستثمار من قِبل المستثمرين الأجانب."
+      },
+      "tags": [
+        "foreign_investment",
+        "limited_liability",
+        "most_common",
+        "operating_entity",
+        "vision_2030",
+        "local_investment"
+      ],
+      "official_sources": [
+        {
+          "name": "وزارة الاستثمار (ماسة)",
+          "role": "إصدار رخصة الاستثمار وتحديد أهلية القطاعات",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "وزارة التجارة",
+          "role": "التسجيل التجاري ونظام الشركات",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "ownership_type.allows_full_foreign_ownership",
+          "description": "القائمة المحددة للقطاعات المفتوحة أمام الملكية الأجنبية الكاملة عبر شركة ذات مسؤولية محدودة تُحكمها قائمة الأنشطة المعتمدة لدى وزارة الاستثمار وقد تُحدَّث. تحقق من أهلية القطاع الحالية قبل المضي قدماً.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "shareholder_requirements",
+          "description": "الحد الأدنى والأقصى لعدد الشركاء المسموح به وفق نظام الشركات السعودي الحالي. قد يخضع للتعديلات التشريعية.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "minimum_capital",
+          "description": "الحد الأدنى لرأس المال المطلوب — إن وُجد — للشركة ذات المسؤولية المحدودة، بما فيها الحدود الخاصة بالقطاعات. لم يُدرج في هذه البيانات تفادياً للإفصاح عن أرقام غير موثّقة.",
+          "verify_at": "misa.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "joint_stock_company",
+      "name": "شركة مساهمة",
+      "name_alt": "Joint Stock Company (JSC)",
+      "abbreviation": "ش.م.",
+      "short_description": "هيكل مؤسسي أكثر تعقيداً، مناسب للمشاريع الكبرى والقطاعات الخاضعة لرقابة مشددة أو الشركات التي تخطط لطرح رأس مال عام أو الإدراج في السوق المالية السعودية (تداول). يخضع لاشتراطات حوكمة مؤسسية أكثر صرامة من الشركة ذات المسؤولية المحدودة.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": "sector_dependent",
+        "allows_local_ownership": true,
+        "allows_mixed_ownership": true,
+        "notes": "تُتاح الملكية الأجنبية مع اشتراط الحصول على رخصة من وزارة الاستثمار ومراعاة الأنظمة الخاصة بالقطاع. قد تفرض بعض القطاعات المنظّمة سقفاً لنسبة الملكية الأجنبية بصرف النظر عن هيكل الشركة."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": true,
+        "liability_model": "limited_to_share_value",
+        "notes": "تكون مسؤولية المساهمين محدودة بقيمة حصصهم. وتُعدّ الشركة المساهمة كياناً قانونياً مستقلاً بالكامل."
+      },
+      "commercial_activities_permitted": true,
+      "typical_use_cases": [
+        "المشاريع الكبرى التي تستلزم هياكل رأس مال معقدة",
+        "القطاعات الخاضعة للتنظيم كالبنوك والتأمين والاتصالات",
+        "الشركات الساعية إلى الإدراج في السوق المالية السعودية (تداول)",
+        "المنشآت التي تحتاج إلى مساهمة جمهور واسع أو مستثمرين مؤسسيين",
+        "الكيانات الراغبة في الوصول إلى أسواق رأس المال السعودية"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required_for_foreign_investors",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "يجب على المستثمرين الأجانب الحصول على رخصة استثمار من وزارة الاستثمار. وتُضاف لذلك اشتراطات هيئة السوق المالية للشركات المساهمة الراغبة في طرح أسهمها للعموم أو الإدراج في تداول.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "وزارة التجارة",
+        "portal": "mc.gov.sa",
+        "notes": "يجب أن تمتثل الشركات المساهمة أيضاً للوائح هيئة السوق المالية في حال عزمت طرح أسهمها للاكتتاب العام أو الإدراج في سوق تداول."
+      },
+      "tags": [
+        "foreign_investment",
+        "capital_markets",
+        "large_enterprise",
+        "regulated_sectors",
+        "tadawul",
+        "ipo_eligible",
+        "local_investment"
+      ],
+      "official_sources": [
+        {
+          "name": "وزارة الاستثمار (ماسة)",
+          "role": "رخصة الاستثمار للمساهمين الأجانب",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "وزارة التجارة",
+          "role": "التسجيل التجاري ونظام الشركات",
+          "portal": "mc.gov.sa"
+        },
+        {
+          "name": "هيئة السوق المالية",
+          "role": "تنظيم الشركات المساهمة المدرجة والعامة",
+          "portal": "cma.org.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "minimum_shareholders",
+          "description": "الحد الأدنى لعدد المؤسسين المطلوبين وفق نظام الشركات السعودي الحالي لتأسيس شركة مساهمة.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "minimum_capital",
+          "description": "الحد الأدنى لرأس المال اللازم للشركة المساهمة، بما فيه الحدود الخاصة بالقطاعات (كالبنوك والتأمين). لم يُدرج تفادياً للإفصاح عن أرقام غير موثّقة.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "governance_requirements",
+          "description": "اشتراطات تشكيل مجلس الإدارة ولجنة المراجعة والجمعية العامة السنوية وفق نظام الشركات وقواعد هيئة السوق المالية للشركات المساهمة.",
+          "verify_at": "mc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "foreign_branch",
+      "name": "فرع شركة أجنبية",
+      "name_alt": "Branch of a Foreign Company",
+      "abbreviation": null,
+      "short_description": "امتداد لشركة أجنبية تعمل في المملكة العربية السعودية. ليس كياناً قانونياً مستقلاً — تتحمل الشركة الأم المسؤولية القانونية والمالية الكاملة عن جميع أنشطة الفرع في المملكة.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": true,
+        "allows_local_ownership": false,
+        "allows_mixed_ownership": false,
+        "notes": "الفرع بحكم تعريفه امتداد لكيان أجنبي. لا يمكن نقل ملكيته إلى شريك محلي دون التحوّل إلى هيكل مختلف."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": false,
+        "liability_model": "full_parent_liability",
+        "notes": "لا وجود قانوني مستقل للفرع عن شركته الأم. جميع الالتزامات والمسؤوليات والعقود تقع على عاتق الشركة الأم الأجنبية."
+      },
+      "commercial_activities_permitted": true,
+      "typical_use_cases": [
+        "العمل مباشرةً تحت اسم الكيان الأجنبي وعلامته التجارية",
+        "الشركات التي تفضّل احتفاظ الشركة الأم بالسيطرة القانونية الكاملة",
+        "العمليات المرتبطة بمشاريع أو عقود محددة في المملكة",
+        "الشركات غير الراغبة في التأسيس المحلي الدائم"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "تُشترط رخصة الاستثمار من وزارة الاستثمار قبل أن يتمكن فرع الشركة الأجنبية من التسجيل التجاري في وزارة التجارة.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "وزارة التجارة",
+        "portal": "mc.gov.sa",
+        "notes": "يحصل الفرع على رقم سجل تجاري خاص به حتى وإن لم يكن كياناً قانونياً مستقلاً."
+      },
+      "tags": [
+        "foreign_investment",
+        "foreign_branch",
+        "no_local_partner",
+        "parent_liability",
+        "direct_extension"
+      ],
+      "official_sources": [
+        {
+          "name": "وزارة الاستثمار (ماسة)",
+          "role": "رخصة الاستثمار لفرع الشركة الأجنبية",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "وزارة التجارة",
+          "role": "التسجيل التجاري للفرع",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "permitted_activities_scope",
+          "description": "هل يجب أن تطابق أنشطة الفرع المرخّصة تلك الخاصة بالشركة الأم بالضبط أم يمكن أن تختلف؟ يُستلزم التحقق مع وزارة الاستثمار.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "document_requirements",
+          "description": "الوثائق المحددة المطلوبة من الشركة الأم (كقرار مجلس الإدارة الموثّق والبيانات المالية للشركة الأم واشتراطات التصديق الرسمي) لتسجيل الفرع.",
+          "verify_at": "mc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "representative_office",
+      "name": "مكتب التمثيل",
+      "name_alt": "Representative Office",
+      "abbreviation": null,
+      "short_description": "حضور غير تجاري مرتبط بشركة أجنبية، مسموح به للأنشطة الترويجية والبحثية وأنشطة الارتباط فحسب. لا يجوز له إجراء معاملات تجارية مباشرة أو إبرام عقود تجارية باسمه الخاص أو توليد إيرادات في المملكة العربية السعودية.",
+      "ownership_type": {
+        "allows_full_foreign_ownership": true,
+        "allows_local_ownership": false,
+        "allows_mixed_ownership": false,
+        "notes": "مكتب التمثيل مرتبط مباشرةً بشركة أجنبية أم وتابع لها. ولا هيكل استقلالي للملكية."
+      },
+      "legal_entity_status": {
+        "is_separate_legal_entity": false,
+        "liability_model": "parent_linked",
+        "notes": "مكتب التمثيل ليس كياناً قانونياً قائماً بذاته. يعمل بصفته حضوراً تابعاً للشركة الأم الأجنبية، ولا يمكنه بصورة مستقلة امتلاك أصول أو إبرام عقود أو تحمّل التزامات."
+      },
+      "commercial_activities_permitted": false,
+      "typical_use_cases": [
+        "أبحاث السوق ودراسات الجدوى",
+        "الترويج للعلامة التجارية والارتباط التسويقي",
+        "تنسيق أنشطة الشركة الأم وعلاقاتها في المملكة العربية السعودية",
+        "الدخول الأولي للسوق قبل الالتزام بهيكل تجاري كامل"
+      ],
+      "requires_misa_license": {
+        "applicable": true,
+        "condition": "required",
+        "condition_for_local_investors": "not_applicable",
+        "notes": "تُشترط رخصة من وزارة الاستثمار لمكتب التمثيل. وقد يختلف نوع الرخصة عن تلك الصادرة للكيانات التجارية. تُحدَّد الأنشطة المسموح بها للمكتب بموجب الرخصة.",
+        "verify_at": "misa.gov.sa"
+      },
+      "registration_body": {
+        "primary": "وزارة الاستثمار (ماسة)",
+        "portal": "misa.gov.sa",
+        "notes": "ينبغي التحقق من اشتراطات التسجيل ومدى الحاجة إلى التسجيل في وزارة التجارة أيضاً مع وزارة الاستثمار مباشرةً."
+      },
+      "tags": [
+        "foreign_investment",
+        "non_commercial",
+        "market_entry",
+        "liaison",
+        "promotion_only",
+        "no_revenue"
+      ],
+      "official_sources": [
+        {
+          "name": "وزارة الاستثمار (ماسة)",
+          "role": "رخصة مكتب التمثيل والأنشطة المسموح بها",
+          "portal": "misa.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "license_type_distinction",
+          "description": "فئة الرخصة المحددة الصادرة عن وزارة الاستثمار لمكتب التمثيل وكيفية اختلافها عن رخصة الكيان التجاري. يُستلزم التحقق مع وزارة الاستثمار.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "permitted_activities_detail",
+          "description": "النطاق الدقيق للأنشطة التي يُسمح لمكتب التمثيل بممارستها (كمدى صلاحيته لإبرام عقود نيابةً عن الشركة الأم أو توظيف موظفين سعوديين أو استئجار مكاتب).",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "renewal_and_duration",
+          "description": "هل لرخصة مكتب التمثيل مدة ثابتة؟ وما اشتراطات تجديدها؟ وما شروط التحوّل منها إلى هيكل تجاري؟",
+          "verify_at": "misa.gov.sa"
+        }
+      ]
+    }
+  ]
+}
