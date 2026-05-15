@@ -263,7 +263,62 @@ Tag: capital_markets  —  1 match(es)  (ar)
 
 ---
 
-## 7. Error: Unknown ID
+## 7. Alias Resolution
+
+Aliases let you use natural-language IDs that resolve to the canonical dataset ID. The resolved mapping is shown in the output header.
+
+**Long-form alias:**
+
+```bash
+python scripts/query-structures.py --id limited_liability_company
+```
+
+```
+Limited Liability Company (LLC)
+────────────────────────────────────────────────────────────────────────
+  ID:         llc
+  Alias:      'limited_liability_company' → 'llc'
+  Status:     draft
+  Also known: Sharika That Mas'uliyya Mahduda (ش.م.م)
+  ...
+```
+
+**Short alias with `--lang ar`:**
+
+```bash
+python scripts/query-structures.py --lang ar --id jsc
+```
+
+```
+شركة مساهمة (ش.م.)
+────────────────────────────────────────────────────────────────────────
+  ID:         joint_stock_company
+  Alias:      'jsc' → 'joint_stock_company'
+  Status:     draft
+  Also known: Joint Stock Company (JSC)
+  ...
+```
+
+**All supported aliases:**
+
+| Alias | Resolves to |
+|---|---|
+| `limited_liability_company` | `llc` |
+| `limited_liability` | `llc` |
+| `jsc` | `joint_stock_company` |
+| `joint_stock` | `joint_stock_company` |
+| `branch` | `foreign_branch` |
+| `branch_office` | `foreign_branch` |
+| `rep_office` | `representative_office` |
+| `representative` | `representative_office` |
+
+Aliases only apply to `--id`. The `--list` and `--tag` flags always use canonical IDs.
+
+The alias map lives in `scripts/query-structures.py` as `ALIASES` and is automatically validated by `scripts/validate-data.py` — adding an alias that points to a non-existent ID will fail the validation suite.
+
+---
+
+## 8. Error: Unknown ID
 
 ```bash
 python scripts/query-structures.py --id unknown_id
@@ -278,7 +333,7 @@ Exit code: `1`
 
 ---
 
-## 8. Error: Unknown Tag
+## 9. Error: Unknown Tag
 
 ```bash
 python scripts/query-structures.py --tag unknown_tag

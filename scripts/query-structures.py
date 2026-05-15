@@ -127,6 +127,29 @@ def all_tags(data: dict) -> List[str]:
     return sorted(tags)
 
 
+# ── Aliases ───────────────────────────────────────────────────────────────────
+# Maps user-friendly shorthand to canonical dataset IDs.
+# Used only for --id lookups. --list and --tag always operate on canonical IDs.
+# MCP note: import ALIASES alongside the query functions to support alias
+# resolution in tool handlers without duplicating this mapping.
+
+ALIASES: Dict[str, str] = {
+    "limited_liability_company": "llc",
+    "limited_liability":         "llc",
+    "jsc":                       "joint_stock_company",
+    "joint_stock":               "joint_stock_company",
+    "branch":                    "foreign_branch",
+    "branch_office":             "foreign_branch",
+    "rep_office":                "representative_office",
+    "representative":            "representative_office",
+}
+
+
+def resolve_alias(input_id: str, aliases: Dict[str, str] = ALIASES) -> str:
+    """Return the canonical ID for input_id, or input_id unchanged if not an alias."""
+    return aliases.get(input_id, input_id)
+
+
 # ── Formatting layer ──────────────────────────────────────────────────────────
 
 def _hr() -> str:
@@ -175,7 +198,7 @@ def fmt_list_table(entries: List[dict], title: str) -> str:
     return "\n".join(lines)
 
 
-def fmt_detail(entry: dict, lang: str) -> str:
+def fmt_detail(entry: dict, lang: str, alias: Optional[str] = None) -> str:
     """Render the full detail view of a single structure for --id."""
     lines = []
     abbr = f" ({entry['abbreviation']})" if entry.get("abbreviation") else ""
@@ -184,6 +207,10 @@ def fmt_detail(entry: dict, lang: str) -> str:
         f"{entry['name']}{abbr}",
         _hr(),
         f"  ID:         {entry['id']}",
+    ]
+    if alias:
+        lines.append(f"  Alias:      '{alias}' → '{entry['id']}'")
+    lines += [
         f"  Status:     {entry.get('verification_status', '')}",
         f"  Also known: {entry.get('name_alt', '')}",
     ]
@@ -303,12 +330,14 @@ def main() -> None:
         print(fmt_list_table(list_all(data), title))
 
     elif args.id:
-        entry = get_by_id(data, args.id)
+        canonical_id = resolve_alias(args.id)
+        entry = get_by_id(data, canonical_id)
         if entry is None:
             print(f"No structure found with id '{args.id}'.")
             print(f"Available ids: {', '.join(all_ids(data))}")
             sys.exit(1)
-        print(fmt_detail(entry, args.lang))
+        used_alias = args.id if args.id != canonical_id else None
+        print(fmt_detail(entry, args.lang, alias=used_alias))
 
     elif args.tag:
         matches = get_by_tag(data, args.tag)

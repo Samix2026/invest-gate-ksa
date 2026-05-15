@@ -18,6 +18,7 @@ Exit codes:
     1  one or more checks failed
 """
 
+import importlib.util
 import json
 import os
 import sys
@@ -128,6 +129,25 @@ def run_file_checks(label, data, schema):
 
 # ── Cross-file checks ─────────────────────────────────────────────────────────
 
+def _load_aliases() -> dict:
+    """Load ALIASES from query-structures.py without requiring it on sys.path."""
+    query_path = os.path.join(ROOT, "scripts", "query-structures.py")
+    spec = importlib.util.spec_from_file_location("query_structures", query_path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return getattr(mod, "ALIASES", {})
+
+
+def check_alias_targets(aliases: dict, en_data: dict):
+    """Every alias value must point to a canonical ID that exists in the EN dataset."""
+    valid_ids = {e["id"] for e in en_data.get("data", [])}
+    return [
+        f"Alias '{alias}' → '{target}' but '{target}' is not a valid ID"
+        for alias, target in aliases.items()
+        if target not in valid_ids
+    ]
+
+
 def check_id_parity(en_data, ar_data):
     """Both files must have the same IDs in the same order."""
     en_ids = [e["id"] for e in en_data.get("data", [])]
@@ -156,11 +176,27 @@ def check_id_parity(en_data, ar_data):
 
 def run_cross_file_checks(en_data, ar_data):
     """Run all cross-file checks. Returns (passes, fails)."""
-    checks = [
-        check_id_parity(en_data, ar_data),
-    ]
-    passes = sum(1 for c in checks if c)
-    fails  = sum(1 for c in checks if not c)
+    passes = fails = 0
+
+    # ID parity
+    ok = check_id_parity(en_data, ar_data)
+    passes += ok; fails += not ok
+
+    # Alias integrity — load aliases from query-structures.py at runtime
+    try:
+        aliases = _load_aliases()
+        alias_errors = check_alias_targets(aliases, en_data)
+        if alias_errors:
+            print("  FAIL  Alias targets exist in dataset")
+            for err in alias_errors:
+                print(f"        {err}")
+            fails += 1
+        else:
+            print(f"  PASS  Alias targets exist in dataset  ({len(aliases)} aliases checked)")
+            passes += 1
+    except Exception as exc:
+        print(f"  WARN  Could not check aliases: {exc}")
+
     return passes, fails
 
 
