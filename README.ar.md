@@ -1,4 +1,7 @@
 # بوابة الاستثمار — المملكة العربية السعودية
+<p align="center">
+  <img src="assets/images/repo-cover.png" alt="Invest Gate KSA Cover" width="100%">
+</p>
 
 ![الرخصة: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![اللغات: عربي | إنجليزي](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)

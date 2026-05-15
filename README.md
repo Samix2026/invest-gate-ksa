@@ -1,4 +1,7 @@
 # Invest Gate KSA
+<p align="center">
+  <img src="assets/images/repo-cover.png" alt="Invest Gate KSA Cover" width="100%">
+</p>
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Languages: Arabic | English](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
