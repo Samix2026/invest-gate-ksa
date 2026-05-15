@@ -131,6 +131,42 @@
         }
       ],
       "tags": ["cma", "fintech", "capital_markets", "investment", "financial_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_industry",
+      "name": "وزارة الصناعة والثروة المعدنية",
+      "name_alt": "Ministry of Industry and Mineral Resources",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخالَي قطاع التصنيع وقطاع التعدين بوصفها الوزارة المعنية بترخيص النشاط الصناعي وتطوير الموارد المعدنية. يستلزم التحقق من الإطار الترخيصي للمنشآت الصناعية ومشغلي التعدين قبل الانتقال بإدخالَي القطاعَين من مسودة إلى موثَّق.",
+      "likely_official_domain": "miim.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى miim.gov.sa. تأكد من أن النطاق يحل على بوابة وزارة الصناعة والثروة المعدنية. راجع الإطار الترخيصي والتصاريح اللازمة للمنشآت الصناعية وأنشطة التعدين. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json باستخدام نموذج مراجعة المصادر وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق miim.gov.sa على أنه البوابة الرسمية المرجَّحة لوزارة الصناعة والثروة المعدنية، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "miim.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_industry", "manufacturing", "mining", "minerals", "industrial", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "modon",
+      "name": "الهيئة السعودية للمدن الصناعية ومناطق التقنية (مدن)",
+      "name_alt": "Saudi Authority for Industrial Cities and Technology Zones (MODON)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخالَي قطاع التصنيع وقطاع الخدمات الصناعية بوصفها الجهة المسؤولة عن بنية المدن الصناعية وتخصيص قطع الأراضي وتراخيص التشغيل داخل المدن الصناعية السعودية. يستلزم التحقق من دور مدن وإطارها الترخيصي للمستأجرين في المدن الصناعية قبل الانتقال بإدخالَي القطاعَين من مسودة إلى موثَّق.",
+      "likely_official_domain": "modon.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى modon.gov.sa. تأكد من أن النطاق يحل على بوابة الهيئة السعودية للمدن الصناعية ومناطق التقنية. راجع إطار الترخيص وتخصيص قطع الأراضي للمستأجرين في المدن الصناعية. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق modon.gov.sa على أنه البوابة الرسمية المرجَّحة للهيئة السعودية للمدن الصناعية ومناطق التقنية (مدن)، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "modon.gov.sa"
+        }
+      ],
+      "tags": ["modon", "industrial_cities", "manufacturing", "industrial_services", "industrial_zones", "source_gap"]
     }
   ]
 }

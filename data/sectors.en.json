@@ -573,6 +573,244 @@
         }
       ],
       "tags": ["fintech", "payments", "digital_banking", "lending", "insurtech", "financial_technology", "sama", "cma"]
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "name_alt": "التصنيع",
+      "short_description": "Industrial production, product manufacturing, assembly operations, and goods manufacturing for domestic and export markets.",
+      "typical_business_models": [
+        "Industrial goods manufacturing and production",
+        "Assembly and processing operations",
+        "Contract manufacturing",
+        "Consumer goods production",
+        "Industrial equipment and components manufacturing"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration for manufacturing activities and sector eligibility determination"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_industry",
+          "name": "Ministry of Industry and Mineral Resources",
+          "role": "Industrial activity licensing and regulatory oversight for manufacturing establishments — verify specific licensing requirements"
+        },
+        {
+          "id": "modon",
+          "name": "Saudi Authority for Industrial Cities and Technology Zones (MODON)",
+          "role": "Industrial city infrastructure, plot allocation, and operating licenses for manufacturing operations within Saudi industrial cities — verify applicability and process"
+        },
+        {
+          "id": "balady",
+          "name": "Balady — Municipal Services Portal",
+          "role": "Operating license for manufacturing premises located outside designated industrial cities"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "municipal_license",
+        "gosi_registration"
+      ],
+      "regulatory_sensitivity": "regulated",
+      "common_confusions": [
+        "Manufacturing operations sited within a Saudi industrial city managed by MODON may follow a different permitting pathway than those on private or non-industrial premises — verify the applicable route.",
+        "Specific product categories (food, pharmaceuticals, chemicals) may require additional product registration or safety approvals from sector-specific authorities beyond the standard manufacturing licensing pathway.",
+        "The Ministry of Industry and Mineral Resources and MODON play distinct roles — one as sector regulator, the other as industrial city operator — and both may be relevant depending on operational location and activity."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_industry",
+          "description": "The Ministry of Industry and Mineral Resources licensing requirements for manufacturing establishments — including what types of industrial activity licenses are required and the applicable process — require verification at the official ministry portal.",
+          "verify_at": "miim.gov.sa"
+        },
+        {
+          "field": "likely_authorities — modon",
+          "description": "The role of the Saudi Authority for Industrial Cities and Technology Zones (MODON) in issuing operating licenses and allocating industrial plots for manufacturing operators requires verification at the MODON official portal.",
+          "verify_at": "modon.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'regulated' reflecting sector-specific industrial licensing beyond standard MISA and commercial registration. Specific requirements depend on activity type, product category, and operational location. Full scope requires verification.",
+          "verify_at": "miim.gov.sa"
+        }
+      ],
+      "tags": ["manufacturing", "industrial", "production", "assembly", "goods", "factory"]
+    },
+    {
+      "id": "industrial_services",
+      "name": "Industrial Services",
+      "name_alt": "الخدمات الصناعية",
+      "short_description": "Services provided to industrial and manufacturing clients — including maintenance, engineering services, logistics, and technical support for industrial operations.",
+      "typical_business_models": [
+        "Industrial maintenance and repair services",
+        "Engineering and technical services for industrial facilities",
+        "Industrial logistics and warehousing",
+        "Equipment installation and commissioning",
+        "Industrial inspection and testing services"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration for industrial service activities"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_industry",
+          "name": "Ministry of Industry and Mineral Resources",
+          "role": "Regulatory oversight for industrial service activities — verify whether and to what extent industrial service providers require engagement with this ministry"
+        },
+        {
+          "id": "modon",
+          "name": "Saudi Authority for Industrial Cities and Technology Zones (MODON)",
+          "role": "Industrial city operator — relevant for service providers operating within or providing services to industrial city tenants — verify applicability"
+        },
+        {
+          "id": "balady",
+          "name": "Balady — Municipal Services Portal",
+          "role": "Operating license for service premises, warehouses, or facilities"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "municipal_license",
+        "gosi_registration"
+      ],
+      "regulatory_sensitivity": "regulated",
+      "common_confusions": [
+        "Industrial service providers whose operations are based within a Saudi industrial city may be subject to MODON's operating framework in addition to standard business setup requirements.",
+        "Engineering and technical services in certain disciplines may require professional licensing from relevant engineering or technical bodies — verify the applicable requirements by discipline.",
+        "Industrial services provided to clients in highly regulated sectors (oil and gas, mining) may face additional compliance requirements from those sectors' regulatory bodies."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_industry",
+          "description": "The extent to which the Ministry of Industry and Mineral Resources has a direct regulatory role for industrial service providers (as opposed to manufacturers) requires verification at the official ministry portal.",
+          "verify_at": "miim.gov.sa"
+        },
+        {
+          "field": "likely_authorities — modon",
+          "description": "The role of MODON for industrial service providers operating within or serving industrial city tenants requires verification at the MODON official portal.",
+          "verify_at": "modon.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'regulated' reflecting potential industrial licensing requirements beyond standard MISA and commercial registration. The specific requirements vary by service type and operational location.",
+          "verify_at": "miim.gov.sa"
+        }
+      ],
+      "tags": ["industrial_services", "maintenance", "engineering_services", "industrial_logistics", "technical_services", "b2b"]
+    },
+    {
+      "id": "mining",
+      "name": "Mining and Mineral Resources",
+      "name_alt": "التعدين والموارد المعدنية",
+      "short_description": "Exploration, extraction, and processing of mineral resources, including metals, industrial minerals, and construction materials.",
+      "typical_business_models": [
+        "Mineral exploration and geological surveys",
+        "Mining and extraction operations",
+        "Mineral processing and beneficiation",
+        "Construction materials quarrying",
+        "Mining support and contractor services"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration for mining and mineral resource activities; sector eligibility for foreign investors"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_industry",
+          "name": "Ministry of Industry and Mineral Resources",
+          "role": "Primary sector ministry for mining and mineral resource activities — verify licensing, permit, and concession framework for exploration and extraction operations"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "gosi_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Mining activities are subject to sector-specific licensing and concession frameworks administered by the Ministry of Industry and Mineral Resources — these are separate from and additional to the standard MISA and commercial registration process.",
+        "Different categories of mineral activities (exploration, extraction, processing, construction materials) may involve different permit types and processes — verify by activity category.",
+        "Some mining activities may be subject to environmental assessment or land use requirements from additional authorities — these dependencies require verification and are not captured here."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration and sector eligibility for foreign investors",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_industry",
+          "description": "The Ministry of Industry and Mineral Resources licensing, permit, and concession framework for mineral exploration, extraction, and processing activities requires verification at the official ministry portal.",
+          "verify_at": "miim.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting sector-specific concession and licensing requirements from the Ministry of Industry and Mineral Resources in addition to standard business setup. The complete regulatory framework for different mining activity types requires verification.",
+          "verify_at": "miim.gov.sa"
+        },
+        {
+          "field": "likely_authorities — additional sector bodies",
+          "description": "Mining operations may involve environmental, land use, or safety requirements from additional authorities not identified here. The full set of relevant authorities requires verification based on specific activity type and location.",
+          "verify_at": "miim.gov.sa"
+        }
+      ],
+      "tags": ["mining", "minerals", "extraction", "geology", "resources", "quarrying", "industrial"]
     }
   ]
 }

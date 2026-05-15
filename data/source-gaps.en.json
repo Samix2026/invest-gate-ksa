@@ -131,6 +131,42 @@
         }
       ],
       "tags": ["cma", "fintech", "capital_markets", "investment", "financial_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_industry",
+      "name": "Ministry of Industry and Mineral Resources",
+      "name_alt": "وزارة الصناعة والثروة المعدنية",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/manufacturing and sectors/mining entries as the sector ministry responsible for industrial activity licensing and mineral resource development. Verifying the Ministry's licensing framework for manufacturing establishments and mining operators is required before those sector entries can move from draft to verified.",
+      "likely_official_domain": "miim.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to miim.gov.sa. Confirm the domain resolves to the Ministry of Industry and Mineral Resources portal. Review the licensing and permit framework for manufacturing establishments and mining activities. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain miim.gov.sa is recorded as the likely official portal for the Ministry of Industry and Mineral Resources but has not been independently confirmed.",
+          "verify_at": "miim.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_industry", "manufacturing", "mining", "minerals", "industrial", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "modon",
+      "name": "Saudi Authority for Industrial Cities and Technology Zones (MODON)",
+      "name_alt": "الهيئة السعودية للمدن الصناعية ومناطق التقنية (مدن)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/manufacturing and sectors/industrial_services entries as the body responsible for industrial city infrastructure, plot allocation, and operating licenses within Saudi industrial cities. Verifying MODON's role and licensing framework for industrial city tenants is required before those sector entries can move from draft to verified.",
+      "likely_official_domain": "modon.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to modon.gov.sa. Confirm the domain resolves to the Saudi Authority for Industrial Cities and Technology Zones portal. Review the licensing and plot allocation framework for industrial city tenants. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain modon.gov.sa is recorded as the likely official portal for the Saudi Authority for Industrial Cities and Technology Zones (MODON) but has not been independently confirmed.",
+          "verify_at": "modon.gov.sa"
+        }
+      ],
+      "tags": ["modon", "industrial_cities", "manufacturing", "industrial_services", "industrial_zones", "source_gap"]
     }
   ]
 }

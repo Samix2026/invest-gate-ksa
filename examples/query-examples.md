@@ -436,7 +436,7 @@ python scripts/report-source-gaps.py
 ```
 Invest Gate KSA — Source Gap Report
 ========================================================================
-  7 gap(s)  (all)  |  language: en
+  9 gap(s)  (all)  |  language: en
 ────────────────────────────────────────────────────────────────────────
 
   1 / 7  cst                                                     [draft]
@@ -564,5 +564,7 @@ Combines language and detail mode. The source line in the output footer confirms
 | `ministry_of_health` | Ministry of Health | moh.gov.sa |
 | `sama` | Saudi Central Bank (SAMA) | sama.gov.sa |
 | `cma` | Capital Market Authority (CMA) | cma.org.sa |
+| `ministry_of_industry` | Ministry of Industry and Mineral Resources | miim.gov.sa |
+| `modon` | Saudi Authority for Industrial Cities and Technology Zones (MODON) | modon.gov.sa |
 
 All entries are `draft` status. As gaps are resolved, entries should be updated to `verified` or removed and replaced with verified entries in `data/sources.en.json`.
