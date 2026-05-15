@@ -1,0 +1,241 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "invest-gate-ksa/schemas/business-structures.schema.json",
+  "title": "Business Structures Dataset — Invest Gate KSA",
+  "description": "Validates business-structures.en.json and business-structures.ar.json. Both files must conform to this schema. Cross-file constraints (ID parity, order) are enforced by scripts/validate-data.py.",
+  "type": "object",
+  "required": ["meta", "data"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "meta": {
+      "type": "object",
+      "required": [
+        "title",
+        "description",
+        "language",
+        "last_verified",
+        "primary_sources",
+        "mirror_file",
+        "schema_version",
+        "status",
+        "disclaimer"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "title":           { "type": "string", "minLength": 1 },
+        "description":     { "type": "string", "minLength": 1 },
+        "language":        { "type": "string", "enum": ["en", "ar", "bilingual"] },
+        "last_verified":   { "type": "string", "minLength": 1 },
+        "primary_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "mirror_file":     { "type": "string", "minLength": 1 },
+        "schema_version":  {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+$"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "review", "published", "archived"]
+        },
+        "disclaimer": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "data": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/business_structure" }
+    }
+
+  },
+
+  "definitions": {
+
+    "business_structure": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "name_alt",
+        "abbreviation",
+        "short_description",
+        "ownership_type",
+        "legal_entity_status",
+        "commercial_activities_permitted",
+        "typical_use_cases",
+        "requires_misa_license",
+        "registration_body",
+        "tags",
+        "official_sources",
+        "verification_status",
+        "placeholders"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Stable machine-readable identifier. Must be identical across language files."
+        },
+
+        "name":      { "type": "string", "minLength": 1 },
+        "name_alt":  { "type": "string", "minLength": 1 },
+
+        "abbreviation": {
+          "type": ["string", "null"],
+          "description": "Short abbreviation if one exists; null otherwise."
+        },
+
+        "short_description": { "type": "string", "minLength": 1 },
+
+        "ownership_type": {
+          "type": "object",
+          "required": [
+            "allows_full_foreign_ownership",
+            "allows_local_ownership",
+            "allows_mixed_ownership",
+            "notes"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "allows_full_foreign_ownership": {
+              "description": "True if full foreign ownership is unconditionally allowed; 'sector_dependent' if eligibility depends on MISA-approved activity list.",
+              "oneOf": [
+                { "type": "boolean" },
+                { "type": "string", "enum": ["sector_dependent"] }
+              ]
+            },
+            "allows_local_ownership": { "type": "boolean" },
+            "allows_mixed_ownership": { "type": "boolean" },
+            "notes":                  { "type": "string" }
+          }
+        },
+
+        "legal_entity_status": {
+          "type": "object",
+          "required": ["is_separate_legal_entity", "liability_model", "notes"],
+          "additionalProperties": false,
+          "properties": {
+            "is_separate_legal_entity": { "type": "boolean" },
+            "liability_model": {
+              "type": "string",
+              "enum": [
+                "limited_to_capital_contribution",
+                "limited_to_share_value",
+                "full_parent_liability",
+                "parent_linked"
+              ]
+            },
+            "notes": { "type": "string" }
+          }
+        },
+
+        "commercial_activities_permitted": { "type": "boolean" },
+
+        "typical_use_cases": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "requires_misa_license": {
+          "type": "object",
+          "required": ["applicable", "condition", "notes", "verify_at"],
+          "additionalProperties": false,
+          "properties": {
+            "applicable": { "type": "boolean" },
+            "condition": {
+              "type": "string",
+              "enum": [
+                "required",
+                "required_for_foreign_investors",
+                "conditional",
+                "not_applicable",
+                "verify"
+              ]
+            },
+            "condition_for_local_investors": { "type": "string" },
+            "notes":     { "type": "string" },
+            "verify_at": { "type": "string", "minLength": 1 }
+          }
+        },
+
+        "registration_body": {
+          "type": "object",
+          "required": ["primary", "portal"],
+          "additionalProperties": false,
+          "properties": {
+            "primary": { "type": "string", "minLength": 1 },
+            "portal":  { "type": "string", "minLength": 1 },
+            "notes":   { "type": "string" }
+          }
+        },
+
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        },
+
+        "official_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name", "role", "portal"],
+            "additionalProperties": false,
+            "properties": {
+              "name":   { "type": "string", "minLength": 1 },
+              "role":   { "type": "string", "minLength": 1 },
+              "portal": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "verification_status": {
+          "type": "string",
+          "enum": ["verified", "draft", "placeholder", "unverified"]
+        },
+
+        "placeholders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "description", "verify_at"],
+            "additionalProperties": false,
+            "properties": {
+              "field":       { "type": "string", "minLength": 1 },
+              "description": { "type": "string", "minLength": 1 },
+              "verify_at":   { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+
+      },
+
+      "if": {
+        "properties": {
+          "verification_status": { "const": "draft" }
+        },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": {
+          "placeholders": { "minItems": 1 }
+        }
+      }
+
+    }
+
+  }
+}

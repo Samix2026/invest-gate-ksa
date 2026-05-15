@@ -40,8 +40,39 @@ Each JSON file should follow this pattern:
 
 ---
 
+## Validation
+
+All datasets with a corresponding JSON Schema can be validated with the project's validation script.
+
+**Requirements:** Python 3.7+ and the `jsonschema` package.
+
+```bash
+# Install dependency
+pip install -r scripts/requirements.txt
+
+# Run all checks
+python scripts/validate-data.py
+```
+
+The script enforces the following rules:
+
+| Check | Scope |
+|---|---|
+| JSON Schema compliance | Per file — structure, required fields, enum values |
+| `official_sources` not empty | Per entry — every entry must cite at least one official source |
+| `placeholders` present when `draft` | Per entry — draft entries must declare what needs verification |
+| ID parity (same IDs, same order) | Cross-file — EN and AR files must be structurally mirrored |
+
+Exit code `0` means all checks passed. Exit code `1` means at least one check failed, with details printed to stdout. Suitable for use in CI pipelines.
+
+The JSON Schema lives at [`schemas/business-structures.schema.json`](../schemas/business-structures.schema.json).
+
+---
+
 ## Adding Data
 
-1. Create a new JSON file following the schema above.
-2. Add a source entry in [`../sources/index.md`](../sources/index.md).
-3. Keep data neutral and descriptive — no interpretation or advice.
+1. Create a new JSON file following the schema convention above.
+2. Add an entry to the Datasets table in this README.
+3. Add a source entry in [`../sources/index.md`](../sources/index.md).
+4. Run `python scripts/validate-data.py` to confirm the file passes validation.
+5. Keep data neutral and descriptive — no interpretation or advice.
