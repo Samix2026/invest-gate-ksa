@@ -46,9 +46,13 @@ REQUIRED_FILES = [
     "data/business-structures.en.json",
     "data/business-structures.ar.json",
     "schemas/business-structures.schema.json",
+    "schemas/investment-licenses.schema.json",
+    "data/investment-licenses.en.json",
+    "data/investment-licenses.ar.json",
     "sources/index.md",
     "scripts/validate-data.py",
     "scripts/query-structures.py",
+    "scripts/query-dataset.py",
     "scripts/requirements.txt",
     "examples/query-examples.md",
 ]

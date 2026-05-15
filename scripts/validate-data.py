@@ -4,6 +4,7 @@ Validation script for Invest Gate KSA datasets.
 
 Runs structural validation (JSON Schema) and semantic checks
 (cross-file ID parity, source completeness, placeholder discipline).
+Iterates over all registered datasets in DATASETS.
 
 Usage:
     python scripts/validate-data.py
@@ -32,13 +33,26 @@ except ImportError:
     sys.exit(1)
 
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
+# ── Dataset registry ──────────────────────────────────────────────────────────
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SCHEMA_PATH = os.path.join(ROOT, "schemas", "business-structures.schema.json")
-EN_PATH     = os.path.join(ROOT, "data", "business-structures.en.json")
-AR_PATH     = os.path.join(ROOT, "data", "business-structures.ar.json")
+DATASETS = [
+    {
+        "name":          "business-structures",
+        "schema_path":   os.path.join(ROOT, "schemas", "business-structures.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "business-structures.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "business-structures.ar.json"),
+        "check_aliases": True,
+    },
+    {
+        "name":          "investment-licenses",
+        "schema_path":   os.path.join(ROOT, "schemas", "investment-licenses.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "investment-licenses.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "investment-licenses.ar.json"),
+        "check_aliases": False,
+    },
+]
 
 
 # ── I/O helpers ───────────────────────────────────────────────────────────────
@@ -156,7 +170,6 @@ def check_id_parity(en_data, ar_data):
     if en_ids == ar_ids:
         return result(True, "ID parity", f"{len(en_ids)} IDs match in correct order")
 
-    # Diagnose the mismatch
     en_set, ar_set = set(en_ids), set(ar_ids)
     only_en = sorted(en_set - ar_set)
     only_ar = sorted(ar_set - en_set)
@@ -174,28 +187,27 @@ def check_id_parity(en_data, ar_data):
     return False
 
 
-def run_cross_file_checks(en_data, ar_data):
+def run_cross_file_checks(en_data, ar_data, check_aliases=False):
     """Run all cross-file checks. Returns (passes, fails)."""
     passes = fails = 0
 
-    # ID parity
     ok = check_id_parity(en_data, ar_data)
     passes += ok; fails += not ok
 
-    # Alias integrity — load aliases from query-structures.py at runtime
-    try:
-        aliases = _load_aliases()
-        alias_errors = check_alias_targets(aliases, en_data)
-        if alias_errors:
-            print("  FAIL  Alias targets exist in dataset")
-            for err in alias_errors:
-                print(f"        {err}")
-            fails += 1
-        else:
-            print(f"  PASS  Alias targets exist in dataset  ({len(aliases)} aliases checked)")
-            passes += 1
-    except Exception as exc:
-        print(f"  WARN  Could not check aliases: {exc}")
+    if check_aliases:
+        try:
+            aliases = _load_aliases()
+            alias_errors = check_alias_targets(aliases, en_data)
+            if alias_errors:
+                print("  FAIL  Alias targets exist in dataset")
+                for err in alias_errors:
+                    print(f"        {err}")
+                fails += 1
+            else:
+                print(f"  PASS  Alias targets exist in dataset  ({len(aliases)} aliases checked)")
+                passes += 1
+        except Exception as exc:
+            print(f"  WARN  Could not check aliases: {exc}")
 
     return passes, fails
 
@@ -206,33 +218,34 @@ def main():
     print("Invest Gate KSA — Dataset Validation")
     print("=" * 45)
 
-    section("Loading files")
-    schema  = load_json(SCHEMA_PATH, "schemas/business-structures.schema.json")
-    en_data = load_json(EN_PATH,     "data/business-structures.en.json")
-    ar_data = load_json(AR_PATH,     "data/business-structures.ar.json")
-
-    if not all([schema, en_data, ar_data]):
-        print("\nFATAL: One or more required files could not be loaded. Aborting.")
-        sys.exit(1)
-
-    print("  OK    All files loaded")
-
     total_passes = total_fails = 0
 
-    section("data/business-structures.en.json")
-    p, f = run_file_checks("EN", en_data, schema)
-    total_passes += p
-    total_fails  += f
+    for ds in DATASETS:
+        name = ds["name"]
 
-    section("data/business-structures.ar.json")
-    p, f = run_file_checks("AR", ar_data, schema)
-    total_passes += p
-    total_fails  += f
+        section(f"Loading: {name}")
+        schema  = load_json(ds["schema_path"], f"schemas/{name}.schema.json")
+        en_data = load_json(ds["en_path"],     f"data/{name}.en.json")
+        ar_data = load_json(ds["ar_path"],     f"data/{name}.ar.json")
 
-    section("Cross-file consistency")
-    p, f = run_cross_file_checks(en_data, ar_data)
-    total_passes += p
-    total_fails  += f
+        if not all([schema, en_data, ar_data]):
+            print(f"\n  FATAL: Could not load all files for '{name}'. Skipping dataset.")
+            total_fails += 1
+            continue
+
+        print("  OK    All files loaded")
+
+        section(f"data/{name}.en.json")
+        p, f = run_file_checks("EN", en_data, schema)
+        total_passes += p; total_fails += f
+
+        section(f"data/{name}.ar.json")
+        p, f = run_file_checks("AR", ar_data, schema)
+        total_passes += p; total_fails += f
+
+        section(f"Cross-file consistency  [{name}]")
+        p, f = run_cross_file_checks(en_data, ar_data, check_aliases=ds.get("check_aliases", False))
+        total_passes += p; total_fails += f
 
     print(f"\n{'=' * 45}")
     print(f"Checks passed: {total_passes}   Checks failed: {total_fails}")

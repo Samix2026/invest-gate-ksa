@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "title": "Investment Licensing Concepts",
+    "description": "High-level conceptual guide to the key licenses and registrations relevant to foreign investors establishing a business in Saudi Arabia. Relationships between entries are conceptual and represent typical sequences, not guaranteed regulatory requirements.",
+    "language": "en",
+    "last_verified": "[PLACEHOLDER — verify all entries against current official sources before publishing]"
+  },
+  "data": [
+    {
+      "id": "misa_license",
+      "name": "MISA Investment License",
+      "name_alt": "رخصة الاستثمار (ماسة)",
+      "abbreviation": null,
+      "short_description": "The primary authorization issued by the Ministry of Investment (MISA) to foreign investors wishing to establish a business presence in Saudi Arabia. The license is activity-specific and conceptually precedes commercial registration for foreign investors.",
+      "issuing_authority": {
+        "name": "Ministry of Investment (MISA)",
+        "portal": "misa.gov.sa",
+        "role": "Issues investment licenses to foreign investors; determines eligible activities and permitted ownership structures"
+      },
+      "applies_to": [
+        "Foreign investors establishing a commercial entity in Saudi Arabia",
+        "Foreign investors establishing a branch of a foreign company",
+        "Foreign investors establishing a representative office"
+      ],
+      "depends_on": [],
+      "common_confusions": [
+        "A MISA investment license is not the same as commercial registration. The license alone does not authorize commercial trading — commercial registration is a separate, subsequent step.",
+        "Local investors (Saudi nationals and GCC citizens) generally register directly with the Ministry of Commerce and do not require a MISA investment license for most activities.",
+        "The license is activity-specific. A change in business activity after issuance may require updating or replacing the license — verify current requirements with MISA."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "portal": "misa.gov.sa",
+          "role": "Investment license issuance, sector eligibility, and ownership rules"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "license_categories",
+          "description": "The specific license types or tiers available through MISA (e.g., distinctions between commercial, industrial, and service licenses). Subject to policy updates.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "gcc_investor_treatment",
+          "description": "Whether GCC nationals are fully exempt from the MISA license requirement or subject to a modified process. Current treatment should be verified directly with MISA.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["foreign_investment", "misa", "licensing", "authorization", "entry_requirement", "first_step"]
+    },
+    {
+      "id": "commercial_registration",
+      "name": "Commercial Registration",
+      "name_alt": "السجل التجاري",
+      "abbreviation": "CR",
+      "short_description": "The official business registration issued by the Ministry of Commerce that establishes a legal commercial entity in Saudi Arabia. Required for any entity conducting commercial activities. For foreign investors, it conceptually follows the MISA investment license.",
+      "issuing_authority": {
+        "name": "Ministry of Commerce",
+        "portal": "mc.gov.sa",
+        "role": "Issues commercial registrations and administers the Companies Law"
+      },
+      "applies_to": [
+        "All entities conducting commercial activities in Saudi Arabia",
+        "Foreign investors (following MISA investment license)",
+        "Saudi and GCC investors establishing commercial operations"
+      ],
+      "depends_on": ["misa_license"],
+      "common_confusions": [
+        "Commercial registration is distinct from a MISA investment license. Both are required for foreign investors — they serve different regulatory purposes.",
+        "A commercial registration number (CR number) does not by itself authorize operations from a physical location. A municipality operating license is also typically required.",
+        "Representative offices may follow a distinct registration pathway. The applicable process should be verified with both MISA and the Ministry of Commerce."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Commerce",
+          "portal": "mc.gov.sa",
+          "role": "Commercial registration issuance and company law administration"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "cr_for_representative_office",
+          "description": "Whether representative offices obtain a standard commercial registration or a distinct registration type. The applicable process and issuing body should be verified.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "cr_renewal_conditions",
+          "description": "Conditions and frequency of commercial registration renewal or maintenance obligations under current regulations.",
+          "verify_at": "mc.gov.sa"
+        }
+      ],
+      "tags": ["commercial_registration", "ministry_of_commerce", "entity_formation", "required_for_operations", "cr"]
+    },
+    {
+      "id": "municipality_license",
+      "name": "Municipality Operating License",
+      "name_alt": "الرخصة البلدية",
+      "abbreviation": null,
+      "short_description": "A location-specific operating license issued by the relevant municipal authority (Baladia) authorizing a business to operate from specific premises. Conceptually follows commercial registration and precedes commencing operations at that location.",
+      "issuing_authority": {
+        "name": "Ministry of Municipal and Rural Affairs and Housing (Baladia)",
+        "portal": "baladia.gov.sa",
+        "role": "Issues location-specific operating permits for business premises"
+      },
+      "applies_to": [
+        "Any business operating from a physical location in Saudi Arabia",
+        "Commercial entities that have completed commercial registration"
+      ],
+      "depends_on": ["commercial_registration"],
+      "common_confusions": [
+        "The municipality license is location-specific. Opening a second branch or relocating typically requires a new or updated license for that premises.",
+        "This license is sometimes informally called the 'baladiya license'. The issuing body is the municipal authority (Baladia) for the relevant location.",
+        "Some activity types require sector-specific approvals (health, food safety, civil defense) in addition to the municipality license. The full set of approvals depends on the activity and location."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Municipal and Rural Affairs and Housing (Baladia)",
+          "portal": "baladia.gov.sa",
+          "role": "Municipal operating license issuance"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "sector_specific_approvals",
+          "description": "The sector-based approvals or inspections required alongside the municipality license vary by activity type and location. Verify the complete requirements with the relevant municipal authority.",
+          "verify_at": "baladia.gov.sa"
+        },
+        {
+          "field": "renewal_cycle",
+          "description": "The frequency and conditions for municipality license renewal under current municipal regulations.",
+          "verify_at": "baladia.gov.sa"
+        }
+      ],
+      "tags": ["municipality", "operating_license", "physical_location", "baladia", "premises", "location_specific"]
+    },
+    {
+      "id": "vat_registration",
+      "name": "VAT Registration",
+      "name_alt": "التسجيل في ضريبة القيمة المضافة",
+      "abbreviation": "VAT",
+      "short_description": "Registration with the Zakat, Tax and Customs Authority (ZATCA) for Value Added Tax purposes. Mandatory for businesses whose taxable supplies meet or exceed the statutory threshold. Businesses below the mandatory threshold may register voluntarily.",
+      "issuing_authority": {
+        "name": "Zakat, Tax and Customs Authority (ZATCA)",
+        "portal": "zatca.gov.sa",
+        "role": "Administers VAT registration, filing obligations, and compliance"
+      },
+      "applies_to": [
+        "Businesses whose taxable supplies meet or exceed the mandatory registration threshold",
+        "Businesses that choose to register voluntarily below the mandatory threshold"
+      ],
+      "depends_on": ["commercial_registration"],
+      "common_confusions": [
+        "VAT registration is threshold-based — not every business with a commercial registration is automatically required to register for VAT.",
+        "VAT registration is separate from Zakat obligations. Whether an entity is subject to Zakat, corporate income tax, or both depends on its ownership structure and applicable rules — verify with ZATCA.",
+        "A Tax Registration Number (TRN) issued upon VAT registration is distinct from the commercial registration number (CR number)."
+      ],
+      "official_sources": [
+        {
+          "name": "Zakat, Tax and Customs Authority (ZATCA)",
+          "portal": "zatca.gov.sa",
+          "role": "VAT registration, filing obligations, and current threshold guidance"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "mandatory_threshold",
+          "description": "The current mandatory VAT registration threshold based on annual taxable supplies. This figure is set by regulation and may be amended — verify the current amount with ZATCA.",
+          "verify_at": "zatca.gov.sa"
+        },
+        {
+          "field": "voluntary_threshold",
+          "description": "The current threshold below which voluntary registration is permitted but not required. Verify with ZATCA.",
+          "verify_at": "zatca.gov.sa"
+        },
+        {
+          "field": "zakat_vs_cit_applicability",
+          "description": "Whether a specific entity is subject to Zakat, corporate income tax, or both depends on ownership structure and applicable regulations. Verify the applicable tax regime with ZATCA.",
+          "verify_at": "zatca.gov.sa"
+        }
+      ],
+      "tags": ["tax", "vat", "zatca", "threshold_based", "ongoing_compliance", "finance"]
+    },
+    {
+      "id": "gosi_registration",
+      "name": "GOSI Registration",
+      "name_alt": "التسجيل في التأمينات الاجتماعية",
+      "abbreviation": "GOSI",
+      "short_description": "Registration with the General Organization for Social Insurance (GOSI), required for any entity employing staff in Saudi Arabia. GOSI administers social insurance contributions for both Saudi and non-Saudi employees, with different contribution structures applying to each.",
+      "issuing_authority": {
+        "name": "General Organization for Social Insurance (GOSI)",
+        "portal": "gosi.gov.sa",
+        "role": "Administers social insurance registration and employer contribution obligations"
+      },
+      "applies_to": [
+        "Any entity employing one or more staff members in Saudi Arabia",
+        "Both Saudi and non-Saudi employees are covered under GOSI, with different contribution structures"
+      ],
+      "depends_on": ["commercial_registration"],
+      "common_confusions": [
+        "GOSI registration is an employer obligation that becomes applicable upon hiring — it is not part of the initial licensing sequence and is not required before commencing operations without staff.",
+        "Contribution structures differ between Saudi and non-Saudi employees. The applicable rates and categories should be verified directly with GOSI.",
+        "GOSI is separate from labor registration and work permit processes, which are administered by the Ministry of Human Resources and Social Development (MHRSD)."
+      ],
+      "official_sources": [
+        {
+          "name": "General Organization for Social Insurance (GOSI)",
+          "portal": "gosi.gov.sa",
+          "role": "Social insurance registration and contribution obligations"
+        },
+        {
+          "name": "Ministry of Human Resources and Social Development (MHRSD)",
+          "portal": "hrsd.gov.sa",
+          "role": "Labor law, employment regulations, and Saudization — complementary to GOSI"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "contribution_structure",
+          "description": "Current contribution rates and categories for Saudi and non-Saudi employees under GOSI. Rates are set by regulation and subject to amendment — verify with GOSI.",
+          "verify_at": "gosi.gov.sa"
+        },
+        {
+          "field": "saudization_interaction",
+          "description": "How GOSI registration and employee records interact with Saudization (Nitaqat) compliance tracking by MHRSD.",
+          "verify_at": "hrsd.gov.sa"
+        }
+      ],
+      "tags": ["gosi", "social_insurance", "employer_obligation", "employees", "ongoing_compliance", "saudization"]
+    }
+  ]
+}
