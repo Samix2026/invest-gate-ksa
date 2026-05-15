@@ -13,7 +13,7 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 - [x] Source index and citation standards
 - [x] Contributing guidelines
 - [x] License
-- [ ] CLAUDE.md — AI assistant context file
+- [x] CLAUDE.md — AI assistant context file
 - [ ] Initial `data/agencies.json` — regulatory body registry
 
 ---

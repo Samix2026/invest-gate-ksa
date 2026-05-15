@@ -112,6 +112,7 @@ Verifies required files, JSON validity, dataset schema validation, alias integri
 
 - [English Documentation →](docs/en/README.md)
 - [الوثائق العربية →](docs/ar/README.md)
+- [Source Verification Workflow →](docs/en/source-verification.md)
 - [Sources Index →](sources/index.md)
 
 ---

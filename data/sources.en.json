@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "title": "Official Sources Registry",
+    "description": "Registry of official Saudi government bodies, authorities, and portals relevant to foreign investors. Entries are descriptive only — not legal or procedural guidance.",
+    "language": "en",
+    "last_verified": "[PLACEHOLDER — verify all entries against current official sources before publishing]"
+  },
+  "data": [
+    {
+      "id": "misa",
+      "name": "Ministry of Investment (MISA)",
+      "name_alt": "وزارة الاستثمار (ماسة)",
+      "authority_type": "government_ministry",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "misa.gov.sa",
+      "documentation_sections": [
+        "Investment license application and issuance",
+        "Approved activities list and sector eligibility",
+        "Foreign ownership rules by sector",
+        "Investor services and aftercare",
+        "Special Economic Zone information"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["misa", "foreign_investment", "licensing", "sector_rules", "ownership", "ministry"],
+      "notes": "Primary body for foreign investor licensing in Saudi Arabia. Issues activity-specific investment licenses. For most foreign investors, this license conceptually precedes commercial registration.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which MISA updates its published guidance, approved activities list, and portal content has not been independently verified.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live MISA portal has not been recorded.",
+          "verify_at": "misa.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "ministry_of_commerce",
+      "name": "Ministry of Commerce",
+      "name_alt": "وزارة التجارة",
+      "authority_type": "government_ministry",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "mc.gov.sa",
+      "documentation_sections": [
+        "Commercial registration (CR)",
+        "Trade name registration and protection",
+        "Companies Law guidelines",
+        "Business activity classification",
+        "Company amendments and dissolution"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["commercial_registration", "companies_law", "entity_formation", "ministry", "cr"],
+      "notes": "Primary body for commercial registration and administration of the Companies Law. A commercial registration number (CR) is required for any entity conducting commercial activities in Saudi Arabia.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which the Ministry of Commerce updates its published guidance and portal content has not been independently verified.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live Ministry of Commerce portal has not been recorded.",
+          "verify_at": "mc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "zatca",
+      "name": "Zakat, Tax and Customs Authority (ZATCA)",
+      "name_alt": "هيئة الزكاة والضريبة والجمارك (زاتكا)",
+      "authority_type": "government_authority",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "zatca.gov.sa",
+      "documentation_sections": [
+        "VAT registration and filing",
+        "Zakat assessment and payment",
+        "Corporate income tax",
+        "E-invoicing (Fatoorah) compliance",
+        "Customs procedures and tariffs"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["tax", "vat", "zakat", "customs", "finance", "authority", "zatca"],
+      "notes": "Formed in 2021 by merging the General Authority of Zakat and Tax (GAZT) and the General Authority of Customs. Governs VAT, Zakat, corporate income tax, and customs for Saudi Arabia.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which ZATCA updates its published tax guidance, thresholds, and portal content has not been independently verified.",
+          "verify_at": "zatca.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live ZATCA portal has not been recorded.",
+          "verify_at": "zatca.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "mhrsd",
+      "name": "Ministry of Human Resources and Social Development (MHRSD)",
+      "name_alt": "وزارة الموارد البشرية والتنمية الاجتماعية",
+      "authority_type": "government_ministry",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "hrsd.gov.sa",
+      "documentation_sections": [
+        "Saudi Labor Law",
+        "Saudization (Nitaqat) compliance",
+        "Work permit applications and renewals",
+        "Employment contract registration",
+        "Labor dispute resolution"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["labor_law", "saudization", "nitaqat", "work_permits", "employment", "ministry"],
+      "notes": "Governs Saudi Labor Law and the Saudization (Nitaqat) program. Works in conjunction with GOSI and the Qiwa platform for employer compliance and workforce management.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which MHRSD updates its published labor guidance, Nitaqat band thresholds, and portal content has not been independently verified.",
+          "verify_at": "hrsd.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live MHRSD portal has not been recorded.",
+          "verify_at": "hrsd.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "gosi",
+      "name": "General Organization for Social Insurance (GOSI)",
+      "name_alt": "المؤسسة العامة للتأمينات الاجتماعية (جوسي)",
+      "authority_type": "government_organization",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "gosi.gov.sa",
+      "documentation_sections": [
+        "Employer registration",
+        "Employee social insurance contributions",
+        "Occupational hazard insurance",
+        "Disability and death benefits",
+        "Pension and retirement services"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["social_insurance", "employer_obligations", "contributions", "employees", "gosi"],
+      "notes": "Administers social insurance for both Saudi and non-Saudi employees in Saudi Arabia. Contribution structures differ based on employee nationality. GOSI registration is required for any entity employing staff.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which GOSI updates its published contribution rates, coverage rules, and portal content has not been independently verified.",
+          "verify_at": "gosi.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live GOSI portal has not been recorded.",
+          "verify_at": "gosi.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "saudi_business_center",
+      "name": "Saudi Business Center",
+      "name_alt": "مركز الأعمال السعودي",
+      "authority_type": "government_portal",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "sbc.gov.sa",
+      "documentation_sections": [
+        "Integrated business setup (unified service)",
+        "Commercial registration",
+        "Municipal operating license",
+        "Professional license",
+        "License renewals and amendments"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["portal", "business_setup", "integrated_services", "one_stop_shop", "cr", "licensing"],
+      "notes": "A unified government portal that integrates business setup services from multiple ministries. Facilitates commercial registration, municipal licensing, and related services. The underlying regulatory authority for each service remains with the respective ministry.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which the Saudi Business Center portal updates its services, guides, and integrated workflows has not been independently verified.",
+          "verify_at": "sbc.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live Saudi Business Center portal has not been recorded.",
+          "verify_at": "sbc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "balady",
+      "name": "Balady — Municipal Services Portal",
+      "name_alt": "بلدي — بوابة الخدمات البلدية",
+      "authority_type": "government_portal",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "balady.gov.sa",
+      "documentation_sections": [
+        "Municipal operating license",
+        "Building and construction permits",
+        "Food and hospitality establishment licensing",
+        "Advertising and signage permits",
+        "Location compliance inspections"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["municipality", "operating_license", "balady", "premises", "location_specific", "portal"],
+      "notes": "Digital portal of the Ministry of Municipal and Rural Affairs and Housing. Issues location-specific operating licenses for business premises. The applicable municipal authority varies by geographic location.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which the Balady portal updates its services and requirements has not been independently verified.",
+          "verify_at": "balady.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live Balady portal has not been recorded.",
+          "verify_at": "balady.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "qiwa",
+      "name": "Qiwa — Labor Market Platform",
+      "name_alt": "قوى — منصة سوق العمل",
+      "authority_type": "government_platform",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "qiwa.com.sa",
+      "documentation_sections": [
+        "Work permit issuance and renewal",
+        "Saudization (Nitaqat) percentage management",
+        "Employment contract documentation",
+        "Employee transfer and exit",
+        "Flexible and remote work permits"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["labor_market", "work_permits", "saudization", "employment", "qiwa", "platform"],
+      "notes": "Digital platform operated under MHRSD for managing labor market transactions, work permits, and Saudization compliance. Employers use Qiwa to manage workforce registration and labor obligations.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "official_website",
+          "description": "The canonical domain for the Qiwa platform should be confirmed directly — verify the current official URL with MHRSD or the platform itself.",
+          "verify_at": "hrsd.gov.sa"
+        },
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which the Qiwa platform updates its services and requirements has not been independently verified.",
+          "verify_at": "qiwa.com.sa"
+        }
+      ]
+    },
+    {
+      "id": "muqeem",
+      "name": "Muqeem — Residency and Visa Services Portal",
+      "name_alt": "مقيم — بوابة خدمات الإقامة والتأشيرات",
+      "authority_type": "government_portal",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "muqeem.sa",
+      "documentation_sections": [
+        "Iqama (residency permit) issuance and renewal",
+        "Exit and re-entry visa management",
+        "Dependent residency permits",
+        "Domestic worker permits",
+        "Passport and travel documentation services"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["residency", "iqama", "visas", "expatriates", "immigration", "portal"],
+      "notes": "Portal for managing residency permits (Iqama) and related visa services for expatriates in Saudi Arabia. Operated under the authority responsible for passports and residency (Jawazat). Relevant for employers sponsoring foreign staff.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which the Muqeem portal updates its services and requirements has not been independently verified.",
+          "verify_at": "muqeem.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live Muqeem portal has not been recorded.",
+          "verify_at": "muqeem.sa"
+        }
+      ]
+    },
+    {
+      "id": "absher_business",
+      "name": "Absher Business",
+      "name_alt": "أبشر أعمال",
+      "authority_type": "government_platform",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "business.absher.sa",
+      "documentation_sections": [
+        "Government transaction services for businesses",
+        "Employee visa and permit services",
+        "Document authentication and attestation",
+        "Civil status services for business entities",
+        "Digital identity verification"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["absher", "government_services", "digital_platform", "authentication", "platform"],
+      "notes": "The business-facing section of the Absher platform, providing government service transactions for commercial entities. Part of the broader Absher ecosystem operated under the Ministry of Interior.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "official_website",
+          "description": "The canonical domain for Absher Business should be confirmed directly — verify the current official URL with the platform itself.",
+          "verify_at": "absher.sa"
+        },
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which the Absher Business platform updates its services and requirements has not been independently verified.",
+          "verify_at": "business.absher.sa"
+        }
+      ]
+    }
+  ]
+}

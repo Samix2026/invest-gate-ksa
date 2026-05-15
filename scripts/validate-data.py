@@ -44,6 +44,7 @@ DATASETS = [
         "en_path":       os.path.join(ROOT, "data",    "business-structures.en.json"),
         "ar_path":       os.path.join(ROOT, "data",    "business-structures.ar.json"),
         "check_aliases": True,
+        "check_sources": True,
     },
     {
         "name":          "investment-licenses",
@@ -51,6 +52,15 @@ DATASETS = [
         "en_path":       os.path.join(ROOT, "data",    "investment-licenses.en.json"),
         "ar_path":       os.path.join(ROOT, "data",    "investment-licenses.ar.json"),
         "check_aliases": False,
+        "check_sources": True,
+    },
+    {
+        "name":          "sources",
+        "schema_path":   os.path.join(ROOT, "schemas", "sources.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "sources.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "sources.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # this dataset IS the sources registry
     },
 ]
 
@@ -129,13 +139,12 @@ def check_placeholders_when_draft(data):
     return result(True, "placeholders present when draft", f"{draft_count} draft entries checked")
 
 
-def run_file_checks(label, data, schema):
+def run_file_checks(label, data, schema, check_sources=True):
     """Run all per-file checks. Returns (passes, fails)."""
-    checks = [
-        check_schema(data, schema, label),
-        check_sources_not_empty(data),
-        check_placeholders_when_draft(data),
-    ]
+    checks = [check_schema(data, schema, label)]
+    if check_sources:
+        checks.append(check_sources_not_empty(data))
+    checks.append(check_placeholders_when_draft(data))
     passes = sum(1 for c in checks if c)
     fails  = sum(1 for c in checks if not c)
     return passes, fails
@@ -235,12 +244,14 @@ def main():
 
         print("  OK    All files loaded")
 
+        check_sources = ds.get("check_sources", True)
+
         section(f"data/{name}.en.json")
-        p, f = run_file_checks("EN", en_data, schema)
+        p, f = run_file_checks("EN", en_data, schema, check_sources=check_sources)
         total_passes += p; total_fails += f
 
         section(f"data/{name}.ar.json")
-        p, f = run_file_checks("AR", ar_data, schema)
+        p, f = run_file_checks("AR", ar_data, schema, check_sources=check_sources)
         total_passes += p; total_fails += f
 
         section(f"Cross-file consistency  [{name}]")

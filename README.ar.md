@@ -2,9 +2,9 @@
 
 ![الرخصة: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![اللغات: عربي | إنجليزي](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![الحالة: تطوير مبكر](https://img.shields.io/badge/Status-Early%20Development-yellow.svg)
 ![المساهمات مرحب بها](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
-![CI](https://github.com/YOUR_USERNAME/your-invest-gate-ksa/actions/workflows/check.yml/badge.svg)
+
+**حالة المشروع:** تأسيس أولي / بيانات مسودة / التحقق مفعل / CI مؤجل
 
 **قاعدة معرفية مفتوحة المصدر وثنائية اللغة، تُساعد المستثمرين الأجانب على فهم كيفية تأسيس الأعمال وإدارتها في المملكة العربية السعودية.**
 
@@ -112,6 +112,7 @@ python scripts/check.py
 
 - [الوثائق العربية ←](docs/ar/README.md)
 - [English Documentation ←](docs/en/README.md)
+- [سير عمل التحقق من المصادر ←](docs/ar/source-verification.md)
 - [فهرس المصادر ←](sources/index.md)
 
 ---

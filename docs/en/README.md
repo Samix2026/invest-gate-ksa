@@ -12,6 +12,7 @@ Documentation will be organized into the following topics:
 
 ### Getting Started
 - [Company Setup Overview](company-setup-overview.md) — business structures, key bodies, and the typical setup flow
+- [Source Verification Workflow](source-verification.md) — how to verify, record, and update official sources in the dataset
 - Key regulatory bodies (MISA, SAMA, CMA, ZATCA, etc.)
 - Official entry points for foreign investors
 

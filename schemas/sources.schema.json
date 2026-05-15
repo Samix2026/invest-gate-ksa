@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sources Registry Dataset",
+  "description": "Schema for the Invest Gate KSA official sources registry.",
+  "type": "object",
+  "required": ["meta", "data"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "description", "language", "last_verified"],
+      "additionalProperties": false,
+      "properties": {
+        "title":         { "type": "string" },
+        "description":   { "type": "string" },
+        "language":      { "type": "string", "enum": ["en", "ar", "bilingual"] },
+        "last_verified": { "type": "string" }
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/source_entry" }
+    }
+  },
+  "definitions": {
+    "source_entry": {
+      "type": "object",
+      "required": [
+        "id", "name", "name_alt", "authority_type", "jurisdiction",
+        "official_website", "documentation_sections", "languages_supported",
+        "update_frequency_estimate", "reliability_level",
+        "last_verified", "verification_method",
+        "tags", "notes", "verification_status", "placeholders"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id":                       { "type": "string" },
+        "name":                     { "type": "string" },
+        "name_alt":                 { "type": "string" },
+        "authority_type": {
+          "type": "string",
+          "enum": [
+            "government_ministry",
+            "government_authority",
+            "government_organization",
+            "government_portal",
+            "government_platform"
+          ]
+        },
+        "jurisdiction":             { "type": "string" },
+        "official_website":         { "type": "string" },
+        "documentation_sections": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "languages_supported": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "update_frequency_estimate": { "type": ["string", "null"] },
+        "reliability_level": {
+          "type": "string",
+          "enum": ["primary_official", "official_portal"]
+        },
+        "last_verified":       { "type": "string" },
+        "verification_method": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "notes": { "type": "string" },
+        "verification_status": {
+          "type": "string",
+          "enum": ["verified", "draft", "placeholder", "unverified"]
+        },
+        "placeholders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "description", "verify_at"],
+            "additionalProperties": false,
+            "properties": {
+              "field":       { "type": "string" },
+              "description": { "type": "string" },
+              "verify_at":   { "type": "string" }
+            }
+          }
+        }
+      },
+      "if": {
+        "properties": { "verification_status": { "const": "draft" } },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": { "placeholders": { "minItems": 1 } }
+      }
+    }
+  }
+}

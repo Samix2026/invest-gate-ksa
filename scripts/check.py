@@ -47,14 +47,21 @@ REQUIRED_FILES = [
     "data/business-structures.ar.json",
     "schemas/business-structures.schema.json",
     "schemas/investment-licenses.schema.json",
+    "schemas/sources.schema.json",
     "data/investment-licenses.en.json",
     "data/investment-licenses.ar.json",
+    "data/sources.en.json",
+    "data/sources.ar.json",
     "sources/index.md",
     "scripts/validate-data.py",
     "scripts/query-structures.py",
     "scripts/query-dataset.py",
     "scripts/requirements.txt",
     "examples/query-examples.md",
+    "docs/en/source-verification.md",
+    "docs/ar/source-verification.md",
+    "templates/source-review.md",
+    "CLAUDE.md",
 ]
 
 # Markdown link targets to skip (not local paths)

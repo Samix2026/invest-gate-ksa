@@ -12,11 +12,14 @@ This directory holds structured, machine-readable data derived from official sou
 |------|-------------|--------|
 | `business-structures.en.json` | Legal entity types available to foreign investors — English | Draft |
 | `business-structures.ar.json` | Legal entity types available to foreign investors — Arabic | Draft |
+| `investment-licenses.en.json` | Investment licensing concepts (MISA, CR, municipal, VAT, GOSI) — English | Draft |
+| `investment-licenses.ar.json` | Investment licensing concepts — Arabic | Draft |
+| `sources.en.json` | Official source registry: government bodies, portals, and platforms — English | Draft |
+| `sources.ar.json` | Official source registry — Arabic | Draft |
 | `fees.json` | Official government fees (registration, licensing, permits) | Planned |
 | `timelines.json` | Estimated processing durations for key procedures | Planned |
 | `sectors.json` | Sectors open/restricted/prohibited to foreign investment | Planned |
 | `zones.json` | Economic zones, locations, and key incentives | Planned |
-| `agencies.json` | Regulatory bodies, roles, and official websites | Planned |
 | `ownership_limits.json` | Foreign ownership thresholds by sector | Planned |
 
 ---
@@ -65,7 +68,7 @@ The script enforces the following rules:
 
 Exit code `0` means all checks passed. Exit code `1` means at least one check failed, with details printed to stdout. Suitable for use in CI pipelines.
 
-The JSON Schema lives at [`schemas/business-structures.schema.json`](../schemas/business-structures.schema.json).
+JSON Schemas live at `schemas/business-structures.schema.json`, `schemas/investment-licenses.schema.json`, and `schemas/sources.schema.json`.
 
 ---
 

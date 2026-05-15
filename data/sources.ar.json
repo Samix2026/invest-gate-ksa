@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "title": "سجل المصادر الرسمية",
+    "description": "سجل الجهات الحكومية السعودية الرسمية والهيئات والبوابات ذات الصلة بالمستثمرين الأجانب. الإدخالات وصفية فحسب — وليست إرشادات قانونية أو إجرائية.",
+    "language": "ar",
+    "last_verified": "[بيان مؤقت — تحقق من جميع الإدخالات بالرجوع إلى المصادر الرسمية الحالية قبل النشر]"
+  },
+  "data": [
+    {
+      "id": "misa",
+      "name": "وزارة الاستثمار (ماسة)",
+      "name_alt": "Ministry of Investment (MISA)",
+      "authority_type": "government_ministry",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "misa.gov.sa",
+      "documentation_sections": [
+        "تقديم طلبات رخص الاستثمار وإصدارها",
+        "قائمة الأنشطة المعتمدة والقطاعات المؤهلة",
+        "قواعد الملكية الأجنبية حسب القطاع",
+        "خدمات المستثمرين ومتابعة الطلبات",
+        "معلومات المناطق الاقتصادية الخاصة"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["misa", "foreign_investment", "licensing", "sector_rules", "ownership", "ministry"],
+      "notes": "الجهة الرئيسية لمنح تراخيص المستثمرين الأجانب في المملكة العربية السعودية. تُصدر رخصاً استثمارية تحدد النشاط التجاري المرخص. بالنسبة لمعظم المستثمرين الأجانب، يسبق الحصول على هذه الرخصة مفاهيمياً التسجيل التجاري.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث وزارة الاستثمار لإرشاداتها المنشورة وقائمة الأنشطة المعتمدة ومحتوى البوابة لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة وزارة الاستثمار لم يُسجَّل بعد.",
+          "verify_at": "misa.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "ministry_of_commerce",
+      "name": "وزارة التجارة",
+      "name_alt": "Ministry of Commerce",
+      "authority_type": "government_ministry",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "mc.gov.sa",
+      "documentation_sections": [
+        "التسجيل في السجل التجاري",
+        "تسجيل الأسماء التجارية وحمايتها",
+        "أحكام نظام الشركات",
+        "تصنيف الأنشطة التجارية",
+        "تعديلات الشركات وإجراءات التصفية"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["commercial_registration", "companies_law", "entity_formation", "ministry", "cr"],
+      "notes": "الجهة الرئيسية للتسجيل التجاري والإشراف على تطبيق نظام الشركات في المملكة العربية السعودية. يُشترط الحصول على السجل التجاري لممارسة أي نشاط تجاري.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث وزارة التجارة لإرشاداتها المنشورة ومحتوى البوابة لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة وزارة التجارة لم يُسجَّل بعد.",
+          "verify_at": "mc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "zatca",
+      "name": "هيئة الزكاة والضريبة والجمارك (زاتكا)",
+      "name_alt": "Zakat, Tax and Customs Authority (ZATCA)",
+      "authority_type": "government_authority",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "zatca.gov.sa",
+      "documentation_sections": [
+        "التسجيل في ضريبة القيمة المضافة وتقديم الإقرارات",
+        "تقييم الزكاة وسدادها",
+        "ضريبة الدخل على الشركات",
+        "الامتثال لنظام الفاتورة الإلكترونية (فاتورة)",
+        "إجراءات الجمارك والتعريفات"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["tax", "vat", "zakat", "customs", "finance", "authority", "zatca"],
+      "notes": "تأسست عام 2021 باندماج الهيئة العامة للزكاة والدخل والهيئة العامة للجمارك. تُشرف على الزكاة وضريبة الدخل على الشركات وضريبة القيمة المضافة وإجراءات الجمارك في المملكة العربية السعودية.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث زاتكا للإرشادات الضريبية المنشورة والحدود والمستجدات لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "zatca.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة زاتكا لم يُسجَّل بعد.",
+          "verify_at": "zatca.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "mhrsd",
+      "name": "وزارة الموارد البشرية والتنمية الاجتماعية",
+      "name_alt": "Ministry of Human Resources and Social Development (MHRSD)",
+      "authority_type": "government_ministry",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "hrsd.gov.sa",
+      "documentation_sections": [
+        "نظام العمل السعودي",
+        "الامتثال لنظام السعودة (نطاقات)",
+        "استخراج تصاريح العمل وتجديدها",
+        "توثيق عقود العمل",
+        "الفصل في منازعات العمل"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["labor_law", "saudization", "nitaqat", "work_permits", "employment", "ministry"],
+      "notes": "تُشرف على نظام العمل السعودي ونظام السعودة (نطاقات). تعمل بالتنسيق مع جوسي ومنصة قوى لإدارة الامتثال الوظيفي لأصحاب العمل.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث وزارة الموارد البشرية للإرشادات العمالية وشرائح نطاقات ومحتوى البوابة لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "hrsd.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة وزارة الموارد البشرية لم يُسجَّل بعد.",
+          "verify_at": "hrsd.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "gosi",
+      "name": "المؤسسة العامة للتأمينات الاجتماعية (جوسي)",
+      "name_alt": "General Organization for Social Insurance (GOSI)",
+      "authority_type": "government_organization",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "gosi.gov.sa",
+      "documentation_sections": [
+        "تسجيل أصحاب العمل",
+        "اشتراكات التأمين الاجتماعي للموظفين",
+        "تأمين الأخطار المهنية",
+        "مزايا العجز والوفاة",
+        "خدمات التقاعد والمعاشات"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["social_insurance", "employer_obligations", "contributions", "employees", "gosi"],
+      "notes": "تُدير نظام التأمين الاجتماعي للموظفين السعوديين وغير السعوديين في المملكة العربية السعودية. تختلف هياكل الاشتراكات باختلاف جنسية الموظف. يُشترط تسجيل جوسي لأي كيان يُوظِّف موظفين.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث جوسي لمعدلات الاشتراكات المنشورة وقواعد التغطية ومحتوى البوابة لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "gosi.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة جوسي لم يُسجَّل بعد.",
+          "verify_at": "gosi.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "saudi_business_center",
+      "name": "مركز الأعمال السعودي",
+      "name_alt": "Saudi Business Center",
+      "authority_type": "government_portal",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "sbc.gov.sa",
+      "documentation_sections": [
+        "تأسيس الأعمال (خدمة موحدة متكاملة)",
+        "التسجيل التجاري",
+        "الرخصة البلدية التشغيلية",
+        "الرخصة المهنية",
+        "تجديد التراخيص وتعديلاتها"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["portal", "business_setup", "integrated_services", "one_stop_shop", "cr", "licensing"],
+      "notes": "بوابة حكومية موحدة تدمج خدمات تأسيس الأعمال من وزارات متعددة. تُيسّر استخراج السجل التجاري والترخيص البلدي والخدمات ذات الصلة في مكان واحد. تبقى الجهة التنظيمية المختصة لكل خدمة هي الوزارة المعنية بها.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث بوابة مركز الأعمال السعودي لخدماتها وأدلتها وسير عملها المتكاملة لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "sbc.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة مركز الأعمال السعودي لم يُسجَّل بعد.",
+          "verify_at": "sbc.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "balady",
+      "name": "بلدي — بوابة الخدمات البلدية",
+      "name_alt": "Balady — Municipal Services Portal",
+      "authority_type": "government_portal",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "balady.gov.sa",
+      "documentation_sections": [
+        "الرخصة البلدية التشغيلية",
+        "تصاريح البناء والإنشاء",
+        "ترخيص منشآت الأغذية والضيافة",
+        "تصاريح الإعلانات واللافتات",
+        "معاينات الامتثال للموقع"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["municipality", "operating_license", "balady", "premises", "location_specific", "portal"],
+      "notes": "البوابة الرقمية لوزارة الشؤون البلدية والقروية والإسكان. تُصدر تصاريح التشغيل المرتبطة بالموقع الجغرافي لمقار الأعمال. تتفاوت الجهة البلدية المختصة بحسب الموقع الجغرافي.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث بوابة بلدي لخدماتها ومتطلباتها لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "balady.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة بلدي لم يُسجَّل بعد.",
+          "verify_at": "balady.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "qiwa",
+      "name": "قوى — منصة سوق العمل",
+      "name_alt": "Qiwa — Labor Market Platform",
+      "authority_type": "government_platform",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "qiwa.com.sa",
+      "documentation_sections": [
+        "استخراج تصاريح العمل وتجديدها",
+        "إدارة نسبة السعودة (نطاقات)",
+        "توثيق عقود العمل",
+        "نقل الموظفين وخروجهم",
+        "تصاريح العمل عن بُعد والعمل المرن"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["labor_market", "work_permits", "saudization", "employment", "qiwa", "platform"],
+      "notes": "منصة رقمية تابعة لوزارة الموارد البشرية والتنمية الاجتماعية لإدارة معاملات سوق العمل وتصاريح العمل والامتثال لنظام السعودة. يستخدمها أصحاب العمل لإدارة تسجيل القوى العاملة والالتزامات العمالية.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "official_website",
+          "description": "ينبغي التحقق من النطاق الرسمي لمنصة قوى مباشرةً — تحقق من عنوان URL الرسمي الحالي مع وزارة الموارد البشرية أو المنصة ذاتها.",
+          "verify_at": "hrsd.gov.sa"
+        },
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث منصة قوى لخدماتها ومتطلباتها لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "qiwa.com.sa"
+        }
+      ]
+    },
+    {
+      "id": "muqeem",
+      "name": "مقيم — بوابة خدمات الإقامة والتأشيرات",
+      "name_alt": "Muqeem — Residency and Visa Services Portal",
+      "authority_type": "government_portal",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "muqeem.sa",
+      "documentation_sections": [
+        "إصدار الإقامة (الإقامة) وتجديدها",
+        "إدارة تأشيرات الخروج والعودة",
+        "تصاريح إقامة المعالين",
+        "تصاريح العمالة المنزلية",
+        "خدمات التوثيق المتعلقة بجوازات السفر والسفر"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["residency", "iqama", "visas", "expatriates", "immigration", "portal"],
+      "notes": "بوابة إدارة الإقامة والتأشيرات للمقيمين الأجانب في المملكة العربية السعودية. تعمل تحت إشراف الجهة المسؤولة عن جوازات السفر والإقامة (الجوازات). ذات صلة بأصحاب العمل الكافلين للموظفين الأجانب.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث بوابة مقيم لخدماتها ومتطلباتها لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "muqeem.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة مقيم لم يُسجَّل بعد.",
+          "verify_at": "muqeem.sa"
+        }
+      ]
+    },
+    {
+      "id": "absher_business",
+      "name": "أبشر أعمال",
+      "name_alt": "Absher Business",
+      "authority_type": "government_platform",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "business.absher.sa",
+      "documentation_sections": [
+        "خدمات المعاملات الحكومية للمنشآت",
+        "خدمات تأشيرات الموظفين وتصاريحهم",
+        "التصديق والتوثيق على الوثائق",
+        "خدمات الأحوال المدنية للكيانات التجارية",
+        "التحقق من الهوية الرقمية"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["absher", "government_services", "digital_platform", "authentication", "platform"],
+      "notes": "القسم الموجَّه للمنشآت من منصة أبشر، يوفر خدمات المعاملات الحكومية للكيانات التجارية. يندرج ضمن منظومة أبشر الأوسع التابعة لوزارة الداخلية.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "official_website",
+          "description": "ينبغي التحقق من النطاق الرسمي لأبشر أعمال مباشرةً — تحقق من عنوان URL الرسمي الحالي من المنصة ذاتها.",
+          "verify_at": "absher.sa"
+        },
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث منصة أبشر أعمال لخدماتها ومتطلباتها لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "business.absher.sa"
+        }
+      ]
+    }
+  ]
+}

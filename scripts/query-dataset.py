@@ -27,6 +27,9 @@ Usage
   python scripts/query-dataset.py --dataset investment-licenses --lang ar --list
   python scripts/query-dataset.py --dataset investment-licenses --id misa_license
   python scripts/query-dataset.py --dataset investment-licenses --tag misa
+  python scripts/query-dataset.py --dataset sources --list
+  python scripts/query-dataset.py --dataset sources --authority-type government_ministry
+  python scripts/query-dataset.py --dataset sources --lang ar --tag misa
   python scripts/query-dataset.py --dataset business-structures --list
 """
 
@@ -49,6 +52,10 @@ DATASETS: Dict[str, Dict[str, str]] = {
     "investment-licenses": {
         "en": os.path.join(ROOT, "data", "investment-licenses.en.json"),
         "ar": os.path.join(ROOT, "data", "investment-licenses.ar.json"),
+    },
+    "sources": {
+        "en": os.path.join(ROOT, "data", "sources.en.json"),
+        "ar": os.path.join(ROOT, "data", "sources.ar.json"),
     },
 }
 
@@ -133,6 +140,20 @@ def all_tags(data: dict) -> List[str]:
     for entry in data.get("data", []):
         tags.update(entry.get("tags", []))
     return sorted(tags)
+
+
+def get_by_authority_type(data: dict, authority_type: str) -> List[dict]:
+    """Return all entries whose authority_type matches exactly."""
+    return [e for e in data.get("data", []) if e.get("authority_type") == authority_type]
+
+
+def all_authority_types(data: dict) -> List[str]:
+    """Return sorted list of every unique authority_type across all entries."""
+    types: set = set()
+    for entry in data.get("data", []):
+        if entry.get("authority_type"):
+            types.add(entry["authority_type"])
+    return sorted(types)
 
 
 # ── Formatting layer ──────────────────────────────────────────────────────────
@@ -325,6 +346,10 @@ def _build_parser() -> argparse.ArgumentParser:
         "--tag", metavar="TAG",
         help="Filter entries by tag",
     )
+    action.add_argument(
+        "--authority-type", metavar="TYPE",
+        help="Filter entries by authority_type (e.g. government_ministry, government_portal)",
+    )
     return parser
 
 
@@ -353,6 +378,22 @@ def main() -> None:
             print(f"Available tags: {', '.join(all_tags(data))}")
             sys.exit(1)
         title = f"Tag: {args.tag}  —  {len(matches)} match(es)  ({args.dataset}, {args.lang})"
+        print(fmt_list_table(matches, title))
+
+    elif args.authority_type:
+        matches = get_by_authority_type(data, args.authority_type)
+        if not matches:
+            print(f"No entries found with authority_type '{args.authority_type}'.")
+            types = all_authority_types(data)
+            if types:
+                print(f"Available authority types: {', '.join(types)}")
+            else:
+                print("This dataset does not use the authority_type field.")
+            sys.exit(1)
+        title = (
+            f"Authority type: {args.authority_type}  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
         print(fmt_list_table(matches, title))
 
 
