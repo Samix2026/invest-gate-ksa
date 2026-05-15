@@ -4,6 +4,7 @@
 ![اللغات: عربي | إنجليزي](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
 ![الحالة: تطوير مبكر](https://img.shields.io/badge/Status-Early%20Development-yellow.svg)
 ![المساهمات مرحب بها](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
+![CI](https://github.com/YOUR_USERNAME/your-invest-gate-ksa/actions/workflows/check.yml/badge.svg)
 
 **قاعدة معرفية مفتوحة المصدر وثنائية اللغة، تُساعد المستثمرين الأجانب على فهم كيفية تأسيس الأعمال وإدارتها في المملكة العربية السعودية.**
 
@@ -94,6 +95,16 @@ invest-gate-ksa/
 - بيانات منظّمة (رسوم رسمية، جداول زمنية، قوائم قطاعات) بمصادر موثّقة
 
 كل محتوى يجب أن يستشهد بمصدر رسمي. راجع [CONTRIBUTING.md](CONTRIBUTING.md) للاطلاع على الإرشادات الكاملة.
+
+---
+
+## فحص صحة المشروع
+
+```bash
+python scripts/check.py
+```
+
+يتحقق من الملفات المطلوبة وصحة JSON واتساق البيانات وسلامة الأسماء البديلة وروابط الوثائق المحلية. يخرج بالرمز `0` عند النجاح الكامل — مفيد للتشغيل قبل فتح طلب دمج.
 
 ---
 

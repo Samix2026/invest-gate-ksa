@@ -4,6 +4,7 @@
 ![Languages: Arabic | English](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
 ![Status: Early Development](https://img.shields.io/badge/Status-Early%20Development-yellow.svg)
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
+![CI](https://github.com/YOUR_USERNAME/your-invest-gate-ksa/actions/workflows/check.yml/badge.svg)
 
 **A bilingual, open-source knowledge base that helps foreign investors understand how to set up and operate a business in Saudi Arabia.**
 
@@ -94,6 +95,16 @@ This project grows through the knowledge of people with direct, documented exper
 - Structured data (official fees, timelines, sector lists) with verified sources
 
 Every piece of content must cite an official source. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guidelines.
+
+---
+
+## Project Checks
+
+```bash
+python scripts/check.py
+```
+
+Verifies required files, JSON validity, dataset schema validation, alias integrity, and local markdown link resolution. Exits `0` on full pass — useful to run before opening a pull request.
 
 ---
 
