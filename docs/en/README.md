@@ -1,0 +1,53 @@
+# English Documentation — Invest Gate KSA
+
+This section contains all English-language documentation on investing and doing business in Saudi Arabia.
+
+> **Disclaimer:** All content is for general informational purposes only. It is not legal, financial, or regulatory advice. Verify all information with official Saudi government sources and qualified professionals.
+
+---
+
+## Contents
+
+Documentation will be organized into the following topics:
+
+### Getting Started
+- Overview of the Saudi investment landscape
+- Key regulatory bodies (MISA, SAMA, CMA, ZATCA, etc.)
+- Official entry points for foreign investors
+
+### Business Structures
+- Limited Liability Company (LLC)
+- Joint Stock Company (JSC)
+- Branch Office
+- Representative Office
+- 100% foreign ownership — eligible sectors
+
+### Registration & Licensing
+- Ministry of Investment (MISA) license
+- Commercial registration (CR) via Ministry of Commerce
+- Municipal license (Baladia)
+- Sector-specific permits
+
+### Economic Zones & Incentives
+- Special Economic Zones (SEZs)
+- Vision 2030 investment programs
+- NEOM, Red Sea, Qiddiya, and other giga-projects
+
+### Operational Topics
+- Banking and opening a corporate account
+- Saudization (Nitaqat) labor requirements
+- Iqama (residency) for investors and employees
+- VAT, Zakat, and tax obligations
+- Annual compliance requirements
+
+---
+
+## Status
+
+This section is under active development. See [roadmap.md](../../roadmap.md) for the content plan.
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](../../CONTRIBUTING.md) to add or improve content.
