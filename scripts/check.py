@@ -62,6 +62,9 @@ REQUIRED_FILES = [
     "docs/ar/source-verification.md",
     "templates/source-review.md",
     "CLAUDE.md",
+    "data/sectors.en.json",
+    "data/sectors.ar.json",
+    "schemas/sectors.schema.json",
 ]
 
 # Markdown link targets to skip (not local paths)

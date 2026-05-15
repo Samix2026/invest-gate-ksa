@@ -129,6 +129,18 @@ Key fields: `authority_type` (enum), `jurisdiction`, `official_website`, `docume
 
 Query: `python scripts/query-dataset.py --dataset sources --lang en --authority-type government_ministry`
 
+### `sectors` (8 entries)
+
+Investment sectors relevant to foreign investors: technology, consulting, ecommerce, food_and_beverage, real_estate, education, healthcare, fintech.
+
+Key fields: `typical_business_models` (array), `likely_authorities` (array of `{id, name, role}` objects), `related_license_concepts` (array of investment-licenses IDs), `regulatory_sensitivity` (enum), `common_confusions` (array).
+
+`regulatory_sensitivity` values: `standard`, `regulated`, `highly_regulated`, `restricted`.
+
+Note: `likely_authorities` items reference both confirmed sources (from `data/sources.en.json`) and sector-specific bodies not yet in the sources registry (CST, SFDA, REGA, MoE, MoH, SAMA, CMA). The latter are marked in each entry's `placeholders` array.
+
+Query: `python scripts/query-dataset.py --dataset sectors --lang en --regulatory-sensitivity highly_regulated`
+
 ---
 
 ## Scripts
@@ -162,6 +174,9 @@ python scripts/query-dataset.py --dataset sources --lang en --list
 python scripts/query-dataset.py --dataset investment-licenses --lang ar --id misa_license
 python scripts/query-dataset.py --dataset sources --lang en --tag ministry
 python scripts/query-dataset.py --dataset sources --lang en --authority-type government_portal
+python scripts/query-dataset.py --dataset sectors --lang en --list
+python scripts/query-dataset.py --dataset sectors --lang ar --id fintech
+python scripts/query-dataset.py --dataset sectors --regulatory-sensitivity highly_regulated
 ```
 
 ---

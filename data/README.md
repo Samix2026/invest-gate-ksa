@@ -16,6 +16,8 @@ This directory holds structured, machine-readable data derived from official sou
 | `investment-licenses.ar.json` | Investment licensing concepts — Arabic | Draft |
 | `sources.en.json` | Official source registry: government bodies, portals, and platforms — English | Draft |
 | `sources.ar.json` | Official source registry — Arabic | Draft |
+| `sectors.en.json` | Investment sectors: regulatory context, likely authorities, common confusions — English | Draft |
+| `sectors.ar.json` | Investment sectors — Arabic | Draft |
 | `fees.json` | Official government fees (registration, licensing, permits) | Planned |
 | `timelines.json` | Estimated processing durations for key procedures | Planned |
 | `sectors.json` | Sectors open/restricted/prohibited to foreign investment | Planned |

@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "invest-gate-ksa/schemas/sectors.schema.json",
+  "title": "Sectors Dataset — Invest Gate KSA",
+  "description": "Validates sectors.en.json and sectors.ar.json. Covers sectors relevant to foreign investors in Saudi Arabia — descriptive and contextual only, not regulatory guidance.",
+  "type": "object",
+  "required": ["meta", "data"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "meta": {
+      "type": "object",
+      "required": ["title", "description", "language", "last_verified"],
+      "additionalProperties": false,
+      "properties": {
+        "title":         { "type": "string", "minLength": 1 },
+        "description":   { "type": "string", "minLength": 1 },
+        "language":      { "type": "string", "enum": ["en", "ar"] },
+        "last_verified": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "data": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/sector_entry" }
+    }
+
+  },
+
+  "definitions": {
+
+    "sector_entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "name_alt",
+        "short_description",
+        "typical_business_models",
+        "likely_authorities",
+        "related_license_concepts",
+        "regulatory_sensitivity",
+        "common_confusions",
+        "official_sources",
+        "verification_status",
+        "placeholders",
+        "tags"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Stable machine-readable identifier. Identical across language files."
+        },
+
+        "name":              { "type": "string", "minLength": 1 },
+        "name_alt":          { "type": "string", "minLength": 1 },
+        "short_description": { "type": "string", "minLength": 1 },
+
+        "typical_business_models": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "likely_authorities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "role"],
+            "additionalProperties": false,
+            "properties": {
+              "id":   { "type": "string", "minLength": 1 },
+              "name": { "type": "string", "minLength": 1 },
+              "role": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "related_license_concepts": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "regulatory_sensitivity": {
+          "type": "string",
+          "enum": ["standard", "regulated", "highly_regulated", "restricted"]
+        },
+
+        "common_confusions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "official_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name", "role", "portal"],
+            "additionalProperties": false,
+            "properties": {
+              "name":   { "type": "string", "minLength": 1 },
+              "role":   { "type": "string", "minLength": 1 },
+              "portal": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "verification_status": {
+          "type": "string",
+          "enum": ["draft", "verified"]
+        },
+
+        "placeholders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "description", "verify_at"],
+            "additionalProperties": false,
+            "properties": {
+              "field":       { "type": "string", "minLength": 1 },
+              "description": { "type": "string", "minLength": 1 },
+              "verify_at":   { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" }
+        }
+
+      },
+
+      "if": {
+        "properties": { "verification_status": { "const": "draft" } },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": { "placeholders": { "minItems": 1 } }
+      }
+
+    }
+
+  }
+}

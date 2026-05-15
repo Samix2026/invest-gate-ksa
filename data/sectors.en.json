@@ -1,0 +1,578 @@
+{
+  "meta": {
+    "title": "Investment Sectors — Saudi Arabia",
+    "description": "Contextual overview of sectors relevant to foreign investors in Saudi Arabia. Covers typical business models, likely regulatory authorities, and common points of confusion. Descriptive only — not sector eligibility determinations or licensing guidance.",
+    "language": "en",
+    "last_verified": "[PLACEHOLDER — verify all entries against current official sources before publishing]"
+  },
+  "data": [
+    {
+      "id": "technology",
+      "name": "Technology",
+      "name_alt": "التقنية",
+      "short_description": "Software development, IT services, digital platforms, and technology-enabled services for business and consumer markets.",
+      "typical_business_models": [
+        "Software as a Service (SaaS)",
+        "IT consulting and systems integration",
+        "Software product development",
+        "Digital platforms and non-financial marketplaces",
+        "Managed IT services and support"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license and approved activities list for technology sector activities"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration for technology companies"
+        },
+        {
+          "id": "cst",
+          "name": "Communications, Space and Technology Commission (CST)",
+          "role": "Sector regulator for communications and technology services — verify specific licensing scope for technology business activities"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "municipal_license"
+      ],
+      "regulatory_sensitivity": "regulated",
+      "common_confusions": [
+        "The technology sector covers a broad range of activities; the specific activity classification on the MISA license determines what is permitted.",
+        "Fintech is a separate, more heavily regulated sector — technology companies providing financial services face additional requirements.",
+        "Telecommunications and communications infrastructure may involve requirements from the CST beyond standard technology licensing."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing and sector eligibility determination",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — cst",
+          "description": "The Communications, Space and Technology Commission (CST) and its specific licensing requirements for technology business activities require verification at the CST official portal.",
+          "verify_at": "cst.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'regulated' because some technology activities may require engagement with the CST beyond standard MISA and commercial registration. The precise scope requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["technology", "software", "digital", "it_services", "saas", "platforms"]
+    },
+    {
+      "id": "consulting",
+      "name": "Consulting and Professional Services",
+      "name_alt": "الاستشارات والخدمات المهنية",
+      "short_description": "Management consulting, technical advisory, business strategy, and professional services for corporate clients.",
+      "typical_business_models": [
+        "Management and strategy consulting",
+        "Technical and engineering consulting",
+        "HR and organizational consulting",
+        "Training and professional development",
+        "Project management services"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license and approved activities list for consulting and professional services"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration"
+      ],
+      "regulatory_sensitivity": "standard",
+      "common_confusions": [
+        "Legal, accounting, engineering, and medical consulting are typically governed by their respective professional bodies and may have different licensing requirements from general management consulting.",
+        "The activities covered depend on the specific classification on the MISA license — the approved activity list determines scope.",
+        "Consulting for clients in regulated industries (healthcare, finance, education) may require consideration of those sectors' rules, even if the consulting firm itself is in the standard category."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing and approved activities list",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'standard' for general management and business consulting. Specialized professional services (legal, accounting, engineering) may have different regulatory paths through their own licensing bodies — verify the applicable framework for the specific consulting discipline.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "likely_authorities — specialized sub-sectors",
+          "description": "Specialized consulting disciplines may involve additional professional licensing bodies not covered here. The relevant authority depends on the specific consulting activity.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["consulting", "advisory", "professional_services", "management", "strategy", "training"]
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce",
+      "name_alt": "التجارة الإلكترونية",
+      "short_description": "Online retail, digital marketplaces, and electronic commerce platforms selling goods or services through digital channels.",
+      "typical_business_models": [
+        "Online retail (B2C)",
+        "Digital marketplace platforms",
+        "Business-to-business (B2B) e-procurement",
+        "Subscription commerce",
+        "Direct-to-consumer brand commerce"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license and sector eligibility for e-commerce activities"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration; e-commerce platform and seller registration requirements"
+        },
+        {
+          "id": "zatca",
+          "name": "Zakat, Tax and Customs Authority (ZATCA)",
+          "role": "VAT registration and obligations on digital sales and transactions"
+        },
+        {
+          "id": "balady",
+          "name": "Balady — Municipal Services Portal",
+          "role": "Operating license for physical warehouse, fulfillment, or retail premises"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "vat_registration",
+        "municipal_license"
+      ],
+      "regulatory_sensitivity": "regulated",
+      "common_confusions": [
+        "E-commerce platforms that process payments or offer deferred payment options may face additional requirements from financial regulators.",
+        "The Ministry of Commerce has published e-commerce-specific regulations; verify current platform and seller registration requirements directly.",
+        "Cross-border e-commerce involves additional customs, import duty, and VAT considerations."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration and e-commerce regulations",
+          "portal": "mc.gov.sa"
+        },
+        {
+          "name": "Zakat, Tax and Customs Authority (ZATCA)",
+          "role": "VAT on digital sales",
+          "portal": "zatca.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_commerce e-commerce rules",
+          "description": "The specific e-commerce platform registration and seller identification requirements issued by the Ministry of Commerce require verification at the official portal.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'regulated' reflecting e-commerce-specific rules from the Ministry of Commerce, VAT obligations, and potential payment service requirements. Full scope requires verification.",
+          "verify_at": "mc.gov.sa"
+        }
+      ],
+      "tags": ["ecommerce", "online_retail", "marketplace", "digital_commerce", "b2c", "b2b"]
+    },
+    {
+      "id": "food_and_beverage",
+      "name": "Food and Beverage",
+      "name_alt": "الأغذية والمشروبات",
+      "short_description": "Restaurants, cafes, catering services, food production, and food retail businesses.",
+      "typical_business_models": [
+        "Restaurant and cafe operations",
+        "Catering and food services",
+        "Food manufacturing and processing",
+        "Food retail and distribution",
+        "Cloud kitchens and delivery-only concepts"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license for food and beverage business activities"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "balady",
+          "name": "Balady — Municipal Services Portal",
+          "role": "Food establishment operating license, premises approval, and local authority coordination"
+        },
+        {
+          "id": "sfda",
+          "name": "Saudi Food and Drug Authority (SFDA)",
+          "role": "Food product registration, food safety standards, and labeling requirements — verify specific scope for food business activities"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "municipal_license"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Food establishments require a location-specific operating license from municipal authorities (via Balady) in addition to standard MISA and commercial registration.",
+        "Food product manufacturers and importers face product registration requirements separate from restaurant or catering operators.",
+        "Health and safety inspections for food establishments involve multiple regulatory bodies at the municipal and national level."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        },
+        {
+          "name": "Balady — Municipal Services Portal",
+          "role": "Food establishment operating license",
+          "portal": "balady.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — sfda",
+          "description": "The Saudi Food and Drug Authority (SFDA) and its specific role in food product registration, food safety standards, and labeling requirements for food businesses requires verification at the SFDA official portal.",
+          "verify_at": "sfda.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting multiple licensing layers: MISA license, commercial registration, municipal food establishment license, and food safety requirements. Full scope requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["food", "beverage", "restaurant", "catering", "food_production", "food_retail", "hospitality"]
+    },
+    {
+      "id": "real_estate",
+      "name": "Real Estate",
+      "name_alt": "العقارات",
+      "short_description": "Property development, property management, real estate brokerage, leasing, and related real estate services.",
+      "typical_business_models": [
+        "Residential and commercial property development",
+        "Property management services",
+        "Real estate brokerage",
+        "Property leasing and rental management",
+        "Real estate advisory and valuation"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license for real estate activities; sector eligibility determination for foreign investors"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "rega",
+          "name": "Real Estate General Authority (REGA)",
+          "role": "Sector regulator for real estate — verify REGA's licensing role for brokers, developers, and property managers"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Real estate activities may require sector-specific licensing from REGA in addition to standard MISA and commercial registration.",
+        "Foreign ownership of real estate may be subject to specific rules and eligibility conditions — verify current requirements with MISA.",
+        "Real estate development and real estate services (brokerage, management) may have different regulatory paths."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — rega",
+          "description": "The Real Estate General Authority (REGA) and its licensing requirements for real estate brokers, developers, and property managers requires verification at the REGA official portal.",
+          "verify_at": "rega.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting sector-specific licensing, foreign ownership rules, and REGA oversight. Full scope and current rules require verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["real_estate", "property", "development", "brokerage", "property_management", "leasing"]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "name_alt": "التعليم",
+      "short_description": "Private schools, training centers, higher education, professional development, and educational technology services.",
+      "typical_business_models": [
+        "Private and international schools",
+        "Vocational and professional training centers",
+        "Test preparation and tutoring services",
+        "Corporate learning and development",
+        "Education technology (EdTech) platforms"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license for education sector activities"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_education",
+          "name": "Ministry of Education",
+          "role": "Sector approval and licensing for private educational establishments — verify specific requirements by establishment type"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "municipal_license"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Educational establishments typically require sector-specific approval from the Ministry of Education in addition to standard business licensing.",
+        "K-12, higher education, vocational training, and corporate training may each have different regulatory requirements.",
+        "EdTech platforms delivering curriculum content may have different requirements from platforms providing only administrative or infrastructure tools."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_education",
+          "description": "The Ministry of Education's specific approvals and licensing requirements for private educational establishments — including which types of establishments require what approvals — requires verification at the official Ministry of Education portal.",
+          "verify_at": "moe.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting sector-specific Ministry of Education approvals required beyond standard MISA and commercial registration. Full scope requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["education", "schools", "training", "higher_education", "edtech", "vocational"]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "name_alt": "الرعاية الصحية",
+      "short_description": "Medical clinics, hospitals, diagnostic services, medical devices, healthcare management, and health technology.",
+      "typical_business_models": [
+        "Medical clinics and polyclinics",
+        "Diagnostic and laboratory services",
+        "Medical device distribution",
+        "Healthcare management companies",
+        "Health technology and digital health platforms"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license for healthcare business activities"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_health",
+          "name": "Ministry of Health",
+          "role": "Licensing framework for private healthcare facilities and practitioners — verify applicable requirements by facility type"
+        },
+        {
+          "id": "sfda",
+          "name": "Saudi Food and Drug Authority (SFDA)",
+          "role": "Medical device and pharmaceutical product registration — verify scope for healthcare business activities"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Healthcare facilities and practitioners require sector-specific licenses from health authorities in addition to standard business setup.",
+        "Medical device importation and pharmaceutical distribution involve product registration requirements separate from healthcare facility licensing.",
+        "Digital health platforms may have different requirements depending on whether they deliver clinical services or only administrative and infrastructure tools."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_health",
+          "description": "The Ministry of Health licensing framework for private healthcare facilities — including the types of approvals required, applicable portal, and process by facility type — requires verification.",
+          "verify_at": "moh.gov.sa"
+        },
+        {
+          "field": "likely_authorities — sfda",
+          "description": "The SFDA's role in medical device and pharmaceutical product registration for healthcare businesses requires verification at the SFDA official portal.",
+          "verify_at": "sfda.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting multiple layers of sector-specific licensing. The complete framework for different healthcare business types requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["healthcare", "medical", "clinics", "hospitals", "medical_devices", "pharmaceuticals", "health_technology"]
+    },
+    {
+      "id": "fintech",
+      "name": "Financial Technology (Fintech)",
+      "name_alt": "التقنية المالية (فينتك)",
+      "short_description": "Payment services, digital banking, digital lending, insurance technology, and other technology-enabled financial services.",
+      "typical_business_models": [
+        "Payment processing and gateway services",
+        "Digital wallets and money transfer",
+        "Peer-to-peer and digital lending platforms",
+        "Robo-advisory and digital investment platforms",
+        "Insurance technology (InsurTech)"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment license for fintech business activities"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "sama",
+          "name": "Saudi Central Bank (SAMA)",
+          "role": "Regulatory licensing for payment services, digital banking, and financial technology operators — verify specific requirements by service type"
+        },
+        {
+          "id": "cma",
+          "name": "Capital Market Authority (CMA)",
+          "role": "Regulatory role for investment-related fintech platforms and digital investment services — verify specific requirements"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Fintech activities require sector-specific licensing from SAMA and/or CMA depending on the financial service type — these are separate from and additional to the standard MISA and commercial registration process.",
+        "Technology companies that provide tools or infrastructure to financial institutions are not necessarily subject to the same licensing as companies that directly provide regulated financial services.",
+        "Regulatory sandbox programs may exist for early-stage fintech operators — verify availability and eligibility with the relevant regulator."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment licensing",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — sama",
+          "description": "The Saudi Central Bank (SAMA) licensing and regulatory requirements for fintech activities — including payment services, digital banking, and financial technology operators — requires verification at the SAMA official portal.",
+          "verify_at": "sama.gov.sa"
+        },
+        {
+          "field": "likely_authorities — cma",
+          "description": "The Capital Market Authority (CMA) regulatory role for investment-related fintech platforms, robo-advisory services, and digital investment products requires verification at the CMA official portal.",
+          "verify_at": "cma.org.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting significant sector-specific licensing from financial regulators in addition to standard business setup. The specific requirements depend on the financial service type provided.",
+          "verify_at": "sama.gov.sa"
+        }
+      ],
+      "tags": ["fintech", "payments", "digital_banking", "lending", "insurtech", "financial_technology", "sama", "cma"]
+    }
+  ]
+}

@@ -36,7 +36,7 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 - [ ] Mirror of all English guides in Arabic
 
 **Structured Data (`data/`)**
-- [ ] `sectors.json` — open/restricted/prohibited sectors
+- [x] `sectors.json` — sector context, likely authorities, regulatory sensitivity (8 initial sectors; open/restricted classification requires official verification)
 - [ ] `fees.json` — official government fees
 - [ ] `timelines.json` — typical processing durations
 - [ ] `zones.json` — economic zones

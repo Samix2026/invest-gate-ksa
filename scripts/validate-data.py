@@ -62,6 +62,14 @@ DATASETS = [
         "check_aliases": False,
         "check_sources": False,  # this dataset IS the sources registry
     },
+    {
+        "name":          "sectors",
+        "schema_path":   os.path.join(ROOT, "schemas", "sectors.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "sectors.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "sectors.ar.json"),
+        "check_aliases": False,
+        "check_sources": True,
+    },
 ]
 
 

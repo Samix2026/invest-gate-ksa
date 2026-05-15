@@ -31,6 +31,9 @@ Usage
   python scripts/query-dataset.py --dataset sources --authority-type government_ministry
   python scripts/query-dataset.py --dataset sources --lang ar --tag misa
   python scripts/query-dataset.py --dataset business-structures --list
+  python scripts/query-dataset.py --dataset sectors --list
+  python scripts/query-dataset.py --dataset sectors --lang ar --id fintech
+  python scripts/query-dataset.py --dataset sectors --regulatory-sensitivity highly_regulated
 """
 
 import argparse
@@ -56,6 +59,10 @@ DATASETS: Dict[str, Dict[str, str]] = {
     "sources": {
         "en": os.path.join(ROOT, "data", "sources.en.json"),
         "ar": os.path.join(ROOT, "data", "sources.ar.json"),
+    },
+    "sectors": {
+        "en": os.path.join(ROOT, "data", "sectors.en.json"),
+        "ar": os.path.join(ROOT, "data", "sectors.ar.json"),
     },
 }
 
@@ -154,6 +161,20 @@ def all_authority_types(data: dict) -> List[str]:
         if entry.get("authority_type"):
             types.add(entry["authority_type"])
     return sorted(types)
+
+
+def get_by_regulatory_sensitivity(data: dict, sensitivity: str) -> List[dict]:
+    """Return all entries whose regulatory_sensitivity matches exactly."""
+    return [e for e in data.get("data", []) if e.get("regulatory_sensitivity") == sensitivity]
+
+
+def all_regulatory_sensitivities(data: dict) -> List[str]:
+    """Return sorted list of every unique regulatory_sensitivity across all entries."""
+    levels: set = set()
+    for entry in data.get("data", []):
+        if entry.get("regulatory_sensitivity"):
+            levels.add(entry["regulatory_sensitivity"])
+    return sorted(levels)
 
 
 # ── Formatting layer ──────────────────────────────────────────────────────────
@@ -350,6 +371,10 @@ def _build_parser() -> argparse.ArgumentParser:
         "--authority-type", metavar="TYPE",
         help="Filter entries by authority_type (e.g. government_ministry, government_portal)",
     )
+    action.add_argument(
+        "--regulatory-sensitivity", metavar="LEVEL",
+        help="Filter entries by regulatory_sensitivity (e.g. standard, regulated, highly_regulated)",
+    )
     return parser
 
 
@@ -392,6 +417,22 @@ def main() -> None:
             sys.exit(1)
         title = (
             f"Authority type: {args.authority_type}  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
+        print(fmt_list_table(matches, title))
+
+    elif args.regulatory_sensitivity:
+        matches = get_by_regulatory_sensitivity(data, args.regulatory_sensitivity)
+        if not matches:
+            print(f"No entries found with regulatory_sensitivity '{args.regulatory_sensitivity}'.")
+            levels = all_regulatory_sensitivities(data)
+            if levels:
+                print(f"Available levels: {', '.join(levels)}")
+            else:
+                print("This dataset does not use the regulatory_sensitivity field.")
+            sys.exit(1)
+        title = (
+            f"Regulatory sensitivity: {args.regulatory_sensitivity}  —  {len(matches)} match(es)"
             f"  ({args.dataset}, {args.lang})"
         )
         print(fmt_list_table(matches, title))
