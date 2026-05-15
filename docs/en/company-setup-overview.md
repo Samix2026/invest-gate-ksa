@@ -61,14 +61,14 @@ A representative office is permitted only for non-commercial activities such as 
 
 Understanding the distinction between locally owned and foreign-owned entities matters because it affects:
 
-- **Licensing requirements** — foreign-owned entities typically require a MISA investment license before commercial registration
+- **Registration requirements** — foreign-owned entities typically require a MISA investment registration before commercial registration
 - **Tax treatment** — Zakat applies to Saudi and GCC-owned portions; Corporate Income Tax (CIT) applies to foreign-owned portions; a combined entity may be subject to both
 - **Saudization obligations** — requirements may differ by entity type and sector
 - **Sector access** — some sectors remain restricted to Saudi nationals or require a local partner
 
 **Local company:** Owned entirely by Saudi or GCC nationals. Subject to Zakat rather than CIT on profits. May access certain government contracts and preferred Saudization classifications.
 
-**Foreign-owned company (full or partial):** Requires a MISA investment license. The foreign-owned portion of profits is subject to CIT. If a local partner holds a share, that portion may be subject to Zakat instead.
+**Foreign-owned company (full or partial):** Requires a MISA investment registration. The foreign-owned portion of profits is subject to CIT. If a local partner holds a share, that portion may be subject to Zakat instead.
 
 **Mixed ownership:** Where a company has both Saudi/GCC and foreign shareholders, different tax treatments apply proportionally. This adds compliance complexity.
 
@@ -94,21 +94,23 @@ MISA is the primary government body responsible for attracting, enabling, and re
 
 Key functions relevant to foreign investors:
 
-- **Issues investment licenses** — A MISA investment license is generally required before a foreign-owned company can be registered commercially in the Kingdom.
-- **Defines permitted activities** — The license specifies which business activities the company is authorized to perform. Activities are classified and subject to approval.
+- **Issues investment registrations** — A MISA investment registration is generally required before a foreign-owned company can be registered commercially in the Kingdom.
+- **Defines permitted activities** — The registration specifies which business activities the company is authorized to perform. Activities are classified and subject to approval.
 - **Manages the negative and positive lists** — Certain sectors are open to full foreign ownership; others require local partnership or are restricted. MISA publishes guidance on which sectors fall into which category.
 - **Provides investor services** — MISA operates service centers and digital platforms to assist investors through the setup and post-establishment phases.
 
-### Investment License
+### Investment Registration
 
-The MISA investment license is activity-specific. A company seeking to operate across multiple sectors may require licenses covering each activity. The license does not substitute for commercial registration — it is a prerequisite to it for foreign investors.
+The MISA investment registration is activity-specific. A company seeking to operate across multiple sectors may require registrations covering each activity. The registration does not substitute for commercial registration — it is a prerequisite to it for foreign investors.
+
+> **Terminology note:** Some older MISA publications and third-party guides refer to this step as an "investment license" or "MISA license." The current investor entry concept is treated as a registration. If you encounter the older terminology in official materials, it refers to the same initial authorization from MISA.
 
 > **[PLACEHOLDER]** The classification of activities, application requirements, and any minimum investment thresholds should be confirmed with MISA directly. Requirements may vary by sector, company type, and the investor's home country. See [misa.gov.sa](https://misa.gov.sa).
 
 ---
 
 > **Verify with official sources:**
-> Investment license types, required documents, permitted sectors, and current procedures are published by MISA at [misa.gov.sa](https://misa.gov.sa) and the Invest Saudi portal at [investsaudi.sa](https://investsaudi.sa).
+> Investment registration types, required documents, permitted sectors, and current procedures are published by MISA at [misa.gov.sa](https://misa.gov.sa) and the Invest Saudi portal at [investsaudi.sa](https://investsaudi.sa).
 
 ---
 
@@ -130,7 +132,7 @@ The CR:
 ### CR and Foreign Investors
 
 For a foreign-owned company, the typical sequence is:
-1. Obtain the MISA investment license
+1. Obtain the MISA investment registration
 2. Draft the company's constitutional documents (Memorandum of Association / Articles of Association)
 3. Register the company and obtain the CR through the Ministry of Commerce
 
@@ -162,7 +164,7 @@ The municipal license:
 
 ### Relationship to Other Licenses
 
-A municipal license is distinct from the MISA investment license and the CR. Typically, a company must hold a valid CR before it can apply for a municipal license. Some sectors may require additional municipal approvals beyond the standard commercial license.
+A municipal license is distinct from the MISA investment registration and the CR. Typically, a company must hold a valid CR before it can apply for a municipal license. Some sectors may require additional municipal approvals beyond the standard commercial license.
 
 > **[PLACEHOLDER]** Requirements, fees, and procedures for municipal licensing vary by city and activity type. Contact the relevant local municipality or check the Baladia portal at [baladia.gov.sa](https://baladia.gov.sa) for location-specific guidance.
 
@@ -263,8 +265,8 @@ Define the business activity, legal structure, ownership arrangement, and capita
 
 ---
 
-### Step 2 — MISA Investment License
-Apply to the Ministry of Investment (MISA) for an investment license. The application will specify the intended activities. MISA reviews and approves the application based on current sector policies.
+### Step 2 — MISA Investment Registration
+Apply to the Ministry of Investment (MISA) for an investment registration. The application will specify the intended activities. MISA reviews and approves the application based on current sector policies.
 
 *Key question at this stage:* Are your intended activities on the permitted list, and do they require any specific additional approvals?
 
@@ -281,7 +283,7 @@ Register the company with the Ministry of Commerce to obtain the Commercial Regi
 ---
 
 ### Step 5 — Corporate Bank Account
-Open a corporate bank account with a licensed Saudi bank. A valid CR and investment license are typically required. Some banks may have additional requirements for foreign-owned entities. Banking relationships can take time — plan accordingly.
+Open a corporate bank account with a licensed Saudi bank. A valid CR and investment registration are typically required. Some banks may have additional requirements for foreign-owned entities. Banking relationships can take time — plan accordingly.
 
 > **[PLACEHOLDER]** Requirements for opening corporate accounts vary by bank and entity type. Contact SAMA-regulated banks directly or consult SAMA's guidance at [sama.gov.sa](https://sama.gov.sa).
 
@@ -323,7 +325,7 @@ After setup, the company must maintain ongoing compliance: renew licenses and re
 
 | Authority | Role | Portal |
 |---|---|---|
-| Ministry of Investment (MISA) | Investment licenses, sector permissions | misa.gov.sa |
+| Ministry of Investment (MISA) | Investment registrations, sector permissions | misa.gov.sa |
 | Ministry of Commerce | Commercial registration, company law | mc.gov.sa |
 | ZATCA | VAT, Zakat, Corporate Income Tax | zatca.gov.sa |
 | Ministry of Human Resources (MHRSD) | Saudization, labor law | hrsd.gov.sa |

@@ -99,15 +99,15 @@ Limited Liability Company (LLC)
     Applicable:   Yes
     Condition:    required_for_foreign_investors
     Local:        not_applicable
-    Foreign investors must obtain a MISA investment license before
-    registering commercially. The license is activity-specific. Local
-    (Saudi/GCC) investors register directly with the Ministry of
-    Commerce without a MISA license.
+    Foreign investors must obtain a MISA investment registration before
+    registering commercially. The registration is activity-specific.
+    Local (Saudi/GCC) investors register directly with the Ministry of
+    Commerce without a MISA registration.
     Verify at:    misa.gov.sa
 
   OFFICIAL SOURCES
     1. Ministry of Investment (MISA)
-       Role:    Investment license issuance and sector eligibility
+       Role:    Investment registration issuance and sector eligibility
        Portal:  misa.gov.sa
     2. Ministry of Commerce
        Role:    Commercial registration and Companies Law
@@ -176,20 +176,20 @@ python scripts/query-structures.py --lang ar --id representative_office
     Applicable:   Yes
     Condition:    required
     Local:        not_applicable
-    تُشترط رخصة من وزارة الاستثمار لمكتب التمثيل. وقد يختلف نوع الرخصة
-    عن تلك الصادرة للكيانات التجارية. تُحدَّد الأنشطة المسموح بها للمكتب
-    بموجب الرخصة.
+    يجب إتمام تسجيل الاستثمار لدى وزارة الاستثمار لمكتب التمثيل. وقد يختلف نوع التسجيل
+    عن ذلك الصادر للكيانات التجارية. تُحدَّد الأنشطة المسموح بها للمكتب
+    بموجب التسجيل.
     Verify at:    misa.gov.sa
 
   OFFICIAL SOURCES
     1. وزارة الاستثمار (ماسة)
-       Role:    رخصة مكتب التمثيل والأنشطة المسموح بها
+       Role:    تسجيل مكتب التمثيل لدى وزارة الاستثمار والأنشطة المسموح بها
        Portal:  misa.gov.sa
 
   PLACEHOLDERS  (3 pending verification)
     1. license_type_distinction
-       فئة الرخصة المحددة الصادرة عن وزارة الاستثمار لمكتب التمثيل
-       وكيفية اختلافها عن رخصة الكيان التجاري. يُستلزم التحقق مع وزارة
+       فئة التسجيل المحددة الصادرة عن وزارة الاستثمار لمكتب التمثيل
+       وكيفية اختلافها عن تسجيل الكيان التجاري. يُستلزم التحقق مع وزارة
        الاستثمار.
        → Verify at: misa.gov.sa
     2. permitted_activities_detail
@@ -198,8 +198,8 @@ python scripts/query-structures.py --lang ar --id representative_office
        أو استئجار مكاتب).
        → Verify at: misa.gov.sa
     3. renewal_and_duration
-       هل لرخصة مكتب التمثيل مدة ثابتة؟ وما اشتراطات تجديدها؟ وما شروط
-       التحوّل منها إلى هيكل تجاري؟
+       هل لتسجيل مكتب التمثيل لدى وزارة الاستثمار مدة ثابتة؟ وما اشتراطات تجديده؟ وما شروط
+       التحوّل منه إلى هيكل تجاري؟
        → Verify at: misa.gov.sa
 
 ────────────────────────────────────────────────────────────────────────

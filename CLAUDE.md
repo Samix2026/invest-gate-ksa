@@ -113,9 +113,11 @@ Query: `python scripts/query-structures.py --list|--id LLC|--tag branch`
 
 ### `investment-licenses` (5 entries)
 
-Licensing concepts in the typical setup sequence: `misa_license`, `commercial_registration`, `municipal_license`, `vat_registration`, `gosi_registration`.
+Registration and licensing concepts in the typical setup sequence: `misa_license`, `commercial_registration`, `municipal_license`, `vat_registration`, `gosi_registration`.
 
-Key fields: `issuing_authority` (object with `id`, `name`, `portal`), `applies_to`, `depends_on` (conceptual only — IDs of prior licenses), `common_confusions`.
+Note: The `misa_license` entry is now titled "MISA Investment Registration" — older terms ("investment license", "MISA license") are treated as legacy terminology. All other entries retain "license" where the concept genuinely is a license (municipal, municipality operating).
+
+Key fields: `issuing_authority` (object with `id`, `name`, `portal`), `applies_to`, `depends_on` (conceptual only — IDs of prior entries), `common_confusions`.
 
 Query: `python scripts/query-dataset.py --dataset investment-licenses --lang en --list`
 

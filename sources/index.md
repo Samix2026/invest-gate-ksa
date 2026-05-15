@@ -10,7 +10,7 @@ This file tracks all official and authoritative sources used across the Invest G
 
 | Organization | Role | Website |
 |---|---|---|
-| Ministry of Investment (MISA) | Foreign investment licenses, sector rules | misa.gov.sa |
+| Ministry of Investment (MISA) | Foreign investment registrations, sector rules | misa.gov.sa |
 | Ministry of Commerce | Commercial registration (CR), company law | mc.gov.sa |
 | Zakat, Tax & Customs Authority (ZATCA) | VAT, Zakat, customs | zatca.gov.sa |
 | Saudi Central Bank (SAMA) | Banking regulation, fintech | sama.gov.sa |

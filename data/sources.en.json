@@ -14,7 +14,7 @@
       "jurisdiction": "Saudi Arabia (national)",
       "official_website": "misa.gov.sa",
       "documentation_sections": [
-        "Investment license application and issuance",
+        "Investment registration application and issuance",
         "Approved activities list and sector eligibility",
         "Foreign ownership rules by sector",
         "Investor services and aftercare",
@@ -26,7 +26,7 @@
       "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
       "verification_method": "[PLACEHOLDER — verification method not yet documented]",
       "tags": ["misa", "foreign_investment", "licensing", "sector_rules", "ownership", "ministry"],
-      "notes": "Primary body for foreign investor licensing in Saudi Arabia. Issues activity-specific investment licenses. For most foreign investors, this license conceptually precedes commercial registration.",
+      "notes": "Primary body for foreign investor registration in Saudi Arabia. Issues activity-specific investment registrations. For most foreign investors, this registration conceptually precedes commercial registration.",
       "verification_status": "draft",
       "placeholders": [
         {

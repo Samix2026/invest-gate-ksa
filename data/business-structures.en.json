@@ -44,13 +44,13 @@
         "applicable": true,
         "condition": "required_for_foreign_investors",
         "condition_for_local_investors": "not_applicable",
-        "notes": "Foreign investors must obtain a MISA investment license before registering commercially. The license is activity-specific. Local (Saudi/GCC) investors register directly with the Ministry of Commerce without a MISA license.",
+        "notes": "Foreign investors must obtain a MISA investment registration before registering commercially. The registration is activity-specific. Local (Saudi/GCC) investors register directly with the Ministry of Commerce without a MISA registration.",
         "verify_at": "misa.gov.sa"
       },
       "registration_body": {
         "primary": "Ministry of Commerce",
         "portal": "mc.gov.sa",
-        "notes": "Commercial Registration (CR) is issued by the Ministry of Commerce after MISA license approval for foreign investors."
+        "notes": "Commercial Registration (CR) is issued by the Ministry of Commerce after MISA registration approval for foreign investors."
       },
       "tags": [
         "foreign_investment",
@@ -63,7 +63,7 @@
       "official_sources": [
         {
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license issuance and sector eligibility",
+          "role": "Investment registration issuance and sector eligibility",
           "portal": "misa.gov.sa"
         },
         {
@@ -101,7 +101,7 @@
         "allows_full_foreign_ownership": "sector_dependent",
         "allows_local_ownership": true,
         "allows_mixed_ownership": true,
-        "notes": "Foreign ownership is possible but subject to MISA licensing and sector-specific rules. Some regulated sectors may impose foreign ownership caps regardless of structure."
+        "notes": "Foreign ownership is possible but subject to MISA registration and sector-specific rules. Some regulated sectors may impose foreign ownership caps regardless of structure."
       },
       "legal_entity_status": {
         "is_separate_legal_entity": true,
@@ -120,7 +120,7 @@
         "applicable": true,
         "condition": "required_for_foreign_investors",
         "condition_for_local_investors": "not_applicable",
-        "notes": "Foreign investors must obtain a MISA investment license. For listed JSCs, additional requirements from the Capital Market Authority (CMA) apply.",
+        "notes": "Foreign investors must obtain a MISA investment registration. For listed JSCs, additional requirements from the Capital Market Authority (CMA) apply.",
         "verify_at": "misa.gov.sa"
       },
       "registration_body": {
@@ -140,7 +140,7 @@
       "official_sources": [
         {
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license for foreign shareholders",
+          "role": "Investment registration for foreign shareholders",
           "portal": "misa.gov.sa"
         },
         {
@@ -201,7 +201,7 @@
         "applicable": true,
         "condition": "required",
         "condition_for_local_investors": "not_applicable",
-        "notes": "A MISA investment license is required before a foreign company branch can be registered with the Ministry of Commerce.",
+        "notes": "A MISA investment registration is required before a foreign company branch can be registered with the Ministry of Commerce.",
         "verify_at": "misa.gov.sa"
       },
       "registration_body": {
@@ -219,7 +219,7 @@
       "official_sources": [
         {
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license for foreign company branch",
+          "role": "Investment registration for foreign company branch",
           "portal": "misa.gov.sa"
         },
         {
@@ -270,7 +270,7 @@
         "applicable": true,
         "condition": "required",
         "condition_for_local_investors": "not_applicable",
-        "notes": "A MISA license is required for a representative office. The license type may differ from that issued for commercial entities. The office's permitted activities are defined by the license.",
+        "notes": "A MISA registration is required for a representative office. The registration type may differ from that issued for commercial entities. The office's permitted activities are defined by the registration.",
         "verify_at": "misa.gov.sa"
       },
       "registration_body": {
@@ -289,7 +289,7 @@
       "official_sources": [
         {
           "name": "Ministry of Investment (MISA)",
-          "role": "Representative office license and permitted activities",
+          "role": "Representative office registration and permitted activities",
           "portal": "misa.gov.sa"
         }
       ],
@@ -297,7 +297,7 @@
       "placeholders": [
         {
           "field": "license_type_distinction",
-          "description": "The specific MISA license category applicable to a representative office and how it differs from a commercial entity license. Verify with MISA.",
+          "description": "The specific MISA registration category applicable to a representative office and how it differs from a commercial entity registration. Verify with MISA.",
           "verify_at": "misa.gov.sa"
         },
         {

@@ -12,7 +12,7 @@ Reusable document templates and checklists for investors and contributors.
 |------|-------------|--------|
 | `checklist-llc-setup.md` | Step-by-step checklist for LLC registration | Planned |
 | `checklist-branch-setup.md` | Checklist for establishing a branch office | Planned |
-| `document-list-misa.md` | Typical document requirements for MISA license | Planned |
+| `document-list-misa.md` | Typical document requirements for MISA investment registration | Planned |
 | `document-list-cr.md` | Commercial registration document checklist | Planned |
 | `investor-journey-map.md` | End-to-end overview of the investment setup process | Planned |
 

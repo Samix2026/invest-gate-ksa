@@ -8,14 +8,14 @@
   "data": [
     {
       "id": "misa_license",
-      "name": "MISA Investment License",
-      "name_alt": "رخصة الاستثمار (ماسة)",
+      "name": "MISA Investment Registration",
+      "name_alt": "تسجيل الاستثمار (ماسة)",
       "abbreviation": null,
-      "short_description": "The primary authorization issued by the Ministry of Investment (MISA) to foreign investors wishing to establish a business presence in Saudi Arabia. The license is activity-specific and conceptually precedes commercial registration for foreign investors.",
+      "short_description": "The primary authorization issued by the Ministry of Investment (MISA) to foreign investors wishing to establish a business presence in Saudi Arabia. The registration is activity-specific and conceptually precedes commercial registration for foreign investors.",
       "issuing_authority": {
         "name": "Ministry of Investment (MISA)",
         "portal": "misa.gov.sa",
-        "role": "Issues investment licenses to foreign investors; determines eligible activities and permitted ownership structures"
+        "role": "Issues investment registrations to foreign investors; determines eligible activities and permitted ownership structures"
       },
       "applies_to": [
         "Foreign investors establishing a commercial entity in Saudi Arabia",
@@ -24,38 +24,39 @@
       ],
       "depends_on": [],
       "common_confusions": [
-        "A MISA investment license is not the same as commercial registration. The license alone does not authorize commercial trading — commercial registration is a separate, subsequent step.",
-        "Local investors (Saudi nationals and GCC citizens) generally register directly with the Ministry of Commerce and do not require a MISA investment license for most activities.",
-        "The license is activity-specific. A change in business activity after issuance may require updating or replacing the license — verify current requirements with MISA."
+        "A MISA investment registration is not the same as commercial registration. The registration alone does not authorize commercial trading — commercial registration is a separate, subsequent step.",
+        "Local investors (Saudi nationals and GCC citizens) generally register directly with the Ministry of Commerce and do not require a MISA investment registration for most activities.",
+        "The registration is activity-specific. A change in business activity after issuance may require updating or replacing the registration — verify current requirements with MISA.",
+        "Some older MISA publications and third-party guides use the term 'investment license' or 'MISA license' for this step. The current investor entry concept is treated as a registration. If you encounter the older terminology in official materials, it refers to the same initial authorization from MISA."
       ],
       "official_sources": [
         {
           "name": "Ministry of Investment (MISA)",
           "portal": "misa.gov.sa",
-          "role": "Investment license issuance, sector eligibility, and ownership rules"
+          "role": "Investment registration issuance, sector eligibility, and ownership rules"
         }
       ],
       "verification_status": "draft",
       "placeholders": [
         {
-          "field": "license_categories",
-          "description": "The specific license types or tiers available through MISA (e.g., distinctions between commercial, industrial, and service licenses). Subject to policy updates.",
+          "field": "registration_categories",
+          "description": "The specific registration categories or tiers available through MISA (e.g., distinctions between commercial, industrial, and service registrations). Subject to policy updates.",
           "verify_at": "misa.gov.sa"
         },
         {
           "field": "gcc_investor_treatment",
-          "description": "Whether GCC nationals are fully exempt from the MISA license requirement or subject to a modified process. Current treatment should be verified directly with MISA.",
+          "description": "Whether GCC nationals are fully exempt from the MISA registration requirement or subject to a modified process. Current treatment should be verified directly with MISA.",
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["foreign_investment", "misa", "licensing", "authorization", "entry_requirement", "first_step"]
+      "tags": ["foreign_investment", "misa", "registration", "authorization", "entry_requirement", "first_step"]
     },
     {
       "id": "commercial_registration",
       "name": "Commercial Registration",
       "name_alt": "السجل التجاري",
       "abbreviation": "CR",
-      "short_description": "The official business registration issued by the Ministry of Commerce that establishes a legal commercial entity in Saudi Arabia. Required for any entity conducting commercial activities. For foreign investors, it conceptually follows the MISA investment license.",
+      "short_description": "The official business registration issued by the Ministry of Commerce that establishes a legal commercial entity in Saudi Arabia. Required for any entity conducting commercial activities. For foreign investors, it conceptually follows the MISA investment registration.",
       "issuing_authority": {
         "name": "Ministry of Commerce",
         "portal": "mc.gov.sa",
@@ -63,12 +64,12 @@
       },
       "applies_to": [
         "All entities conducting commercial activities in Saudi Arabia",
-        "Foreign investors (following MISA investment license)",
+        "Foreign investors (following MISA investment registration)",
         "Saudi and GCC investors establishing commercial operations"
       ],
       "depends_on": ["misa_license"],
       "common_confusions": [
-        "Commercial registration is distinct from a MISA investment license. Both are required for foreign investors — they serve different regulatory purposes.",
+        "Commercial registration is distinct from the MISA investment registration. Both are required for foreign investors — they serve different regulatory purposes.",
         "A commercial registration number (CR number) does not by itself authorize operations from a physical location. A municipality operating license is also typically required.",
         "Representative offices may follow a distinct registration pathway. The applicable process should be verified with both MISA and the Ministry of Commerce."
       ],

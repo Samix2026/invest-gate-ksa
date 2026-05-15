@@ -25,7 +25,7 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 **English Docs (`docs/en/`)**
 - [ ] Overview of the Saudi investment landscape
 - [ ] Guide: Business structures for foreign investors
-- [ ] Guide: MISA license — types and process
+- [ ] Guide: MISA investment registration — types and process
 - [ ] Guide: Commercial registration (CR)
 - [ ] Guide: Special Economic Zones
 - [ ] Guide: Saudization (Nitaqat) requirements

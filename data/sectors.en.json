@@ -22,7 +22,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license and approved activities list for technology sector activities"
+          "role": "Investment registration and approved activities list for technology sector activities"
         },
         {
           "id": "ministry_of_commerce",
@@ -42,7 +42,7 @@
       ],
       "regulatory_sensitivity": "regulated",
       "common_confusions": [
-        "The technology sector covers a broad range of activities; the specific activity classification on the MISA license determines what is permitted.",
+        "The technology sector covers a broad range of activities; the specific activity classification on the MISA registration determines what is permitted.",
         "Fintech is a separate, more heavily regulated sector — technology companies providing financial services face additional requirements.",
         "Telecommunications and communications infrastructure may involve requirements from the CST beyond standard technology licensing."
       ],
@@ -89,7 +89,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license and approved activities list for consulting and professional services"
+          "role": "Investment registration and approved activities list for consulting and professional services"
         },
         {
           "id": "ministry_of_commerce",
@@ -104,7 +104,7 @@
       "regulatory_sensitivity": "standard",
       "common_confusions": [
         "Legal, accounting, engineering, and medical consulting are typically governed by their respective professional bodies and may have different licensing requirements from general management consulting.",
-        "The activities covered depend on the specific classification on the MISA license — the approved activity list determines scope.",
+        "The activities covered depend on the specific classification on the MISA registration — the approved activity list determines scope.",
         "Consulting for clients in regulated industries (healthcare, finance, education) may require consideration of those sectors' rules, even if the consulting firm itself is in the standard category."
       ],
       "official_sources": [
@@ -150,7 +150,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license and sector eligibility for e-commerce activities"
+          "role": "Investment registration and sector eligibility for e-commerce activities"
         },
         {
           "id": "ministry_of_commerce",
@@ -228,7 +228,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license for food and beverage business activities"
+          "role": "Investment registration for food and beverage business activities"
         },
         {
           "id": "ministry_of_commerce",
@@ -283,7 +283,7 @@
         },
         {
           "field": "regulatory_sensitivity",
-          "description": "Classified as 'highly_regulated' reflecting multiple licensing layers: MISA license, commercial registration, municipal food establishment license, and food safety requirements. Full scope requires verification.",
+          "description": "Classified as 'highly_regulated' reflecting multiple authorization layers: MISA registration, commercial registration, municipal food establishment license, and food safety requirements. Full scope requires verification.",
           "verify_at": "misa.gov.sa"
         }
       ],
@@ -305,7 +305,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license for real estate activities; sector eligibility determination for foreign investors"
+          "role": "Investment registration for real estate activities; sector eligibility determination for foreign investors"
         },
         {
           "id": "ministry_of_commerce",
@@ -371,7 +371,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license for education sector activities"
+          "role": "Investment registration for education sector activities"
         },
         {
           "id": "ministry_of_commerce",
@@ -438,7 +438,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license for healthcare business activities"
+          "role": "Investment registration for healthcare business activities"
         },
         {
           "id": "ministry_of_commerce",
@@ -514,7 +514,7 @@
         {
           "id": "misa",
           "name": "Ministry of Investment (MISA)",
-          "role": "Investment license for fintech business activities"
+          "role": "Investment registration for fintech business activities"
         },
         {
           "id": "ministry_of_commerce",
