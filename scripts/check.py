@@ -70,6 +70,8 @@ REQUIRED_FILES = [
     "schemas/source-gaps.schema.json",
     "scripts/report-source-gaps.py",
     "schemas/economic-activities.schema.json",
+    "docs/en/authority-relationships.md",
+    "docs/ar/authority-relationships.md",
 ]
 
 # Markdown link targets to skip (not local paths)

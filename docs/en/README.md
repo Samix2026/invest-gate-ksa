@@ -16,6 +16,9 @@ Documentation will be organized into the following topics:
 - Key regulatory bodies (MISA, SAMA, CMA, ZATCA, etc.)
 - Official entry points for foreign investors
 
+### Regulatory Architecture
+- [Authority Relationship Architecture](authority-relationships.md) — primary vs. supporting authorities, authority types by function, why multiple authorities are involved, and conceptual relationship examples
+
 ### Statistical and Economic Context
 - [Future Indicators](future-indicators.md) — planned economic and statistical indicator categories: FDI flows, sector growth, labor market, logistics, digital economy, and ease of doing business alternatives
 - [Economic Activity Taxonomy](activity-taxonomy.md) — ISIC4, Saudi activity classification, sectors vs. activities, and the architectural foundation for future activity datasets
