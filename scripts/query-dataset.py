@@ -76,8 +76,8 @@ DATASETS: Dict[str, Dict[str, str]] = {
 
 # ── Layout constants ──────────────────────────────────────────────────────────
 
-WIDTH    = 72
-COL_ID   = 28
+WIDTH    = 80
+COL_ID   = 34
 COL_NAME = 30
 
 # Fields rendered explicitly in the header/footer — skipped in the generic loop
@@ -248,6 +248,24 @@ def _ybool(value) -> str:
     return str(value)
 
 
+def _entry_name(entry: dict) -> str:
+    """Return a display name for a list row.
+
+    Falls back gracefully for entries without a top-level 'name' field
+    (e.g. authority-relationships) by constructing 'from_id → to_id'.
+    """
+    if entry.get("name"):
+        return entry["name"]
+    from_auth = entry.get("from_authority")
+    if from_auth:
+        from_id = from_auth.get("id", "")
+        to_auth  = entry.get("to_authority")
+        to_id    = to_auth.get("id", "") if to_auth else "—"
+        return f"{from_id} → {to_id}"
+    desc = entry.get("conceptual_description", "")
+    return desc
+
+
 def fmt_list_table(entries: List[dict], title: str) -> str:
     """Render a compact table for --list and --tag."""
     lines = [
@@ -258,7 +276,7 @@ def fmt_list_table(entries: List[dict], title: str) -> str:
         _hr(),
     ]
     for e in entries:
-        name = _trunc(e.get("name", ""), COL_NAME - 1)
+        name = _trunc(_entry_name(e), COL_NAME - 1)
         lines.append(
             f"  {e['id']:<{COL_ID}}{name:<{COL_NAME}}"
             f"{e.get('verification_status', '')}"
