@@ -16,6 +16,9 @@ Documentation will be organized into the following topics:
 - Key regulatory bodies (MISA, SAMA, CMA, ZATCA, etc.)
 - Official entry points for foreign investors
 
+### Statistical and Economic Context
+- [Future Indicators](future-indicators.md) — planned economic and statistical indicator categories: FDI flows, sector growth, labor market, logistics, digital economy, and ease of doing business alternatives
+
 ### Business Structures
 - Limited Liability Company (LLC)
 - Joint Stock Company (JSC)

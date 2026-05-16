@@ -167,6 +167,29 @@
         }
       ],
       "tags": ["modon", "industrial_cities", "manufacturing", "industrial_services", "industrial_zones", "source_gap"]
+    },
+    {
+      "id": "gastat",
+      "name": "General Authority for Statistics (GASTAT)",
+      "name_alt": "الهيئة العامة للإحصاء (جاستات)",
+      "mentioned_in_datasets": ["future_datasets"],
+      "reason_needed": "GASTAT is the primary official statistical authority for Saudi Arabia, publishing national accounts (GDP by sector), labor force surveys, FDI statistics, and ICT indicators. It is not yet referenced in any current dataset but is the expected authoritative source for future economic and statistical indicator datasets — including FDI flows, sector growth, labor market indicators, and digital economy indicators. Verifying GASTAT's data catalog and publication methodology is required before any such dataset can be added to this repository.",
+      "likely_official_domain": "stats.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to stats.gov.sa. Confirm the domain resolves to the General Authority for Statistics portal. Review the data catalog for national accounts, labor force surveys, FDI statistics, and ICT publications. Note the publication schedule, reference periods, and methodology documentation available for each series. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain stats.gov.sa is recorded as the likely official portal for the General Authority for Statistics (GASTAT) but has not been independently confirmed.",
+          "verify_at": "stats.gov.sa"
+        },
+        {
+          "field": "mentioned_in_datasets",
+          "description": "GASTAT is not yet referenced in any current dataset. It is pre-registered here because it is the expected authoritative source for future economic and statistical indicator datasets (FDI flows, sector growth, labor market indicators, digital economy indicators). Update this field when a dataset referencing GASTAT is added.",
+          "verify_at": "stats.gov.sa"
+        }
+      ],
+      "tags": ["gastat", "statistics", "national_accounts", "labor_force", "fdi", "economic_indicators", "source_gap"]
     }
   ]
 }
