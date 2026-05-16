@@ -7,8 +7,6 @@
 ![Languages: Arabic | English](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
 
-**Project status:** Early foundation / Draft datasets / Validation enabled / CI pending
-
 **A bilingual, open-source knowledge base that helps foreign investors understand how to set up and operate a business in Saudi Arabia.**
 
 ---
@@ -74,16 +72,17 @@ invest-gate-ksa/
 
 ---
 
-## Roadmap
+## Project Status
 
-| Phase | Focus | Status |
-|---|---|---|
-| **1 — Foundation** | Repository structure, contribution standards, source index | Complete |
-| **2 — Core Content** | Bilingual guides on structures, licensing, zones, and operations | In progress |
-| **3 — AI Integration** | System prompts, RAG templates, MCP server scaffold | Planned |
-| **4 — Community** | Review cadence, translation workflow, automated link checks | Planned |
+```
+Phase 1 — Foundation        ██████████  Completed    v0.1 published
+Phase 2 — Knowledge Base    ███░░░░░░░  In Progress  datasets + flows
+Phase 3 — AI Workflows      ░░░░░░░░░░  Planned
+Phase 4 — MCP Integration   ░░░░░░░░░░  Planned
+Phase 5 — Product Layer     ░░░░░░░░░░  Planned
+```
 
-See [roadmap.md](roadmap.md) for the detailed task breakdown.
+See [roadmap.md](roadmap.md) for the full plan and task breakdown.
 
 ---
 
