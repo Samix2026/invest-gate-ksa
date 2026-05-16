@@ -69,6 +69,7 @@ REQUIRED_FILES = [
     "data/source-gaps.ar.json",
     "schemas/source-gaps.schema.json",
     "scripts/report-source-gaps.py",
+    "schemas/economic-activities.schema.json",
 ]
 
 # Markdown link targets to skip (not local paths)

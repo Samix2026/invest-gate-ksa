@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "invest-gate-ksa/schemas/economic-activities.schema.json",
+  "title": "Economic Activities Dataset — Invest Gate KSA",
+  "description": "Blueprint schema for future economic-activities.en.json and economic-activities.ar.json datasets. No activity data has been added yet — this schema defines the architectural foundation. Field definitions are provisional and will be refined when the dataset is first populated. See docs/en/activity-taxonomy.md for the conceptual rationale.",
+  "type": "object",
+  "required": ["meta", "data"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "meta": {
+      "type": "object",
+      "required": ["title", "description", "language", "last_verified"],
+      "additionalProperties": false,
+      "properties": {
+        "title":         { "type": "string", "minLength": 1 },
+        "description":   { "type": "string", "minLength": 1 },
+        "language":      { "type": "string", "enum": ["en", "ar"] },
+        "last_verified": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "data": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/activity_entry" }
+    }
+
+  },
+
+  "definitions": {
+
+    "activity_entry": {
+      "type": "object",
+      "description": "A single economic activity entry. IDs are stable, language-agnostic, and identical across language files.",
+      "required": [
+        "id",
+        "name",
+        "name_alt",
+        "short_description",
+        "classification",
+        "verification_status",
+        "placeholders",
+        "tags"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Stable machine-readable identifier. Identical across language files. Must not change once published."
+        },
+
+        "name":              { "type": "string", "minLength": 1 },
+        "name_alt":          { "type": "string", "minLength": 1 },
+        "short_description": { "type": "string", "minLength": 1 },
+
+        "classification": {
+          "type": "object",
+          "description": "Classification codes and references for this activity. Both ISIC4 and Saudi national classification are tracked separately because the mapping is not always one-to-one.",
+          "required": ["isic4"],
+          "additionalProperties": false,
+          "properties": {
+
+            "isic4": {
+              "type": "object",
+              "description": "ISIC Revision 4 classification reference. All sub-fields are nullable — they should be populated during verification but may be null in draft entries pending research.",
+              "additionalProperties": false,
+              "properties": {
+                "section": {
+                  "type": ["string", "null"],
+                  "description": "Single-letter ISIC4 section code (A–U)."
+                },
+                "division": {
+                  "type": ["string", "null"],
+                  "description": "Two-digit ISIC4 division code."
+                },
+                "group": {
+                  "type": ["string", "null"],
+                  "description": "Three-digit ISIC4 group code."
+                },
+                "class": {
+                  "type": ["string", "null"],
+                  "description": "Four-digit ISIC4 class code — the most granular level."
+                },
+                "label": {
+                  "type": ["string", "null"],
+                  "description": "Official ISIC4 label for the matched class, group, or division."
+                },
+                "alignment_note": {
+                  "type": ["string", "null"],
+                  "description": "Notes on alignment quality — e.g. partial match, span across multiple classes, or where the Saudi activity has no direct ISIC4 equivalent."
+                }
+              }
+            },
+
+            "saudi": {
+              "type": "object",
+              "description": "Saudi national activity classification reference. Codes and names must come from official Saudi sources — do not infer or approximate. All sub-fields are nullable pending verification.",
+              "additionalProperties": false,
+              "properties": {
+                "activity_code": {
+                  "type": ["string", "null"],
+                  "description": "Official Saudi activity code as assigned in the national classification or MISA approved activities list. Must be verified against the live official source before populating."
+                },
+                "activity_name_en": {
+                  "type": ["string", "null"],
+                  "description": "Official English activity name exactly as it appears in the MISA approved activities list or equivalent official publication. Must not be paraphrased."
+                },
+                "activity_name_ar": {
+                  "type": ["string", "null"],
+                  "description": "Official Arabic activity name exactly as it appears in the MISA approved activities list or equivalent official publication. Must not be paraphrased."
+                },
+                "on_misa_approved_list": {
+                  "type": ["boolean", "null"],
+                  "description": "Whether this activity appears on the MISA approved activities list for foreign investors. Null if not yet verified."
+                },
+                "alignment_note": {
+                  "type": ["string", "null"],
+                  "description": "Notes on the Saudi classification — e.g. where the Saudi code diverges from ISIC4, splits an ISIC4 class into sub-activities, or covers a narrower scope than the ISIC4 class."
+                }
+              }
+            }
+
+          }
+        },
+
+        "related_sectors": {
+          "type": "array",
+          "description": "IDs of sector entries (from data/sectors.*.json) that this activity falls within. An activity may map to more than one sector.",
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "likely_authorities": {
+          "type": "array",
+          "description": "Regulatory authorities likely relevant to this specific activity beyond the universal MISA and Ministry of Commerce step. Only activity-specific authorities should be listed here.",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "role"],
+            "additionalProperties": false,
+            "properties": {
+              "id":   { "type": "string", "minLength": 1 },
+              "name": { "type": "string", "minLength": 1 },
+              "role": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "related_license_concepts": {
+          "type": "array",
+          "description": "IDs of investment-license concepts (from data/investment-licenses.*.json) applicable to this activity.",
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "common_confusions": {
+          "type": "array",
+          "description": "Known points of confusion about this activity's scope, classification, or regulatory path.",
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "notes": {
+          "type": "string",
+          "description": "Freeform notes — edge cases, cross-references, or caveats not captured in other fields. Descriptive only."
+        },
+
+        "verification_status": {
+          "type": "string",
+          "enum": ["draft", "verified"],
+          "description": "'draft' = not yet verified against live official sources. 'verified' = contributor has reviewed the live source and all placeholders are resolved."
+        },
+
+        "last_verified": {
+          "type": ["string", "null"],
+          "description": "ISO 8601 date (YYYY-MM-DD) of the most recent verification against a live official source, or a placeholder string when status is draft."
+        },
+
+        "verification_method": {
+          "type": ["string", "null"],
+          "description": "What was reviewed and how during the most recent verification — e.g. 'Reviewed MISA approved activities list, confirmed activity code and name, checked ISIC4 alignment against UNSD publication.'"
+        },
+
+        "placeholders": {
+          "type": "array",
+          "description": "Unresolved fields pending verification. Must be non-empty when verification_status is 'draft'. Each placeholder must name the specific field, explain what needs to be verified, and point to the official source.",
+          "items": {
+            "type": "object",
+            "required": ["field", "description", "verify_at"],
+            "additionalProperties": false,
+            "properties": {
+              "field":       { "type": "string", "minLength": 1 },
+              "description": { "type": "string", "minLength": 1 },
+              "verify_at":   { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" }
+        }
+
+      },
+
+      "if": {
+        "properties": { "verification_status": { "const": "draft" } },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": { "placeholders": { "minItems": 1 } }
+      }
+
+    }
+
+  }
+}
