@@ -164,6 +164,26 @@ python scripts/query-dataset.py --dataset authority-relationships --to-authority
 python scripts/query-dataset.py --dataset authority-relationships --sector fintech
 ```
 
+### `setup-flows` (4 entries)
+
+Conceptual setup flows for common foreign investment scenarios in Saudi Arabia. All flows are architectural and informational only — not procedural instructions, approval timelines, or legal requirements.
+
+Flows: `foreign_consulting_company_setup`, `ecommerce_company_setup`, `manufacturing_company_setup`, `fintech_market_entry`.
+
+Key fields: `target_investor_type` (string), `related_sectors` (array of sector IDs), `steps` (array of step objects), `decision_points` (array of branching decisions), `related_authorities` (array of `{id, name, role}`), `source_dependencies` (array of `{dataset, entry_id, description}`).
+
+Step fields: `step_number`, `label`, `description`, `authority` (object or null), `depends_on_step` (integer or null), `notes` (string or null).
+
+Note: All entries are `"draft"`. Steps reference authority IDs from `sources` and `source-gaps` datasets; `source_dependencies` cross-reference entries in `investment-licenses`, `authority-relationships`, and `sectors`.
+
+Query examples:
+```bash
+python scripts/query-dataset.py --dataset setup-flows --list
+python scripts/query-dataset.py --dataset setup-flows --id fintech_market_entry
+python scripts/query-dataset.py --dataset setup-flows --related-sector manufacturing
+python scripts/query-dataset.py --dataset setup-flows --tag setup_flow
+```
+
 ---
 
 ## Scripts
@@ -204,6 +224,9 @@ python scripts/query-dataset.py --dataset authority-relationships --list
 python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
 python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
 python scripts/query-dataset.py --dataset authority-relationships --sector fintech
+python scripts/query-dataset.py --dataset setup-flows --list
+python scripts/query-dataset.py --dataset setup-flows --id fintech_market_entry
+python scripts/query-dataset.py --dataset setup-flows --related-sector manufacturing
 ```
 
 ---

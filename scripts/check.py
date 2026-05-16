@@ -75,6 +75,9 @@ REQUIRED_FILES = [
     "data/authority-relationships.en.json",
     "data/authority-relationships.ar.json",
     "schemas/authority-relationships.schema.json",
+    "data/setup-flows.en.json",
+    "data/setup-flows.ar.json",
+    "schemas/setup-flows.schema.json",
 ]
 
 # Markdown link targets to skip (not local paths)

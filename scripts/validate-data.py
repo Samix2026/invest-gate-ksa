@@ -86,6 +86,14 @@ DATASETS = [
         "check_aliases": False,
         "check_sources": False,  # relationship entries reference authorities conceptually, not via official_sources
     },
+    {
+        "name":          "setup-flows",
+        "schema_path":   os.path.join(ROOT, "schemas", "setup-flows.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "setup-flows.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "setup-flows.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # setup flows reference authorities conceptually, not via official_sources
+    },
 ]
 
 

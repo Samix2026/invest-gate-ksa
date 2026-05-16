@@ -72,6 +72,10 @@ DATASETS: Dict[str, Dict[str, str]] = {
         "en": os.path.join(ROOT, "data", "authority-relationships.en.json"),
         "ar": os.path.join(ROOT, "data", "authority-relationships.ar.json"),
     },
+    "setup-flows": {
+        "en": os.path.join(ROOT, "data", "setup-flows.en.json"),
+        "ar": os.path.join(ROOT, "data", "setup-flows.ar.json"),
+    },
 }
 
 # ── Layout constants ──────────────────────────────────────────────────────────
@@ -220,6 +224,14 @@ def get_by_sector(data: dict, sector_id: str) -> List[dict]:
     return [
         e for e in data.get("data", [])
         if sector_id in e.get("applies_to_sectors", [])
+    ]
+
+
+def get_by_related_sector(data: dict, sector_id: str) -> List[dict]:
+    """Return all entries that list the given sector_id in related_sectors."""
+    return [
+        e for e in data.get("data", [])
+        if sector_id in e.get("related_sectors", [])
     ]
 
 
@@ -455,6 +467,10 @@ def _build_parser() -> argparse.ArgumentParser:
         "--sector", metavar="SECTOR",
         help="Filter authority-relationships entries by applies_to_sectors membership (e.g. fintech, manufacturing)",
     )
+    action.add_argument(
+        "--related-sector", metavar="SECTOR",
+        help="Filter setup-flows entries by related_sectors membership (e.g. fintech, manufacturing, ecommerce)",
+    )
     return parser
 
 
@@ -562,6 +578,17 @@ def main() -> None:
             sys.exit(1)
         title = (
             f"Sector: {args.sector}  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
+        print(fmt_list_table(matches, title))
+
+    elif args.related_sector:
+        matches = get_by_related_sector(data, args.related_sector)
+        if not matches:
+            print(f"No entries found with sector '{args.related_sector}' in related_sectors.")
+            sys.exit(1)
+        title = (
+            f"Related sector: {args.related_sector}  —  {len(matches)} match(es)"
             f"  ({args.dataset}, {args.lang})"
         )
         print(fmt_list_table(matches, title))

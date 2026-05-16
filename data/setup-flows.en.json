@@ -1,0 +1,607 @@
+{
+  "meta": {
+    "title": "Setup Flows — Foreign Investment in Saudi Arabia",
+    "description": "Conceptual setup flows for common foreign investment scenarios in Saudi Arabia. All flows describe the typical sequence of authorizations and registrations at a conceptual level only — not procedural instructions, legal requirements, or approval guarantees. Steps reference concepts from other datasets in this repository.",
+    "language": "en",
+    "last_verified": "placeholder — all flows are draft; verify every step against current official sources before relying on this sequence"
+  },
+  "data": [
+    {
+      "id": "foreign_consulting_company_setup",
+      "name": "Foreign Consulting Company Setup",
+      "name_alt": "Consulting firm registration flow",
+      "short_description": "Conceptual setup sequence for a foreign investor establishing a consulting or professional services company in Saudi Arabia as a limited liability company (LLC).",
+      "target_investor_type": "Foreign investor establishing a consulting or professional services business in Saudi Arabia",
+      "related_sectors": ["consulting"],
+      "steps": [
+        {
+          "step_number": 1,
+          "label": "Activity eligibility verification",
+          "description": "Verify that the intended consulting activity is available to foreign investors. MISA maintains an activity classification list; the eligibility status of specific consulting sub-activities and any foreign ownership restrictions must be confirmed at the MISA portal before proceeding.",
+          "authority": { "id": "misa", "name": "Ministry of Investment (MISA)" },
+          "depends_on_step": null,
+          "notes": "Activity eligibility may differ by consulting sub-sector. Confirm the specific MISA activity code applicable to the intended service type."
+        },
+        {
+          "step_number": 2,
+          "label": "Business structure selection",
+          "description": "Determine the appropriate legal structure: LLC (a locally incorporated Saudi entity with limited liability) or branch office of an existing foreign company (an extension of the parent with no separate legal personality). This flow assumes LLC structure.",
+          "authority": null,
+          "depends_on_step": 1,
+          "notes": "Structure choice affects liability, ownership, minimum capital, and ongoing compliance. Verify current requirements for each structure at MISA and the Ministry of Commerce before finalising."
+        },
+        {
+          "step_number": 3,
+          "label": "MISA investment registration",
+          "description": "Submit an investment registration application to MISA for the authorized consulting activity. A successful application produces an investment registration certificate that authorizes the investor to establish a Saudi legal entity for the specified activities.",
+          "authority": { "id": "misa", "name": "Ministry of Investment (MISA)" },
+          "depends_on_step": 2,
+          "notes": null
+        },
+        {
+          "step_number": 4,
+          "label": "Commercial registration",
+          "description": "Register the legal entity (LLC) with the Ministry of Commerce to obtain a commercial registration certificate (CR). The CR creates the legal person in the Saudi commercial register and is conceptually distinct from the MISA investment registration.",
+          "authority": { "id": "ministry_of_commerce", "name": "Ministry of Commerce" },
+          "depends_on_step": 3,
+          "notes": null
+        },
+        {
+          "step_number": 5,
+          "label": "Municipal operating license",
+          "description": "Obtain a Balady operating license for the physical premises from which the business will operate. This step applies to businesses with a physical office in Saudi Arabia and authorizes operation at a specific location.",
+          "authority": { "id": "balady", "name": "Balady (Municipal Services Portal)" },
+          "depends_on_step": 4,
+          "notes": "Applies where a physical premises is maintained. Businesses operating without a fixed physical office should verify whether this step applies to their situation."
+        },
+        {
+          "step_number": 6,
+          "label": "Social insurance registration",
+          "description": "Register as an employer with GOSI before hiring any employees. GOSI registration is required for all employers operating in Saudi Arabia.",
+          "authority": { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)" },
+          "depends_on_step": 4,
+          "notes": null
+        },
+        {
+          "step_number": 7,
+          "label": "Tax and zakat registration",
+          "description": "Register with ZATCA for VAT, zakat, and income tax obligations applicable to the business. VAT registration is required at or before the revenue registration threshold. Zakat and income tax applicability depend on the ownership structure and activity type.",
+          "authority": { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)" },
+          "depends_on_step": 4,
+          "notes": "Thresholds and applicability rules change; confirm current requirements at zatca.gov.sa."
+        },
+        {
+          "step_number": 8,
+          "label": "Labor platform registration and Saudization review",
+          "description": "Register on the Qiwa platform and review Nitaqat (Saudization) obligations before hiring employees. The applicable Nitaqat band and minimum Saudi employee ratio depend on the business activity and workforce size.",
+          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "depends_on_step": 6,
+          "notes": "Saudization obligations should be assessed before finalising the staffing plan. Confirm the applicable Nitaqat band for consulting activities via official channels."
+        }
+      ],
+      "decision_points": [
+        {
+          "at_step": 2,
+          "question": "LLC or branch office of foreign company?",
+          "options": [
+            "LLC — a locally incorporated Saudi entity; shareholders have limited liability; verify current minimum shareholder and capital requirements at MISA",
+            "Branch office — an extension of the foreign parent in Saudi Arabia; no separate legal personality; parent company bears liability for branch obligations"
+          ]
+        },
+        {
+          "at_step": 5,
+          "question": "Is a physical premises required?",
+          "options": [
+            "Physical office maintained in Saudi Arabia — Balady municipal operating license required for the premises",
+            "No fixed physical premises — verify whether this step applies and how the registered address requirement can be satisfied"
+          ]
+        }
+      ],
+      "related_authorities": [
+        { "id": "misa", "name": "Ministry of Investment (MISA)", "role": "Investment registration — authorizes foreign investor presence and consulting activity scope (steps 1, 3)" },
+        { "id": "ministry_of_commerce", "name": "Ministry of Commerce", "role": "Commercial registration — creates the legal entity in the commercial register (step 4)" },
+        { "id": "balady", "name": "Balady (Municipal Services Portal)", "role": "Municipal operating license — authorizes physical premises operation (step 5)" },
+        { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance obligations (step 6)" },
+        { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, and income tax registration (step 7)" },
+        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance tracking (step 8)" }
+      ],
+      "source_dependencies": [
+        { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
+        { "dataset": "investment-licenses", "entry_id": "commercial_registration", "description": "Step 4 — Ministry of Commerce commercial registration" },
+        { "dataset": "investment-licenses", "entry_id": "municipality_license", "description": "Step 5 — Balady municipal operating license" },
+        { "dataset": "investment-licenses", "entry_id": "gosi_registration", "description": "Step 6 — GOSI employer registration" },
+        { "dataset": "investment-licenses", "entry_id": "vat_registration", "description": "Step 7 — ZATCA VAT and tax registration" },
+        { "dataset": "authority-relationships", "entry_id": "misa_ministry_of_commerce", "description": "Foundational dependency informing the MISA → Ministry of Commerce sequence in steps 3–4" },
+        { "dataset": "authority-relationships", "entry_id": "ministry_of_commerce_balady", "description": "Operational dependency informing the Ministry of Commerce → Balady sequence in steps 4–5" },
+        { "dataset": "authority-relationships", "entry_id": "zatca_business_compliance", "description": "Horizontal compliance relationship informing step 7" },
+        { "dataset": "sectors", "entry_id": "consulting", "description": "Sector entry with likely authorities and common confusions for consulting businesses" }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "steps — activity eligibility",
+          "description": "The list of consulting activity codes available to foreign investors changes. Verify the current eligibility status for the specific consulting sub-activity at the MISA portal before relying on this flow.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "steps — step sequence accuracy",
+          "description": "The sequence reflects the typical setup path. Verify whether any steps may run in parallel and whether commercial registration can precede MISA registration in any consulting activity scenario.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["consulting", "llc", "foreign_investment", "professional_services", "setup_flow", "misa", "commercial_registration"]
+    },
+    {
+      "id": "ecommerce_company_setup",
+      "name": "E-Commerce Company Setup",
+      "name_alt": "Online retail business registration flow",
+      "short_description": "Conceptual setup sequence for a foreign investor establishing an e-commerce business in Saudi Arabia, covering the core registration path and key conditional steps for product compliance and physical warehousing.",
+      "target_investor_type": "Foreign investor establishing an e-commerce platform or online retail business in Saudi Arabia",
+      "related_sectors": ["ecommerce"],
+      "steps": [
+        {
+          "step_number": 1,
+          "label": "Activity classification and eligibility verification",
+          "description": "Classify the e-commerce activity (marketplace operator, direct retailer, or service platform) and verify that the activity is available to foreign investors at MISA. The classification affects which additional registrations and product compliance requirements may apply downstream.",
+          "authority": { "id": "misa", "name": "Ministry of Investment (MISA)" },
+          "depends_on_step": null,
+          "notes": "E-commerce is a broad category. Confirm the specific MISA activity code applicable to the intended model before proceeding."
+        },
+        {
+          "step_number": 2,
+          "label": "Business structure selection",
+          "description": "Select the legal structure — LLC or branch office. This flow assumes LLC. Verify current requirements for each structure at MISA and the Ministry of Commerce.",
+          "authority": null,
+          "depends_on_step": 1,
+          "notes": null
+        },
+        {
+          "step_number": 3,
+          "label": "MISA investment registration",
+          "description": "Submit an investment registration application to MISA for the authorized e-commerce activity. Successful registration authorizes the investor to establish a Saudi legal entity for the specified activities.",
+          "authority": { "id": "misa", "name": "Ministry of Investment (MISA)" },
+          "depends_on_step": 2,
+          "notes": null
+        },
+        {
+          "step_number": 4,
+          "label": "Commercial registration",
+          "description": "Register the legal entity with the Ministry of Commerce to obtain a commercial registration certificate (CR). The CR creates the legal person in the Saudi commercial register.",
+          "authority": { "id": "ministry_of_commerce", "name": "Ministry of Commerce" },
+          "depends_on_step": 3,
+          "notes": null
+        },
+        {
+          "step_number": 5,
+          "label": "Product compliance assessment (conditional)",
+          "description": "If the e-commerce business sells regulated product categories — food, pharmaceuticals, medical devices, cosmetics, electronics — identify applicable product registration and conformity requirements. SFDA governs food, pharmaceutical, and medical product registration. Other product categories may have separate conformity frameworks.",
+          "authority": { "id": "sfda", "name": "Saudi Food and Drug Authority (SFDA)" },
+          "depends_on_step": 4,
+          "notes": "This step is conditional on the product categories sold. Technology services and software products typically do not require SFDA registration. Confirm which product categories trigger SFDA or other product-specific requirements."
+        },
+        {
+          "step_number": 6,
+          "label": "Municipal operating license for physical premises (conditional)",
+          "description": "If the business maintains physical warehousing, fulfilment centres, or retail locations in Saudi Arabia, obtain a Balady operating license for each premises. Each location requires a separate license.",
+          "authority": { "id": "balady", "name": "Balady (Municipal Services Portal)" },
+          "depends_on_step": 4,
+          "notes": "Applies where physical premises are maintained. A purely digital e-commerce business with no Saudi-based warehousing or retail may not require this step; verify with Balady."
+        },
+        {
+          "step_number": 7,
+          "label": "Social insurance registration",
+          "description": "Register as an employer with GOSI before hiring any employees in Saudi Arabia.",
+          "authority": { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)" },
+          "depends_on_step": 4,
+          "notes": null
+        },
+        {
+          "step_number": 8,
+          "label": "Tax and zakat registration",
+          "description": "Register with ZATCA for VAT, zakat, and income tax obligations. E-commerce businesses selling to Saudi consumers are subject to VAT on those sales. Importing goods for sale may also create customs obligations governed by ZATCA.",
+          "authority": { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)" },
+          "depends_on_step": 4,
+          "notes": "Confirm current VAT registration thresholds and import/customs requirements at zatca.gov.sa."
+        },
+        {
+          "step_number": 9,
+          "label": "Labor platform registration and Saudization review",
+          "description": "Register on the Qiwa platform and review Nitaqat obligations before hiring employees. Confirm the applicable Saudization band for e-commerce activities.",
+          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "depends_on_step": 7,
+          "notes": null
+        }
+      ],
+      "decision_points": [
+        {
+          "at_step": 1,
+          "question": "What is the e-commerce business model?",
+          "options": [
+            "Marketplace operator — connects third-party sellers and buyers; platform liability and seller compliance obligations may differ from direct retail",
+            "Direct retailer — purchases and sells goods directly to Saudi consumers; product compliance and import obligations apply based on product categories",
+            "Service platform — digital services delivered online; product registration requirements may not apply; confirm activity code with MISA"
+          ]
+        },
+        {
+          "at_step": 5,
+          "question": "Are regulated product categories involved?",
+          "options": [
+            "Regulated products (food, pharmaceuticals, medical devices, cosmetics) — SFDA product registration and compliance requirements apply before sale",
+            "Non-regulated products or digital services — SFDA registration likely not required; verify for the specific product category"
+          ]
+        },
+        {
+          "at_step": 6,
+          "question": "Does the business maintain physical premises in Saudi Arabia?",
+          "options": [
+            "Physical warehousing or retail locations maintained — Balady operating license required per premises",
+            "No Saudi-based physical operations — Balady license may not apply; verify registered address requirement"
+          ]
+        }
+      ],
+      "related_authorities": [
+        { "id": "misa", "name": "Ministry of Investment (MISA)", "role": "Investment registration — authorizes foreign investor presence and e-commerce activity scope (steps 1, 3)" },
+        { "id": "ministry_of_commerce", "name": "Ministry of Commerce", "role": "Commercial registration — creates the legal entity (step 4)" },
+        { "id": "sfda", "name": "Saudi Food and Drug Authority (SFDA)", "role": "Product registration and compliance — conditional on regulated product categories sold (step 5)" },
+        { "id": "balady", "name": "Balady (Municipal Services Portal)", "role": "Municipal operating license — conditional on physical premises in Saudi Arabia (step 6)" },
+        { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance (step 7)" },
+        { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, income tax, and customs registration (step 8)" },
+        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance (step 9)" }
+      ],
+      "source_dependencies": [
+        { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
+        { "dataset": "investment-licenses", "entry_id": "commercial_registration", "description": "Step 4 — Ministry of Commerce commercial registration" },
+        { "dataset": "investment-licenses", "entry_id": "municipality_license", "description": "Step 6 — Balady municipal operating license (conditional)" },
+        { "dataset": "investment-licenses", "entry_id": "gosi_registration", "description": "Step 7 — GOSI employer registration" },
+        { "dataset": "investment-licenses", "entry_id": "vat_registration", "description": "Step 8 — ZATCA VAT and tax registration" },
+        { "dataset": "authority-relationships", "entry_id": "misa_ministry_of_commerce", "description": "Foundational dependency informing steps 3–4" },
+        { "dataset": "authority-relationships", "entry_id": "ministry_of_commerce_balady", "description": "Operational dependency informing steps 4–6 (conditional)" },
+        { "dataset": "authority-relationships", "entry_id": "zatca_business_compliance", "description": "Horizontal compliance relationship informing step 8" },
+        { "dataset": "authority-relationships", "entry_id": "saip_ip_protection", "description": "IP protection is strategically relevant for e-commerce platforms with branded products or proprietary platform names" },
+        { "dataset": "sectors", "entry_id": "ecommerce", "description": "Sector entry with likely authorities and common confusions for e-commerce businesses" }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "steps — activity eligibility",
+          "description": "Verify the current MISA activity code and eligibility status for the specific e-commerce model (marketplace, direct retail, service platform) before relying on this flow.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "steps 5 — sfda product compliance scope",
+          "description": "Verify which product categories trigger SFDA registration requirements for e-commerce sellers and whether cross-border digital delivery of goods has different compliance obligations than physical import and sale.",
+          "verify_at": "sfda.gov.sa"
+        },
+        {
+          "field": "steps — step sequence accuracy",
+          "description": "Verify whether any steps may run in parallel and whether the sequence changes for marketplace operators vs. direct retailers.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["ecommerce", "online_retail", "marketplace", "foreign_investment", "setup_flow", "sfda", "zatca"]
+    },
+    {
+      "id": "manufacturing_company_setup",
+      "name": "Manufacturing Company Setup",
+      "name_alt": "Industrial manufacturing registration flow",
+      "short_description": "Conceptual setup sequence for a foreign investor establishing a manufacturing operation in Saudi Arabia, covering the industrial licensing path, site strategy decision, environmental compliance assessment, and product registration considerations.",
+      "target_investor_type": "Foreign investor establishing a manufacturing facility or industrial operation in Saudi Arabia",
+      "related_sectors": ["manufacturing", "industrial_services"],
+      "steps": [
+        {
+          "step_number": 1,
+          "label": "Activity classification and site strategy planning",
+          "description": "Classify the manufacturing activity under the applicable MISA and Ministry of Industry activity codes, and determine the site strategy: a MODON-operated industrial city or a private premises. This decision affects the premises licensing path (MODON vs. Balady) and may affect infrastructure availability, industrial license processing, and applicable support programs.",
+          "authority": null,
+          "depends_on_step": null,
+          "notes": "MODON industrial cities offer established infrastructure and may streamline certain approvals for eligible industries. A private site provides more location flexibility but requires separate premises licensing with Balady."
+        },
+        {
+          "step_number": 2,
+          "label": "Activity eligibility verification",
+          "description": "Verify that the manufacturing activity is available to foreign investors at MISA and that no sector-specific foreign ownership restrictions apply. Confirm the applicable industrial activity code.",
+          "authority": { "id": "misa", "name": "Ministry of Investment (MISA)" },
+          "depends_on_step": 1,
+          "notes": null
+        },
+        {
+          "step_number": 3,
+          "label": "MISA investment registration",
+          "description": "Submit an investment registration application to MISA for the authorized manufacturing activity. Successful registration authorizes the investor to establish a Saudi legal entity for the specified industrial activities.",
+          "authority": { "id": "misa", "name": "Ministry of Investment (MISA)" },
+          "depends_on_step": 2,
+          "notes": null
+        },
+        {
+          "step_number": 4,
+          "label": "Ministry of Industry industrial license",
+          "description": "Apply for an industrial license from the Ministry of Industry and Mineral Resources. The industrial license is the sector-specific authorization for manufacturing activity and is distinct from the commercial registration. It governs the industrial activity classification, applicable standards, and the scope of permitted manufacturing operations.",
+          "authority": { "id": "ministry_of_industry", "name": "Ministry of Industry and Mineral Resources" },
+          "depends_on_step": 3,
+          "notes": "The industrial license is a primary sector-specific requirement for manufacturing operations. Confirm the application process and documentation requirements at mim.gov.sa."
+        },
+        {
+          "step_number": 5,
+          "label": "Commercial registration",
+          "description": "Register the legal entity with the Ministry of Commerce to obtain a commercial registration certificate. The commercial registration creates the legal person; the industrial license governs the manufacturing activity.",
+          "authority": { "id": "ministry_of_commerce", "name": "Ministry of Commerce" },
+          "depends_on_step": 3,
+          "notes": "The sequencing of commercial registration relative to industrial licensing should be confirmed with both MISA and the Ministry of Industry, as the required order may vary."
+        },
+        {
+          "step_number": 6,
+          "label": "Premises licensing",
+          "description": "Obtain a premises operating license from the appropriate authority based on the site strategy decision: a MODON operating license for a facility within a MODON industrial city, or a Balady municipal operating license for a private site. Each manufacturing location requires its own license.",
+          "authority": { "id": "modon", "name": "MODON (Saudi Authority for Industrial Cities and Technology Zones)" },
+          "depends_on_step": 5,
+          "notes": "For a private site (outside MODON), the authority is Balady, not MODON. For a MODON industrial city, the licensing authority is MODON. Confirm which industrial cities are relevant to the planned activity at modon.gov.sa."
+        },
+        {
+          "step_number": 7,
+          "label": "Environmental compliance assessment",
+          "description": "Assess whether the manufacturing operations generate environmental obligations — emissions, industrial waste, effluent, or land disturbance — that fall within NCEC's scope. If operations meet applicable thresholds, environmental impact assessment and compliance registration with NCEC are required before operations begin.",
+          "authority": { "id": "ncec", "name": "National Center for Environmental Compliance (NCEC)" },
+          "depends_on_step": 6,
+          "notes": "The NCEC assessment is conditional on the environmental profile of the specific manufacturing activity. Not all manufacturing operations necessarily trigger NCEC involvement. Verify applicable thresholds and requirements at ncec.gov.sa."
+        },
+        {
+          "step_number": 8,
+          "label": "Product compliance registration (conditional)",
+          "description": "If the manufactured products fall into regulated categories — food, pharmaceuticals, medical devices, cosmetics, consumer safety products — register products with SFDA or the relevant product authority before sale or distribution in Saudi Arabia.",
+          "authority": { "id": "sfda", "name": "Saudi Food and Drug Authority (SFDA)" },
+          "depends_on_step": 5,
+          "notes": "Conditional on the product category. Industrial components and non-consumer goods typically do not require SFDA registration. Confirm the specific registration requirements for the product category at sfda.gov.sa."
+        },
+        {
+          "step_number": 9,
+          "label": "Social insurance registration",
+          "description": "Register as an employer with GOSI before hiring employees.",
+          "authority": { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)" },
+          "depends_on_step": 5,
+          "notes": null
+        },
+        {
+          "step_number": 10,
+          "label": "Tax and zakat registration",
+          "description": "Register with ZATCA for VAT, zakat, income tax, and any applicable customs obligations. Manufacturing businesses importing raw materials have customs obligations governed by ZATCA in addition to the standard tax registration.",
+          "authority": { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)" },
+          "depends_on_step": 5,
+          "notes": null
+        },
+        {
+          "step_number": 11,
+          "label": "Labor platform registration and Saudization review",
+          "description": "Register on the Qiwa platform and review Nitaqat obligations. Manufacturing operations are subject to Saudization requirements; the applicable band depends on the industrial activity and workforce size.",
+          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "depends_on_step": 9,
+          "notes": null
+        }
+      ],
+      "decision_points": [
+        {
+          "at_step": 1,
+          "question": "MODON industrial city or private site?",
+          "options": [
+            "MODON industrial city — established industrial infrastructure; MODON issues the operating license for the facility; Ministry of Industry governs the activity; may offer access to industrial support programs",
+            "Private site outside industrial city — Balady issues the municipal operating license; Ministry of Industry still governs the activity; location is more flexible but infrastructure arrangements are independent"
+          ]
+        },
+        {
+          "at_step": 7,
+          "question": "Do operations generate environmental obligations?",
+          "options": [
+            "Operations generate emissions, waste, effluent, or significant land disturbance — NCEC environmental compliance requirements likely apply; verify thresholds and obtain assessments before commencing operations",
+            "Operations have minimal environmental impact — NCEC involvement may not be required; verify applicability based on the specific manufacturing activity"
+          ]
+        },
+        {
+          "at_step": 8,
+          "question": "Are manufactured products in regulated categories?",
+          "options": [
+            "Food, pharmaceutical, medical device, or cosmetics manufacturing — SFDA product registration required before sale or distribution",
+            "Industrial components, machinery, or non-consumer products — SFDA registration typically not required; verify for the specific product type"
+          ]
+        }
+      ],
+      "related_authorities": [
+        { "id": "misa", "name": "Ministry of Investment (MISA)", "role": "Investment registration — authorizes foreign investor presence and manufacturing activity scope (steps 2, 3)" },
+        { "id": "ministry_of_industry", "name": "Ministry of Industry and Mineral Resources", "role": "Industrial license — primary sector authorization for manufacturing activity (step 4)" },
+        { "id": "ministry_of_commerce", "name": "Ministry of Commerce", "role": "Commercial registration — creates the legal entity (step 5)" },
+        { "id": "modon", "name": "MODON (Saudi Authority for Industrial Cities and Technology Zones)", "role": "Premises licensing for facilities in MODON industrial cities (step 6, conditional)" },
+        { "id": "balady", "name": "Balady (Municipal Services Portal)", "role": "Premises licensing for facilities outside MODON industrial cities (step 6, conditional)" },
+        { "id": "ncec", "name": "National Center for Environmental Compliance (NCEC)", "role": "Environmental compliance assessment and registration (step 7, conditional)" },
+        { "id": "sfda", "name": "Saudi Food and Drug Authority (SFDA)", "role": "Product registration for regulated product categories (step 8, conditional)" },
+        { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance (step 9)" },
+        { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, income tax, and customs registration (step 10)" },
+        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance (step 11)" }
+      ],
+      "source_dependencies": [
+        { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
+        { "dataset": "investment-licenses", "entry_id": "commercial_registration", "description": "Step 5 — Ministry of Commerce commercial registration" },
+        { "dataset": "investment-licenses", "entry_id": "municipality_license", "description": "Step 6 — Balady municipal operating license (conditional, applies for private site)" },
+        { "dataset": "investment-licenses", "entry_id": "gosi_registration", "description": "Step 9 — GOSI employer registration" },
+        { "dataset": "investment-licenses", "entry_id": "vat_registration", "description": "Step 10 — ZATCA VAT and tax registration" },
+        { "dataset": "authority-relationships", "entry_id": "misa_ministry_of_commerce", "description": "Foundational dependency informing steps 3–5" },
+        { "dataset": "authority-relationships", "entry_id": "misa_ministry_of_industry", "description": "Sector oversight relationship informing steps 3–4" },
+        { "dataset": "authority-relationships", "entry_id": "ministry_of_industry_modon", "description": "Infrastructure relationship informing the MODON vs. Balady premises path in step 6" },
+        { "dataset": "authority-relationships", "entry_id": "ncec_environmental_compliance", "description": "Horizontal compliance relationship informing the conditional NCEC step 7" },
+        { "dataset": "authority-relationships", "entry_id": "zatca_business_compliance", "description": "Horizontal compliance relationship informing step 10" },
+        { "dataset": "sectors", "entry_id": "manufacturing", "description": "Sector entry with likely authorities and common confusions for manufacturing businesses" }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "steps — industrial license sequence relative to commercial registration",
+          "description": "Verify the required sequencing of the Ministry of Industry industrial license relative to the Ministry of Commerce commercial registration. The order may depend on the specific manufacturing activity and whether MISA registration precedes or coincides with industrial licensing.",
+          "verify_at": "mim.gov.sa"
+        },
+        {
+          "field": "steps 6 — modon application process",
+          "description": "Verify the MODON industrial plot application and operating license process for the specific industrial city and activity type. Availability of plots and processing steps vary by industrial city.",
+          "verify_at": "modon.gov.sa"
+        },
+        {
+          "field": "steps 7 — ncec thresholds",
+          "description": "Verify the specific operational thresholds and activity types that trigger NCEC environmental compliance requirements for manufacturing. The relationship is contextual and not all manufacturing operations necessarily engage NCEC.",
+          "verify_at": "ncec.gov.sa"
+        }
+      ],
+      "tags": ["manufacturing", "industrial_services", "industrial_license", "modon", "ncec", "foreign_investment", "setup_flow"]
+    },
+    {
+      "id": "fintech_market_entry",
+      "name": "Fintech Market Entry",
+      "name_alt": "Financial technology market entry flow",
+      "short_description": "Conceptual market entry sequence for a foreign investor entering the Saudi fintech sector, covering regulatory authority determination, the relationship between MISA registration and financial sector licensing, and the distinction between sandbox engagement and full licensing.",
+      "target_investor_type": "Foreign investor entering the Saudi fintech sector — payments, lending, insurance technology, investment platforms, or other regulated financial services",
+      "related_sectors": ["fintech"],
+      "steps": [
+        {
+          "step_number": 1,
+          "label": "Fintech activity classification",
+          "description": "Classify the fintech activity within the Saudi regulatory framework to determine the primary licensing authority. SAMA regulates payments, banking, insurance, and financing companies. The CMA regulates capital market activities, investment funds, and investment advisory services. Some fintech models intersect both domains.",
+          "authority": null,
+          "depends_on_step": null,
+          "notes": "This classification step is critical because it determines which regulator leads the licensing process. Misclassification can delay the entire market entry. Confirm the applicable regulatory framework before proceeding."
+        },
+        {
+          "step_number": 2,
+          "label": "Regulatory pathway determination",
+          "description": "Based on the activity classification, identify whether the primary regulator is SAMA, the CMA, or both. Determine whether the business is eligible for a regulatory sandbox program before a full license application, or must apply directly for the appropriate license.",
+          "authority": null,
+          "depends_on_step": 1,
+          "notes": "SAMA operates a fintech regulatory sandbox (SAMA Fintech Lab). CMA operates a regulatory sandbox for capital market innovation. Sandbox participation may be appropriate for early-stage or novel fintech models. Eligibility and availability must be confirmed with the relevant authority."
+        },
+        {
+          "step_number": 3,
+          "label": "MISA investment registration",
+          "description": "Submit an investment registration application to MISA for the authorized fintech or financial services activity. MISA investment registration authorizes foreign investor presence for the specified activity scope. For regulated financial activities, the MISA registration and the sector regulator licensing are both required — neither substitutes for the other.",
+          "authority": { "id": "misa", "name": "Ministry of Investment (MISA)" },
+          "depends_on_step": 2,
+          "notes": "Confirm whether MISA investment registration precedes or runs in parallel with the SAMA or CMA licensing process. The sequencing may vary depending on the specific fintech activity and the regulator's requirements."
+        },
+        {
+          "step_number": 4,
+          "label": "Regulatory sandbox or license application",
+          "description": "Submit an application to the primary financial sector regulator (SAMA or CMA) for either sandbox participation or a direct license application. The sandbox pathway allows testing of novel fintech models under regulatory supervision before full licensing. The full license pathway applies to established business models with a defined regulatory framework.",
+          "authority": { "id": "sama", "name": "Saudi Central Bank (SAMA)" },
+          "depends_on_step": 3,
+          "notes": "For activities primarily governed by the CMA, the relevant authority for this step is the CMA, not SAMA. For activities requiring both, both regulatory engagement processes apply. Do not assume sandbox participation automatically leads to full licensing."
+        },
+        {
+          "step_number": 5,
+          "label": "Commercial registration",
+          "description": "Register the legal entity with the Ministry of Commerce to obtain a commercial registration certificate. For regulated financial services, the timing of commercial registration relative to the sector regulator's licensing process should be confirmed, as the regulator may require a registered legal entity before issuing a license, or may require regulatory approval before commercial registration is finalized.",
+          "authority": { "id": "ministry_of_commerce", "name": "Ministry of Commerce" },
+          "depends_on_step": 3,
+          "notes": "The required sequence of commercial registration relative to SAMA or CMA licensing varies by activity type. Confirm the required order with the relevant sector regulator."
+        },
+        {
+          "step_number": 6,
+          "label": "Financial sector license completion",
+          "description": "Complete the full licensing process with SAMA or CMA as required for the fintech activity. This includes satisfying capital requirements, governance standards, technology infrastructure requirements, and any other conditions imposed by the regulator before full authorization to operate is granted.",
+          "authority": { "id": "sama", "name": "Saudi Central Bank (SAMA)" },
+          "depends_on_step": 4,
+          "notes": "Licensing conditions and requirements are set by SAMA and CMA respectively. Do not rely on third-party descriptions of these requirements; confirm current conditions directly with the regulator."
+        },
+        {
+          "step_number": 7,
+          "label": "Social insurance registration",
+          "description": "Register as an employer with GOSI before hiring employees in Saudi Arabia.",
+          "authority": { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)" },
+          "depends_on_step": 5,
+          "notes": null
+        },
+        {
+          "step_number": 8,
+          "label": "Tax and zakat registration",
+          "description": "Register with ZATCA for VAT, zakat, and income tax obligations applicable to the fintech business.",
+          "authority": { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)" },
+          "depends_on_step": 5,
+          "notes": null
+        },
+        {
+          "step_number": 9,
+          "label": "Labor platform registration and Saudization review",
+          "description": "Register on the Qiwa platform and review Nitaqat obligations before hiring employees. Confirm the applicable Saudization band for financial services or technology activities.",
+          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "depends_on_step": 7,
+          "notes": null
+        },
+        {
+          "step_number": 10,
+          "label": "Ongoing regulatory compliance program",
+          "description": "Establish internal processes for ongoing compliance with SAMA or CMA regulatory obligations: periodic reporting, capital adequacy monitoring, audit requirements, incident reporting, and any conditions attached to the license. Financial sector regulators impose continuous obligations, not merely a one-time licensing requirement.",
+          "authority": { "id": "sama", "name": "Saudi Central Bank (SAMA)" },
+          "depends_on_step": 6,
+          "notes": "Ongoing obligations vary significantly by license type and regulator. This step represents a permanent operational state, not a one-time registration."
+        }
+      ],
+      "decision_points": [
+        {
+          "at_step": 1,
+          "question": "Which regulator governs the primary fintech activity?",
+          "options": [
+            "SAMA — payments, banking, insurance technology, lending, financing companies; SAMA's fintech regulatory framework applies",
+            "CMA — investment advisory, capital market platforms, investment funds, securities; CMA's regulatory sandbox and licensing framework applies",
+            "Both SAMA and CMA — platforms combining payment services with investment features may require engagement with both regulators; verify the specific activity scope and applicable frameworks with both authorities"
+          ]
+        },
+        {
+          "at_step": 2,
+          "question": "Sandbox participation or direct full license application?",
+          "options": [
+            "Regulatory sandbox — appropriate for novel fintech models, early-stage entrants, or activities without an established licensing precedent; sandbox allows testing under regulatory supervision",
+            "Direct full license application — appropriate for established fintech models with a clear regulatory framework; sandbox may not be available for all activity types"
+          ]
+        },
+        {
+          "at_step": 5,
+          "question": "When does commercial registration occur relative to sector licensing?",
+          "options": [
+            "Commercial registration before sector license — check whether the sector regulator requires a registered Saudi legal entity before processing the license application",
+            "Sector license approval before or concurrent with commercial registration — some regulatory pathways require regulatory approval as a condition precedent to commercial registration; confirm the required sequence with SAMA or CMA"
+          ]
+        }
+      ],
+      "related_authorities": [
+        { "id": "misa", "name": "Ministry of Investment (MISA)", "role": "Investment registration — authorizes foreign investor presence for fintech activity scope (step 3)" },
+        { "id": "sama", "name": "Saudi Central Bank (SAMA)", "role": "Primary financial sector regulator for payments, banking, insurance, and financing activities — sandbox or license (steps 4, 6, 10)" },
+        { "id": "cma", "name": "Capital Market Authority (CMA)", "role": "Primary financial sector regulator for capital markets, investment funds, and advisory services — sandbox or license (steps 4, 6, conditional)" },
+        { "id": "ministry_of_commerce", "name": "Ministry of Commerce", "role": "Commercial registration — creates the legal entity (step 5)" },
+        { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance (step 7)" },
+        { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, and income tax registration (step 8)" },
+        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance (step 9)" }
+      ],
+      "source_dependencies": [
+        { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
+        { "dataset": "investment-licenses", "entry_id": "commercial_registration", "description": "Step 5 — Ministry of Commerce commercial registration" },
+        { "dataset": "investment-licenses", "entry_id": "gosi_registration", "description": "Step 7 — GOSI employer registration" },
+        { "dataset": "investment-licenses", "entry_id": "vat_registration", "description": "Step 8 — ZATCA VAT and tax registration" },
+        { "dataset": "authority-relationships", "entry_id": "misa_ministry_of_commerce", "description": "Foundational dependency informing steps 3–5" },
+        { "dataset": "authority-relationships", "entry_id": "sama_cma_financial_oversight", "description": "Strategic coordination relationship informing the SAMA vs. CMA determination in steps 1–2" },
+        { "dataset": "authority-relationships", "entry_id": "zatca_business_compliance", "description": "Horizontal compliance relationship informing step 8" },
+        { "dataset": "sectors", "entry_id": "fintech", "description": "Sector entry with likely authorities and common confusions for fintech businesses" }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "steps 4 and 6 — sama licensing framework",
+          "description": "Verify the current SAMA fintech licensing categories, sandbox eligibility criteria, and application process. SAMA's fintech regulatory framework is actively evolving; confirm current requirements at sama.gov.sa.",
+          "verify_at": "sama.gov.sa"
+        },
+        {
+          "field": "steps 4 and 6 — cma licensing framework",
+          "description": "Verify the current CMA sandbox and licensing framework for fintech and capital market activities. Confirm eligibility criteria, application process, and applicable regulations at cma.org.sa.",
+          "verify_at": "cma.org.sa"
+        },
+        {
+          "field": "steps — commercial registration sequencing",
+          "description": "Verify the required sequencing of MISA investment registration, commercial registration, and SAMA/CMA licensing for the specific fintech activity type. The required order may differ by activity.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["fintech", "sama", "cma", "payments", "capital_markets", "regulatory_sandbox", "foreign_investment", "setup_flow", "financial_services"]
+    }
+  ]
+}

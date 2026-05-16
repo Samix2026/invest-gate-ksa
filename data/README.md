@@ -22,6 +22,8 @@ This directory holds structured, machine-readable data derived from official sou
 | `source-gaps.ar.json` | Source gaps registry — Arabic | Draft |
 | `authority-relationships.en.json` | Conceptual relationships between regulatory authorities in the Saudi investment context — English | Draft |
 | `authority-relationships.ar.json` | Conceptual authority relationships — Arabic | Draft |
+| `setup-flows.en.json` | Conceptual setup flows for common foreign investment scenarios — English | Draft |
+| `setup-flows.ar.json` | Conceptual setup flows — Arabic | Draft |
 | `fees.json` | Official government fees (registration, licensing, permits) | Planned |
 | `timelines.json` | Estimated processing durations for key procedures | Planned |
 | `zones.json` | Economic zones, locations, and key incentives | Planned |
@@ -73,7 +75,7 @@ The script enforces the following rules:
 
 Exit code `0` means all checks passed. Exit code `1` means at least one check failed, with details printed to stdout. Suitable for use in CI pipelines.
 
-JSON Schemas live at `schemas/` — one per dataset: `business-structures`, `investment-licenses`, `sources`, `sectors`, `source-gaps`, `authority-relationships`.
+JSON Schemas live at `schemas/` — one per dataset: `business-structures`, `investment-licenses`, `sources`, `sectors`, `source-gaps`, `authority-relationships`, `setup-flows`.
 
 ---
 
