@@ -190,6 +190,132 @@
         }
       ],
       "tags": ["gastat", "statistics", "national_accounts", "labor_force", "fdi", "economic_indicators", "source_gap"]
+    },
+    {
+      "id": "ministry_of_tourism",
+      "name": "وزارة السياحة",
+      "name_alt": "Ministry of Tourism",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع السياحة والضيافة بوصفها الوزارة القطاعية الأولى المختصة بترخيص أعمال السياحة والفندقة والضيافة. يستلزم التحقق من دور وزارة السياحة في ترخيص مشغِّلي السياحة والضيافة قبل الانتقال بإدخال قطاع السياحة والضيافة من مسودة إلى موثَّق.",
+      "likely_official_domain": "mt.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى mt.gov.sa. تأكد من أن النطاق يحل على بوابة وزارة السياحة. راجع الإطار الترخيصي والتنظيمي لأعمال السياحة والفنادق ومشغِّلي الضيافة. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json باستخدام نموذج مراجعة المصادر وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق mt.gov.sa على أنه البوابة الرسمية المرجَّحة لوزارة السياحة، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "mt.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_tourism", "tourism", "hospitality", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_media",
+      "name": "وزارة الإعلام",
+      "name_alt": "Ministry of Media",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع الإعلام والمحتوى بوصفها الوزارة القطاعية الأولى المختصة بتراخيص الإعلام والنشر والمحتوى. يستلزم التحقق من دور وزارة الإعلام في ترخيص شركات الإعلام ومشغِّلي المحتوى قبل الانتقال بالإدخال من مسودة إلى موثَّق.",
+      "likely_official_domain": "media.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى media.gov.sa. تأكد من أن النطاق يحل على بوابة وزارة الإعلام. راجع الإطار الترخيصي والتنظيمي لشركات الإعلام وناشري المحتوى ومشغِّلي البث. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json باستخدام نموذج مراجعة المصادر وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق media.gov.sa على أنه البوابة الرسمية المرجَّحة لوزارة الإعلام، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "media.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_media", "media", "publishing", "content", "broadcasting", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_interior",
+      "name": "وزارة الداخلية",
+      "name_alt": "Ministry of Interior",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخالات قطاعَي السياحة والضيافة وخدمات الحج والعمرة وقطاع الإعلام والمحتوى، حيث قد تكون الامتثالات المتعلقة بالهجرة والإقامة أو اشتراطات الأمن القطاعي ذات صلة بالمستثمرين والمشغِّلين التجاريين. يستلزم التحقق من دور وزارة الداخلية في سياق متطلبات تأشيرة وإقامة المستثمرين والموظفين التحقق المباشر.",
+      "likely_official_domain": "moi.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى moi.gov.sa. تأكد من أن النطاق يحل على بوابة وزارة الداخلية. راجع الخدمات والمتطلبات ذات الصلة بالمستثمرين الأجانب والمشغِّلين التجاريين والموظفين — لا سيما الإقامة وتصاريح الدخول وأي اشتراطات تخليص أمني قطاعية. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json إن اقتضى الأمر وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق moi.gov.sa على أنه البوابة الرسمية المرجَّحة لوزارة الداخلية، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "moi.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_interior", "immigration", "residency", "security", "source_gap"]
+    },
+    {
+      "id": "ministry_of_hajj_and_umrah",
+      "name": "وزارة الحج والعمرة",
+      "name_alt": "Ministry of Hajj and Umrah",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع خدمات الحج والعمرة بوصفها الوزارة القطاعية الأولى المختصة بترخيص الأعمال التي تقدم خدمات للحجاج والمعتمرين. يستلزم التحقق من الإطار الترخيصي للمشغِّلين في هذا القطاع قبل الانتقال بإدخال القطاع من مسودة إلى موثَّق.",
+      "likely_official_domain": "haj.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى haj.gov.sa. تأكد من أن النطاق يحل على بوابة وزارة الحج والعمرة. راجع الإطار الترخيصي للأعمال التي تقدم خدمات للحجاج والمعتمرين — بما فيها الإقامة والنقل وخدمات دعم أداء المناسك. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json باستخدام نموذج مراجعة المصادر وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق haj.gov.sa على أنه البوابة الرسمية المرجَّحة لوزارة الحج والعمرة، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "haj.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_hajj_and_umrah", "hajj", "umrah", "pilgrimage", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ncec",
+      "name": "المركز الوطني لرقابة الالتزام البيئي",
+      "name_alt": "National Center for Environmental Compliance (NCEC)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَج كجهة ذات صلة بالامتثال البيئي في إدخالات قطاعية متعددة — التصنيع والتعدين والأغذية والمشروبات والعقارات والرعاية الصحية — حيث قد ينطبق تقييم الأثر البيئي أو إدارة النفايات أو امتثال الانبعاثات. يستلزم التحقق من الدور المحدد للمركز وأنواع الأعمال الخاضعة لمتطلباته قبل الانتقال بتلك الإدخالات القطاعية من مسودة إلى موثَّق.",
+      "likely_official_domain": "ncec.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى ncec.gov.sa. تأكد من أن النطاق يحل على بوابة المركز الوطني لرقابة الالتزام البيئي. راجع أنواع الأعمال والأنشطة الخاضعة لمتطلبات الامتثال البيئي، وما يُشترط من تقييمات أو تصاريح، وكيفية ارتباط دور المركز بالجهات البيئية الأخرى. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق ncec.gov.sa على أنه البوابة الرسمية المرجَّحة للمركز الوطني لرقابة الالتزام البيئي، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "ncec.gov.sa"
+        }
+      ],
+      "tags": ["ncec", "environment", "environmental_compliance", "manufacturing", "mining", "source_gap"]
+    },
+    {
+      "id": "saip",
+      "name": "الهيئة السعودية للملكية الفكرية",
+      "name_alt": "Saudi Authority for Intellectual Property (SAIP)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة ذات صلة مفاهيمية في إدخالات قطاعية متعددة — التقنية والتجارة الإلكترونية والاستشارات والإعلام والمحتوى والترفيه والفعاليات — حيث قد تكون حماية الملكية الفكرية (العلامات التجارية والبراءات وحقوق النشر والأسرار التجارية) اعتباراً تجارياً جوهرياً. يستلزم التحقق من دور الهيئة في سياق تأسيس الأعمال وتسجيل الملكية الفكرية في المملكة العربية السعودية التحقق المباشر.",
+      "likely_official_domain": "saip.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى saip.gov.sa. تأكد من أن النطاق يحل على بوابة الهيئة السعودية للملكية الفكرية. راجع خدمات تسجيل الملكية الفكرية المتاحة (العلامات التجارية والبراءات وحقوق النشر) ومتطلبات حاملي الملكية الفكرية الأجانب وكيفية تفاعل اعتبارات الملكية الفكرية مع تسجيل الأعمال. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json إن اقتضى الأمر وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق saip.gov.sa على أنه البوابة الرسمية المرجَّحة للهيئة السعودية للملكية الفكرية، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "saip.gov.sa"
+        }
+      ],
+      "tags": ["saip", "intellectual_property", "trademarks", "patents", "copyrights", "source_gap"]
+    },
+    {
+      "id": "gea",
+      "name": "هيئة الترفيه",
+      "name_alt": "General Entertainment Authority (GEA)",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "مُدرَجة كجهة تنظيمية مرجَّحة في إدخال قطاع الترفيه والفعاليات بوصفها جهة تنظيم قطاع الترفيه ومشغِّلي الفعاليات وأماكن الترفيه الحي. يستلزم التحقق من الإطار الترخيصي لهيئة الترفيه لمشغِّلي الترفيه والفعاليات قبل الانتقال بإدخال القطاع من مسودة إلى موثَّق.",
+      "likely_official_domain": "gea.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى gea.gov.sa. تأكد من أن النطاق يحل على بوابة هيئة الترفيه. راجع الإطار الترخيصي والتنظيمي لأعمال الترفيه ومشغِّلي الفعاليات الحية وأماكن الترفيه. ثم أضف إدخالاً موثَّقاً في data/sources.ar.json باستخدام نموذج مراجعة المصادر وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق gea.gov.sa على أنه البوابة الرسمية المرجَّحة لهيئة الترفيه، غير أنه لم يُؤكَّد بصورة مستقلة بعد.",
+          "verify_at": "gea.gov.sa"
+        }
+      ],
+      "tags": ["gea", "entertainment", "events", "live_events", "sector_regulator", "source_gap"]
     }
   ]
 }

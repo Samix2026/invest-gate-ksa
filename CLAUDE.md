@@ -131,15 +131,15 @@ Key fields: `authority_type` (enum), `jurisdiction`, `official_website`, `docume
 
 Query: `python scripts/query-dataset.py --dataset sources --lang en --authority-type government_ministry`
 
-### `sectors` (11 entries)
+### `sectors` (15 entries)
 
-Investment sectors relevant to foreign investors: technology, consulting, ecommerce, food_and_beverage, real_estate, education, healthcare, fintech, manufacturing, industrial_services, mining.
+Investment sectors relevant to foreign investors: technology, consulting, ecommerce, food_and_beverage, real_estate, education, healthcare, fintech, manufacturing, industrial_services, mining, tourism_and_hospitality, media_and_content, hajj_umrah_services, entertainment_and_events.
 
 Key fields: `typical_business_models` (array), `likely_authorities` (array of `{id, name, role}` objects), `related_license_concepts` (array of investment-licenses IDs), `regulatory_sensitivity` (enum), `common_confusions` (array).
 
 `regulatory_sensitivity` values: `standard`, `regulated`, `highly_regulated`, `restricted`.
 
-Note: `likely_authorities` items reference both confirmed sources (from `data/sources.en.json`) and sector-specific bodies not yet in the sources registry (CST, SFDA, REGA, MoE, MoH, SAMA, CMA, Ministry of Industry and Mineral Resources, MODON). The latter are marked in each entry's `placeholders` array.
+Note: `likely_authorities` items reference both confirmed sources (from `data/sources.en.json`) and sector-specific bodies not yet in the sources registry (CST, SFDA, REGA, MoE, MoH, SAMA, CMA, Ministry of Industry and Mineral Resources, MODON, Ministry of Tourism, Ministry of Media, Ministry of Interior, Ministry of Hajj and Umrah, NCEC, SAIP, GEA). The latter are marked in each entry's `placeholders` array.
 
 Query: `python scripts/query-dataset.py --dataset sectors --lang en --regulatory-sensitivity highly_regulated`
 

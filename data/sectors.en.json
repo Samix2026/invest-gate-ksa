@@ -33,6 +33,11 @@
           "id": "cst",
           "name": "Communications, Space and Technology Commission (CST)",
           "role": "Sector regulator for communications and technology services — verify specific licensing scope for technology business activities"
+        },
+        {
+          "id": "saip",
+          "name": "Saudi Authority for Intellectual Property (SAIP)",
+          "role": "Intellectual property authority — relevant for technology businesses with trademark, patent, copyright, or trade secret considerations; verify specific services and requirements"
         }
       ],
       "related_license_concepts": [
@@ -66,6 +71,11 @@
           "verify_at": "cst.gov.sa"
         },
         {
+          "field": "likely_authorities — saip",
+          "description": "The Saudi Authority for Intellectual Property (SAIP) and the relevance of IP registration (trademarks, patents, copyrights) for technology businesses requires verification at the SAIP official portal.",
+          "verify_at": "saip.gov.sa"
+        },
+        {
           "field": "regulatory_sensitivity",
           "description": "Classified as 'regulated' because some technology activities may require engagement with the CST beyond standard MISA and commercial registration. The precise scope requires verification.",
           "verify_at": "misa.gov.sa"
@@ -95,6 +105,11 @@
           "id": "ministry_of_commerce",
           "name": "Ministry of Commerce",
           "role": "Commercial registration"
+        },
+        {
+          "id": "saip",
+          "name": "Saudi Authority for Intellectual Property (SAIP)",
+          "role": "Intellectual property authority — relevant for consulting firms with proprietary methodologies, branded products, or other IP considerations; verify specific services and requirements"
         }
       ],
       "related_license_concepts": [
@@ -130,6 +145,11 @@
           "field": "likely_authorities — specialized sub-sectors",
           "description": "Specialized consulting disciplines may involve additional professional licensing bodies not covered here. The relevant authority depends on the specific consulting activity.",
           "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "likely_authorities — saip",
+          "description": "The Saudi Authority for Intellectual Property (SAIP) and the relevance of IP registration for consulting businesses with proprietary methodologies or branded services requires verification at the SAIP official portal.",
+          "verify_at": "saip.gov.sa"
         }
       ],
       "tags": ["consulting", "advisory", "professional_services", "management", "strategy", "training"]
@@ -166,6 +186,11 @@
           "id": "balady",
           "name": "Balady — Municipal Services Portal",
           "role": "Operating license for physical warehouse, fulfillment, or retail premises"
+        },
+        {
+          "id": "saip",
+          "name": "Saudi Authority for Intellectual Property (SAIP)",
+          "role": "Intellectual property authority — relevant for e-commerce businesses with branded products, platform trademarks, or proprietary content; verify specific services and requirements"
         }
       ],
       "related_license_concepts": [
@@ -208,6 +233,11 @@
           "field": "regulatory_sensitivity",
           "description": "Classified as 'regulated' reflecting e-commerce-specific rules from the Ministry of Commerce, VAT obligations, and potential payment service requirements. Full scope requires verification.",
           "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "likely_authorities — saip",
+          "description": "The Saudi Authority for Intellectual Property (SAIP) and its relevance for e-commerce businesses with branded products, platform trademarks, or proprietary content requires verification at the SAIP official portal.",
+          "verify_at": "saip.gov.sa"
         }
       ],
       "tags": ["ecommerce", "online_retail", "marketplace", "digital_commerce", "b2c", "b2b"]
@@ -244,6 +274,11 @@
           "id": "sfda",
           "name": "Saudi Food and Drug Authority (SFDA)",
           "role": "Food product registration, food safety standards, and labeling requirements — verify specific scope for food business activities"
+        },
+        {
+          "id": "ncec",
+          "name": "National Center for Environmental Compliance (NCEC)",
+          "role": "Environmental compliance authority — relevant for food production and processing operations with waste, effluent, or emissions considerations; verify applicability by operation type"
         }
       ],
       "related_license_concepts": [
@@ -282,6 +317,11 @@
           "verify_at": "sfda.gov.sa"
         },
         {
+          "field": "likely_authorities — ncec",
+          "description": "The National Center for Environmental Compliance (NCEC) and its applicability to food production and processing operations — particularly those with waste, effluent, or emissions outputs — requires verification at the NCEC official portal.",
+          "verify_at": "ncec.gov.sa"
+        },
+        {
           "field": "regulatory_sensitivity",
           "description": "Classified as 'highly_regulated' reflecting multiple authorization layers: MISA registration, commercial registration, municipal food establishment license, and food safety requirements. Full scope requires verification.",
           "verify_at": "misa.gov.sa"
@@ -316,6 +356,11 @@
           "id": "rega",
           "name": "Real Estate General Authority (REGA)",
           "role": "Sector regulator for real estate — verify REGA's licensing role for brokers, developers, and property managers"
+        },
+        {
+          "id": "ncec",
+          "name": "National Center for Environmental Compliance (NCEC)",
+          "role": "Environmental compliance authority — relevant for real estate development projects subject to environmental impact assessment requirements; verify applicability by project type and scale"
         }
       ],
       "related_license_concepts": [
@@ -346,6 +391,11 @@
           "field": "likely_authorities — rega",
           "description": "The Real Estate General Authority (REGA) and its licensing requirements for real estate brokers, developers, and property managers requires verification at the REGA official portal.",
           "verify_at": "rega.gov.sa"
+        },
+        {
+          "field": "likely_authorities — ncec",
+          "description": "The National Center for Environmental Compliance (NCEC) and its applicability to real estate development projects — particularly those subject to environmental impact assessment requirements — requires verification at the NCEC official portal.",
+          "verify_at": "ncec.gov.sa"
         },
         {
           "field": "regulatory_sensitivity",
@@ -454,6 +504,11 @@
           "id": "sfda",
           "name": "Saudi Food and Drug Authority (SFDA)",
           "role": "Medical device and pharmaceutical product registration — verify scope for healthcare business activities"
+        },
+        {
+          "id": "ncec",
+          "name": "National Center for Environmental Compliance (NCEC)",
+          "role": "Environmental compliance authority — relevant for healthcare facilities with medical waste, hazardous material, or effluent management requirements; verify applicability by facility type"
         }
       ],
       "related_license_concepts": [
@@ -489,6 +544,11 @@
           "field": "likely_authorities — sfda",
           "description": "The SFDA's role in medical device and pharmaceutical product registration for healthcare businesses requires verification at the SFDA official portal.",
           "verify_at": "sfda.gov.sa"
+        },
+        {
+          "field": "likely_authorities — ncec",
+          "description": "The National Center for Environmental Compliance (NCEC) and its applicability to healthcare facilities with medical waste, hazardous materials, or effluent management requirements requires verification at the NCEC official portal.",
+          "verify_at": "ncec.gov.sa"
         },
         {
           "field": "regulatory_sensitivity",
@@ -611,6 +671,11 @@
           "id": "balady",
           "name": "Balady — Municipal Services Portal",
           "role": "Operating license for manufacturing premises located outside designated industrial cities"
+        },
+        {
+          "id": "ncec",
+          "name": "National Center for Environmental Compliance (NCEC)",
+          "role": "Environmental compliance authority — relevant for manufacturing operations with emissions, waste, or environmental impact considerations; verify applicable requirements by activity type"
         }
       ],
       "related_license_concepts": [
@@ -648,6 +713,11 @@
           "field": "likely_authorities — modon",
           "description": "The role of the Saudi Authority for Industrial Cities and Technology Zones (MODON) in issuing operating licenses and allocating industrial plots for manufacturing operators requires verification at the MODON official portal.",
           "verify_at": "modon.gov.sa"
+        },
+        {
+          "field": "likely_authorities — ncec",
+          "description": "The National Center for Environmental Compliance (NCEC) and its applicable requirements for manufacturing operations — including emissions, waste management, and environmental impact assessment — requires verification at the NCEC official portal.",
+          "verify_at": "ncec.gov.sa"
         },
         {
           "field": "regulatory_sensitivity",
@@ -767,6 +837,11 @@
           "id": "ministry_of_industry",
           "name": "Ministry of Industry and Mineral Resources",
           "role": "Primary sector ministry for mining and mineral resource activities — verify licensing, permit, and concession framework for exploration and extraction operations"
+        },
+        {
+          "id": "ncec",
+          "name": "National Center for Environmental Compliance (NCEC)",
+          "role": "Environmental compliance authority — relevant for mining and extraction operations subject to environmental impact assessment, land rehabilitation, or waste management requirements; verify applicability by operation type"
         }
       ],
       "related_license_concepts": [
@@ -800,6 +875,11 @@
           "verify_at": "miim.gov.sa"
         },
         {
+          "field": "likely_authorities — ncec",
+          "description": "The National Center for Environmental Compliance (NCEC) and its applicable requirements for mining and extraction operations — including environmental impact assessments, land rehabilitation obligations, and waste management — requires verification at the NCEC official portal.",
+          "verify_at": "ncec.gov.sa"
+        },
+        {
           "field": "regulatory_sensitivity",
           "description": "Classified as 'highly_regulated' reflecting sector-specific concession and licensing requirements from the Ministry of Industry and Mineral Resources in addition to standard business setup. The complete regulatory framework for different mining activity types requires verification.",
           "verify_at": "miim.gov.sa"
@@ -811,6 +891,325 @@
         }
       ],
       "tags": ["mining", "minerals", "extraction", "geology", "resources", "quarrying", "industrial"]
+    },
+    {
+      "id": "tourism_and_hospitality",
+      "name": "Tourism and Hospitality",
+      "name_alt": "السياحة والضيافة",
+      "short_description": "Hotels, resorts, tour operators, travel agencies, and hospitality services supporting domestic and international tourism.",
+      "typical_business_models": [
+        "Hotels, resorts, and serviced accommodation",
+        "Tour operators and destination management",
+        "Travel agencies and booking services",
+        "Restaurant and hospitality operations (tourism-focused)",
+        "Tourism infrastructure and experience providers"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration for tourism and hospitality business activities; sector eligibility for foreign investors"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_tourism",
+          "name": "Ministry of Tourism",
+          "role": "Primary sector ministry for tourism licensing — verify licensing requirements for hotels, tour operators, and tourism service providers"
+        },
+        {
+          "id": "ministry_of_interior",
+          "name": "Ministry of Interior",
+          "role": "Immigration and residency requirements relevant to tourist entry, investor visas, and employee residency — verify applicable requirements"
+        },
+        {
+          "id": "balady",
+          "name": "Balady — Municipal Services Portal",
+          "role": "Operating license for hospitality premises, hotels, and food-serving establishments"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "municipal_license",
+        "gosi_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Tourism businesses typically require sector-specific licensing from the Ministry of Tourism in addition to standard MISA and commercial registration.",
+        "Hotel and hospitality operations require a municipal operating license; food service components involve food safety requirements.",
+        "Vision 2030 tourism programs and giga-projects may have dedicated approval pathways separate from standard licensing — verify with MISA."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_tourism",
+          "description": "The Ministry of Tourism licensing framework for tourism businesses — including hotels, tour operators, and hospitality service providers — requires verification at the official Ministry of Tourism portal.",
+          "verify_at": "mt.gov.sa"
+        },
+        {
+          "field": "likely_authorities — ministry_of_interior",
+          "description": "The Ministry of Interior's role in the context of tourism investment — including investor visa, employee residency, and any security-related requirements for hospitality operators — requires verification.",
+          "verify_at": "moi.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting sector-specific Ministry of Tourism licensing, municipal operating requirements, and potential food safety compliance. Full scope requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["tourism", "hospitality", "hotels", "travel", "tour_operators", "resorts", "vision_2030"]
+    },
+    {
+      "id": "media_and_content",
+      "name": "Media and Content",
+      "name_alt": "الإعلام والمحتوى",
+      "short_description": "Media companies, content production, publishing, broadcasting, digital media platforms, and advertising services.",
+      "typical_business_models": [
+        "Content production and distribution",
+        "Digital media platforms and publishers",
+        "Advertising and marketing services",
+        "Broadcasting and streaming services",
+        "Book and periodical publishing"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration for media and content business activities; sector eligibility for foreign investors"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_media",
+          "name": "Ministry of Media",
+          "role": "Primary sector ministry for media and publishing licensing — verify licensing requirements for media companies, content producers, and broadcasting operators"
+        },
+        {
+          "id": "saip",
+          "name": "Saudi Authority for Intellectual Property (SAIP)",
+          "role": "Intellectual property authority — relevant for media and content businesses with copyright, trademark, or licensing considerations; verify specific services and requirements"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Media and content businesses typically require sector-specific licensing from the Ministry of Media in addition to standard MISA and commercial registration.",
+        "Broadcasting, streaming, and digital content distribution may each have different regulatory requirements — verify the applicable framework by business model.",
+        "Foreign media entities may face additional restrictions or requirements compared to domestic operators — verify current foreign ownership and content rules with MISA."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_media",
+          "description": "The Ministry of Media licensing framework for media companies, content producers, and broadcasting operators requires verification at the official Ministry of Media portal.",
+          "verify_at": "media.gov.sa"
+        },
+        {
+          "field": "likely_authorities — saip",
+          "description": "The Saudi Authority for Intellectual Property (SAIP) and its relevance for media and content businesses with copyright, trademark, or content licensing considerations requires verification at the SAIP official portal.",
+          "verify_at": "saip.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting sector-specific Ministry of Media licensing requirements. The complete regulatory framework for different media business types and foreign ownership rules requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["media", "content", "publishing", "broadcasting", "digital_media", "advertising", "streaming"]
+    },
+    {
+      "id": "hajj_umrah_services",
+      "name": "Hajj and Umrah Services",
+      "name_alt": "خدمات الحج والعمرة",
+      "short_description": "Services provided to Hajj and Umrah pilgrims — including accommodation, transportation, catering, guiding, and pilgrimage support services.",
+      "typical_business_models": [
+        "Pilgrim accommodation and hotel services",
+        "Pilgrim transportation services",
+        "Catering and food services for pilgrims",
+        "Hajj and Umrah tour operators and packages",
+        "Pilgrim services and support operations"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration for Hajj and Umrah service activities; sector eligibility for foreign investors"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "ministry_of_hajj_and_umrah",
+          "name": "Ministry of Hajj and Umrah",
+          "role": "Primary sector ministry — verify licensing, accreditation, and approval framework for businesses providing services to pilgrims"
+        },
+        {
+          "id": "ministry_of_interior",
+          "name": "Ministry of Interior",
+          "role": "Immigration and entry requirements for pilgrims and workforce — verify applicable requirements for businesses operating in pilgrimage contexts"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "gosi_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Services to Hajj and Umrah pilgrims are subject to sector-specific licensing and accreditation requirements from the Ministry of Hajj and Umrah — these are separate from and additional to standard business licensing.",
+        "Different service categories (accommodation, transportation, tour operations) may have different approval requirements within the same sector.",
+        "Operations in the Makkah and Madinah regions may be subject to additional restrictions and requirements not applicable to other locations."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — ministry_of_hajj_and_umrah",
+          "description": "The Ministry of Hajj and Umrah licensing, accreditation, and approval framework for businesses providing services to pilgrims requires verification at the official ministry portal.",
+          "verify_at": "haj.gov.sa"
+        },
+        {
+          "field": "likely_authorities — ministry_of_interior",
+          "description": "The Ministry of Interior's requirements relevant to businesses operating in pilgrimage contexts — including workforce residency and any location-specific security requirements — requires verification.",
+          "verify_at": "moi.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting sector-specific Ministry of Hajj and Umrah accreditation requirements and location-specific restrictions. The complete regulatory framework requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["hajj", "umrah", "pilgrimage", "pilgrims", "religious_tourism", "makkah", "madinah"]
+    },
+    {
+      "id": "entertainment_and_events",
+      "name": "Entertainment and Events",
+      "name_alt": "الترفيه والفعاليات",
+      "short_description": "Live entertainment, events management, theme parks, cinemas, gaming, sports events, and leisure venues.",
+      "typical_business_models": [
+        "Live entertainment venues and events",
+        "Events management and production",
+        "Theme parks and family entertainment centers",
+        "Cinemas and performing arts venues",
+        "Sports events and competitions"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration for entertainment and events business activities; sector eligibility for foreign investors"
+        },
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration"
+        },
+        {
+          "id": "gea",
+          "name": "General Entertainment Authority (GEA)",
+          "role": "Sector regulator for entertainment businesses, events operators, and entertainment venues — verify licensing framework for specific business types"
+        },
+        {
+          "id": "saip",
+          "name": "Saudi Authority for Intellectual Property (SAIP)",
+          "role": "Intellectual property authority — relevant for entertainment businesses with content rights, licensing agreements, or branded events; verify specific services and requirements"
+        },
+        {
+          "id": "balady",
+          "name": "Balady — Municipal Services Portal",
+          "role": "Operating license for entertainment venues and event facilities"
+        }
+      ],
+      "related_license_concepts": [
+        "misa_license",
+        "commercial_registration",
+        "municipal_license",
+        "gosi_registration"
+      ],
+      "regulatory_sensitivity": "highly_regulated",
+      "common_confusions": [
+        "Entertainment businesses require sector-specific licensing from the General Entertainment Authority (GEA) in addition to standard MISA and commercial registration.",
+        "Different entertainment categories (live events, cinemas, theme parks, gaming) may have different GEA licensing requirements — verify by business type.",
+        "Content rights, licensing agreements, and branded entertainment concepts may require IP protection registration — this is separate from business setup licensing."
+      ],
+      "official_sources": [
+        {
+          "name": "Ministry of Investment (MISA)",
+          "role": "Investment registration and sector eligibility",
+          "portal": "misa.gov.sa"
+        },
+        {
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration",
+          "portal": "mc.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "likely_authorities — gea",
+          "description": "The General Entertainment Authority (GEA) licensing framework for entertainment businesses, events operators, and entertainment venues requires verification at the official GEA portal.",
+          "verify_at": "gea.gov.sa"
+        },
+        {
+          "field": "likely_authorities — saip",
+          "description": "The Saudi Authority for Intellectual Property (SAIP) and its relevance for entertainment businesses with content rights, licensing agreements, or branded entertainment concepts requires verification at the SAIP official portal.",
+          "verify_at": "saip.gov.sa"
+        },
+        {
+          "field": "regulatory_sensitivity",
+          "description": "Classified as 'highly_regulated' reflecting sector-specific GEA licensing requirements in addition to standard business setup. The complete regulatory framework for different entertainment business types requires verification.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["entertainment", "events", "live_events", "cinemas", "theme_parks", "gaming", "sports_events", "venues"]
     }
   ]
 }

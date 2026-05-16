@@ -190,6 +190,132 @@
         }
       ],
       "tags": ["gastat", "statistics", "national_accounts", "labor_force", "fdi", "economic_indicators", "source_gap"]
+    },
+    {
+      "id": "ministry_of_tourism",
+      "name": "Ministry of Tourism",
+      "name_alt": "وزارة السياحة",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/tourism_and_hospitality entry as the primary sector ministry for tourism licensing and regulatory oversight. Verifying the Ministry of Tourism's role in licensing tourism businesses and hospitality operators is required before the tourism_and_hospitality sector entry can move from draft to verified.",
+      "likely_official_domain": "mt.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to mt.gov.sa. Confirm the domain resolves to the Ministry of Tourism portal. Review the licensing and regulatory framework for tourism businesses, hotels, and hospitality operators. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain mt.gov.sa is recorded as the likely official portal for the Ministry of Tourism but has not been independently confirmed.",
+          "verify_at": "mt.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_tourism", "tourism", "hospitality", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_media",
+      "name": "Ministry of Media",
+      "name_alt": "وزارة الإعلام",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/media_and_content entry as the primary sector ministry for media, publishing, and content licensing. Verifying the Ministry of Media's role in licensing media businesses and content operators is required before the media_and_content sector entry can move from draft to verified.",
+      "likely_official_domain": "media.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to media.gov.sa. Confirm the domain resolves to the Ministry of Media portal. Review the licensing and regulatory framework for media companies, content publishers, and broadcasting operators. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain media.gov.sa is recorded as the likely official portal for the Ministry of Media but has not been independently confirmed.",
+          "verify_at": "media.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_media", "media", "publishing", "content", "broadcasting", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ministry_of_interior",
+      "name": "Ministry of Interior",
+      "name_alt": "وزارة الداخلية",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/tourism_and_hospitality, sectors/hajj_umrah_services, and sectors/media_and_content entries where immigration, residency, or security-related compliance may be relevant to investors and business operators. Verifying the Ministry of Interior's role in the context of investor and employee visa and residency requirements requires direct verification.",
+      "likely_official_domain": "moi.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to moi.gov.sa. Confirm the domain resolves to the Ministry of Interior portal. Review what services and requirements are relevant to foreign investors, business operators, and employees — particularly residency, entry permits, and any sector-specific security clearance requirements. Then add a verified entry to data/sources.en.json if applicable and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain moi.gov.sa is recorded as the likely official portal for the Ministry of Interior but has not been independently confirmed.",
+          "verify_at": "moi.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_interior", "immigration", "residency", "security", "source_gap"]
+    },
+    {
+      "id": "ministry_of_hajj_and_umrah",
+      "name": "Ministry of Hajj and Umrah",
+      "name_alt": "وزارة الحج والعمرة",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/hajj_umrah_services entry as the primary sector ministry responsible for licensing businesses that provide services to Hajj and Umrah pilgrims. Verifying the Ministry's licensing framework for operators in this sector is required before the hajj_umrah_services sector entry can move from draft to verified.",
+      "likely_official_domain": "haj.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to haj.gov.sa. Confirm the domain resolves to the Ministry of Hajj and Umrah portal. Review the licensing framework for businesses providing services to pilgrims — including accommodation, transportation, and pilgrimage support services. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain haj.gov.sa is recorded as the likely official portal for the Ministry of Hajj and Umrah but has not been independently confirmed.",
+          "verify_at": "haj.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_hajj_and_umrah", "hajj", "umrah", "pilgrimage", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "ncec",
+      "name": "National Center for Environmental Compliance (NCEC)",
+      "name_alt": "المركز الوطني لرقابة الالتزام البيئي",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a relevant environmental compliance authority in multiple sector entries — manufacturing, mining, food_and_beverage, real_estate, and healthcare — where environmental assessment, waste management, or emissions compliance may apply. Verifying NCEC's specific role and the types of businesses subject to its requirements is necessary before those sector entries can move from draft to verified.",
+      "likely_official_domain": "ncec.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to ncec.gov.sa. Confirm the domain resolves to the National Center for Environmental Compliance portal. Review which business types and activities are subject to environmental compliance requirements, what assessments or permits are required, and how NCEC's role relates to other environmental authorities. Then add a verified entry to data/sources.en.json and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain ncec.gov.sa is recorded as the likely official portal for the National Center for Environmental Compliance but has not been independently confirmed.",
+          "verify_at": "ncec.gov.sa"
+        }
+      ],
+      "tags": ["ncec", "environment", "environmental_compliance", "manufacturing", "mining", "source_gap"]
+    },
+    {
+      "id": "saip",
+      "name": "Saudi Authority for Intellectual Property (SAIP)",
+      "name_alt": "الهيئة السعودية للملكية الفكرية",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a conceptually relevant authority in multiple sector entries — technology, ecommerce, consulting, media_and_content, and entertainment_and_events — where intellectual property protection (trademarks, patents, copyrights, trade secrets) may be a material business consideration. Verifying SAIP's role in the context of business setup and IP registration in Saudi Arabia requires direct verification.",
+      "likely_official_domain": "saip.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to saip.gov.sa. Confirm the domain resolves to the Saudi Authority for Intellectual Property portal. Review the IP registration services available (trademarks, patents, copyrights), requirements for foreign IP holders, and how IP considerations interact with business registration. Then add a verified entry to data/sources.en.json if applicable and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain saip.gov.sa is recorded as the likely official portal for the Saudi Authority for Intellectual Property but has not been independently confirmed.",
+          "verify_at": "saip.gov.sa"
+        }
+      ],
+      "tags": ["saip", "intellectual_property", "trademarks", "patents", "copyrights", "source_gap"]
+    },
+    {
+      "id": "gea",
+      "name": "General Entertainment Authority (GEA)",
+      "name_alt": "هيئة الترفيه",
+      "mentioned_in_datasets": ["sectors"],
+      "reason_needed": "Listed as a likely authority in the sectors/entertainment_and_events entry as the sector regulator for entertainment businesses, events operators, and live entertainment venues. Verifying GEA's licensing framework for entertainment and events operators is required before the entertainment_and_events sector entry can move from draft to verified.",
+      "likely_official_domain": "gea.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to gea.gov.sa. Confirm the domain resolves to the General Entertainment Authority portal. Review the licensing and regulatory framework for entertainment businesses, live events operators, and entertainment venues. Then add a verified entry to data/sources.en.json using the source review template and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain gea.gov.sa is recorded as the likely official portal for the General Entertainment Authority but has not been independently confirmed.",
+          "verify_at": "gea.gov.sa"
+        }
+      ],
+      "tags": ["gea", "entertainment", "events", "live_events", "sector_regulator", "source_gap"]
     }
   ]
 }

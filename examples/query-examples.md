@@ -436,10 +436,10 @@ python scripts/report-source-gaps.py
 ```
 Invest Gate KSA — Source Gap Report
 ========================================================================
-  9 gap(s)  (all)  |  language: en
+  16 gap(s)  (all)  |  language: en
 ────────────────────────────────────────────────────────────────────────
 
-  1 / 7  cst                                                     [draft]
+  1 / 16  cst                                                     [draft]
   Communications, Space and Technology Commission (CST)
   (هيئة الاتصالات والفضاء والتقنية)
   Mentioned in:     sectors
@@ -566,5 +566,13 @@ Combines language and detail mode. The source line in the output footer confirms
 | `cma` | Capital Market Authority (CMA) | cma.org.sa |
 | `ministry_of_industry` | Ministry of Industry and Mineral Resources | miim.gov.sa |
 | `modon` | Saudi Authority for Industrial Cities and Technology Zones (MODON) | modon.gov.sa |
+| `gastat` | General Authority for Statistics (GASTAT) | stats.gov.sa |
+| `ministry_of_tourism` | Ministry of Tourism | mt.gov.sa |
+| `ministry_of_media` | Ministry of Media | media.gov.sa |
+| `ministry_of_interior` | Ministry of Interior | moi.gov.sa |
+| `ministry_of_hajj_and_umrah` | Ministry of Hajj and Umrah | haj.gov.sa |
+| `ncec` | National Center for Environmental Compliance (NCEC) | ncec.gov.sa |
+| `saip` | Saudi Authority for Intellectual Property (SAIP) | saip.gov.sa |
+| `gea` | General Entertainment Authority (GEA) | gea.gov.sa |
 
 All entries are `draft` status. As gaps are resolved, entries should be updated to `verified` or removed and replaced with verified entries in `data/sources.en.json`.
