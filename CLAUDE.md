@@ -143,6 +143,27 @@ Note: `likely_authorities` items reference both confirmed sources (from `data/so
 
 Query: `python scripts/query-dataset.py --dataset sectors --lang en --regulatory-sensitivity highly_regulated`
 
+### `authority-relationships` (12 entries)
+
+Conceptual relationships between regulatory authorities in the Saudi investment context. All entries are architectural and informational only — not legal obligations or procedural requirements.
+
+Key fields: `from_authority` (object: `{id, name}`), `to_authority` (object or null), `relationship_type` (enum), `relationship_direction` (enum), `conceptual_description`, `applies_to_sectors` (array), `examples` (array).
+
+`relationship_type` values: `foundational_dependency`, `operational_dependency`, `sector_oversight`, `compliance_interaction`, `infrastructure_relationship`, `strategic_coordination`.
+
+`relationship_direction` values: `unidirectional`, `bidirectional`, `contextual`.
+
+Note: `to_authority` is `null` for horizontal compliance and service authorities (NCEC, SAIP, ZATCA) whose relationships are sector-spanning rather than authority-to-authority.
+
+Query examples:
+```bash
+python scripts/query-dataset.py --dataset authority-relationships --list
+python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
+python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
+python scripts/query-dataset.py --dataset authority-relationships --to-authority ministry_of_commerce
+python scripts/query-dataset.py --dataset authority-relationships --sector fintech
+```
+
 ---
 
 ## Scripts
@@ -179,6 +200,10 @@ python scripts/query-dataset.py --dataset sources --lang en --authority-type gov
 python scripts/query-dataset.py --dataset sectors --lang en --list
 python scripts/query-dataset.py --dataset sectors --lang ar --id fintech
 python scripts/query-dataset.py --dataset sectors --regulatory-sensitivity highly_regulated
+python scripts/query-dataset.py --dataset authority-relationships --list
+python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
+python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
+python scripts/query-dataset.py --dataset authority-relationships --sector fintech
 ```
 
 ---

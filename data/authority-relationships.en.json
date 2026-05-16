@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "title": "Authority Relationships — Saudi Investment Context",
+    "description": "Conceptual relationships between regulatory authorities relevant to foreign investment and business operations in Saudi Arabia. All entries are architectural and informational only — not legal obligations or procedural requirements.",
+    "language": "en",
+    "last_verified": "placeholder — entries are draft; verify each relationship against official sources before relying on it"
+  },
+  "data": [
+    {
+      "id": "misa_ministry_of_commerce",
+      "from_authority": {
+        "id": "misa",
+        "name": "Ministry of Investment (MISA)"
+      },
+      "to_authority": {
+        "id": "ministry_of_commerce",
+        "name": "Ministry of Commerce"
+      },
+      "relationship_type": "foundational_dependency",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "MISA investment registration establishes the regulatory foundation for a foreign investor's legal presence and authorized activity scope in Saudi Arabia. The Ministry of Commerce commercial registration creates the legal entity in the commercial register. Commercial registration typically follows MISA investment registration; the activity scope authorized by MISA shapes what can be registered commercially. Neither substitutes for the other: MISA authorizes the investment, the Ministry of Commerce creates the legal person.",
+      "applies_to_sectors": [
+        "technology",
+        "consulting",
+        "ecommerce",
+        "food_and_beverage",
+        "real_estate",
+        "education",
+        "healthcare",
+        "fintech",
+        "manufacturing",
+        "industrial_services",
+        "mining",
+        "tourism_and_hospitality",
+        "media_and_content",
+        "hajj_umrah_services",
+        "entertainment_and_events"
+      ],
+      "examples": [
+        "A foreign investor establishing a technology company requires MISA investment registration before commercial registration at the Ministry of Commerce",
+        "The MISA-authorized activity codes define the scope of what the commercially registered entity may conduct"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "relationship_type — foundational_dependency",
+          "description": "The foundational_dependency classification reflects the typical sequence described in official guidance. Verify whether this dependency is formally required in all cases or whether commercial registration is possible without prior MISA registration for any business type.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "ministry_of_commerce", "investment_registration", "commercial_registration", "foundational", "foreign_investment"]
+    },
+    {
+      "id": "ministry_of_commerce_balady",
+      "from_authority": {
+        "id": "ministry_of_commerce",
+        "name": "Ministry of Commerce"
+      },
+      "to_authority": {
+        "id": "balady",
+        "name": "Balady (Municipal Services Portal)"
+      },
+      "relationship_type": "operational_dependency",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "The Ministry of Commerce commercial registration creates the legal entity. The Balady municipal operating license authorizes operations at a specific physical premises. Commercial registration is entity-level authorization; the Balady license is premises-level authorization. A business with physical premises requires both; a change of premises requires a new or updated Balady license. For purely digital businesses without physical premises, Balady licensing may not apply. The two authorizations are complementary, not substitutes.",
+      "applies_to_sectors": [
+        "technology",
+        "consulting",
+        "ecommerce",
+        "food_and_beverage",
+        "real_estate",
+        "education",
+        "healthcare",
+        "fintech",
+        "manufacturing",
+        "industrial_services",
+        "mining",
+        "tourism_and_hospitality",
+        "media_and_content",
+        "hajj_umrah_services",
+        "entertainment_and_events"
+      ],
+      "examples": [
+        "A retail food and beverage business requires both a Ministry of Commerce commercial registration and a Balady operating license for each physical location",
+        "A purely digital technology company may not require a Balady license if it operates without a physical premises in Saudi Arabia"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "applies_to_sectors — digital and remote service sectors",
+          "description": "Verify whether purely digital or remote service businesses (technology, consulting, fintech) consistently require Balady licensing or whether this is conditional on physical premises only. The sectors list reflects businesses that may have physical operations; the actual Balady requirement depends on operational specifics.",
+          "verify_at": "balady.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_commerce", "balady", "municipal_license", "commercial_registration", "premises", "operational"]
+    },
+    {
+      "id": "ministry_of_industry_modon",
+      "from_authority": {
+        "id": "ministry_of_industry",
+        "name": "Ministry of Industry and Mineral Resources"
+      },
+      "to_authority": {
+        "id": "modon",
+        "name": "MODON (Saudi Authority for Industrial Cities and Technology Zones)"
+      },
+      "relationship_type": "infrastructure_relationship",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "The Ministry of Industry and Mineral Resources governs the industrial activity classification, industrial licensing framework, and regulatory standards for manufacturing and mining operations. MODON operates Saudi industrial cities and issues operating licenses for businesses located within those cities. The Ministry of Industry governs the activity; MODON governs the location. A manufacturer in a Saudi industrial city may need to satisfy both. A manufacturer located outside an industrial city engages with the Ministry of Industry as sector regulator and with Balady for premises licensing rather than MODON.",
+      "applies_to_sectors": [
+        "manufacturing",
+        "industrial_services"
+      ],
+      "examples": [
+        "A manufacturing business located in a MODON-operated industrial city requires both Ministry of Industry licensing for the activity and MODON licensing for the industrial premises",
+        "A manufacturing business located outside an industrial city does not engage with MODON — Balady handles premises licensing instead"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "applies_to_sectors — mining in industrial cities",
+          "description": "Verify whether mining operations located in MODON-operated industrial cities or technology zones also engage with MODON, or whether MODON's mandate is limited to manufacturing and industrial services in those cities.",
+          "verify_at": "modon.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_industry", "modon", "industrial_cities", "manufacturing", "infrastructure", "industrial_services"]
+    },
+    {
+      "id": "misa_gea",
+      "from_authority": {
+        "id": "misa",
+        "name": "Ministry of Investment (MISA)"
+      },
+      "to_authority": {
+        "id": "gea",
+        "name": "General Entertainment Authority (GEA)"
+      },
+      "relationship_type": "sector_oversight",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "MISA investment registration authorizes foreign investor presence for entertainment activities. GEA is the primary licensing and regulatory authority for entertainment businesses in Saudi Arabia, issuing licenses that authorize the entertainment activity itself — not merely the legal entity or the physical premises. For entertainment operators, both MISA and GEA involvement is required: MISA for the investment registration, GEA for the entertainment activity authorization. GEA licensing applies to live entertainment venues, events operators, cinemas, theme parks, and similar concepts.",
+      "applies_to_sectors": [
+        "entertainment_and_events"
+      ],
+      "examples": [
+        "A foreign investor establishing a cinema chain requires MISA investment registration and GEA entertainment activity licensing",
+        "An events venue operator requires GEA licensing for the entertainment activity in addition to the standard business licensing path"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "to_authority — gea licensing scope",
+          "description": "Verify the precise scope of GEA licensing requirements: which entertainment business types require GEA licensing and which may not. Confirm via the official GEA portal.",
+          "verify_at": "gea.gov.sa"
+        }
+      ],
+      "tags": ["misa", "gea", "entertainment", "events", "sector_oversight", "activity_license"]
+    },
+    {
+      "id": "misa_ministry_of_tourism",
+      "from_authority": {
+        "id": "misa",
+        "name": "Ministry of Investment (MISA)"
+      },
+      "to_authority": {
+        "id": "ministry_of_tourism",
+        "name": "Ministry of Tourism"
+      },
+      "relationship_type": "sector_oversight",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "MISA investment registration authorizes foreign investor presence for tourism and hospitality activities. The Ministry of Tourism is the primary sector authority for tourism and hospitality businesses, and sector-specific licensing from the Ministry of Tourism applies alongside standard investment registration. For tourism and hospitality operators, both are required: MISA for the investment registration, Ministry of Tourism for the regulated sector activity. The Ministry of Tourism also holds a promotional and developmental role under Vision 2030.",
+      "applies_to_sectors": [
+        "tourism_and_hospitality"
+      ],
+      "examples": [
+        "A foreign investor establishing a hotel requires MISA investment registration and Ministry of Tourism sector licensing",
+        "A tour operator requires Ministry of Tourism licensing for the tourism service activity in addition to the standard business licensing path"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "to_authority — ministry_of_tourism sector scope",
+          "description": "Verify which tourism and hospitality business types require Ministry of Tourism sector licensing and whether any are exempt from sector-specific requirements. Confirm via mt.gov.sa.",
+          "verify_at": "mt.gov.sa"
+        }
+      ],
+      "tags": ["misa", "ministry_of_tourism", "tourism", "hospitality", "hotels", "sector_oversight", "vision_2030"]
+    },
+    {
+      "id": "misa_ministry_of_hajj_and_umrah",
+      "from_authority": {
+        "id": "misa",
+        "name": "Ministry of Investment (MISA)"
+      },
+      "to_authority": {
+        "id": "ministry_of_hajj_and_umrah",
+        "name": "Ministry of Hajj and Umrah"
+      },
+      "relationship_type": "sector_oversight",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "MISA investment registration authorizes foreign investor presence for pilgrimage-related service activities. The Ministry of Hajj and Umrah governs the highly regulated sector of hajj and umrah services, with licensing requirements that apply alongside standard investment registration. For businesses providing pilgrimage services, both MISA and Ministry of Hajj and Umrah involvement is required: MISA for the investment registration, the Ministry for sector authorization. This sector carries some of the most sensitive regulatory requirements due to its religious, logistical, and crowd management dimensions.",
+      "applies_to_sectors": [
+        "hajj_umrah_services"
+      ],
+      "examples": [
+        "A foreign investor providing hajj support services requires MISA investment registration and Ministry of Hajj and Umrah sector authorization",
+        "An umrah service provider must satisfy Ministry of Hajj and Umrah requirements in addition to standard business licensing"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "to_authority — ministry_of_hajj_and_umrah licensing scope",
+          "description": "Verify the specific licensing and approval requirements from the Ministry of Hajj and Umrah for different types of pilgrimage service businesses. Confirm the official portal scope at haj.gov.sa.",
+          "verify_at": "haj.gov.sa"
+        }
+      ],
+      "tags": ["misa", "ministry_of_hajj_and_umrah", "hajj", "umrah", "pilgrimage", "sector_oversight", "highly_regulated"]
+    },
+    {
+      "id": "misa_ministry_of_media",
+      "from_authority": {
+        "id": "misa",
+        "name": "Ministry of Investment (MISA)"
+      },
+      "to_authority": {
+        "id": "ministry_of_media",
+        "name": "Ministry of Media"
+      },
+      "relationship_type": "sector_oversight",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "MISA investment registration authorizes foreign investor presence for media and content activities. The Ministry of Media governs the regulated media sector including content licensing, publishing, broadcasting, and digital media operations. Sector-specific requirements from the Ministry of Media apply alongside standard investment registration. For media and content businesses, both are required: MISA for the investment registration, Ministry of Media for sector authorization. The regulatory sensitivity of this sector reflects content governance and national media policy.",
+      "applies_to_sectors": [
+        "media_and_content"
+      ],
+      "examples": [
+        "A foreign investor establishing a digital media platform requires MISA investment registration and Ministry of Media content licensing",
+        "A broadcasting operation requires Ministry of Media authorization for the broadcasting activity in addition to standard business registration"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "to_authority — ministry_of_media sector scope",
+          "description": "Verify which media and content business types are subject to Ministry of Media sector licensing. Confirm the relevant official portal and scope at media.gov.sa.",
+          "verify_at": "media.gov.sa"
+        }
+      ],
+      "tags": ["misa", "ministry_of_media", "media", "content", "broadcasting", "sector_oversight", "publishing"]
+    },
+    {
+      "id": "ncec_environmental_compliance",
+      "from_authority": {
+        "id": "ncec",
+        "name": "National Center for Environmental Compliance (NCEC)"
+      },
+      "to_authority": null,
+      "relationship_type": "compliance_interaction",
+      "relationship_direction": "contextual",
+      "conceptual_description": "NCEC is a horizontal compliance authority whose mandate extends across multiple sectors based on the environmental impact of operations rather than sector classification. Its jurisdiction is triggered by what a business does, not which sector it belongs to. Manufacturing, mining, food production and processing, real estate development, and healthcare facilities may generate environmental obligations — emissions, industrial waste, medical waste, effluent, land disturbance — that fall within NCEC's scope. NCEC involvement does not substitute for sector licensing; it applies in addition to the primary sector regulatory path whenever environmental impact thresholds are met.",
+      "applies_to_sectors": [
+        "manufacturing",
+        "mining",
+        "food_and_beverage",
+        "real_estate",
+        "healthcare"
+      ],
+      "examples": [
+        "A food processing plant is subject to NCEC environmental compliance requirements in addition to SFDA food safety requirements and standard business licensing",
+        "A real estate development project requiring land clearing or construction with significant environmental impact may require NCEC environmental impact assessment",
+        "A mining operation generates environmental obligations around land rehabilitation and waste management that fall within NCEC's scope"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "applies_to_sectors — ncec operational thresholds",
+          "description": "Verify the specific operational thresholds or activity types that trigger NCEC compliance requirements in each listed sector. The relationship is contextual — not all businesses in these sectors necessarily engage with NCEC. Confirm scope at ncec.gov.sa.",
+          "verify_at": "ncec.gov.sa"
+        }
+      ],
+      "tags": ["ncec", "environmental_compliance", "manufacturing", "mining", "food_and_beverage", "real_estate", "healthcare", "horizontal_compliance"]
+    },
+    {
+      "id": "saip_ip_protection",
+      "from_authority": {
+        "id": "saip",
+        "name": "Saudi Authority for Intellectual Property (SAIP)"
+      },
+      "to_authority": null,
+      "relationship_type": "strategic_coordination",
+      "relationship_direction": "contextual",
+      "conceptual_description": "SAIP is a service authority for intellectual property registration and protection — trademarks, patents, copyrights, and related rights. Unlike licensing or compliance authorities, SAIP does not authorize a business to operate or conduct specific activities. Its relevance is determined by the intellectual property profile of the business rather than its sector classification. Technology companies, e-commerce platforms, consulting firms with proprietary methodologies, media and content producers, and entertainment operators are among the business types for whom SAIP registration and protection services are strategically relevant. Engagement with SAIP is an asset protection mechanism, not a regulatory prerequisite in the same sense as a license.",
+      "applies_to_sectors": [
+        "technology",
+        "ecommerce",
+        "consulting",
+        "media_and_content",
+        "entertainment_and_events"
+      ],
+      "examples": [
+        "A technology company with proprietary software, a registered brand, or patented processes may use SAIP for trademark and patent registration",
+        "A media and content producer may register copyrights and related rights with SAIP to protect content assets",
+        "An e-commerce platform with branded products or a proprietary platform name has trademark exposure that SAIP services can address"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "applies_to_sectors — saip service scope",
+          "description": "Verify which SAIP services apply to each sector and whether any specific activities trigger mandatory SAIP registration rather than optional protection. Confirm service categories and eligibility at saip.gov.sa.",
+          "verify_at": "saip.gov.sa"
+        }
+      ],
+      "tags": ["saip", "intellectual_property", "trademark", "patent", "copyright", "technology", "ecommerce", "media", "strategic"]
+    },
+    {
+      "id": "misa_ministry_of_industry",
+      "from_authority": {
+        "id": "misa",
+        "name": "Ministry of Investment (MISA)"
+      },
+      "to_authority": {
+        "id": "ministry_of_industry",
+        "name": "Ministry of Industry and Mineral Resources"
+      },
+      "relationship_type": "sector_oversight",
+      "relationship_direction": "unidirectional",
+      "conceptual_description": "MISA investment registration authorizes foreign investor presence for industrial and mining activities. The Ministry of Industry and Mineral Resources governs manufacturing and mining operations through the industrial licensing framework, activity classification, and regulatory standards. For industrial operators, both MISA and Ministry of Industry involvement is required: MISA for the investment registration, Ministry of Industry for industrial licensing. The Ministry of Industry functions as both a licensing authority (issuing industrial licenses) and an operational authority (setting ongoing regulatory standards throughout the life of the operation).",
+      "applies_to_sectors": [
+        "manufacturing",
+        "industrial_services",
+        "mining"
+      ],
+      "examples": [
+        "A foreign investor establishing a manufacturing facility requires MISA investment registration and Ministry of Industry and Mineral Resources industrial licensing",
+        "A mining operation requires Ministry of Industry and Mineral Resources extraction authorization in addition to MISA investment registration"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "to_authority — ministry_of_industry licensing scope",
+          "description": "Verify the specific industrial licensing requirements from the Ministry of Industry and Mineral Resources for manufacturing, industrial services, and mining respectively. Confirm official portal and requirements.",
+          "verify_at": "mim.gov.sa"
+        }
+      ],
+      "tags": ["misa", "ministry_of_industry", "manufacturing", "mining", "industrial_services", "sector_oversight", "industrial_license"]
+    },
+    {
+      "id": "sama_cma_financial_oversight",
+      "from_authority": {
+        "id": "sama",
+        "name": "Saudi Central Bank (SAMA)"
+      },
+      "to_authority": {
+        "id": "cma",
+        "name": "Capital Market Authority (CMA)"
+      },
+      "relationship_type": "strategic_coordination",
+      "relationship_direction": "bidirectional",
+      "conceptual_description": "SAMA and the CMA have overlapping jurisdiction over certain financial services. SAMA regulates banking, insurance, payment services, and financing companies. The CMA regulates capital markets, securities, investment funds, and investment advisory services. For fintech businesses that intersect both regulatory domains — such as platforms combining payment services with investment features — both SAMA and CMA may be relevant as primary licensing and operational authorities. The relationship is bidirectional: neither authority is subordinate to the other, and each holds an independent mandate over its domain. Determining which authority governs a specific fintech activity requires assessment of the precise activity, not just the sector label.",
+      "applies_to_sectors": [
+        "fintech"
+      ],
+      "examples": [
+        "A fintech platform offering both payment processing (SAMA) and investment portfolio services (CMA) may require licensing from both authorities",
+        "An insurance technology platform sits within SAMA's insurance regulation scope; a securities advisory platform sits within CMA's scope"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "relationship_direction — sama cma overlap boundaries",
+          "description": "Verify whether SAMA and CMA have formal coordination mechanisms or published guidance on overlapping jurisdiction for fintech activities. Confirm the current official delineation of authority boundaries.",
+          "verify_at": "sama.gov.sa"
+        }
+      ],
+      "tags": ["sama", "cma", "fintech", "financial_services", "strategic_coordination", "bidirectional", "payments", "capital_markets"]
+    },
+    {
+      "id": "zatca_business_compliance",
+      "from_authority": {
+        "id": "zatca",
+        "name": "Zakat, Tax and Customs Authority (ZATCA)"
+      },
+      "to_authority": null,
+      "relationship_type": "compliance_interaction",
+      "relationship_direction": "contextual",
+      "conceptual_description": "ZATCA is a horizontal compliance authority that applies to virtually all registered businesses operating in Saudi Arabia. Its mandate covers VAT registration and filing, zakat obligations, income tax, and customs duties. ZATCA compliance applies regardless of sector classification — it is triggered by business registration status and activity type rather than sector. ZATCA does not authorize a business to operate in the licensing sense, but its obligations are universal and non-compliance carries direct legal consequences for all registered entities.",
+      "applies_to_sectors": [
+        "technology",
+        "consulting",
+        "ecommerce",
+        "food_and_beverage",
+        "real_estate",
+        "education",
+        "healthcare",
+        "fintech",
+        "manufacturing",
+        "industrial_services",
+        "mining",
+        "tourism_and_hospitality",
+        "media_and_content",
+        "hajj_umrah_services",
+        "entertainment_and_events"
+      ],
+      "examples": [
+        "Any registered business with annual revenue above the VAT registration threshold must register with ZATCA for VAT regardless of sector",
+        "A manufacturing company importing raw materials has customs obligations governed by ZATCA in addition to its sector licensing requirements",
+        "A foreign-owned company with taxable profits is subject to ZATCA income tax obligations"
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "applies_to_sectors — zatca thresholds and rates",
+          "description": "Verify current VAT registration thresholds, zakat applicability criteria, and income tax applicability rules for foreign-owned entities. These thresholds may change; confirm current values at zatca.gov.sa.",
+          "verify_at": "zatca.gov.sa"
+        }
+      ],
+      "tags": ["zatca", "vat", "zakat", "income_tax", "customs", "horizontal_compliance", "all_sectors"]
+    }
+  ]
+}

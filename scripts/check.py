@@ -72,6 +72,9 @@ REQUIRED_FILES = [
     "schemas/economic-activities.schema.json",
     "docs/en/authority-relationships.md",
     "docs/ar/authority-relationships.md",
+    "data/authority-relationships.en.json",
+    "data/authority-relationships.ar.json",
+    "schemas/authority-relationships.schema.json",
 ]
 
 # Markdown link targets to skip (not local paths)

@@ -68,6 +68,10 @@ DATASETS: Dict[str, Dict[str, str]] = {
         "en": os.path.join(ROOT, "data", "source-gaps.en.json"),
         "ar": os.path.join(ROOT, "data", "source-gaps.ar.json"),
     },
+    "authority-relationships": {
+        "en": os.path.join(ROOT, "data", "authority-relationships.en.json"),
+        "ar": os.path.join(ROOT, "data", "authority-relationships.ar.json"),
+    },
 }
 
 # ── Layout constants ──────────────────────────────────────────────────────────
@@ -179,6 +183,44 @@ def all_regulatory_sensitivities(data: dict) -> List[str]:
         if entry.get("regulatory_sensitivity"):
             levels.add(entry["regulatory_sensitivity"])
     return sorted(levels)
+
+
+def get_by_relationship_type(data: dict, relationship_type: str) -> List[dict]:
+    """Return all entries whose relationship_type matches exactly."""
+    return [e for e in data.get("data", []) if e.get("relationship_type") == relationship_type]
+
+
+def all_relationship_types(data: dict) -> List[str]:
+    """Return sorted list of every unique relationship_type across all entries."""
+    types: set = set()
+    for entry in data.get("data", []):
+        if entry.get("relationship_type"):
+            types.add(entry["relationship_type"])
+    return sorted(types)
+
+
+def get_by_from_authority(data: dict, authority_id: str) -> List[dict]:
+    """Return all entries whose from_authority.id matches exactly."""
+    return [
+        e for e in data.get("data", [])
+        if e.get("from_authority", {}).get("id") == authority_id
+    ]
+
+
+def get_by_to_authority(data: dict, authority_id: str) -> List[dict]:
+    """Return all entries whose to_authority.id matches exactly."""
+    return [
+        e for e in data.get("data", [])
+        if e.get("to_authority") and e["to_authority"].get("id") == authority_id
+    ]
+
+
+def get_by_sector(data: dict, sector_id: str) -> List[dict]:
+    """Return all entries that list the given sector_id in applies_to_sectors."""
+    return [
+        e for e in data.get("data", [])
+        if sector_id in e.get("applies_to_sectors", [])
+    ]
 
 
 # ── Formatting layer ──────────────────────────────────────────────────────────
@@ -379,6 +421,22 @@ def _build_parser() -> argparse.ArgumentParser:
         "--regulatory-sensitivity", metavar="LEVEL",
         help="Filter entries by regulatory_sensitivity (e.g. standard, regulated, highly_regulated)",
     )
+    action.add_argument(
+        "--relationship-type", metavar="TYPE",
+        help="Filter entries by relationship_type (e.g. foundational_dependency, sector_oversight, compliance_interaction)",
+    )
+    action.add_argument(
+        "--from-authority", metavar="ID",
+        help="Filter authority-relationships entries by from_authority.id (e.g. misa, ncec, zatca)",
+    )
+    action.add_argument(
+        "--to-authority", metavar="ID",
+        help="Filter authority-relationships entries by to_authority.id (e.g. ministry_of_commerce, balady)",
+    )
+    action.add_argument(
+        "--sector", metavar="SECTOR",
+        help="Filter authority-relationships entries by applies_to_sectors membership (e.g. fintech, manufacturing)",
+    )
     return parser
 
 
@@ -437,6 +495,55 @@ def main() -> None:
             sys.exit(1)
         title = (
             f"Regulatory sensitivity: {args.regulatory_sensitivity}  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
+        print(fmt_list_table(matches, title))
+
+    elif args.relationship_type:
+        matches = get_by_relationship_type(data, args.relationship_type)
+        if not matches:
+            print(f"No entries found with relationship_type '{args.relationship_type}'.")
+            types = all_relationship_types(data)
+            if types:
+                print(f"Available relationship types: {', '.join(types)}")
+            else:
+                print("This dataset does not use the relationship_type field.")
+            sys.exit(1)
+        title = (
+            f"Relationship type: {args.relationship_type}  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
+        print(fmt_list_table(matches, title))
+
+    elif args.from_authority:
+        matches = get_by_from_authority(data, args.from_authority)
+        if not matches:
+            print(f"No entries found with from_authority.id '{args.from_authority}'.")
+            sys.exit(1)
+        title = (
+            f"From authority: {args.from_authority}  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
+        print(fmt_list_table(matches, title))
+
+    elif args.to_authority:
+        matches = get_by_to_authority(data, args.to_authority)
+        if not matches:
+            print(f"No entries found with to_authority.id '{args.to_authority}'.")
+            sys.exit(1)
+        title = (
+            f"To authority: {args.to_authority}  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
+        print(fmt_list_table(matches, title))
+
+    elif args.sector:
+        matches = get_by_sector(data, args.sector)
+        if not matches:
+            print(f"No entries found with sector '{args.sector}' in applies_to_sectors.")
+            sys.exit(1)
+        title = (
+            f"Sector: {args.sector}  —  {len(matches)} match(es)"
             f"  ({args.dataset}, {args.lang})"
         )
         print(fmt_list_table(matches, title))

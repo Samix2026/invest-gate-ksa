@@ -177,6 +177,15 @@ The authority relationship architecture described in this document is reflected 
 
 **Future activity dataset will extend this model.** The economic activities dataset (see `schemas/economic-activities.schema.json`) includes `likely_authorities` at the activity level, enabling authority relationships to be expressed with greater precision than is possible at the sector level.
 
+**The `authority-relationships` dataset implements this architecture directly.** The `data/authority-relationships.*.json` files record the conceptual relationships described in this document in structured, queryable form — covering relationship type, direction, participating authorities, applicable sectors, and examples. All entries in that dataset are `"draft"` and carry placeholders tracking what must be verified before the relationship can be confirmed. Query the dataset with:
+
+```bash
+python scripts/query-dataset.py --dataset authority-relationships --list
+python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
+python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
+python scripts/query-dataset.py --dataset authority-relationships --sector fintech
+```
+
 ---
 
 ## Status

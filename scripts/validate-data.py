@@ -78,6 +78,14 @@ DATASETS = [
         "check_aliases": False,
         "check_sources": False,  # gap entries have no official_sources by definition
     },
+    {
+        "name":          "authority-relationships",
+        "schema_path":   os.path.join(ROOT, "schemas", "authority-relationships.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "authority-relationships.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "authority-relationships.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # relationship entries reference authorities conceptually, not via official_sources
+    },
 ]
 
 
