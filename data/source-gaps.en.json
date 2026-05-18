@@ -316,6 +316,24 @@
         }
       ],
       "tags": ["gea", "entertainment", "events", "live_events", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "chamber_of_commerce",
+      "name": "Chambers of Commerce (NCCI)",
+      "name_alt": "الغرف التجارية — الاتحاد الوطني للغرف التجارية الصناعية",
+      "mentioned_in_datasets": ["fees"],
+      "reason_needed": "Chamber of Commerce annual membership is a mandatory cost for businesses registered in Saudi Arabia. Fees vary by company class (SAR 800–10,000+/year). The National Committee for Chambers of Commerce and Industry (NCCI) and local chambers are the relevant bodies. The chamber_of_commerce_fee entry in data/fees.en.json references this authority_id. Verifying the official domain and fee schedule by class is required before that fee entry can move from verified to a full source entry.",
+      "likely_official_domain": "chamber.org.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Navigate directly to chamber.org.sa or the relevant local chamber portal. Confirm the domain resolves to the National Committee for Chambers of Commerce and Industry or the relevant local chamber. Review the published membership fee schedule by company class. Determine whether the Chamber of Commerce qualifies as an officially recognized national authority under the repository's source standards (.gov.sa or equivalent). If it qualifies, add a verified entry to data/sources.en.json and remove this gap or set verification_status to verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "The domain chamber.org.sa is recorded as the likely official portal for the national chamber body but has not been independently confirmed. Note: this domain uses .org.sa rather than .gov.sa — confirm whether the Chamber of Commerce is an officially recognized national authority that meets this repository's source standards before adding it to data/sources.en.json.",
+          "verify_at": "chamber.org.sa"
+        }
+      ],
+      "tags": ["chamber_of_commerce", "commercial_registration", "mandatory_membership", "fees", "source_gap"]
     }
   ]
 }

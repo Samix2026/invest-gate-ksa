@@ -316,6 +316,24 @@
         }
       ],
       "tags": ["gea", "entertainment", "events", "live_events", "sector_regulator", "source_gap"]
+    },
+    {
+      "id": "chamber_of_commerce",
+      "name": "الغرف التجارية — الاتحاد الوطني للغرف التجارية الصناعية",
+      "name_alt": "Chambers of Commerce (NCCI)",
+      "mentioned_in_datasets": ["fees"],
+      "reason_needed": "العضوية السنوية في الغرف التجارية تكلفة إلزامية للشركات المسجلة في المملكة العربية السعودية. تتفاوت الرسوم بحسب فئة الشركة (800 ريال – 10,000 ريال سعودي أو أكثر/سنوياً). الجهة المعنية هي اللجنة الوطنية للغرف التجارية والصناعية والغرف المحلية. يُشير إدخال chamber_of_commerce_fee في data/fees.ar.json إلى هذا authority_id. يستلزم التحقق من النطاق الرسمي وجدول رسوم العضوية حسب الفئة قبل الانتقال بذلك الإدخال إلى مرحلة متقدمة.",
+      "likely_official_domain": "chamber.org.sa",
+      "verification_status": "draft",
+      "next_verification_step": "انتقل مباشرةً إلى chamber.org.sa أو بوابة الغرفة التجارية المحلية المعنية. تأكد من أن النطاق يحل على بوابة الاتحاد الوطني للغرف التجارية الصناعية أو الغرفة المحلية ذات الصلة. راجع جدول رسوم العضوية المنشور حسب فئة الشركة. حدد ما إذا كانت الغرف التجارية تستوفي معايير المستودع للجهات الرسمية المعتمدة (.gov.sa أو ما يعادلها). إن استوفت، أضف إدخالاً موثَّقاً في data/sources.ar.json وأزِل هذه الفجوة أو اضبط verification_status على verified.",
+      "placeholders": [
+        {
+          "field": "likely_official_domain",
+          "description": "تم تسجيل النطاق chamber.org.sa على أنه البوابة الرسمية المرجَّحة للهيئة الوطنية للغرف، غير أنه لم يُؤكَّد بصورة مستقلة بعد. ملاحظة: يستخدم هذا النطاق .org.sa بدلاً من .gov.sa — يتطلب التأكد مما إذا كانت الغرف التجارية تستوفي معايير المصادر الرسمية المعتمدة للمستودع قبل إضافتها إلى data/sources.ar.json.",
+          "verify_at": "chamber.org.sa"
+        }
+      ],
+      "tags": ["chamber_of_commerce", "commercial_registration", "mandatory_membership", "fees", "source_gap"]
     }
   ]
 }

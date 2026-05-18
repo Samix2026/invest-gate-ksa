@@ -110,28 +110,32 @@
     {
       "id": "commercial_registration_issuance_fee",
       "authority_id": "ministry_of_commerce",
-      "fee_type": "issuance",
-      "description": "Fee charged by the Ministry of Commerce for issuing a Commercial Registration (CR) certificate. The CR formally creates the company as a legal entity in the Saudi commercial register.",
-      "amount_sar": 0,
+      "fee_type": "registration",
+      "description": "Fee charged by the Ministry of Commerce for the main (head office) Commercial Registration (CR). Under the April 2025 CR Law update, the annual renewal requirement was replaced by an annual fee payment and data verification cycle. A single CR now covers all activities and branches.",
+      "amount_sar": 200,
       "currency": "SAR",
-      "frequency": "one_time",
-      "placeholder_reason": "The current commercial registration issuance fee has not been independently verified. Fees for initial CR issuance may differ from renewal fees. Verify at mc.gov.sa.",
-      "verify_at": "https://open.data.gov.sa",
-      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
-      "verification_status": "draft",
-      "placeholders": [
-        {
-          "field": "amount_sar",
-          "description": "The current Ministry of Commerce fee for initial CR issuance. May vary by legal entity type (LLC vs JSC vs branch). Verify at mc.gov.sa.",
-          "verify_at": "mc.gov.sa"
-        },
-        {
-          "field": "frequency",
-          "description": "Whether the CR issuance fee is one-time and what the annual renewal fee is. Verify the current renewal schedule at mc.gov.sa.",
-          "verify_at": "mc.gov.sa"
-        }
-      ],
-      "tags": ["ministry_of_commerce", "commercial_registration", "cr", "issuance", "fees"]
+      "frequency": "annual",
+      "placeholder_reason": "Verified: SAR 200/year for main CR per Ministry of Commerce fee schedule (2025). Branch CR is SAR 100/year. The April 2025 CR Law replaced periodic renewal with an annual verification and fee payment cycle. Chamber of Commerce membership fee (SAR 800+/year) is separate and mandatory — see chamber_of_commerce_fee entry. Verify current fee at mc.gov.sa.",
+      "verify_at": "https://mc.gov.sa/en/eservices/Pages/Commercial-data.aspx",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["ministry_of_commerce", "commercial_registration", "cr", "annual", "fees"]
+    },
+    {
+      "id": "chamber_of_commerce_fee",
+      "authority_id": "chamber_of_commerce",
+      "fee_type": "other",
+      "description": "Annual mandatory Chamber of Commerce membership fee payable by all Saudi-registered companies. Fee varies by company class. Class 3 (minimum) is SAR 800/year. Larger companies fall in higher classes with fees of SAR 10,000/year or more. Membership is required for CR issuance and renewal.",
+      "amount_sar": 800,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "Verified: SAR 800/year minimum (Class 3) per Chamber of Commerce fee schedule (2025). Higher classes pay more — SAR 10,000+/year for large companies. The amount_sar recorded here represents the minimum Class 3 fee. Actual fee depends on company class. Verify current fee schedule at the relevant local Chamber of Commerce.",
+      "verify_at": "https://mc.gov.sa/en/eservices/Pages/Commercial-data.aspx",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["chamber_of_commerce", "commercial_registration", "cr", "mandatory_membership", "annual", "fees"]
     },
     {
       "id": "gosi_employer_registration_fee",

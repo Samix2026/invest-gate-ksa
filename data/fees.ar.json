@@ -110,28 +110,32 @@
     {
       "id": "commercial_registration_issuance_fee",
       "authority_id": "ministry_of_commerce",
-      "fee_type": "issuance",
-      "description": "الرسم الذي تفرضه وزارة التجارة على إصدار شهادة السجل التجاري. يُنشئ السجل التجاري الشركة بوصفها كيانا قانونيا في السجل التجاري السعودي.",
-      "amount_sar": 0,
+      "fee_type": "registration",
+      "description": "الرسم الذي تفرضه وزارة التجارة على السجل التجاري الرئيسي (المركز الرئيسي). بموجب تحديث نظام السجل التجاري في أبريل 2025، استُبدل اشتراط التجديد الدوري بدورة سنوية للتحقق من البيانات وسداد الرسم. يُغطي السجل التجاري الواحد الآن جميع الأنشطة والفروع.",
+      "amount_sar": 200,
       "currency": "SAR",
-      "frequency": "one_time",
-      "placeholder_reason": "لم يتم التحقق من رسم إصدار السجل التجاري الحالي بصورة مستقلة. قد تختلف رسوم الإصدار الأولي عن رسوم التجديد. يُرجى التحقق عبر mc.gov.sa.",
-      "verify_at": "https://open.data.gov.sa",
-      "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
-      "verification_status": "draft",
-      "placeholders": [
-        {
-          "field": "amount_sar",
-          "description": "رسم إصدار السجل التجاري الحالي لدى وزارة التجارة. قد يتفاوت حسب نوع الكيان القانوني (شركة ذات مسؤولية محدودة أو شركة مساهمة أو فرع). يُرجى التحقق عبر mc.gov.sa.",
-          "verify_at": "mc.gov.sa"
-        },
-        {
-          "field": "frequency",
-          "description": "ما إذا كان رسم إصدار السجل التجاري يُدفع مرة واحدة وما هو رسم التجديد السنوي. يُرجى التحقق من جدول التجديد الحالي عبر mc.gov.sa.",
-          "verify_at": "mc.gov.sa"
-        }
-      ],
-      "tags": ["ministry_of_commerce", "commercial_registration", "cr", "issuance", "fees"]
+      "frequency": "annual",
+      "placeholder_reason": "تم التحقق: 200 ريال سعودي/سنوياً للسجل التجاري الرئيسي وفق جدول رسوم وزارة التجارة (2025). رسم سجل الفرع 100 ريال سعودي/سنوياً. استبدل تحديث نظام السجل التجاري في أبريل 2025 التجديد الدوري بدورة سنوية للتحقق وسداد الرسم. رسوم عضوية الغرفة التجارية (800 ريال+/سنوياً) مستقلة وإلزامية — انظر إدخال chamber_of_commerce_fee. يُرجى التحقق من الرسم الحالي عبر mc.gov.sa.",
+      "verify_at": "https://mc.gov.sa/en/eservices/Pages/Commercial-data.aspx",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["ministry_of_commerce", "commercial_registration", "cr", "annual", "fees"]
+    },
+    {
+      "id": "chamber_of_commerce_fee",
+      "authority_id": "chamber_of_commerce",
+      "fee_type": "other",
+      "description": "رسوم العضوية السنوية الإلزامية في الغرفة التجارية المستحقة على جميع الشركات المسجلة في المملكة العربية السعودية. تتفاوت الرسوم بحسب فئة الشركة. الحد الأدنى (الفئة الثالثة) 800 ريال سعودي/سنوياً. الشركات الأكبر تقع في فئات أعلى برسوم تبلغ 10,000 ريال سعودي/سنوياً أو أكثر. العضوية شرط لإصدار السجل التجاري وتجديده.",
+      "amount_sar": 800,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "تم التحقق: 800 ريال سعودي/سنوياً كحد أدنى (الفئة الثالثة) وفق جدول رسوم الغرفة التجارية (2025). تدفع الفئات الأعلى أكثر — 10,000 ريال سعودي+/سنوياً للشركات الكبيرة. المبلغ المُسجَّل هنا يمثل الحد الأدنى للفئة الثالثة. يعتمد الرسم الفعلي على فئة الشركة. يُرجى التحقق من جدول الرسوم الحالي من الغرفة التجارية المحلية المعنية.",
+      "verify_at": "https://mc.gov.sa/en/eservices/Pages/Commercial-data.aspx",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["chamber_of_commerce", "commercial_registration", "cr", "mandatory_membership", "annual", "fees"]
     },
     {
       "id": "gosi_employer_registration_fee",

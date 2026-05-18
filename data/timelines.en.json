@@ -38,20 +38,14 @@
       "id": "commercial_registration_issuance",
       "authority_id": "ministry_of_commerce",
       "process_name": "Commercial Registration (CR) Issuance",
-      "min_days": null,
-      "max_days": null,
-      "typical_days": null,
-      "conditions": "Processing time depends on the legal entity type (LLC vs JSC vs branch), completeness of constitutional documents, and whether any manual review is required. The Ministry of Commerce digital portal (mc.gov.sa) may process certain registrations faster than others.",
-      "placeholder_reason": "The current Ministry of Commerce processing time for commercial registration issuance has not been independently verified. Digital processing benchmarks have improved over time under Vision 2030 reforms. Verify the current service level at mc.gov.sa.",
-      "verify_at": "https://open.data.gov.sa",
-      "verification_status": "draft",
-      "placeholders": [
-        {
-          "field": "min_days, max_days, typical_days",
-          "description": "The current Ministry of Commerce CR issuance processing time. May differ for LLC, JSC, and branch registrations. Verify the published service level at mc.gov.sa.",
-          "verify_at": "mc.gov.sa"
-        }
-      ],
+      "min_days": 0,
+      "max_days": 7,
+      "typical_days": 1,
+      "conditions": "Immediate (same day) for straightforward activities submitted with complete documentation via the Ministry of Commerce digital portal. Trade name review adds 1–2 business days for names requiring approval. Activities requiring sector regulator approval may take up to 7 business days or longer. Ejari electronic lease is mandatory — paper tenancy contracts are not accepted. Under the April 2025 CR Law update, a single CR covers all activities and branches. Source: Ministry of Commerce service level benchmarks (2025).",
+      "placeholder_reason": "Verified: immediate to 7 business days per Ministry of Commerce 2025 service benchmarks. Typical case (complete documentation, standard activity): 1 business day. Electronic lease (Ejari) is mandatory for the premises address. Verify current service levels at mc.gov.sa.",
+      "verify_at": "https://mc.gov.sa/en/eservices/Pages/Commercial-data.aspx",
+      "verification_status": "verified",
+      "placeholders": [],
       "tags": ["ministry_of_commerce", "commercial_registration", "cr", "timelines"]
     },
     {

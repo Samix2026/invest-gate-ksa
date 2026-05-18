@@ -138,12 +138,14 @@ For a foreign-owned company, the typical sequence is:
 
 The CR must be renewed periodically and updated whenever material changes occur (e.g., change of address, business activity, or shareholders).
 
+> **April 2025 CR Law Update:** Under amendments effective April 2025, the CR is no longer time-limited. The annual renewal requirement has been replaced by an annual data verification cycle and fee payment (SAR 200/year for main CR, SAR 100/year for branch CR). A single CR now covers all activities and branches. Companies holding CRs issued under the prior law have a 5-year grace period to April 2030. Verify current requirements at [mc.gov.sa](https://mc.gov.sa).
+
 > **[PLACEHOLDER]** The specific documents required for CR registration, notarization requirements, and the current process flow (including online steps via the Ministry of Commerce portal) should be verified at [mc.gov.sa](https://mc.gov.sa).
 
 ---
 
 > **Verify with official sources:**
-> Commercial registration requirements, renewal procedures, and the company law framework are published by the Ministry of Commerce at [mc.gov.sa](https://mc.gov.sa).
+> Commercial registration requirements, the annual verification cycle, and the company law framework are published by the Ministry of Commerce at [mc.gov.sa](https://mc.gov.sa).
 
 ---
 
@@ -312,7 +314,7 @@ Depending on the business activity, additional licenses or approvals may be requ
 ---
 
 ### Step 10 — Ongoing Compliance
-After setup, the company must maintain ongoing compliance: renew licenses and registrations, file tax returns, meet Saudization obligations, maintain proper books of account, and meet any sector-specific reporting requirements.
+After setup, the company must maintain ongoing compliance: complete annual CR data verification and fee payment (replacing the prior renewal requirement under the April 2025 CR Law update), renew other licenses and registrations, file tax returns, meet Saudization obligations, maintain proper books of account, and meet any sector-specific reporting requirements.
 
 ---
 

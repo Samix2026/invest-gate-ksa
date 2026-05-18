@@ -19,6 +19,8 @@ All information below is sourced from the `business-structures` dataset entries.
 
 > **2025 Regulatory Update:** Saudi Arabia replaced the Foreign Investment License system with a streamlined Investment Registration process under the new Investment Law (Royal Decree M/19, 2024) and its Implementing Regulations (Ministerial Decision 1086, February 2025). A single registration now covers multiple sectors — activity-specific licenses are no longer required per activity. Source: MISA Investor Guide, 12th Edition (2025).
 
+> **April 2025 CR Law Update:** The Companies Law was amended effective April 2025. Key changes: (1) Annual renewal replaced by an annual data verification cycle and fee payment — CR is no longer time-limited. (2) A single CR now covers all business activities and branches. (3) A 5-year grace period to April 2030 applies to companies with CRs issued under the prior law. (4) Auto-cancellation period for inactive CRs extended from 30 days to 1 year. Source: Ministry of Commerce (mc.gov.sa). Verify current requirements at mc.gov.sa.
+
 ---
 
 ## 1. Side-by-Side Comparison
