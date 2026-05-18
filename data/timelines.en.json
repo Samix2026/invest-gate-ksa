@@ -10,21 +10,29 @@
       "id": "misa_investment_registration",
       "authority_id": "misa",
       "process_name": "MISA Investment Registration",
-      "min_days": null,
-      "max_days": null,
-      "typical_days": null,
-      "conditions": "Processing time may vary based on the business activity, completeness of the application, and whether additional review is required for the specific sector or investor home country. Digital applications via the MISA portal may differ from in-person processing.",
-      "placeholder_reason": "The current processing time for MISA investment registrations has not been independently verified. MISA has published benchmarks in past investor guides but these change. Verify the current processing timeline at misa.gov.sa or the Invest Saudi portal.",
-      "verify_at": "https://misa.gov.sa/en/open-data/",
-      "verification_status": "draft",
-      "placeholders": [
-        {
-          "field": "min_days, max_days, typical_days",
-          "description": "The current MISA investment registration processing time benchmark (minimum, maximum, and typical) has not been recorded. This varies by activity type and application completeness. Verify the published service level at misa.gov.sa.",
-          "verify_at": "misa.gov.sa"
-        }
-      ],
+      "min_days": 1,
+      "max_days": 10,
+      "typical_days": 10,
+      "conditions": "Processing begins after complete documentation is submitted. Simple cases may be approved within 1 business day. Regulated sectors requiring additional authority approvals take longer. Under the Investment Law (Royal Decree M/19, 2024), a single registration now covers multiple sectors. Source: MISA Investor Guide, 12th Edition, July 2025.",
+      "placeholder_reason": "Verified per MISA Investor Guide, 12th Edition, July 2025. Min: 1 business day (straightforward cases). Max/typical: 10 business days. Regulated sectors requiring additional approvals may take longer.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "verification_status": "verified",
+      "placeholders": [],
       "tags": ["misa", "registration", "foreign_investment", "timelines"]
+    },
+    {
+      "id": "misa_annual_renewal",
+      "authority_id": "misa",
+      "process_name": "MISA Annual Registration Update",
+      "min_days": 5,
+      "max_days": 5,
+      "typical_days": 5,
+      "conditions": "Annual update of registration data as required by Investment Law Executive Regulations (Ministerial Decision 1086, February 2025). Must be completed within the period specified by MISA.",
+      "placeholder_reason": "Verified per MISA Investor Guide, 12th Edition, July 2025.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "annual_renewal", "timelines"]
     },
     {
       "id": "commercial_registration_issuance",

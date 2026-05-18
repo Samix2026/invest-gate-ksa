@@ -23,20 +23,15 @@
       "languages_supported": ["ar", "en"],
       "update_frequency_estimate": null,
       "reliability_level": "primary_official",
-      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
-      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "last_verified": "2026-05-18",
+      "verification_method": "Reviewed MISA Investor Guide, 12th Edition, July 2025 (misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf)",
       "tags": ["misa", "foreign_investment", "licensing", "sector_rules", "ownership", "ministry"],
-      "notes": "Primary body for foreign investor registration in Saudi Arabia. Issues activity-specific investment registrations. For most foreign investors, this registration conceptually precedes commercial registration.",
+      "notes": "Primary body for foreign investor registration in Saudi Arabia. Under the Investment Law (Royal Decree M/19, August 2024) and its Implementing Regulations (Ministerial Decision 1086, February 2025), foreign investors obtain an Investment Registration — the former activity-specific Foreign Investment License no longer exists. A single registration now covers multiple sectors. For most foreign investors, this registration precedes commercial registration. Formerly known as SAGIA (Saudi Arabian General Investment Authority) until 2020. Reference: MISA Investor Guide, 12th Edition (July 2025).",
       "verification_status": "draft",
       "placeholders": [
         {
           "field": "update_frequency_estimate",
           "description": "The frequency with which MISA updates its published guidance, approved activities list, and portal content has not been independently verified.",
-          "verify_at": "misa.gov.sa"
-        },
-        {
-          "field": "last_verified",
-          "description": "The date this registry entry was last verified against the live MISA portal has not been recorded.",
           "verify_at": "misa.gov.sa"
         }
       ]

@@ -14,23 +14,98 @@
       "amount_sar": 0,
       "currency": "SAR",
       "frequency": "one_time",
-      "placeholder_reason": "The current MISA investment registration fee has not been independently verified. Amounts are subject to change. Verify the current fee schedule at misa.gov.sa before proceeding.",
-      "verify_at": "https://misa.gov.sa/en/open-data/",
-      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
+      "placeholder_reason": "Fee determined by MISA upon application approval per activity type. No fixed public fee schedule is published. Payable within 15 business days of notification per MISA Investor Guide, 12th Edition (July 2025). Verify directly via MISA e-portal after submitting registration.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
       "verification_status": "draft",
       "placeholders": [
         {
           "field": "amount_sar",
-          "description": "The current MISA investment registration fee amount in SAR. This may vary by investor type, activity, or entity structure. Verify the current fee schedule at the MISA official portal.",
-          "verify_at": "misa.gov.sa"
+          "description": "The MISA investment registration fee is determined per activity type upon application approval. No fixed public schedule is published. Verify the applicable fee via the MISA e-portal after registration is approved.",
+          "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf"
         },
         {
           "field": "frequency",
-          "description": "Whether the registration fee is one-time or includes a recurring annual component (e.g., renewal fee). Verify the MISA renewal fee schedule separately.",
-          "verify_at": "misa.gov.sa"
+          "description": "Whether the registration fee is one-time only or includes recurring components. Annual registration update (renewal) is confirmed as no-fee per the official guide. Verify any initial registration fee structure directly via MISA.",
+          "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf"
         }
       ],
       "tags": ["misa", "registration", "foreign_investment", "fees"]
+    },
+    {
+      "id": "misa_activity_amendment_fee",
+      "authority_id": "misa",
+      "fee_type": "amendment",
+      "description": "Fee charged by the Ministry of Investment (MISA) for amending the business activity on an existing Investment Registration. Confirmed zero fee per the official investor guide.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "Confirmed zero fee per MISA Investor Guide, 12th Edition, July 2025. No fee is charged for activity amendment as a post-registration service.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "amendment", "activity", "fees"]
+    },
+    {
+      "id": "misa_ownership_amendment_fee",
+      "authority_id": "misa",
+      "fee_type": "amendment",
+      "description": "Fee charged by the Ministry of Investment (MISA) for amending the ownership structure of an existing Investment Registration. Confirmed zero fee per the official investor guide.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "Confirmed zero fee per MISA Investor Guide, 12th Edition, July 2025. No fee is charged for ownership amendment as a post-registration service.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "amendment", "ownership", "fees"]
+    },
+    {
+      "id": "misa_annual_renewal_fee",
+      "authority_id": "misa",
+      "fee_type": "renewal",
+      "description": "Fee for the annual update of Investment Registration data required under the Investment Law Executive Regulations (Ministerial Decision 1086, February 2025). Confirmed zero fee per the official investor guide.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "Confirmed zero fee per MISA Investor Guide, 12th Edition, July 2025. No fee is charged for the annual registration update.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "annual_renewal", "fees"]
+    },
+    {
+      "id": "misa_property_approval_fee",
+      "authority_id": "misa",
+      "fee_type": "other",
+      "description": "Fee charged by the Ministry of Investment (MISA) for approving an investor's property-related request as part of post-registration services. Confirmed zero fee per the official investor guide.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "Confirmed zero fee per MISA Investor Guide, 12th Edition, July 2025. No fee is charged for property approval as a post-registration service.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "property", "approval", "fees"]
+    },
+    {
+      "id": "misa_registration_cancellation_fee",
+      "authority_id": "misa",
+      "fee_type": "other",
+      "description": "Fee charged by the Ministry of Investment (MISA) for cancelling an existing Investment Registration. Confirmed zero fee per the official investor guide.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "Confirmed zero fee per MISA Investor Guide, 12th Edition, July 2025. No fee is charged for investment registration cancellation.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "cancellation", "fees"]
     },
     {
       "id": "commercial_registration_issuance_fee",

@@ -101,9 +101,9 @@ Key functions relevant to foreign investors:
 
 ### Investment Registration
 
-The MISA investment registration is activity-specific. A company seeking to operate across multiple sectors may require registrations covering each activity. The registration does not substitute for commercial registration — it is a prerequisite to it for foreign investors.
+As of the Investment Law (Royal Decree M/19, August 2024) and its Implementing Regulations (Ministerial Decision 1086, February 2025), foreign investors obtain an Investment Registration from MISA — they are no longer required to obtain a separate license per activity. A single registration now covers multiple sectors. The registration does not substitute for commercial registration — it is a prerequisite to it for foreign investors.
 
-> **Terminology note:** Some older MISA publications and third-party guides refer to this step as an "investment license" or "MISA license." The current investor entry concept is treated as a registration. If you encounter the older terminology in official materials, it refers to the same initial authorization from MISA.
+> **2025 Regulatory Update:** Saudi Arabia replaced the Foreign Investment License system with a streamlined Investment Registration process under the new Investment Law (Royal Decree M/19, 2024). A single registration now covers multiple sectors. Source: MISA Investor Guide, 12th Edition (2025). (formerly "MISA License" — terminology updated per Investment Law 2024)
 
 > **[PLACEHOLDER]** The classification of activities, application requirements, and any minimum investment thresholds should be confirmed with MISA directly. Requirements may vary by sector, company type, and the investor's home country. See [misa.gov.sa](https://misa.gov.sa).
 

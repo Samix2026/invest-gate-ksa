@@ -17,6 +17,8 @@ related:
 
 All information below is sourced from the `business-structures` dataset entries. All entries are **draft** status — not yet independently verified against live official sources. Verify every point at misa.gov.sa and mc.gov.sa before proceeding.
 
+> **2025 Regulatory Update:** Saudi Arabia replaced the Foreign Investment License system with a streamlined Investment Registration process under the new Investment Law (Royal Decree M/19, 2024) and its Implementing Regulations (Ministerial Decision 1086, February 2025). A single registration now covers multiple sectors — activity-specific licenses are no longer required per activity. Source: MISA Investor Guide, 12th Edition (2025).
+
 ---
 
 ## 1. Side-by-Side Comparison

@@ -14,23 +14,98 @@
       "amount_sar": 0,
       "currency": "SAR",
       "frequency": "one_time",
-      "placeholder_reason": "لم يتم التحقق من رسم تسجيل الاستثمار الحالي لدى وزارة الاستثمار بصورة مستقلة. تخضع المبالغ للتغيير. يُرجى التحقق من جدول الرسوم الحالي عبر misa.gov.sa قبل المضي قدما.",
-      "verify_at": "https://misa.gov.sa/en/open-data/",
-      "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
+      "placeholder_reason": "يُحدَّد الرسم من قِبَل وزارة الاستثمار عند الموافقة على الطلب وفق نوع النشاط. لا يُنشَر جدول رسوم ثابت علنيا. يُستحق السداد خلال 15 يوم عمل من الإشعار وفق دليل المستثمر لوزارة الاستثمار، الطبعة الثانية عشرة (يوليو 2025). يُرجى التحقق مباشرةً عبر البوابة الإلكترونية لوزارة الاستثمار بعد تقديم التسجيل.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
       "verification_status": "draft",
       "placeholders": [
         {
           "field": "amount_sar",
-          "description": "مبلغ رسم تسجيل الاستثمار الحالي لدى وزارة الاستثمار بالريال السعودي. قد يتفاوت حسب نوع المستثمر والنشاط وهيكل الكيان. يُرجى التحقق من جدول الرسوم الحالي عبر بوابة وزارة الاستثمار الرسمية.",
-          "verify_at": "misa.gov.sa"
+          "description": "رسم تسجيل الاستثمار لدى وزارة الاستثمار يُحدَّد حسب نوع النشاط عند الموافقة على الطلب. لا يُنشَر جدول ثابت علنيا. يُرجى التحقق من الرسم المنطبق عبر البوابة الإلكترونية لوزارة الاستثمار بعد اعتماد التسجيل.",
+          "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf"
         },
         {
           "field": "frequency",
-          "description": "ما إذا كان رسم التسجيل يُدفع مرة واحدة أم يشمل مكونا سنويا متكررا كرسم التجديد. يُرجى التحقق من جدول رسوم تجديد التسجيل لدى وزارة الاستثمار بصورة منفصلة.",
-          "verify_at": "misa.gov.sa"
+          "description": "ما إذا كان رسم التسجيل يُدفع مرة واحدة فحسب أم يشمل مكونات متكررة. تم التأكيد بأن التحديث السنوي للتسجيل مجاني وفق الدليل الرسمي. يُرجى التحقق من هيكل الرسم الأولي مباشرةً عبر وزارة الاستثمار.",
+          "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf"
         }
       ],
       "tags": ["misa", "registration", "foreign_investment", "fees"]
+    },
+    {
+      "id": "misa_activity_amendment_fee",
+      "authority_id": "misa",
+      "fee_type": "amendment",
+      "description": "الرسم الذي تفرضه وزارة الاستثمار على تعديل النشاط التجاري في تسجيل استثمار قائم. مؤكد عدم وجود رسم وفق الدليل الرسمي.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "مؤكد عدم وجود رسم وفق دليل المستثمر لوزارة الاستثمار، الطبعة الثانية عشرة، يوليو 2025. لا يُفرض رسم على تعديل النشاط بوصفه خدمة ما بعد التسجيل.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "amendment", "activity", "fees"]
+    },
+    {
+      "id": "misa_ownership_amendment_fee",
+      "authority_id": "misa",
+      "fee_type": "amendment",
+      "description": "الرسم الذي تفرضه وزارة الاستثمار على تعديل هيكل الملكية في تسجيل استثمار قائم. مؤكد عدم وجود رسم وفق الدليل الرسمي.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "مؤكد عدم وجود رسم وفق دليل المستثمر لوزارة الاستثمار، الطبعة الثانية عشرة، يوليو 2025. لا يُفرض رسم على تعديل الملكية بوصفه خدمة ما بعد التسجيل.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "amendment", "ownership", "fees"]
+    },
+    {
+      "id": "misa_annual_renewal_fee",
+      "authority_id": "misa",
+      "fee_type": "renewal",
+      "description": "رسم التحديث السنوي لبيانات تسجيل الاستثمار المطلوب بموجب اللوائح التنفيذية لنظام الاستثمار (قرار وزير الاستثمار رقم 1086، فبراير 2025). مؤكد عدم وجود رسم وفق الدليل الرسمي.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "مؤكد عدم وجود رسم وفق دليل المستثمر لوزارة الاستثمار، الطبعة الثانية عشرة، يوليو 2025. لا يُفرض رسم على التحديث السنوي للتسجيل.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "annual_renewal", "fees"]
+    },
+    {
+      "id": "misa_property_approval_fee",
+      "authority_id": "misa",
+      "fee_type": "other",
+      "description": "الرسم الذي تفرضه وزارة الاستثمار على الموافقة على طلبات المستثمر المتعلقة بالعقارات بوصفها خدمة من خدمات ما بعد التسجيل. مؤكد عدم وجود رسم وفق الدليل الرسمي.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "مؤكد عدم وجود رسم وفق دليل المستثمر لوزارة الاستثمار، الطبعة الثانية عشرة، يوليو 2025. لا يُفرض رسم على الموافقة العقارية بوصفها خدمة ما بعد التسجيل.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "property", "approval", "fees"]
+    },
+    {
+      "id": "misa_registration_cancellation_fee",
+      "authority_id": "misa",
+      "fee_type": "other",
+      "description": "الرسم الذي تفرضه وزارة الاستثمار على إلغاء تسجيل استثمار قائم. مؤكد عدم وجود رسم وفق الدليل الرسمي.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "مؤكد عدم وجود رسم وفق دليل المستثمر لوزارة الاستثمار، الطبعة الثانية عشرة، يوليو 2025. لا يُفرض رسم على إلغاء تسجيل الاستثمار.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "cancellation", "fees"]
     },
     {
       "id": "commercial_registration_issuance_fee",
