@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Government Fees for Foreign Investors — Saudi Arabia",
+    "description": "Official government fees for registration, licensing, and certification procedures relevant to foreign investors establishing a business in Saudi Arabia. All monetary amounts are in SAR. All entries are draft — amounts have not been independently verified against live official sources.",
+    "language": "en",
+    "last_verified": "[PLACEHOLDER — update when entries are verified against current official fee schedules]"
+  },
+  "data": [
+    {
+      "id": "misa_investment_registration_fee",
+      "authority_id": "misa",
+      "fee_type": "registration",
+      "description": "Fee charged by the Ministry of Investment (MISA) for processing and issuing an investment registration certificate for a foreign investor. This registration authorizes the investor to establish a Saudi legal entity for the approved activity.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "The current MISA investment registration fee has not been independently verified. Amounts are subject to change. Verify the current fee schedule at misa.gov.sa before proceeding.",
+      "verify_at": "misa.gov.sa",
+      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "amount_sar",
+          "description": "The current MISA investment registration fee amount in SAR. This may vary by investor type, activity, or entity structure. Verify the current fee schedule at the MISA official portal.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "frequency",
+          "description": "Whether the registration fee is one-time or includes a recurring annual component (e.g., renewal fee). Verify the MISA renewal fee schedule separately.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "registration", "foreign_investment", "fees"]
+    },
+    {
+      "id": "commercial_registration_issuance_fee",
+      "authority_id": "ministry_of_commerce",
+      "fee_type": "issuance",
+      "description": "Fee charged by the Ministry of Commerce for issuing a Commercial Registration (CR) certificate. The CR formally creates the company as a legal entity in the Saudi commercial register.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "The current commercial registration issuance fee has not been independently verified. Fees for initial CR issuance may differ from renewal fees. Verify at mc.gov.sa.",
+      "verify_at": "mc.gov.sa",
+      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "amount_sar",
+          "description": "The current Ministry of Commerce fee for initial CR issuance. May vary by legal entity type (LLC vs JSC vs branch). Verify at mc.gov.sa.",
+          "verify_at": "mc.gov.sa"
+        },
+        {
+          "field": "frequency",
+          "description": "Whether the CR issuance fee is one-time and what the annual renewal fee is. Verify the current renewal schedule at mc.gov.sa.",
+          "verify_at": "mc.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_commerce", "commercial_registration", "cr", "issuance", "fees"]
+    },
+    {
+      "id": "gosi_employer_registration_fee",
+      "authority_id": "gosi",
+      "fee_type": "registration",
+      "description": "Fee, if any, charged by the General Organization for Social Insurance (GOSI) for registering as an employer. GOSI registration is required before hiring any employees in Saudi Arabia.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "It is not confirmed whether GOSI charges a separate employer registration fee or whether registration is free at the point of enrollment. Ongoing GOSI contributions (a percentage of payroll) are separate from any registration fee and are not recorded here. Verify at gosi.gov.sa.",
+      "verify_at": "gosi.gov.sa",
+      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "amount_sar",
+          "description": "Whether GOSI charges a fee for initial employer registration. Ongoing GOSI contribution rates (employer and employee portions as a percentage of salary) are not recorded in this dataset. Verify at gosi.gov.sa.",
+          "verify_at": "gosi.gov.sa"
+        }
+      ],
+      "tags": ["gosi", "registration", "employer", "social_insurance", "fees"]
+    },
+    {
+      "id": "zatca_vat_registration_fee",
+      "authority_id": "zatca",
+      "fee_type": "registration",
+      "description": "Fee, if any, charged by the Zakat, Tax and Customs Authority (ZATCA) for registering for VAT, zakat, or corporate income tax. VAT registration is required when taxable turnover meets or exceeds the statutory threshold.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "It is not confirmed whether ZATCA charges a separate registration fee for VAT, zakat, or income tax registration, or whether registration is free. Ongoing tax obligations (VAT rates, CIT rates, zakat rates) are set by law and are not recorded as fees in this dataset. Verify at zatca.gov.sa.",
+      "verify_at": "zatca.gov.sa",
+      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "amount_sar",
+          "description": "Whether ZATCA charges a fee for initial VAT, zakat, or income tax registration. Tax rates and thresholds are governed by Saudi tax law and are not recorded as fees in this dataset. Verify at zatca.gov.sa.",
+          "verify_at": "zatca.gov.sa"
+        }
+      ],
+      "tags": ["zatca", "vat", "registration", "tax", "fees"]
+    },
+    {
+      "id": "municipal_license_riyadh_fee",
+      "authority_id": "balady",
+      "fee_type": "issuance",
+      "description": "Fee charged by the local municipality in Riyadh for issuing a commercial operating license (Balady license) for a business premises. The fee authorizes operation at a specific physical location. Fees vary by city, premises size, and activity type.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "Municipal operating license fees vary by city, premises size, and business activity classification. The fee recorded here is specific to Riyadh. Fees for Jeddah, Dammam, and other cities may differ. Verify the current fee schedule with the relevant local municipality or at the Balady portal.",
+      "verify_at": "balady.gov.sa",
+      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "amount_sar",
+          "description": "The current Balady municipal operating license fee for a business premises in Riyadh. Fees depend on premises size, activity type, and may include sub-components. Verify at the Balady portal or with Amanah Al-Riyadh directly.",
+          "verify_at": "balady.gov.sa"
+        },
+        {
+          "field": "frequency",
+          "description": "Whether the municipal license requires annual renewal and whether the renewal fee differs from the initial issuance fee. Verify at balady.gov.sa.",
+          "verify_at": "balady.gov.sa"
+        }
+      ],
+      "tags": ["balady", "municipal_license", "riyadh", "annual", "fees"]
+    },
+    {
+      "id": "saudization_certificate_fee",
+      "authority_id": "mhrsd",
+      "fee_type": "certificate",
+      "description": "Fee, if any, charged by the Ministry of Human Resources and Social Development (MHRSD) for issuing a Saudization compliance certificate or for registering on the Qiwa labor platform. Employers must meet Nitaqat (Saudization) thresholds to maintain work visa quotas and access to government services.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": null,
+      "placeholder_reason": "It is not confirmed whether MHRSD or Qiwa charge a fee for Saudization certificate issuance or labor platform registration. Nitaqat compliance fees, work visa (iqama) fees, and the expat levy (Hafiz) are separate and not recorded here. Verify at hrsd.gov.sa and qiwa.hrsd.gov.sa.",
+      "verify_at": "hrsd.gov.sa",
+      "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "amount_sar",
+          "description": "Whether MHRSD or the Qiwa platform charge a fee for employer registration, Saudization certificate issuance, or Nitaqat compliance status reporting. Verify at hrsd.gov.sa.",
+          "verify_at": "hrsd.gov.sa"
+        },
+        {
+          "field": "frequency",
+          "description": "Whether any Saudization certificate or compliance fee is one-time, annual, or per-employee. Verify at hrsd.gov.sa.",
+          "verify_at": "hrsd.gov.sa"
+        }
+      ],
+      "tags": ["mhrsd", "saudization", "nitaqat", "certificate", "fees"]
+    }
+  ]
+}

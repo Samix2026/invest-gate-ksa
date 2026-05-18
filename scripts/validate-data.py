@@ -7,7 +7,7 @@ Runs structural validation (JSON Schema) and semantic checks
 Iterates over all registered datasets in DATASETS.
 
 Usage:
-    python scripts/validate-data.py
+    python3 scripts/validate-data.py
 
 Requirements:
     pip install jsonschema>=3.2.0
@@ -93,6 +93,22 @@ DATASETS = [
         "ar_path":       os.path.join(ROOT, "data",    "setup-flows.ar.json"),
         "check_aliases": False,
         "check_sources": False,  # setup flows reference authorities conceptually, not via official_sources
+    },
+    {
+        "name":          "fees",
+        "schema_path":   os.path.join(ROOT, "schemas", "fees.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "fees.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "fees.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # fees reference authorities by authority_id, not via official_sources
+    },
+    {
+        "name":          "timelines",
+        "schema_path":   os.path.join(ROOT, "schemas", "timelines.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "timelines.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "timelines.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # timelines reference authorities by authority_id, not via official_sources
     },
 ]
 

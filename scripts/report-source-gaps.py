@@ -13,11 +13,11 @@ Architecture
 
 Usage
 ─────
-  python scripts/report-source-gaps.py
-  python scripts/report-source-gaps.py --lang ar
-  python scripts/report-source-gaps.py --status draft
-  python scripts/report-source-gaps.py --id sama
-  python scripts/report-source-gaps.py --id cma
+  python3 scripts/report-source-gaps.py
+  python3 scripts/report-source-gaps.py --lang ar
+  python3 scripts/report-source-gaps.py --status draft
+  python3 scripts/report-source-gaps.py --id sama
+  python3 scripts/report-source-gaps.py --id cma
 
 Exit codes:
   0  report printed (including when a filter returns no matches)
@@ -184,11 +184,11 @@ def _build_parser():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent("""\
             examples:
-              python scripts/report-source-gaps.py
-              python scripts/report-source-gaps.py --lang ar
-              python scripts/report-source-gaps.py --status draft
-              python scripts/report-source-gaps.py --id sama
-              python scripts/report-source-gaps.py --id cma
+              python3 scripts/report-source-gaps.py
+              python3 scripts/report-source-gaps.py --lang ar
+              python3 scripts/report-source-gaps.py --status draft
+              python3 scripts/report-source-gaps.py --id sama
+              python3 scripts/report-source-gaps.py --id cma
         """),
     )
     parser.add_argument(

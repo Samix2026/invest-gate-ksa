@@ -109,7 +109,7 @@ Entity types available to foreign investors: LLC, JSC, Branch Office, Representa
 
 Key fields: `name`, `abbreviation`, `ownership_structure`, `liability`, `minimum_requirements`, `regulatory_bodies`, `official_sources`, `aliases`.
 
-Query: `python scripts/query-structures.py --list|--id LLC|--tag branch`
+Query: `python3 scripts/query-structures.py --list|--id LLC|--tag branch`
 
 ### `investment-licenses` (5 entries)
 
@@ -119,7 +119,7 @@ Note: The `misa_license` entry is now titled "MISA Investment Registration" — 
 
 Key fields: `issuing_authority` (object with `id`, `name`, `portal`), `applies_to`, `depends_on` (conceptual only — IDs of prior entries), `common_confusions`.
 
-Query: `python scripts/query-dataset.py --dataset investment-licenses --lang en --list`
+Query: `python3 scripts/query-dataset.py --dataset investment-licenses --lang en --list`
 
 ### `sources` (10 entries)
 
@@ -129,7 +129,7 @@ Key fields: `authority_type` (enum), `jurisdiction`, `official_website`, `docume
 
 `authority_type` values: `government_ministry`, `government_authority`, `government_organization`, `government_portal`, `government_platform`.
 
-Query: `python scripts/query-dataset.py --dataset sources --lang en --authority-type government_ministry`
+Query: `python3 scripts/query-dataset.py --dataset sources --lang en --authority-type government_ministry`
 
 ### `sectors` (15 entries)
 
@@ -141,7 +141,7 @@ Key fields: `typical_business_models` (array), `likely_authorities` (array of `{
 
 Note: `likely_authorities` items reference both confirmed sources (from `data/sources.en.json`) and sector-specific bodies not yet in the sources registry (CST, SFDA, REGA, MoE, MoH, SAMA, CMA, Ministry of Industry and Mineral Resources, MODON, Ministry of Tourism, Ministry of Media, Ministry of Interior, Ministry of Hajj and Umrah, NCEC, SAIP, GEA). The latter are marked in each entry's `placeholders` array.
 
-Query: `python scripts/query-dataset.py --dataset sectors --lang en --regulatory-sensitivity highly_regulated`
+Query: `python3 scripts/query-dataset.py --dataset sectors --lang en --regulatory-sensitivity highly_regulated`
 
 ### `authority-relationships` (12 entries)
 
@@ -157,11 +157,11 @@ Note: `to_authority` is `null` for horizontal compliance and service authorities
 
 Query examples:
 ```bash
-python scripts/query-dataset.py --dataset authority-relationships --list
-python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
-python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
-python scripts/query-dataset.py --dataset authority-relationships --to-authority ministry_of_commerce
-python scripts/query-dataset.py --dataset authority-relationships --sector fintech
+python3 scripts/query-dataset.py --dataset authority-relationships --list
+python3 scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
+python3 scripts/query-dataset.py --dataset authority-relationships --from-authority misa
+python3 scripts/query-dataset.py --dataset authority-relationships --to-authority ministry_of_commerce
+python3 scripts/query-dataset.py --dataset authority-relationships --sector fintech
 ```
 
 ### `setup-flows` (4 entries)
@@ -178,10 +178,10 @@ Note: All entries are `"draft"`. Steps reference authority IDs from `sources` an
 
 Query examples:
 ```bash
-python scripts/query-dataset.py --dataset setup-flows --list
-python scripts/query-dataset.py --dataset setup-flows --id fintech_market_entry
-python scripts/query-dataset.py --dataset setup-flows --related-sector manufacturing
-python scripts/query-dataset.py --dataset setup-flows --tag setup_flow
+python3 scripts/query-dataset.py --dataset setup-flows --list
+python3 scripts/query-dataset.py --dataset setup-flows --id fintech_market_entry
+python3 scripts/query-dataset.py --dataset setup-flows --related-sector manufacturing
+python3 scripts/query-dataset.py --dataset setup-flows --tag setup_flow
 ```
 
 ---
@@ -191,7 +191,7 @@ python scripts/query-dataset.py --dataset setup-flows --tag setup_flow
 ### Health check
 
 ```bash
-python scripts/check.py
+python3 scripts/check.py
 ```
 
 Runs four suites: required files, JSON validity, dataset validation (delegates to validate-data.py), and local markdown link resolution. Exits `0` on full pass. No internet required.
@@ -199,7 +199,7 @@ Runs four suites: required files, JSON validity, dataset validation (delegates t
 ### Dataset validation
 
 ```bash
-python scripts/validate-data.py
+python3 scripts/validate-data.py
 ```
 
 Validates all three datasets against their JSON Schemas. Also checks: `official_sources` not empty (where applicable), `placeholders` present when `draft`, ID parity between EN and AR files. Exits `0` on full pass.
@@ -208,25 +208,25 @@ Validates all three datasets against their JSON Schemas. Also checks: `official_
 
 ```bash
 # Business structures
-python scripts/query-structures.py --list
-python scripts/query-structures.py --id llc
-python scripts/query-structures.py --tag foreign_ownership
+python3 scripts/query-structures.py --list
+python3 scripts/query-structures.py --id llc
+python3 scripts/query-structures.py --tag foreign_ownership
 
 # Any dataset
-python scripts/query-dataset.py --dataset sources --lang en --list
-python scripts/query-dataset.py --dataset investment-licenses --lang ar --id misa_license
-python scripts/query-dataset.py --dataset sources --lang en --tag ministry
-python scripts/query-dataset.py --dataset sources --lang en --authority-type government_portal
-python scripts/query-dataset.py --dataset sectors --lang en --list
-python scripts/query-dataset.py --dataset sectors --lang ar --id fintech
-python scripts/query-dataset.py --dataset sectors --regulatory-sensitivity highly_regulated
-python scripts/query-dataset.py --dataset authority-relationships --list
-python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
-python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
-python scripts/query-dataset.py --dataset authority-relationships --sector fintech
-python scripts/query-dataset.py --dataset setup-flows --list
-python scripts/query-dataset.py --dataset setup-flows --id fintech_market_entry
-python scripts/query-dataset.py --dataset setup-flows --related-sector manufacturing
+python3 scripts/query-dataset.py --dataset sources --lang en --list
+python3 scripts/query-dataset.py --dataset investment-licenses --lang ar --id misa_license
+python3 scripts/query-dataset.py --dataset sources --lang en --tag ministry
+python3 scripts/query-dataset.py --dataset sources --lang en --authority-type government_portal
+python3 scripts/query-dataset.py --dataset sectors --lang en --list
+python3 scripts/query-dataset.py --dataset sectors --lang ar --id fintech
+python3 scripts/query-dataset.py --dataset sectors --regulatory-sensitivity highly_regulated
+python3 scripts/query-dataset.py --dataset authority-relationships --list
+python3 scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
+python3 scripts/query-dataset.py --dataset authority-relationships --from-authority misa
+python3 scripts/query-dataset.py --dataset authority-relationships --sector fintech
+python3 scripts/query-dataset.py --dataset setup-flows --list
+python3 scripts/query-dataset.py --dataset setup-flows --id fintech_market_entry
+python3 scripts/query-dataset.py --dataset setup-flows --related-sector manufacturing
 ```
 
 ---

@@ -2,16 +2,18 @@
 """
 Project health check for Invest Gate KSA.
 
-Runs four check suites:
-  1. Required files    — all key project files must exist
-  2. JSON validity     — every .json file must parse cleanly
-  3. Dataset checks    — delegates to validate-data.py via subprocess
-  4. Markdown links    — local [text](path) links in .md files must resolve
+Runs five check suites:
+  1. Required files         — all key project files must exist
+  2. JSON validity          — every .json file must parse cleanly
+  3. Dataset checks         — delegates to validate-data.py via subprocess
+  4. Markdown links         — local [text](path) links in .md files must resolve
+  5. Cross-reference integrity — authority IDs in setup-flows resolve to sources
+                                 or source-gaps datasets
 
 External URLs (http/https) and anchor-only links (#...) are skipped.
 
 Usage:
-    python scripts/check.py
+    python3 scripts/check.py
 
 Requirements:
     Python 3.7+ — no additional packages needed for this script.
@@ -78,6 +80,17 @@ REQUIRED_FILES = [
     "data/setup-flows.en.json",
     "data/setup-flows.ar.json",
     "schemas/setup-flows.schema.json",
+    ".python-version",
+    "pyproject.toml",
+    "prompts/system-prompt-base.md",
+    "schemas/fees.schema.json",
+    "schemas/timelines.schema.json",
+    "data/fees.en.json",
+    "data/fees.ar.json",
+    "data/timelines.en.json",
+    "data/timelines.ar.json",
+    "docs/en/comparison-structures.md",
+    "docs/ar/comparison-structures.md",
 ]
 
 # Markdown link targets to skip (not local paths)
@@ -244,6 +257,94 @@ def run_markdown_links() -> tuple:
     return passes, fails
 
 
+# ── Cross-reference integrity ─────────────────────────────────────────────────
+
+def run_cross_reference_integrity() -> tuple:
+    """
+    Check that every authority ID referenced in setup-flows (in step authorities
+    and related_authorities) exists in either sources.en.json or source-gaps.en.json.
+
+    This catches orphaned IDs that are neither a verified source nor an
+    acknowledged gap — i.e., genuine reference errors or typos.
+    """
+    _section("Cross-reference integrity  (setup-flows → sources + source-gaps)")
+    passes = fails = 0
+
+    sources_path     = os.path.join(ROOT, "data", "sources.en.json")
+    source_gaps_path = os.path.join(ROOT, "data", "source-gaps.en.json")
+    setup_flows_path = os.path.join(ROOT, "data", "setup-flows.en.json")
+
+    for path, label in [
+        (sources_path,     "data/sources.en.json"),
+        (source_gaps_path, "data/source-gaps.en.json"),
+        (setup_flows_path, "data/setup-flows.en.json"),
+    ]:
+        if not os.path.isfile(path):
+            _fail(label, "file not found — skipping cross-reference check")
+            return 0, 1
+
+    try:
+        with open(sources_path, encoding="utf-8") as fh:
+            sources_data = json.load(fh)
+        with open(source_gaps_path, encoding="utf-8") as fh:
+            gaps_data = json.load(fh)
+        with open(setup_flows_path, encoding="utf-8") as fh:
+            flows_data = json.load(fh)
+    except (json.JSONDecodeError, OSError) as exc:
+        _fail("data files", str(exc))
+        return 0, 1
+
+    known_ids: set = set()
+    known_ids.update(e["id"] for e in sources_data.get("data", []))
+    known_ids.update(e["id"] for e in gaps_data.get("data", []))
+
+    for flow in flows_data.get("data", []):
+        flow_id  = flow.get("id", "<unknown>")
+        bad_refs = []
+
+        for step in flow.get("steps", []):
+            auth = step.get("authority")
+            if auth and auth.get("id") and auth["id"] not in known_ids:
+                bad_refs.append(
+                    f"step {step.get('step_number', '?')}: '{auth['id']}' "
+                    f"not in sources or source-gaps"
+                )
+
+        for auth in flow.get("related_authorities", []):
+            auth_id = auth.get("id")
+            if auth_id and auth_id not in known_ids:
+                bad_refs.append(
+                    f"related_authorities: '{auth_id}' "
+                    f"not in sources or source-gaps"
+                )
+
+        if bad_refs:
+            _fail(
+                f"setup-flows/{flow_id}",
+                "\n".join(bad_refs),
+            )
+            fails += 1
+        else:
+            referenced = set()
+            for step in flow.get("steps", []):
+                auth = step.get("authority")
+                if auth and auth.get("id"):
+                    referenced.add(auth["id"])
+            for auth in flow.get("related_authorities", []):
+                if auth.get("id"):
+                    referenced.add(auth["id"])
+            _pass(
+                f"setup-flows/{flow_id}",
+                f"{len(referenced)} authority ID(s) resolve",
+            )
+            passes += 1
+
+    if passes == 0 and fails == 0:
+        print("  (no setup-flow entries found)")
+
+    return passes, fails
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -257,6 +358,7 @@ def main() -> None:
         run_json_validity,
         run_dataset_validation,
         run_markdown_links,
+        run_cross_reference_integrity,
     ]:
         p, f = suite()
         total_passes += p

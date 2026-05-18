@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "invest-gate-ksa/schemas/timelines.schema.json",
+  "title": "Timelines Dataset — Invest Gate KSA",
+  "description": "Validates timelines.en.json and timelines.ar.json. Records estimated processing durations for key government procedures relevant to foreign investors. All durations are in business days unless otherwise noted. Entries are draft until verified.",
+  "type": "object",
+  "required": ["meta", "data"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "meta": {
+      "type": "object",
+      "required": ["title", "description", "language", "last_verified"],
+      "additionalProperties": false,
+      "properties": {
+        "title":         { "type": "string", "minLength": 1 },
+        "description":   { "type": "string", "minLength": 1 },
+        "language":      { "type": "string", "enum": ["en", "ar"] },
+        "last_verified": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "data": {
+      "type": "array",
+      "minItems": 0,
+      "items": { "$ref": "#/definitions/timeline_entry" }
+    }
+
+  },
+
+  "definitions": {
+
+    "timeline_entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "authority_id",
+        "process_name",
+        "min_days",
+        "max_days",
+        "typical_days",
+        "conditions",
+        "placeholder_reason",
+        "verify_at",
+        "verification_status",
+        "placeholders",
+        "tags"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Stable machine-readable identifier. Must be identical across language files."
+        },
+
+        "authority_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "ID of the authority that processes this procedure."
+        },
+
+        "process_name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable name of the process or procedure."
+        },
+
+        "min_days": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Minimum processing time in business days. Null when unverified."
+        },
+
+        "max_days": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Maximum processing time in business days. Null when unverified."
+        },
+
+        "typical_days": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Typical or average processing time in business days. Null when unverified."
+        },
+
+        "conditions": {
+          "type": ["string", "null"],
+          "description": "Conditions, caveats, or factors that affect processing time. Null if none documented."
+        },
+
+        "placeholder_reason": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explanation of why duration fields are null or unverified."
+        },
+
+        "verify_at": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Official portal domain where this timeline should be verified."
+        },
+
+        "verification_status": {
+          "type": "string",
+          "enum": ["verified", "draft", "placeholder", "unverified"]
+        },
+
+        "placeholders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "description", "verify_at"],
+            "additionalProperties": false,
+            "properties": {
+              "field":       { "type": "string", "minLength": 1 },
+              "description": { "type": "string", "minLength": 1 },
+              "verify_at":   { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        }
+
+      },
+
+      "if": {
+        "properties": { "verification_status": { "const": "draft" } },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": { "placeholders": { "minItems": 1 } }
+      }
+
+    }
+
+  }
+}

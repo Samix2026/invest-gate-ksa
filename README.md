@@ -103,7 +103,7 @@ Every piece of content must cite an official source. See [CONTRIBUTING.md](CONTR
 ## Project Checks
 
 ```bash
-python scripts/check.py
+python3 scripts/check.py
 ```
 
 Verifies required files, JSON validity, dataset schema validation, alias integrity, and local markdown link resolution. Exits `0` on full pass — useful to run before opening a pull request.

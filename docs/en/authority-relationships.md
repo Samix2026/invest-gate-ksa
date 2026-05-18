@@ -180,10 +180,10 @@ The authority relationship architecture described in this document is reflected 
 **The `authority-relationships` dataset implements this architecture directly.** The `data/authority-relationships.*.json` files record the conceptual relationships described in this document in structured, queryable form — covering relationship type, direction, participating authorities, applicable sectors, and examples. All entries in that dataset are `"draft"` and carry placeholders tracking what must be verified before the relationship can be confirmed. Query the dataset with:
 
 ```bash
-python scripts/query-dataset.py --dataset authority-relationships --list
-python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
-python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
-python scripts/query-dataset.py --dataset authority-relationships --sector fintech
+python3 scripts/query-dataset.py --dataset authority-relationships --list
+python3 scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
+python3 scripts/query-dataset.py --dataset authority-relationships --from-authority misa
+python3 scripts/query-dataset.py --dataset authority-relationships --sector fintech
 ```
 
 ---

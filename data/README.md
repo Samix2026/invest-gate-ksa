@@ -24,8 +24,10 @@ This directory holds structured, machine-readable data derived from official sou
 | `authority-relationships.ar.json` | Conceptual authority relationships — Arabic | Draft |
 | `setup-flows.en.json` | Conceptual setup flows for common foreign investment scenarios — English | Draft |
 | `setup-flows.ar.json` | Conceptual setup flows — Arabic | Draft |
-| `fees.json` | Official government fees (registration, licensing, permits) | Planned |
-| `timelines.json` | Estimated processing durations for key procedures | Planned |
+| `fees.en.json` | Official government fees (registration, licensing, permits) — English | Draft |
+| `fees.ar.json` | Official government fees — Arabic | Draft |
+| `timelines.en.json` | Estimated processing durations for key procedures — English | Draft |
+| `timelines.ar.json` | Estimated processing durations — Arabic | Draft |
 | `zones.json` | Economic zones, locations, and key incentives | Planned |
 | `ownership_limits.json` | Foreign ownership thresholds by sector | Planned |
 
@@ -61,7 +63,7 @@ All datasets with a corresponding JSON Schema can be validated with the project'
 pip install -r scripts/requirements.txt
 
 # Run all checks
-python scripts/validate-data.py
+python3 scripts/validate-data.py
 ```
 
 The script enforces the following rules:
@@ -84,5 +86,5 @@ JSON Schemas live at `schemas/` — one per dataset: `business-structures`, `inv
 1. Create a new JSON file following the schema convention above.
 2. Add an entry to the Datasets table in this README.
 3. Add a source entry in [`../sources/index.md`](../sources/index.md).
-4. Run `python scripts/validate-data.py` to confirm the file passes validation.
+4. Run `python3 scripts/validate-data.py` to confirm the file passes validation.
 5. Keep data neutral and descriptive — no interpretation or advice.

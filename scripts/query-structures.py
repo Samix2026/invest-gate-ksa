@@ -24,12 +24,12 @@ MCP usage
 
 Usage
 ─────
-  python scripts/query-structures.py --list
-  python scripts/query-structures.py --lang ar --list
-  python scripts/query-structures.py --id llc
-  python scripts/query-structures.py --lang ar --id llc
-  python scripts/query-structures.py --tag foreign_investment
-  python scripts/query-structures.py --lang ar --tag non_commercial
+  python3 scripts/query-structures.py --list
+  python3 scripts/query-structures.py --lang ar --list
+  python3 scripts/query-structures.py --id llc
+  python3 scripts/query-structures.py --lang ar --id llc
+  python3 scripts/query-structures.py --tag foreign_investment
+  python3 scripts/query-structures.py --lang ar --tag non_commercial
 """
 
 import argparse
@@ -291,11 +291,11 @@ def _build_parser() -> argparse.ArgumentParser:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent("""\
             examples:
-              python scripts/query-structures.py --list
-              python scripts/query-structures.py --lang ar --list
-              python scripts/query-structures.py --id llc
-              python scripts/query-structures.py --lang ar --id joint_stock_company
-              python scripts/query-structures.py --tag foreign_investment
+              python3 scripts/query-structures.py --list
+              python3 scripts/query-structures.py --lang ar --list
+              python3 scripts/query-structures.py --id llc
+              python3 scripts/query-structures.py --lang ar --id joint_stock_company
+              python3 scripts/query-structures.py --tag foreign_investment
         """),
     )
     parser.add_argument(

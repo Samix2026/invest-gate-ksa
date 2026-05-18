@@ -180,10 +180,10 @@
 **مجموعة بيانات `authority-relationships` تُطبّق هذه المعمارية مباشرةً.** تُسجّل ملفات `data/authority-relationships.*.json` العلاقات المفاهيمية الموصوفة في هذه الوثيقة بصيغة منظَّمة وقابلة للاستعلام — تشمل نوع العلاقة واتجاهها والجهات المشاركة والقطاعات المنطبقة والأمثلة. جميع الإدخالات في حالة `"draft"` وتحمل حقول placeholders تتتبع ما يجب التحقق منه قبل تأكيد العلاقة. استعلم عن مجموعة البيانات بـ:
 
 ```bash
-python scripts/query-dataset.py --dataset authority-relationships --list
-python scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
-python scripts/query-dataset.py --dataset authority-relationships --from-authority misa
-python scripts/query-dataset.py --dataset authority-relationships --sector fintech
+python3 scripts/query-dataset.py --dataset authority-relationships --list
+python3 scripts/query-dataset.py --dataset authority-relationships --relationship-type sector_oversight
+python3 scripts/query-dataset.py --dataset authority-relationships --from-authority misa
+python3 scripts/query-dataset.py --dataset authority-relationships --sector fintech
 ```
 
 ---

@@ -23,17 +23,17 @@ MCP usage
 
 Usage
 ─────
-  python scripts/query-dataset.py --dataset investment-licenses --list
-  python scripts/query-dataset.py --dataset investment-licenses --lang ar --list
-  python scripts/query-dataset.py --dataset investment-licenses --id misa_license
-  python scripts/query-dataset.py --dataset investment-licenses --tag misa
-  python scripts/query-dataset.py --dataset sources --list
-  python scripts/query-dataset.py --dataset sources --authority-type government_ministry
-  python scripts/query-dataset.py --dataset sources --lang ar --tag misa
-  python scripts/query-dataset.py --dataset business-structures --list
-  python scripts/query-dataset.py --dataset sectors --list
-  python scripts/query-dataset.py --dataset sectors --lang ar --id fintech
-  python scripts/query-dataset.py --dataset sectors --regulatory-sensitivity highly_regulated
+  python3 scripts/query-dataset.py --dataset investment-licenses --list
+  python3 scripts/query-dataset.py --dataset investment-licenses --lang ar --list
+  python3 scripts/query-dataset.py --dataset investment-licenses --id misa_license
+  python3 scripts/query-dataset.py --dataset investment-licenses --tag misa
+  python3 scripts/query-dataset.py --dataset sources --list
+  python3 scripts/query-dataset.py --dataset sources --authority-type government_ministry
+  python3 scripts/query-dataset.py --dataset sources --lang ar --tag misa
+  python3 scripts/query-dataset.py --dataset business-structures --list
+  python3 scripts/query-dataset.py --dataset sectors --list
+  python3 scripts/query-dataset.py --dataset sectors --lang ar --id fintech
+  python3 scripts/query-dataset.py --dataset sectors --regulatory-sensitivity highly_regulated
 """
 
 import argparse
@@ -411,11 +411,11 @@ def _build_parser() -> argparse.ArgumentParser:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent("""\
             examples:
-              python scripts/query-dataset.py --dataset investment-licenses --list
-              python scripts/query-dataset.py --dataset investment-licenses --lang ar --list
-              python scripts/query-dataset.py --dataset investment-licenses --id misa_license
-              python scripts/query-dataset.py --dataset investment-licenses --tag misa
-              python scripts/query-dataset.py --dataset business-structures --list
+              python3 scripts/query-dataset.py --dataset investment-licenses --list
+              python3 scripts/query-dataset.py --dataset investment-licenses --lang ar --list
+              python3 scripts/query-dataset.py --dataset investment-licenses --id misa_license
+              python3 scripts/query-dataset.py --dataset investment-licenses --tag misa
+              python3 scripts/query-dataset.py --dataset business-structures --list
         """),
     )
     parser.add_argument(

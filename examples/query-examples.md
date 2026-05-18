@@ -11,7 +11,7 @@ Run all commands from the repository root.
 ## 1. List All Structures (English)
 
 ```bash
-python scripts/query-structures.py --list
+python3 scripts/query-structures.py --list
 ```
 
 ```
@@ -34,7 +34,7 @@ Business Structures (en)  —  4 entries
 ## 2. List All Structures (Arabic)
 
 ```bash
-python scripts/query-structures.py --lang ar --list
+python3 scripts/query-structures.py --lang ar --list
 ```
 
 ```
@@ -57,7 +57,7 @@ IDs are always in English (they are machine-readable keys). Names and all descri
 ## 3. Detail View — Single Structure (English)
 
 ```bash
-python scripts/query-structures.py --id llc
+python3 scripts/query-structures.py --id llc
 ```
 
 ```
@@ -138,7 +138,7 @@ Limited Liability Company (LLC)
 ## 4. Detail View — Single Structure (Arabic)
 
 ```bash
-python scripts/query-structures.py --lang ar --id representative_office
+python3 scripts/query-structures.py --lang ar --id representative_office
 ```
 
 ```
@@ -211,7 +211,7 @@ python scripts/query-structures.py --lang ar --id representative_office
 ## 5. Filter by Tag — Single Match
 
 ```bash
-python scripts/query-structures.py --tag non_commercial
+python3 scripts/query-structures.py --tag non_commercial
 ```
 
 ```
@@ -229,7 +229,7 @@ Tag: non_commercial  —  1 match(es)  (en)
 ## 6. Filter by Tag — Multiple Matches
 
 ```bash
-python scripts/query-structures.py --tag foreign_investment
+python3 scripts/query-structures.py --tag foreign_investment
 ```
 
 ```
@@ -248,7 +248,7 @@ Tag: foreign_investment  —  4 match(es)  (en)
 Tags can be combined with `--lang`:
 
 ```bash
-python scripts/query-structures.py --lang ar --tag capital_markets
+python3 scripts/query-structures.py --lang ar --tag capital_markets
 ```
 
 ```
@@ -270,7 +270,7 @@ Aliases let you use natural-language IDs that resolve to the canonical dataset I
 **Long-form alias:**
 
 ```bash
-python scripts/query-structures.py --id limited_liability_company
+python3 scripts/query-structures.py --id limited_liability_company
 ```
 
 ```
@@ -286,7 +286,7 @@ Limited Liability Company (LLC)
 **Short alias with `--lang ar`:**
 
 ```bash
-python scripts/query-structures.py --lang ar --id jsc
+python3 scripts/query-structures.py --lang ar --id jsc
 ```
 
 ```
@@ -321,7 +321,7 @@ The alias map lives in `scripts/query-structures.py` as `ALIASES` and is automat
 ## 8. Error: Unknown ID
 
 ```bash
-python scripts/query-structures.py --id unknown_id
+python3 scripts/query-structures.py --id unknown_id
 ```
 
 ```
@@ -336,7 +336,7 @@ Exit code: `1`
 ## 9. Error: Unknown Tag
 
 ```bash
-python scripts/query-structures.py --tag unknown_tag
+python3 scripts/query-structures.py --tag unknown_tag
 ```
 
 ```
@@ -430,7 +430,7 @@ Run all commands from the repository root.
 ## 1. List All Gaps (English, default)
 
 ```bash
-python scripts/report-source-gaps.py
+python3 scripts/report-source-gaps.py
 ```
 
 ```
@@ -463,13 +463,13 @@ Each block shows: entry ID with right-aligned status, full name, alternate name,
 ## 2. Filter by Status
 
 ```bash
-python scripts/report-source-gaps.py --status draft
+python3 scripts/report-source-gaps.py --status draft
 ```
 
 Returns only entries with `verification_status == "draft"`. When all entries are draft the output is identical to the default listing.
 
 ```bash
-python scripts/report-source-gaps.py --status verified
+python3 scripts/report-source-gaps.py --status verified
 ```
 
 ```
@@ -487,7 +487,7 @@ Exit code is always `0` when the command runs successfully — even when the fil
 ## 3. Detail View — Single Gap Entry
 
 ```bash
-python scripts/report-source-gaps.py --id sama
+python3 scripts/report-source-gaps.py --id sama
 ```
 
 ```
@@ -536,13 +536,13 @@ If the requested ID does not exist, available IDs are printed and exit code rema
 ## 4. Arabic Language
 
 ```bash
-python scripts/report-source-gaps.py --lang ar
+python3 scripts/report-source-gaps.py --lang ar
 ```
 
 Reads `data/source-gaps.ar.json` instead of the English file. All names, descriptions, and next-step text are in Arabic; IDs, domains, and structural fields are identical across both language files.
 
 ```bash
-python scripts/report-source-gaps.py --lang ar --id cma
+python3 scripts/report-source-gaps.py --lang ar --id cma
 ```
 
 Combines language and detail mode. The source line in the output footer confirms which file was read:

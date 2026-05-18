@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Processing Timelines for Foreign Investors — Saudi Arabia",
+    "description": "Estimated processing durations for key government procedures relevant to foreign investors establishing a business in Saudi Arabia. All durations are in business days unless otherwise noted. All entries are draft — durations have not been independently verified against live official sources or current processing benchmarks.",
+    "language": "en",
+    "last_verified": "[PLACEHOLDER — update when entries are verified against current official processing benchmarks]"
+  },
+  "data": [
+    {
+      "id": "misa_investment_registration",
+      "authority_id": "misa",
+      "process_name": "MISA Investment Registration",
+      "min_days": null,
+      "max_days": null,
+      "typical_days": null,
+      "conditions": "Processing time may vary based on the business activity, completeness of the application, and whether additional review is required for the specific sector or investor home country. Digital applications via the MISA portal may differ from in-person processing.",
+      "placeholder_reason": "The current processing time for MISA investment registrations has not been independently verified. MISA has published benchmarks in past investor guides but these change. Verify the current processing timeline at misa.gov.sa or the Invest Saudi portal.",
+      "verify_at": "misa.gov.sa",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "min_days, max_days, typical_days",
+          "description": "The current MISA investment registration processing time benchmark (minimum, maximum, and typical) has not been recorded. This varies by activity type and application completeness. Verify the published service level at misa.gov.sa.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "registration", "foreign_investment", "timelines"]
+    },
+    {
+      "id": "commercial_registration_issuance",
+      "authority_id": "ministry_of_commerce",
+      "process_name": "Commercial Registration (CR) Issuance",
+      "min_days": null,
+      "max_days": null,
+      "typical_days": null,
+      "conditions": "Processing time depends on the legal entity type (LLC vs JSC vs branch), completeness of constitutional documents, and whether any manual review is required. The Ministry of Commerce digital portal (mc.gov.sa) may process certain registrations faster than others.",
+      "placeholder_reason": "The current Ministry of Commerce processing time for commercial registration issuance has not been independently verified. Digital processing benchmarks have improved over time under Vision 2030 reforms. Verify the current service level at mc.gov.sa.",
+      "verify_at": "mc.gov.sa",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "min_days, max_days, typical_days",
+          "description": "The current Ministry of Commerce CR issuance processing time. May differ for LLC, JSC, and branch registrations. Verify the published service level at mc.gov.sa.",
+          "verify_at": "mc.gov.sa"
+        }
+      ],
+      "tags": ["ministry_of_commerce", "commercial_registration", "cr", "timelines"]
+    },
+    {
+      "id": "bank_account_opening_local",
+      "authority_id": "misa",
+      "process_name": "Corporate Bank Account Opening (Saudi Licensed Bank)",
+      "min_days": null,
+      "max_days": null,
+      "typical_days": null,
+      "conditions": "Processing time varies significantly by bank. Foreign-owned entities typically face additional due diligence requirements compared to Saudi-owned companies. Required documents typically include the CR, MISA investment registration certificate, and KYC documentation for all beneficial owners. Some banks have dedicated foreign investment onboarding teams.",
+      "placeholder_reason": "Bank account opening timelines are not governed by a single authority — each SAMA-regulated bank sets its own processing standards. The authority_id is set to misa as the primary investor-facing authority, but the actual processing is by individual Saudi banks. Verify with the chosen bank and SAMA at sama.gov.sa.",
+      "verify_at": "sama.gov.sa",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "min_days, max_days, typical_days",
+          "description": "Bank account opening timelines vary by bank and entity type. No single official benchmark exists. Contact Saudi-licensed banks directly and review SAMA guidance at sama.gov.sa for applicable banking regulations.",
+          "verify_at": "sama.gov.sa"
+        },
+        {
+          "field": "authority_id",
+          "description": "Corporate banking is regulated by SAMA (sama.gov.sa) but processed by individual Saudi licensed banks. The same is not a single government body processing timeline. Verify with the specific bank and SAMA.",
+          "verify_at": "sama.gov.sa"
+        }
+      ],
+      "tags": ["banking", "corporate_account", "sama", "timelines"]
+    },
+    {
+      "id": "work_permit_issuance",
+      "authority_id": "mhrsd",
+      "process_name": "Work Permit Issuance (Expatriate Employee)",
+      "min_days": null,
+      "max_days": null,
+      "typical_days": null,
+      "conditions": "Work permits are issued to expatriate employees hired by a registered Saudi company. The employer must be in good Nitaqat standing. Processing includes MHRSD approval and coordination with the Absher platform. The employee must hold a valid visa category that permits the transition to a work permit.",
+      "placeholder_reason": "The current work permit (tashreeh al-amal) processing time has not been independently verified. Processing times are affected by the employer's Nitaqat compliance status, the employee's nationality, and the specific activity. Verify at hrsd.gov.sa and via the Qiwa platform.",
+      "verify_at": "hrsd.gov.sa",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "min_days, max_days, typical_days",
+          "description": "The current MHRSD work permit processing time benchmark. Affected by Nitaqat status, employee nationality, and activity classification. Verify at hrsd.gov.sa.",
+          "verify_at": "hrsd.gov.sa"
+        }
+      ],
+      "tags": ["mhrsd", "work_permit", "expatriate", "labor", "timelines"]
+    },
+    {
+      "id": "iqama_issuance",
+      "authority_id": "mhrsd",
+      "process_name": "Iqama (Residency Permit) Issuance",
+      "min_days": null,
+      "max_days": null,
+      "typical_days": null,
+      "conditions": "An Iqama (residency permit) is issued to an expatriate employee after the work permit is approved, the employee has entered Saudi Arabia on the appropriate visa, and the employer registers the employee with the relevant authorities. The process involves MHRSD, the General Directorate of Passports (Jawazat), and the Absher platform.",
+      "placeholder_reason": "Iqama processing times are not consistently published and vary by employee nationality, employer compliance status, and completeness of documentation. Verify current processing benchmarks with the relevant authorities and via the Absher Business platform.",
+      "verify_at": "hrsd.gov.sa",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "min_days, max_days, typical_days",
+          "description": "The current Iqama issuance processing time. Involves MHRSD and the General Directorate of Passports (Jawazat). Processing varies by nationality and employer status. Verify at hrsd.gov.sa and via the Absher Business platform.",
+          "verify_at": "hrsd.gov.sa"
+        },
+        {
+          "field": "authority_id",
+          "description": "Iqama issuance involves both MHRSD (labor clearance) and the General Directorate of Passports (Jawazat), which is under the Ministry of Interior. The primary entry point is via the Absher Business platform. authority_id is set to mhrsd as the primary employer-facing authority.",
+          "verify_at": "hrsd.gov.sa"
+        }
+      ],
+      "tags": ["iqama", "residency_permit", "mhrsd", "expatriate", "timelines"]
+    }
+  ]
+}

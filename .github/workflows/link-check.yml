@@ -1,0 +1,106 @@
+name: External Link Check
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"  # Every Monday at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    name: Check External URLs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Check URLs in sources/index.md
+        id: url_check
+        run: |
+          python3 - <<'EOF'
+          import re
+          import sys
+          import requests
+
+          with open("sources/index.md", encoding="utf-8") as fh:
+              content = fh.read()
+
+          # Extract bare domains and full https URLs from markdown tables
+          url_pattern = re.compile(
+              r"https?://[^\s\)\]>\"']+|(?<!\()(?<!\[)([a-z0-9.-]+\.(?:gov\.sa|org\.sa|sa|org|int))\b"
+          )
+          # Also match bare domains in table cells (e.g. | misa.gov.sa |)
+          cell_domain = re.compile(r"\|\s*((?:[a-z0-9-]+\.)+(?:gov\.sa|org\.sa|sa|org|int))\s*\|")
+
+          urls = set()
+          for m in url_pattern.finditer(content):
+              u = m.group(0)
+              if u.startswith("http"):
+                  urls.add(u.rstrip(".,)"))
+          for m in cell_domain.finditer(content):
+              urls.add("https://" + m.group(1))
+
+          if not urls:
+              print("No URLs found to check.")
+              sys.exit(0)
+
+          failed = []
+          for url in sorted(urls):
+              try:
+                  r = requests.head(url, timeout=10, allow_redirects=True,
+                                    headers={"User-Agent": "Mozilla/5.0 invest-gate-ksa link-checker"})
+                  status = r.status_code
+              except Exception as exc:
+                  status = f"ERROR: {exc}"
+              if isinstance(status, int) and status >= 400:
+                  failed.append(f"{status}  {url}")
+                  print(f"FAIL  {status}  {url}")
+              else:
+                  print(f"OK    {status}  {url}")
+
+          if failed:
+              print("\nFailed URLs:")
+              for f in failed:
+                  print(f"  {f}")
+              with open("link_check_failures.txt", "w") as out:
+                  out.write("\n".join(failed))
+              sys.exit(1)
+          else:
+              print("\nAll URLs OK.")
+          EOF
+        continue-on-error: true
+
+      - name: Open issue if URLs are broken
+        if: steps.url_check.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = '## Broken External Links Detected\n\n';
+            body += 'The weekly link check found one or more URLs in `sources/index.md` ';
+            body += 'returning 4xx or 5xx responses.\n\n';
+            try {
+              const failures = fs.readFileSync('link_check_failures.txt', 'utf8');
+              body += '### Failed URLs\n\n```\n' + failures + '\n```\n\n';
+            } catch (e) {
+              body += '_(See workflow run for details.)_\n\n';
+            }
+            body += 'Please verify each URL against the official source and update ';
+            body += '`sources/index.md` and `data/sources.en.json` accordingly.\n\n';
+            body += `_Workflow run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}_`;
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Link Check] Broken URLs detected — ${new Date().toISOString().slice(0,10)}`,
+              body: body,
+              labels: ['maintenance', 'broken-link'],
+            });

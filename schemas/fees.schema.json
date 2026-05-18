@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "invest-gate-ksa/schemas/fees.schema.json",
+  "title": "Fees Dataset — Invest Gate KSA",
+  "description": "Validates fees.en.json and fees.ar.json. Records official government fees for registration, licensing, and permits. All amounts are in SAR. Entries are draft until verified against live official sources.",
+  "type": "object",
+  "required": ["meta", "data"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "meta": {
+      "type": "object",
+      "required": ["title", "description", "language", "last_verified"],
+      "additionalProperties": false,
+      "properties": {
+        "title":         { "type": "string", "minLength": 1 },
+        "description":   { "type": "string", "minLength": 1 },
+        "language":      { "type": "string", "enum": ["en", "ar"] },
+        "last_verified": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "data": {
+      "type": "array",
+      "minItems": 0,
+      "items": { "$ref": "#/definitions/fee_entry" }
+    }
+
+  },
+
+  "definitions": {
+
+    "fee_entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "authority_id",
+        "fee_type",
+        "description",
+        "amount_sar",
+        "currency",
+        "frequency",
+        "placeholder_reason",
+        "verify_at",
+        "last_reviewed",
+        "verification_status",
+        "placeholders",
+        "tags"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Stable machine-readable identifier. Must be identical across language files."
+        },
+
+        "authority_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "ID of the authority that charges this fee. Should correspond to an entry in sources.en.json or source-gaps.en.json."
+        },
+
+        "fee_type": {
+          "type": "string",
+          "enum": [
+            "registration",
+            "renewal",
+            "issuance",
+            "amendment",
+            "certificate",
+            "inspection",
+            "other"
+          ],
+          "description": "Classification of the fee type."
+        },
+
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable description of what this fee covers."
+        },
+
+        "amount_sar": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Fee amount in Saudi Riyals. Set to 0 when the amount is a placeholder pending verification."
+        },
+
+        "currency": {
+          "type": "string",
+          "enum": ["SAR"],
+          "description": "Currency of the fee. Always SAR for this dataset."
+        },
+
+        "frequency": {
+          "type": ["string", "null"],
+          "description": "How often this fee is charged: one_time, annual, per_employee, or null if unknown."
+        },
+
+        "placeholder_reason": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explanation of why amount_sar is 0 or unverified, and what needs to be confirmed."
+        },
+
+        "verify_at": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Official portal domain where this fee should be verified."
+        },
+
+        "last_reviewed": {
+          "type": "string",
+          "minLength": 1,
+          "description": "ISO date or placeholder string indicating when this entry was last reviewed."
+        },
+
+        "verification_status": {
+          "type": "string",
+          "enum": ["verified", "draft", "placeholder", "unverified"]
+        },
+
+        "placeholders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["field", "description", "verify_at"],
+            "additionalProperties": false,
+            "properties": {
+              "field":       { "type": "string", "minLength": 1 },
+              "description": { "type": "string", "minLength": 1 },
+              "verify_at":   { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        }
+
+      },
+
+      "if": {
+        "properties": { "verification_status": { "const": "draft" } },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": { "placeholders": { "minItems": 1 } }
+      }
+
+    }
+
+  }
+}
