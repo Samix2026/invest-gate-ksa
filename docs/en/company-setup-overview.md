@@ -185,27 +185,64 @@ A municipal license is distinct from the MISA investment registration and the CR
 
 ZATCA is the government authority responsible for administering Saudi Arabia's tax, zakat, and customs framework. For foreign investors, three areas are most relevant at the outset.
 
+### Corporate Tax Obligations for Foreign Investors
+
+Saudi Arabia operates a dual tax system administered by ZATCA:
+
+| Tax | Rate | Applies To | Base |
+|---|---|---|---|
+| Corporate Income Tax (CIT) | 20% | Non-Saudi, non-GCC shareholders | Net adjusted profits |
+| Zakat | 2.5% | Saudi and GCC shareholders | Net worth (Zakat base) |
+| VAT | 15% | All businesses above threshold | Taxable supplies |
+| Withholding Tax (WHT) | 5–20% | Payments to non-residents | Payment amount |
+
+Key rules:
+- No personal income tax on employee salaries (any nationality)
+- Mixed ownership: CIT on foreign share, Zakat on Saudi/GCC share — cannot offset each other
+- ZATCA registration: within 60 days of commencing business
+- Annual return filing: within 120 days after fiscal year end, with audited financials
+- Records: maintained in Arabic, retained minimum 10 years
+- PE risk: providing services in KSA for 183+ days in 12 months triggers 20% CIT liability
+
+> **Note on rates:** Rates above reflect the current verified standard rates. Oil/hydrocarbon production is subject to higher CIT rates (50–85%). SEZ participants may qualify for reduced rates — verify at investsaudi.sa. All rates are set by law and subject to amendment — always verify current rates at [zatca.gov.sa](https://zatca.gov.sa).
+
 ### 6.1 Value Added Tax (VAT)
 *Arabic: ضريبة القيمة المضافة*
 
-VAT applies to most goods and services supplied in Saudi Arabia. Businesses whose taxable turnover meets or exceeds the registration threshold are required to register for VAT with ZATCA. Registered businesses collect VAT from customers and file periodic returns.
+VAT applies to most goods and services supplied in Saudi Arabia. Businesses whose taxable turnover meets or exceeds the registration threshold are required to register for VAT with ZATCA. Registered businesses collect VAT from customers and file periodic returns. The current VAT rate is 15%.
 
-> **[PLACEHOLDER]** The current VAT rate and mandatory registration threshold should be confirmed at [zatca.gov.sa](https://zatca.gov.sa). These figures are set by law and may be amended.
+> **[PLACEHOLDER]** The mandatory VAT registration threshold should be confirmed at [zatca.gov.sa](https://zatca.gov.sa). The threshold is set by regulation and may be amended.
 
 ### 6.2 Zakat
 *Arabic: الزكاة*
 
-Zakat is an Islamic levy applied to the Saudi and GCC-owned portions of a company's capital and retained earnings. It is not the same as corporate income tax and follows a different calculation methodology. Local (Saudi/GCC-owned) companies are subject to Zakat rather than CIT.
+Zakat is an annual Islamic levy applied to the Saudi and GCC-owned portions of a company's Zakat base (net worth). The rate is **2.5% of the Zakat base** — applied to net worth, not profits. It is administered by ZATCA and follows a different calculation methodology from CIT. Local (Saudi/GCC-owned) companies are subject to Zakat rather than CIT. Foreign shareholders are not subject to Zakat — they pay CIT instead. CIT and Zakat cannot offset each other in mixed-ownership structures.
 
 ### 6.3 Corporate Income Tax (CIT)
 *Arabic: ضريبة الدخل على الشركات*
 
-CIT applies to the foreign-owned portion of a company's profits. The applicable rate is set by Saudi tax law.
+CIT applies to the foreign-owned portion of a company's profits at a rate of **20% of net adjusted profits**. It applies to:
+- Non-Saudi, non-GCC shareholders in Saudi resident companies
+- Branches of foreign companies operating in Saudi Arabia
+- Non-resident persons with a permanent establishment (PE) in the Kingdom
+- Any PE triggered by providing services in Saudi Arabia for more than 183 days in any 12-month period
 
-> **[PLACEHOLDER]** The current CIT rate, Zakat calculation basis, and any available exemptions or treaty benefits should be verified directly with ZATCA at [zatca.gov.sa](https://zatca.gov.sa) and with a licensed tax professional familiar with Saudi law.
+Oil and hydrocarbon production is subject to higher rates (50–85%). Saudi and GCC shareholders are not subject to CIT — they pay Zakat instead.
+
+Key compliance deadlines:
+- ZATCA registration: within 60 days of commencing business
+- Annual CIT return: within 120 days after the fiscal year end
+- Required with audited financial statements
+- Records must be maintained in Arabic (or bilingual) for a minimum of 10 years
 
 ### 6.4 Withholding Tax
-Certain payments made to non-resident entities — such as service fees, royalties, or technical services — may be subject to withholding tax. Rates and applicable payment types are defined in Saudi tax regulations and may be modified by tax treaties.
+Certain payments made by Saudi-resident entities to non-resident entities are subject to withholding tax, administered by ZATCA. Rates by payment type:
+
+- **Dividends and interest:** 5%
+- **Royalties and IP licenses:** 15%
+- **Services and management fees:** up to 20%
+
+WHT is due within the first 10 days of the month following the payment. Saudi Arabia has 55+ double tax treaties (DTTs) that may reduce the applicable rate. Verify current DTT rates and treaty availability at [zatca.gov.sa](https://zatca.gov.sa).
 
 ### 6.5 E-Invoicing (Fatoora)
 Saudi Arabia has implemented a mandatory electronic invoicing system known as Fatoora. Registered businesses are required to generate and transmit compliant e-invoices. ZATCA oversees rollout in phases by taxpayer group.
