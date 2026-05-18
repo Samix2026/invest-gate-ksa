@@ -105,6 +105,8 @@ As of the Investment Law (Royal Decree M/19, August 2024) and its Implementing R
 
 > **2025 Regulatory Update:** Saudi Arabia replaced the Foreign Investment License system with a streamlined Investment Registration process under the new Investment Law (Royal Decree M/19, 2024). A single registration now covers multiple sectors. Source: MISA Investor Guide, 12th Edition (2025). (formerly "MISA License" — terminology updated per Investment Law 2024)
 
+> **Registration Fee:** MISA determines the registration fee upon approval of the application. The fee amount is not published in advance and varies by activity type. Applicants are notified of the due amount after approval and must pay within 15 business days. Failure to pay within this window voids the registration. The same fee structure applies to the annual registration update. Post-registration services (activity amendments, ownership changes, cancellation) carry no fee. Source: MISA Investor Guide, 12th Edition (2025), Section 3.1.1.
+
 > **[PLACEHOLDER]** The classification of activities, application requirements, and any minimum investment thresholds should be confirmed with MISA directly. Requirements may vary by sector, company type, and the investor's home country. See [misa.gov.sa](https://misa.gov.sa).
 
 ---
@@ -138,7 +140,7 @@ For a foreign-owned company, the typical sequence is:
 
 The CR must be renewed periodically and updated whenever material changes occur (e.g., change of address, business activity, or shareholders).
 
-> **April 2025 CR Law Update:** Under amendments effective April 2025, the CR is no longer time-limited. The annual renewal requirement has been replaced by an annual data verification cycle and fee payment (SAR 200/year for main CR, SAR 100/year for branch CR). A single CR now covers all activities and branches. Companies holding CRs issued under the prior law have a 5-year grace period to April 2030. Verify current requirements at [mc.gov.sa](https://mc.gov.sa).
+> **April 2025 CR Law Update:** Under the new Commercial Registration Law (Royal Decree M/83, effective April 3, 2025), the CR is no longer time-limited. The annual renewal requirement has been replaced by an annual data verification cycle and fee payment (SAR 200/year). A single national CR now covers all activities and branches — branch CRs were abolished. New CR numbers are 10 digits starting with "7". Companies holding CRs issued under the prior law have a 5-year grace period to April 2030 to update. Exception: a foreign company branch remains valid if it is the sole registered entity of that company in the Kingdom. Branch CRs were abolished effective April 3, 2025 under the new Commercial Registration Law. A single national CR now covers all activities and locations. Existing branch CRs have until April 2030 to convert or cancel. Verify current requirements at [mc.gov.sa](https://mc.gov.sa).
 
 > **[PLACEHOLDER]** The specific documents required for CR registration, notarization requirements, and the current process flow (including online steps via the Ministry of Commerce portal) should be verified at [mc.gov.sa](https://mc.gov.sa).
 

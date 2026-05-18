@@ -334,6 +334,24 @@
         }
       ],
       "tags": ["chamber_of_commerce", "commercial_registration", "mandatory_membership", "fees", "source_gap"]
+    },
+    {
+      "id": "misa_fee_schedule",
+      "name": "جدول رسوم تسجيل الاستثمار — وزارة الاستثمار",
+      "name_alt": "MISA Registration Fee Schedule",
+      "mentioned_in_datasets": ["fees"],
+      "reason_needed": "جدول رسوم تسجيل الاستثمار لدى وزارة الاستثمار — المبالغ الدقيقة حسب نوع النشاط غير منشورة للعموم. يُحدَّد الرسم بعد الموافقة ويُشعَر به المتقدم. لم يُعثَر على جدول رسوم رسمي منشور حتى 2026-05-18. يُرجى الاطلاع على إشعار الرسم عبر بوابة وزارة الاستثمار بعد تقديم الطلب. الأولوية: عالية — يتساءل المستثمرون باستمرار عن هذه التكلفة. المصدر المؤكد للهيكل: دليل المستثمر لوزارة الاستثمار الطبعة الثانية عشرة يوليو 2025 القسم 3.1.1.",
+      "likely_official_domain": "misa.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "قدم طلب تجريبي عبر بوابة وزارة الاستثمار الإلكترونية (misa.gov.sa) أو تواصل مع خدمات المستثمرين في وزارة الاستثمار للاطلاع على آلية إشعار الرسم الحالية وأي مؤشرات للرسوم المنشورة حسب نوع النشاط. إن توفر جدول رسوم منشور، سجّل المبالغ حسب فئة النشاط وحدّث إدخالَي misa_investment_registration_fee و misa_annual_renewal_fee في data/fees.ar.json.",
+      "placeholders": [
+        {
+          "field": "fee_amounts_by_activity",
+          "description": "المبالغ الفعلية للرسوم المفروضة لكل نوع نشاط غير متاحة للعموم. تُشعر وزارة الاستثمار المتقدمين بالمبلغ المستحق بعد الموافقة على الطلب. لم يُعثَر على جدول رسوم منشور حتى 2026-05-18.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "fees", "registration", "foreign_investment", "source_gap"]
     }
   ]
 }

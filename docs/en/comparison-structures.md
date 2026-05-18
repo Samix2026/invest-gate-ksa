@@ -21,6 +21,8 @@ All information below is sourced from the `business-structures` dataset entries.
 
 > **April 2025 CR Law Update:** The Companies Law was amended effective April 2025. Key changes: (1) Annual renewal replaced by an annual data verification cycle and fee payment — CR is no longer time-limited. (2) A single CR now covers all business activities and branches. (3) A 5-year grace period to April 2030 applies to companies with CRs issued under the prior law. (4) Auto-cancellation period for inactive CRs extended from 30 days to 1 year. Source: Ministry of Commerce (mc.gov.sa). Verify current requirements at mc.gov.sa.
 
+> **April 2025 — Branch CR Abolished:** Under the new Commercial Registration Law (Royal Decree M/83), branch commercial registrations no longer exist. A Single National CR covers all activities and locations under one 10-digit number starting with "7". Existing branch CRs have until April 2030 to convert into separate legal entities or be cancelled. Exception: a foreign company may still operate through a branch if it is the only registered entity of that company in the Kingdom. Saudization note: converted branches become separate entities and each must meet its own Nitaqat quota independently. Source: CR Law, effective April 3, 2025.
+
 ---
 
 ## 1. Side-by-Side Comparison
@@ -36,7 +38,7 @@ All information below is sourced from the `business-structures` dataset entries.
 | **MISA registration required** | Yes (for foreign investors) | Yes | Yes |
 | **Can generate revenue in Saudi Arabia** | Yes | Yes | No |
 | **Can sign commercial contracts in own name** | Yes | Via parent | No |
-| **Can sponsor employees (Iqama)** | Yes (once registered and CR issued) | Yes (via branch CR) | Placeholder — verify at misa.gov.sa |
+| **Can sponsor employees (Iqama)** | Yes (once registered and CR issued) | Yes (via branch CR — foreign company branch remains valid as sole KSA entity; domestic branch CRs abolished April 2025) | Placeholder — verify at misa.gov.sa |
 | **Typical setup complexity** | Moderate | Moderate | Lower |
 | **Suitable for** | Operating companies, services, manufacturing, tech, consulting | Operating under parent brand with full parent control | Market research, liaison, brand promotion only |
 | **Not suitable for** | Businesses where no local legal entity is preferred | Businesses wanting Saudi limited liability | Any revenue-generating activity |

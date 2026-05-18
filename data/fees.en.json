@@ -10,26 +10,15 @@
       "id": "misa_investment_registration_fee",
       "authority_id": "misa",
       "fee_type": "registration",
-      "description": "Fee charged by the Ministry of Investment (MISA) for processing and issuing an investment registration certificate for a foreign investor. This registration authorizes the investor to establish a Saudi legal entity for the approved activity.",
+      "description": "Fee charged by the Ministry of Investment (MISA) for processing and issuing an investment registration certificate for a foreign investor. This registration authorizes the investor to establish a Saudi legal entity for the approved activity. The fee amount is determined by MISA after application approval and is not published in advance.",
       "amount_sar": 0,
       "currency": "SAR",
       "frequency": "one_time",
-      "placeholder_reason": "Fee determined by MISA upon application approval per activity type. No fixed public fee schedule is published. Payable within 15 business days of notification per MISA Investor Guide, 12th Edition (July 2025). Verify directly via MISA e-portal after submitting registration.",
+      "placeholder_reason": "Fee exists but amount is not published in advance. MISA determines the fee upon approval based on activity type and notifies the applicant. Payment required within 15 business days of notification — failure to pay voids the registration. Submit application via MISA e-portal to receive the fee amount. Do NOT assume this is free. Post-registration services (activity amendment, ownership amendment, property approval, cancellation) are confirmed no-fee. Source: MISA Investor Guide 12th Edition, July 2025, Section 3.1.1. Verify at: https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
       "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
       "last_reviewed": "2026-05-18",
-      "verification_status": "draft",
-      "placeholders": [
-        {
-          "field": "amount_sar",
-          "description": "The MISA investment registration fee is determined per activity type upon application approval. No fixed public schedule is published. Verify the applicable fee via the MISA e-portal after registration is approved.",
-          "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf"
-        },
-        {
-          "field": "frequency",
-          "description": "Whether the registration fee is one-time only or includes recurring components. Annual registration update (renewal) is confirmed as no-fee per the official guide. Verify any initial registration fee structure directly via MISA.",
-          "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf"
-        }
-      ],
+      "verification_status": "verified",
+      "placeholders": [],
       "tags": ["misa", "registration", "foreign_investment", "fees"]
     },
     {
@@ -66,11 +55,11 @@
       "id": "misa_annual_renewal_fee",
       "authority_id": "misa",
       "fee_type": "renewal",
-      "description": "Fee for the annual update of Investment Registration data required under the Investment Law Executive Regulations (Ministerial Decision 1086, February 2025). Confirmed zero fee per the official investor guide.",
+      "description": "Fee for the annual update of Investment Registration data required under the Investment Law Executive Regulations (Ministerial Decision 1086, February 2025). The fee amount is determined by MISA after the annual update cycle and is not published in advance. Same fee structure as the initial registration fee.",
       "amount_sar": 0,
       "currency": "SAR",
       "frequency": "annual",
-      "placeholder_reason": "Confirmed zero fee per MISA Investor Guide, 12th Edition, July 2025. No fee is charged for the annual registration update.",
+      "placeholder_reason": "Fee exists but amount is not published in advance. MISA determines the annual renewal fee upon approval based on activity type and notifies the applicant. Payment required within 15 business days of notification — failure to pay voids the registration. Same fee structure applies to the Annual Registration Update as to the initial registration. Source: MISA Investor Guide 12th Edition, July 2025, Section 3.1.1. Verify at: https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
       "verify_at": "https://misa.gov.sa/app/uploads/2025/07/Investor-Guide_12-04.pdf",
       "last_reviewed": "2026-05-18",
       "verification_status": "verified",
@@ -111,16 +100,31 @@
       "id": "commercial_registration_issuance_fee",
       "authority_id": "ministry_of_commerce",
       "fee_type": "registration",
-      "description": "Fee charged by the Ministry of Commerce for the main (head office) Commercial Registration (CR). Under the April 2025 CR Law update, the annual renewal requirement was replaced by an annual fee payment and data verification cycle. A single CR now covers all activities and branches.",
+      "description": "Fee charged by the Ministry of Commerce for the Single National Commercial Registration (SNCR). Under the April 2025 CR Law (Royal Decree M/83), a single national CR covers all activities and branches nationwide. CR is now permanent with no expiry date. Annual data verification and fee payment cycle replaces the prior periodic renewal requirement. New CR numbers are 10 digits starting with '7'.",
       "amount_sar": 200,
       "currency": "SAR",
       "frequency": "annual",
-      "placeholder_reason": "Verified: SAR 200/year for main CR per Ministry of Commerce fee schedule (2025). Branch CR is SAR 100/year. The April 2025 CR Law replaced periodic renewal with an annual verification and fee payment cycle. Chamber of Commerce membership fee (SAR 800+/year) is separate and mandatory — see chamber_of_commerce_fee entry. Verify current fee at mc.gov.sa.",
+      "placeholder_reason": "Verified: SAR 200/year annual confirmation fee per Ministry of Commerce fee schedule (2025). CR is now permanent — no expiry date. Annual confirmation of data required to stay active. New 10-digit CR numbers starting with 7 replace old regional codes. Single CR covers all activities and branches nationwide (Royal Decree M/83, April 2025). Branch CRs abolished — see branch_commercial_registration_fee entry for historical reference. Chamber of Commerce membership fee (SAR 800+/year) is separate and mandatory — see chamber_of_commerce_fee entry. Verify current fee at mc.gov.sa.",
       "verify_at": "https://mc.gov.sa/en/eservices/Pages/Commercial-data.aspx",
       "last_reviewed": "2026-05-18",
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["ministry_of_commerce", "commercial_registration", "cr", "annual", "fees"]
+    },
+    {
+      "id": "branch_commercial_registration_fee",
+      "authority_id": "ministry_of_commerce",
+      "fee_type": "registration",
+      "description": "Historical entry — Branch Commercial Registration (CR) fee under the pre-April 2025 system. Branch CRs were abolished effective April 3, 2025 under the new Commercial Registration Law (Royal Decree M/83). This entry is retained for historical reference only and does not reflect current law.",
+      "amount_sar": 100,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "Branch CR (SAR 100/year) applied under the old system. ABOLISHED effective April 3, 2025 under the new Commercial Registration Law (Royal Decree M/83). A Single National CR now covers all activities and branches. Existing branch CRs have until April 2030 to convert or cancel. Exception: foreign company branches remain valid only if sole KSA registered entity of that foreign company. This entry is retained for historical reference only. Source: CR Law Royal Decree M/83, April 2025. Verify at: https://mc.gov.sa",
+      "verify_at": "https://mc.gov.sa",
+      "last_reviewed": "2026-05-18",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["ministry_of_commerce", "commercial_registration", "branch", "cr", "historical", "abolished", "fees"]
     },
     {
       "id": "chamber_of_commerce_fee",

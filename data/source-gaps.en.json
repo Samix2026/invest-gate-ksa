@@ -334,6 +334,24 @@
         }
       ],
       "tags": ["chamber_of_commerce", "commercial_registration", "mandatory_membership", "fees", "source_gap"]
+    },
+    {
+      "id": "misa_fee_schedule",
+      "name": "MISA Registration Fee Schedule",
+      "name_alt": "جدول رسوم تسجيل الاستثمار — وزارة الاستثمار",
+      "mentioned_in_datasets": ["fees"],
+      "reason_needed": "MISA registration fee schedule — exact amounts by activity type are not publicly disclosed. Fee is determined post-approval and communicated to applicant. No official published fee table found as of 2026-05-18. Check MISA e-portal after submitting application for fee notification. Priority: high — investors frequently ask about this cost. Source confirming fee structure: MISA Investor Guide 12th Edition, July 2025, Section 3.1.1.",
+      "likely_official_domain": "misa.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Submit a test application via the MISA e-portal (misa.gov.sa) or contact MISA investor services directly to obtain the current fee notification process and any published fee indicatives by activity type. If a fee schedule is published, record amounts per activity category and update the misa_investment_registration_fee and misa_annual_renewal_fee entries in data/fees.en.json.",
+      "placeholders": [
+        {
+          "field": "fee_amounts_by_activity",
+          "description": "The actual fee amounts charged for each activity type are not publicly available. MISA notifies applicants of the due amount after application approval. No published fee schedule was found as of 2026-05-18.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "fees", "registration", "foreign_investment", "source_gap"]
     }
   ]
 }
