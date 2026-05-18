@@ -299,6 +299,22 @@ The steps below represent the general sequence for a foreign investor establishi
 
 ---
 
+### Core Regulatory Path — Quick Reference
+
+The five steps below form the non-negotiable foundation of any foreign company setup in Saudi Arabia. All other steps branch from this sequence.
+
+| Step | Authority | Typical Duration | Notes |
+|------|-----------|-----------------|-------|
+| 1. MISA Investment Registration | Ministry of Investment (MISA) | ~10 days | Authorizes the foreign investor to establish a Saudi entity |
+| 2. Commercial Registration (CR) | Ministry of Commerce | 1–7 days | Creates the legal entity; annual data verification + SAR 200 fee under April 2025 CR Law |
+| 3. Chamber of Commerce Membership | Chamber of Commerce | Same day as CR | Mandatory for all Saudi-registered companies; minimum SAR 800/year |
+| 4. ZATCA Registration | Zakat, Tax and Customs Authority | Must be completed within 60 days of commencing business | Covers VAT, CIT (20% on foreign-owned profits), and Zakat (2.5% on Saudi/GCC-owned portion) |
+| 5. GOSI Employer Registration | General Organization for Social Insurance | Before first employee joins | Required for all employers operating in Saudi Arabia |
+
+> **Note:** This table reflects a conceptual orientation only. Verify current procedures, timelines, and requirements at the official portals of each authority before relying on this sequence.
+
+---
+
 ### Step 1 — Business Planning
 Define the business activity, legal structure, ownership arrangement, and capital plan. Engage legal and corporate advisors early. Determine whether your intended activities fall within permitted sectors for foreign ownership.
 

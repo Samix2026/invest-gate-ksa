@@ -48,6 +48,14 @@
         },
         {
           "step_number": 5,
+          "label": "Chamber of Commerce membership",
+          "description": "Complete Chamber of Commerce annual membership registration. Membership with the relevant local Chamber of Commerce is mandatory for all Saudi-registered companies and is required as part of the commercial registration process. The annual fee varies by company class (minimum SAR 800/year for Class 3).",
+          "authority": { "id": "chamber_of_commerce", "name": "Chamber of Commerce" },
+          "depends_on_step": 4,
+          "notes": "Chamber of Commerce membership is not optional — it is required for CR issuance and ongoing compliance. The annual membership fee is a mandatory recurring cost that must be factored into the company's annual budget."
+        },
+        {
+          "step_number": 6,
           "label": "Municipal operating license",
           "description": "Obtain a Balady operating license for the physical premises from which the business will operate. This step applies to businesses with a physical office in Saudi Arabia and authorizes operation at a specific location.",
           "authority": { "id": "balady", "name": "Balady (Municipal Services Portal)" },
@@ -55,27 +63,27 @@
           "notes": "Applies where a physical premises is maintained. Businesses operating without a fixed physical office should verify whether this step applies to their situation."
         },
         {
-          "step_number": 6,
+          "step_number": 7,
           "label": "Social insurance registration",
-          "description": "Register as an employer with GOSI before hiring any employees. GOSI registration is required for all employers operating in Saudi Arabia.",
+          "description": "Register as an employer with GOSI before hiring any employees. GOSI registration is required for all employers operating in Saudi Arabia and must be completed before the first employee joins.",
           "authority": { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)" },
           "depends_on_step": 4,
           "notes": null
         },
         {
-          "step_number": 7,
-          "label": "Tax and zakat registration",
-          "description": "Register with ZATCA for VAT, zakat, and income tax obligations applicable to the business. VAT registration is required at or before the revenue registration threshold. Zakat and income tax applicability depend on the ownership structure and activity type.",
+          "step_number": 8,
+          "label": "Tax and Zakat registration",
+          "description": "Register with ZATCA for VAT, zakat, and income tax obligations applicable to the business. ZATCA registration must be completed within 60 days of commencing business activities — this is a statutory deadline. CIT applies to the foreign-owned portion of profits at 20%; Zakat applies to Saudi/GCC-owned portions at 2.5% of the Zakat base. VAT registration is required when taxable turnover meets the mandatory threshold.",
           "authority": { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)" },
           "depends_on_step": 4,
-          "notes": "Thresholds and applicability rules change; confirm current requirements at zatca.gov.sa."
+          "notes": "60-day registration deadline from business commencement is a statutory obligation. CIT rate: 20% of net adjusted profits. Zakat rate: 2.5% of Zakat base. Confirm current VAT registration thresholds at zatca.gov.sa."
         },
         {
-          "step_number": 8,
+          "step_number": 9,
           "label": "Labor platform registration and Saudization review",
           "description": "Register on the Qiwa platform and review Nitaqat (Saudization) obligations before hiring employees. The applicable Nitaqat band and minimum Saudi employee ratio depend on the business activity and workforce size.",
           "authority": { "id": "qiwa", "name": "Qiwa" },
-          "depends_on_step": 6,
+          "depends_on_step": 7,
           "notes": "Saudization obligations should be assessed before finalising the staffing plan. Confirm the applicable Nitaqat band for consulting activities via official channels."
         }
       ],
@@ -89,7 +97,7 @@
           ]
         },
         {
-          "at_step": 5,
+          "at_step": 6,
           "question": "Is a physical premises required?",
           "options": [
             "Physical office maintained in Saudi Arabia — Balady municipal operating license required for the premises",
@@ -100,20 +108,22 @@
       "related_authorities": [
         { "id": "misa", "name": "Ministry of Investment (MISA)", "role": "Investment registration — authorizes foreign investor presence and consulting activity scope (steps 1, 3)" },
         { "id": "ministry_of_commerce", "name": "Ministry of Commerce", "role": "Commercial registration — creates the legal entity in the commercial register (step 4)" },
-        { "id": "balady", "name": "Balady (Municipal Services Portal)", "role": "Municipal operating license — authorizes physical premises operation (step 5)" },
-        { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance obligations (step 6)" },
-        { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, and income tax registration (step 7)" },
-        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance tracking (step 8)" }
+        { "id": "chamber_of_commerce", "name": "Chamber of Commerce", "role": "Mandatory annual membership — required for CR issuance and ongoing compliance (step 5)" },
+        { "id": "balady", "name": "Balady (Municipal Services Portal)", "role": "Municipal operating license — authorizes physical premises operation (step 6)" },
+        { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance obligations (step 7)" },
+        { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, and income tax registration (step 8)" },
+        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance tracking (step 9)" }
       ],
       "source_dependencies": [
         { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
         { "dataset": "investment-licenses", "entry_id": "commercial_registration", "description": "Step 4 — Ministry of Commerce commercial registration" },
-        { "dataset": "investment-licenses", "entry_id": "municipality_license", "description": "Step 5 — Balady municipal operating license" },
-        { "dataset": "investment-licenses", "entry_id": "gosi_registration", "description": "Step 6 — GOSI employer registration" },
-        { "dataset": "investment-licenses", "entry_id": "vat_registration", "description": "Step 7 — ZATCA VAT and tax registration" },
+        { "dataset": "fees", "entry_id": "chamber_of_commerce_fee", "description": "Step 5 — Chamber of Commerce mandatory annual membership fee" },
+        { "dataset": "investment-licenses", "entry_id": "municipality_license", "description": "Step 6 — Balady municipal operating license" },
+        { "dataset": "investment-licenses", "entry_id": "gosi_registration", "description": "Step 7 — GOSI employer registration" },
+        { "dataset": "investment-licenses", "entry_id": "vat_registration", "description": "Step 8 — ZATCA VAT and tax registration" },
         { "dataset": "authority-relationships", "entry_id": "misa_ministry_of_commerce", "description": "Foundational dependency informing the MISA → Ministry of Commerce sequence in steps 3–4" },
-        { "dataset": "authority-relationships", "entry_id": "ministry_of_commerce_balady", "description": "Operational dependency informing the Ministry of Commerce → Balady sequence in steps 4–5" },
-        { "dataset": "authority-relationships", "entry_id": "zatca_business_compliance", "description": "Horizontal compliance relationship informing step 7" },
+        { "dataset": "authority-relationships", "entry_id": "ministry_of_commerce_balady", "description": "Operational dependency informing the Ministry of Commerce → Balady sequence in steps 4–6" },
+        { "dataset": "authority-relationships", "entry_id": "zatca_business_compliance", "description": "Horizontal compliance relationship informing step 8" },
         { "dataset": "sectors", "entry_id": "consulting", "description": "Sector entry with likely authorities and common confusions for consulting businesses" }
       ],
       "verification_status": "draft",
