@@ -355,6 +355,111 @@
           "verify_at": "business.absher.sa"
         }
       ]
+    },
+    {
+      "id": "sdaia-open-data",
+      "name": "منصة البيانات المفتوحة السعودية",
+      "name_alt": "Saudi Open Data Platform",
+      "authority_type": "government_platform",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "open.data.gov.sa",
+      "documentation_sections": [
+        "بيانات حكومية قابلة للمعالجة الآلية (CSV وXLS وJSON وXML)",
+        "بيانات من أكثر من 289 جهة حكومية",
+        "احصاءات اقتصادية واستثمارية وقطاعية",
+        "واجهة برمجية للبيانات المفتوحة وترخيص مجموعات البيانات",
+        "الفهرس الوطني للبيانات المفتوحة ضمن رؤية 2030"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["open_data", "sdaia", "machine_readable", "government_data", "data_platform", "platform", "fees", "timelines"],
+      "notes": "المصدر الأساسي لمجموعات البيانات الحكومية السعودية بصيغ قابلة للمعالجة الآلية. تديرها هيئة البيانات والذكاء الاصطناعي (سدايا) في إطار استراتيجية البيانات المفتوحة الوطنية المنسجمة مع رؤية 2030. تضم أكثر من 11000 مجموعة بيانات من أكثر من 289 جهة حكومية بصيغ CSV وXLS وJSON وXML. يُرجع إليها قبل أي مصدر ثانوي عند البحث عن جداول الرسوم القابلة للمعالجة الآلية أو الاحصاءات القطاعية أو البيانات التنظيمية.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث منصة البيانات المفتوحة السعودية لفهرس مجموعاتها ومجموعات البيانات المنفردة لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "open.data.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى منصة البيانات المفتوحة السعودية لم يُسجَّل بعد.",
+          "verify_at": "open.data.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "misa-open-data",
+      "name": "وزارة الاستثمار — بوابة البيانات المفتوحة",
+      "name_alt": "Ministry of Investment — Open Data Portal",
+      "authority_type": "government_portal",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "misa.gov.sa/en/open-data/",
+      "documentation_sections": [
+        "جداول رسوم التسجيل الاستثماري والترخيص",
+        "احصاءات الاستثمار الأجنبي المباشر حسب القطاع",
+        "بيانات الأنشطة والقطاعات المعتمدة",
+        "معايير معالجة تسجيل الاستثمار",
+        "مجموعات بيانات تصنيف الأنشطة الاقتصادية"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["misa", "open_data", "fees", "investment_registration", "sectors", "fdi", "portal"],
+      "notes": "بوابة البيانات المفتوحة الخاصة بوزارة الاستثمار. المصدر الأساسي لجداول رسوم وزارة الاستثمار واحصاءات تسجيل الاستثمار والبيانات القطاعية. قد تشمل مجموعات بيانات خاصة بالوزارة غير متوفرة في منصة البيانات المفتوحة الرئيسية. يُستخدم عند التحقق من رسوم تسجيل وزارة الاستثمار ومعايير المعالجة.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث وزارة الاستثمار لمحتوى بوابة البيانات المفتوحة لديها لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "misa.gov.sa/en/open-data/"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى بوابة البيانات المفتوحة لوزارة الاستثمار لم يُسجَّل بعد.",
+          "verify_at": "misa.gov.sa/en/open-data/"
+        }
+      ]
+    },
+    {
+      "id": "zatca-open-data",
+      "name": "هيئة الزكاة والضريبة والجمارك — البيانات المفتوحة",
+      "name_alt": "Zakat, Tax and Customs Authority — Open Data",
+      "authority_type": "government_portal",
+      "jurisdiction": "المملكة العربية السعودية (على المستوى الوطني)",
+      "official_website": "zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx",
+      "documentation_sections": [
+        "احصاءات الاستيراد والتصدير",
+        "بيانات الموانئ الجمركية ومعلومات التعريفات الجمركية",
+        "احصاءات تسجيل الضريبة والزكاة",
+        "بيانات الامتثال لضريبة القيمة المضافة والتقديم",
+        "جداول رسوم وأسعار هيئة الزكاة والضريبة والجمارك"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[بيان مؤقت — تاريخ آخر تحقق لم يُسجَّل بعد]",
+      "verification_method": "[بيان مؤقت — أسلوب التحقق لم يُوثَّق بعد]",
+      "tags": ["zatca", "open_data", "fees", "tax", "customs", "zakat", "vat", "portal"],
+      "notes": "مكتبة البيانات المفتوحة لهيئة الزكاة والضريبة والجمارك تغطي احصاءات الاستيراد والتصدير وبيانات الموانئ الجمركية والمعلومات الضريبية. يُستخدم للتحقق من الرسوم المتعلقة بالجمارك وتسجيل ضريبة القيمة المضافة والزكاة. يشمل مجموعات بيانات الهيئة العامة للزكاة والدخل (سابقا) والهيئة العامة للجمارك.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "وتيرة تحديث هيئة الزكاة والضريبة والجمارك لمحتوى مكتبة البيانات المفتوحة لديها لم تُتحقق منها بصورة مستقلة.",
+          "verify_at": "zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx"
+        },
+        {
+          "field": "last_verified",
+          "description": "تاريخ آخر تحقق من هذا الإدخال بالرجوع إلى مكتبة البيانات المفتوحة لهيئة الزكاة والضريبة والجمارك لم يُسجَّل بعد.",
+          "verify_at": "zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx"
+        }
+      ]
     }
   ]
 }

@@ -35,6 +35,16 @@ This file tracks all official and authoritative sources used across the Invest G
 
 ---
 
+## Saudi Open Data Platforms
+
+| ID | Name | Owner | Type | Coverage | URL |
+|---|---|---|---|---|---|
+| sdaia-open-data | Saudi Open Data Platform | SDAIA | government_platform | economic-activities, fees, timelines, sectors, authorities | open.data.gov.sa |
+| misa-open-data | Ministry of Investment Open Data | Ministry of Investment (MISA) | government_portal | fees, investment-registrations, sectors | misa.gov.sa/en/open-data/ |
+| zatca-open-data | ZATCA Open Data | Zakat, Tax and Customs Authority (ZATCA) | government_portal | fees, tax-rates, customs, zakat | zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx |
+
+---
+
 ## Adding a Source
 
 When adding content that references a new source:

@@ -15,7 +15,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "لم يتم التحقق من رسم تسجيل الاستثمار الحالي لدى وزارة الاستثمار بصورة مستقلة. تخضع المبالغ للتغيير. يُرجى التحقق من جدول الرسوم الحالي عبر misa.gov.sa قبل المضي قدما.",
-      "verify_at": "misa.gov.sa",
+      "verify_at": "https://misa.gov.sa/en/open-data/",
       "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
       "verification_status": "draft",
       "placeholders": [
@@ -41,7 +41,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "لم يتم التحقق من رسم إصدار السجل التجاري الحالي بصورة مستقلة. قد تختلف رسوم الإصدار الأولي عن رسوم التجديد. يُرجى التحقق عبر mc.gov.sa.",
-      "verify_at": "mc.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
       "verification_status": "draft",
       "placeholders": [
@@ -67,7 +67,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "لم يُؤكَّد ما إذا كانت المؤسسة العامة للتأمينات الاجتماعية تفرض رسما منفصلا على تسجيل صاحب العمل أم أن التسجيل مجاني. اشتراكات غوسي الجارية وهي نسبة مئوية من الرواتب مستقلة عن أي رسم تسجيل ولا تُسجَّل هنا. يُرجى التحقق عبر gosi.gov.sa.",
-      "verify_at": "gosi.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
       "verification_status": "draft",
       "placeholders": [
@@ -88,7 +88,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "لم يُؤكَّد ما إذا كانت هيئة الزكاة والضريبة والجمارك تفرض رسما منفصلا على التسجيل في ضريبة القيمة المضافة أو الزكاة أو ضريبة الدخل أم أن التسجيل مجاني. معدلات الضرائب والالتزامات الجارية يحددها القانون ولا تُسجَّل بوصفها رسوما في هذه البيانات. يُرجى التحقق عبر zatca.gov.sa.",
-      "verify_at": "zatca.gov.sa",
+      "verify_at": "https://zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx",
       "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
       "verification_status": "draft",
       "placeholders": [
@@ -109,7 +109,7 @@
       "currency": "SAR",
       "frequency": "annual",
       "placeholder_reason": "تتفاوت رسوم رخصة التشغيل البلدي حسب المدينة وحجم المنشأة وتصنيف النشاط التجاري. الرسم المُسجَّل هنا خاص بالرياض. قد تختلف رسوم جدة والدمام وسائر المدن. يُرجى التحقق من جدول الرسوم الحالي مع البلدية المحلية المعنية أو عبر بوابة بلدي.",
-      "verify_at": "balady.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
       "verification_status": "draft",
       "placeholders": [
@@ -135,7 +135,7 @@
       "currency": "SAR",
       "frequency": null,
       "placeholder_reason": "لم يُؤكَّد ما إذا كانت وزارة الموارد البشرية أو منصة قوى تفرض رسما على إصدار شهادة السعودة أو التسجيل في منصة العمل. رسوم تأشيرات العمل (الإقامة) ورسوم العمالة الوافدة (حافز) مستقلة ولا تُسجَّل هنا. يُرجى التحقق عبر hrsd.gov.sa وقوى.",
-      "verify_at": "hrsd.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[نائب — أضف تاريخ التحقق بصيغة YYYY-MM-DD]",
       "verification_status": "draft",
       "placeholders": [

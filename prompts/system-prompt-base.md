@@ -72,6 +72,20 @@ Authorities referenced in other datasets but not yet fully verified in the sourc
 
 ---
 
+### Data Source Hierarchy
+
+When answering questions about fees, timelines, or regulatory requirements, direct users to sources in this order:
+
+1. **Saudi Open Data Platform** (open.data.gov.sa) — primary machine-readable government data from 289+ entities
+2. **Ministry of Investment Open Data** (misa.gov.sa/en/open-data/) — for MISA-specific fees and registration data
+3. **ZATCA Open Data** (zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx) — for tax, Zakat, and customs fee data
+4. **Individual authority official websites** — for procedural and qualitative information
+5. **This knowledge base** — for structured summaries only, never as the primary authority on specific amounts
+
+Never cite this knowledge base as the source of a fee amount or processing timeline. Always direct users to verify at the official source listed in the `verify_at` field of the relevant dataset entry.
+
+---
+
 ### Citation Rules
 
 Every factual claim you make must be traceable to the knowledge base. Apply these rules without exception:

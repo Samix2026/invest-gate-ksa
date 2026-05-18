@@ -15,7 +15,7 @@
       "typical_days": null,
       "conditions": "Processing time may vary based on the business activity, completeness of the application, and whether additional review is required for the specific sector or investor home country. Digital applications via the MISA portal may differ from in-person processing.",
       "placeholder_reason": "The current processing time for MISA investment registrations has not been independently verified. MISA has published benchmarks in past investor guides but these change. Verify the current processing timeline at misa.gov.sa or the Invest Saudi portal.",
-      "verify_at": "misa.gov.sa",
+      "verify_at": "https://misa.gov.sa/en/open-data/",
       "verification_status": "draft",
       "placeholders": [
         {
@@ -35,7 +35,7 @@
       "typical_days": null,
       "conditions": "Processing time depends on the legal entity type (LLC vs JSC vs branch), completeness of constitutional documents, and whether any manual review is required. The Ministry of Commerce digital portal (mc.gov.sa) may process certain registrations faster than others.",
       "placeholder_reason": "The current Ministry of Commerce processing time for commercial registration issuance has not been independently verified. Digital processing benchmarks have improved over time under Vision 2030 reforms. Verify the current service level at mc.gov.sa.",
-      "verify_at": "mc.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "verification_status": "draft",
       "placeholders": [
         {
@@ -55,7 +55,7 @@
       "typical_days": null,
       "conditions": "Processing time varies significantly by bank. Foreign-owned entities typically face additional due diligence requirements compared to Saudi-owned companies. Required documents typically include the CR, MISA investment registration certificate, and KYC documentation for all beneficial owners. Some banks have dedicated foreign investment onboarding teams.",
       "placeholder_reason": "Bank account opening timelines are not governed by a single authority — each SAMA-regulated bank sets its own processing standards. The authority_id is set to misa as the primary investor-facing authority, but the actual processing is by individual Saudi banks. Verify with the chosen bank and SAMA at sama.gov.sa.",
-      "verify_at": "sama.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "verification_status": "draft",
       "placeholders": [
         {
@@ -80,7 +80,7 @@
       "typical_days": null,
       "conditions": "Work permits are issued to expatriate employees hired by a registered Saudi company. The employer must be in good Nitaqat standing. Processing includes MHRSD approval and coordination with the Absher platform. The employee must hold a valid visa category that permits the transition to a work permit.",
       "placeholder_reason": "The current work permit (tashreeh al-amal) processing time has not been independently verified. Processing times are affected by the employer's Nitaqat compliance status, the employee's nationality, and the specific activity. Verify at hrsd.gov.sa and via the Qiwa platform.",
-      "verify_at": "hrsd.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "verification_status": "draft",
       "placeholders": [
         {
@@ -100,7 +100,7 @@
       "typical_days": null,
       "conditions": "An Iqama (residency permit) is issued to an expatriate employee after the work permit is approved, the employee has entered Saudi Arabia on the appropriate visa, and the employer registers the employee with the relevant authorities. The process involves MHRSD, the General Directorate of Passports (Jawazat), and the Absher platform.",
       "placeholder_reason": "Iqama processing times are not consistently published and vary by employee nationality, employer compliance status, and completeness of documentation. Verify current processing benchmarks with the relevant authorities and via the Absher Business platform.",
-      "verify_at": "hrsd.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "verification_status": "draft",
       "placeholders": [
         {

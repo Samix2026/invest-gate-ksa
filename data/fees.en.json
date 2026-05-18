@@ -15,7 +15,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "The current MISA investment registration fee has not been independently verified. Amounts are subject to change. Verify the current fee schedule at misa.gov.sa before proceeding.",
-      "verify_at": "misa.gov.sa",
+      "verify_at": "https://misa.gov.sa/en/open-data/",
       "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
       "verification_status": "draft",
       "placeholders": [
@@ -41,7 +41,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "The current commercial registration issuance fee has not been independently verified. Fees for initial CR issuance may differ from renewal fees. Verify at mc.gov.sa.",
-      "verify_at": "mc.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
       "verification_status": "draft",
       "placeholders": [
@@ -67,7 +67,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "It is not confirmed whether GOSI charges a separate employer registration fee or whether registration is free at the point of enrollment. Ongoing GOSI contributions (a percentage of payroll) are separate from any registration fee and are not recorded here. Verify at gosi.gov.sa.",
-      "verify_at": "gosi.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
       "verification_status": "draft",
       "placeholders": [
@@ -88,7 +88,7 @@
       "currency": "SAR",
       "frequency": "one_time",
       "placeholder_reason": "It is not confirmed whether ZATCA charges a separate registration fee for VAT, zakat, or income tax registration, or whether registration is free. Ongoing tax obligations (VAT rates, CIT rates, zakat rates) are set by law and are not recorded as fees in this dataset. Verify at zatca.gov.sa.",
-      "verify_at": "zatca.gov.sa",
+      "verify_at": "https://zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx",
       "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
       "verification_status": "draft",
       "placeholders": [
@@ -109,7 +109,7 @@
       "currency": "SAR",
       "frequency": "annual",
       "placeholder_reason": "Municipal operating license fees vary by city, premises size, and business activity classification. The fee recorded here is specific to Riyadh. Fees for Jeddah, Dammam, and other cities may differ. Verify the current fee schedule with the relevant local municipality or at the Balady portal.",
-      "verify_at": "balady.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
       "verification_status": "draft",
       "placeholders": [
@@ -135,7 +135,7 @@
       "currency": "SAR",
       "frequency": null,
       "placeholder_reason": "It is not confirmed whether MHRSD or Qiwa charge a fee for Saudization certificate issuance or labor platform registration. Nitaqat compliance fees, work visa (iqama) fees, and the expat levy (Hafiz) are separate and not recorded here. Verify at hrsd.gov.sa and qiwa.hrsd.gov.sa.",
-      "verify_at": "hrsd.gov.sa",
+      "verify_at": "https://open.data.gov.sa",
       "last_reviewed": "[PLACEHOLDER — add ISO date YYYY-MM-DD when verified]",
       "verification_status": "draft",
       "placeholders": [

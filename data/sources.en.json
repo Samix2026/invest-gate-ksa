@@ -355,6 +355,111 @@
           "verify_at": "business.absher.sa"
         }
       ]
+    },
+    {
+      "id": "sdaia-open-data",
+      "name": "Saudi Open Data Platform",
+      "name_alt": "منصة البيانات المفتوحة السعودية",
+      "authority_type": "government_platform",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "open.data.gov.sa",
+      "documentation_sections": [
+        "Machine-readable government datasets (CSV, XLS, JSON, XML)",
+        "Datasets from 289+ government entities",
+        "Economic, investment, and sector statistics",
+        "Open data API access and dataset licensing",
+        "National open data catalogue under Vision 2030"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["open_data", "sdaia", "machine_readable", "government_data", "data_platform", "platform", "fees", "timelines"],
+      "notes": "Primary source for machine-readable Saudi government datasets. Operated by SDAIA (Saudi Data and Artificial Intelligence Authority) under the national open data strategy aligned with Vision 2030. Contains 11,000+ datasets from 289+ government entities in CSV, XLS, JSON, and XML formats. Check this platform before secondary sources when looking for machine-readable fee schedules, sector statistics, or regulatory data.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which the Saudi Open Data Platform updates its dataset catalogue and individual datasets has not been independently verified.",
+          "verify_at": "open.data.gov.sa"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live Saudi Open Data Platform has not been recorded.",
+          "verify_at": "open.data.gov.sa"
+        }
+      ]
+    },
+    {
+      "id": "misa-open-data",
+      "name": "Ministry of Investment — Open Data Portal",
+      "name_alt": "وزارة الاستثمار — بوابة البيانات المفتوحة",
+      "authority_type": "government_portal",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "misa.gov.sa/en/open-data/",
+      "documentation_sections": [
+        "Investment registration and licensing fee schedules",
+        "Foreign direct investment (FDI) statistics by sector",
+        "Approved activity and sector eligibility data",
+        "Investment registration processing benchmarks",
+        "Economic activity classification datasets"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["misa", "open_data", "fees", "investment_registration", "sectors", "fdi", "portal"],
+      "notes": "MISA's dedicated open data portal. Primary source for MISA-specific fee schedules, investment registration statistics, and sector data. May include MISA-specific datasets not available on the main Saudi Open Data Platform. Use when verifying MISA registration fees and processing benchmarks.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which MISA updates its open data portal content has not been independently verified.",
+          "verify_at": "misa.gov.sa/en/open-data/"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live MISA open data portal has not been recorded.",
+          "verify_at": "misa.gov.sa/en/open-data/"
+        }
+      ]
+    },
+    {
+      "id": "zatca-open-data",
+      "name": "Zakat, Tax and Customs Authority — Open Data",
+      "name_alt": "هيئة الزكاة والضريبة والجمارك — البيانات المفتوحة",
+      "authority_type": "government_portal",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx",
+      "documentation_sections": [
+        "Import and export statistics",
+        "Customs port data and tariff information",
+        "Tax and Zakat registration statistics",
+        "VAT compliance and filing data",
+        "ZATCA fee schedules and rates"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
+      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
+      "tags": ["zatca", "open_data", "fees", "tax", "customs", "zakat", "vat", "portal"],
+      "notes": "ZATCA open data library covering import and export statistics, customs port data, and tax information. Use for fee verification related to customs duties, VAT registration, and Zakat. Covers datasets from both the former General Authority of Zakat and Tax and the General Authority of Customs.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "The frequency with which ZATCA updates its open data library content has not been independently verified.",
+          "verify_at": "zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx"
+        },
+        {
+          "field": "last_verified",
+          "description": "The date this registry entry was last verified against the live ZATCA open data library has not been recorded.",
+          "verify_at": "zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx"
+        }
+      ]
     }
   ]
 }
