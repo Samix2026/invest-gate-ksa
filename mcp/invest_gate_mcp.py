@@ -211,7 +211,10 @@ class GetInvestorPathInput(BaseModel):
     )
     investor_type: str = Field(
         "sme",
-        description="Investor profile: individual_entrepreneur, sme, multinational",
+        description=(
+            "Investor profile: foreign_individual, foreign_company, "
+            "individual_entrepreneur, sme, multinational"
+        ),
     )
     lang: str = Field("en", description="Language: 'en' or 'ar'")
 
@@ -392,7 +395,17 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
 
     struct_data = _qs.DataLoader.load(lang=lang)
     all_structs = _qs.list_all(struct_data)
-    if not params.has_parent_company:
+    if params.investor_type == "foreign_individual":
+        # Standard Investment Registration (LLC) is the only applicable path.
+        # Branch requires an existing foreign parent; RHQ requires a multinational.
+        relevant_structs = [e for e in all_structs if e["id"] == "llc"]
+    elif params.investor_type == "foreign_company":
+        # Foreign company can establish a new LLC presence or extend via Branch.
+        relevant_structs = [
+            e for e in all_structs
+            if e["id"] in ("llc", "foreign_branch")
+        ]
+    elif not params.has_parent_company:
         relevant_structs = [
             e for e in all_structs
             if e["id"] not in ("foreign_branch", "representative_office")
@@ -411,27 +424,38 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
     )
 
     notes: List[str] = []
-    if not params.has_parent_company and params.investor_type == "individual_entrepreneur":
+
+    # Type-specific notes — only add what is relevant to this investor type.
+    if params.investor_type == "individual_entrepreneur" and not params.has_parent_company:
         notes.append(
             "Without a foreign parent company, the Entrepreneurial License may apply "
             "for innovative or tech-enabled businesses. Requires a support letter from "
             "a MISA-recognised incubator, accelerator, or VC. Verify eligibility at "
             "misa.gov.sa."
         )
-    if params.investor_type == "multinational":
+    elif params.investor_type == "multinational":
         notes.append(
             "Multinationals may qualify for a Regional Headquarters (RHQ) License in "
             "addition to standard investment registration. The RHQ cannot generate "
             "direct commercial revenue — it covers management functions only. "
             "Verify at investsaudi.sa."
         )
+    elif params.investor_type == "foreign_company" and params.sector in ("consulting",):
+        # RHQ is relevant only for foreign companies with regional management operations.
+        notes.append(
+            "For regional management operations, a Regional Headquarters (RHQ) License "
+            "may also be an option. Verify eligibility at investsaudi.sa."
+        )
+
+    # Sectoral note: surface the additional licensing layer only — never explain why
+    # other registration types don't apply.
     if sector_entry and sector_entry.get("regulatory_sensitivity") in (
         "highly_regulated", "restricted"
     ):
         notes.append(
-            f"Sector '{params.sector}' is classified as "
-            f"'{sector_entry['regulatory_sensitivity']}'. Additional authority "
-            "approvals are likely required and MISA registration may take longer."
+            f"Sector '{params.sector}' requires additional sectoral licensing beyond "
+            "standard investment registration. Contact the relevant sectoral authority "
+            "early in the process."
         )
 
     path = {
