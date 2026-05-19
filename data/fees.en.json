@@ -351,6 +351,66 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["misa", "entrepreneurial_license", "startup", "renewal", "fees"]
+    },
+    {
+      "id": "qiwa_employer_registration_fee",
+      "authority_id": "qiwa_platform",
+      "fee_type": "registration",
+      "description": "Fee for registering as an employer on the Qiwa labor market platform. Employer registration on Qiwa is mandatory before hiring any employees in Saudi Arabia. Registration is free of charge.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "Confirmed free of charge per qiwa.sa platform (2025). Employer registration on Qiwa has no fee. Mandatory before first hire. HRSD administers via qiwa.sa. Ongoing Nitaqat compliance and work permit fees are governed separately — this entry covers only the initial employer registration.",
+      "verify_at": "https://qiwa.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["qiwa", "labor_market", "employer_registration", "registration", "fees"]
+    },
+    {
+      "id": "iqama_issuance_renewal_fee",
+      "authority_id": "muqeem_platform",
+      "fee_type": "issuance",
+      "description": "Annual Iqama (residency permit) fee per expatriate employee, payable by the sponsoring employer. The Iqama must be issued within 90 days of the employee's arrival in Saudi Arabia. This fee applies to both initial issuance and annual renewal.",
+      "amount_sar": 51.75,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "Verified: SAR 51.75 per employee per year per MOI/Jawazat official fee schedule (2025). Payable by the employer (sponsor). Late Iqama issuance (beyond 90 days from employee arrival) incurs penalties: SAR 500 first offense, SAR 1,000 second offense, then deportation proceedings. Verify current fee at muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "iqama", "residency_permit", "issuance", "expatriate", "fees"]
+    },
+    {
+      "id": "final_exit_visa_fee",
+      "authority_id": "muqeem_platform",
+      "fee_type": "issuance",
+      "description": "Fee for issuing a final exit visa for an expatriate employee departing Saudi Arabia permanently. Processed via the Muqeem portal. This fee is payable per transaction — one fee per employee departure.",
+      "amount_sar": 70,
+      "currency": "SAR",
+      "frequency": "per_transaction",
+      "placeholder_reason": "Verified: SAR 70 per transaction per MOI/Jawazat official fee schedule (2025). Applies when an expatriate employee is leaving Saudi Arabia permanently. Separate from exit/re-entry visa (see exit_reentry_visa_extension_fee). Verify current fee at muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "exit_visa", "final_exit", "expatriate", "fees"]
+    },
+    {
+      "id": "exit_reentry_visa_extension_fee",
+      "authority_id": "muqeem_platform",
+      "fee_type": "other",
+      "description": "Fee for extending an exit/re-entry visa for an expatriate employee who needs to travel outside Saudi Arabia and return. Processed via the Muqeem portal. This fee is payable per transaction.",
+      "amount_sar": 103,
+      "currency": "SAR",
+      "frequency": "per_transaction",
+      "placeholder_reason": "Verified: SAR 103 per transaction per MOI/Jawazat official fee schedule (2025). Applies to exit/re-entry visa extension requests for expatriate employees. Separate from final exit visa (see final_exit_visa_fee). Verify current fee at muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "exit_reentry_visa", "extension", "expatriate", "fees"]
     }
   ]
 }

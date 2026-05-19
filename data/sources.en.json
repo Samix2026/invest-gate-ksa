@@ -247,74 +247,52 @@
       ]
     },
     {
-      "id": "qiwa",
+      "id": "qiwa_platform",
       "name": "Qiwa — Labor Market Platform",
       "name_alt": "قوى — منصة سوق العمل",
       "authority_type": "government_platform",
       "jurisdiction": "Saudi Arabia (national)",
-      "official_website": "qiwa.com.sa",
+      "official_website": "qiwa.sa",
       "documentation_sections": [
+        "Employer registration (mandatory before first hire)",
+        "Employment contract authentication and documentation",
         "Work permit issuance and renewal",
-        "Saudization (Nitaqat) percentage management",
-        "Employment contract documentation",
-        "Employee transfer and exit",
-        "Flexible and remote work permits"
+        "Saudization (Nitaqat) compliance tracking",
+        "Employee transfer, exit, and flexible work permits"
       ],
       "languages_supported": ["ar", "en"],
       "update_frequency_estimate": null,
       "reliability_level": "official_portal",
-      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
-      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
-      "tags": ["labor_market", "work_permits", "saudization", "employment", "qiwa", "platform"],
-      "notes": "Digital platform operated under MHRSD for managing labor market transactions, work permits, and Saudization compliance. Employers use Qiwa to manage workforce registration and labor obligations.",
-      "verification_status": "draft",
-      "placeholders": [
-        {
-          "field": "official_website",
-          "description": "The canonical domain for the Qiwa platform should be confirmed directly — verify the current official URL with MHRSD or the platform itself.",
-          "verify_at": "hrsd.gov.sa"
-        },
-        {
-          "field": "update_frequency_estimate",
-          "description": "The frequency with which the Qiwa platform updates its services and requirements has not been independently verified.",
-          "verify_at": "qiwa.com.sa"
-        }
-      ]
+      "last_verified": "2026-05-19",
+      "verification_method": "Reviewed qiwa.sa platform pages and HRSD announcements (2025). Employer registration confirmed free of charge. Platform statistics (14.5M users, 11M contracts H1 2025) per HRSD published data.",
+      "tags": ["labor_market", "work_permits", "saudization", "employment", "qiwa", "platform", "contract_authentication"],
+      "notes": "Official Saudi labor market platform operated by the Ministry of Human Resources and Social Development (HRSD). Employer registration on Qiwa is mandatory before hiring any employees — this must be completed before the first worker joins. Registration is free. Key functions: employment contract authentication (all private-sector contracts must be authenticated via Qiwa), Nitaqat (Saudization) compliance monitoring, work permit management, and employee transfer processing. As of H1 2025: 14.5 million registered users, 11 million employment contracts processed. Platform URL: qiwa.sa (not qiwa.com.sa — the .com.sa domain redirects).",
+      "verification_status": "verified",
+      "placeholders": []
     },
     {
-      "id": "muqeem",
-      "name": "Muqeem — Residency and Visa Services Portal",
-      "name_alt": "مقيم — بوابة خدمات الإقامة والتأشيرات",
+      "id": "muqeem_platform",
+      "name": "Muqeem — Residency and Expatriate Management Portal",
+      "name_alt": "مقيم — بوابة إدارة الإقامة والعمالة الوافدة",
       "authority_type": "government_portal",
       "jurisdiction": "Saudi Arabia (national)",
       "official_website": "muqeem.sa",
       "documentation_sections": [
         "Iqama (residency permit) issuance and renewal",
-        "Exit and re-entry visa management",
+        "Exit visa and exit/re-entry visa management",
         "Dependent residency permits",
         "Domestic worker permits",
-        "Passport and travel documentation services"
+        "2026 digital Iqama card delivery via Wasil"
       ],
       "languages_supported": ["ar", "en"],
       "update_frequency_estimate": null,
       "reliability_level": "official_portal",
-      "last_verified": "[PLACEHOLDER — date of last verification not yet recorded]",
-      "verification_method": "[PLACEHOLDER — verification method not yet documented]",
-      "tags": ["residency", "iqama", "visas", "expatriates", "immigration", "portal"],
-      "notes": "Portal for managing residency permits (Iqama) and related visa services for expatriates in Saudi Arabia. Operated under the authority responsible for passports and residency (Jawazat). Relevant for employers sponsoring foreign staff.",
-      "verification_status": "draft",
-      "placeholders": [
-        {
-          "field": "update_frequency_estimate",
-          "description": "The frequency with which the Muqeem portal updates its services and requirements has not been independently verified.",
-          "verify_at": "muqeem.sa"
-        },
-        {
-          "field": "last_verified",
-          "description": "The date this registry entry was last verified against the live Muqeem portal has not been recorded.",
-          "verify_at": "muqeem.sa"
-        }
-      ]
+      "last_verified": "2026-05-19",
+      "verification_method": "Reviewed muqeem.sa portal and MOI/Jawazat fee schedules (2025). Iqama fees (SAR 51.75/year per employee), final exit visa (SAR 70), and exit/re-entry extension (SAR 103) confirmed against official Muqeem fee tables. 90-day Iqama deadline and late penalty schedule confirmed via HRSD/Jawazat published guidance.",
+      "tags": ["residency", "iqama", "visas", "expatriates", "immigration", "portal", "jawazat"],
+      "notes": "Official portal for managing Iqama (residency permits) and related visa services for expatriate employees in Saudi Arabia. Operated under the General Directorate of Passports (Jawazat), Ministry of Interior. Mandatory for employers sponsoring foreign staff. Key facts: (1) Iqama must be issued within 90 days of the employee's arrival in KSA — failure triggers penalties: SAR 500 (first offense), SAR 1,000 (second offense), then deportation proceedings. (2) Iqama fee: SAR 51.75 per employee per year (paid by the employer). (3) Final exit visa fee: SAR 70 per transaction. (4) Exit/re-entry visa extension: SAR 103 per transaction. (5) From 2026: Iqama renewal is fully digital; physical card replaced by Wasil card (digital identity card), delivered within 5 business days of renewal.",
+      "verification_status": "verified",
+      "placeholders": []
     },
     {
       "id": "absher_business",

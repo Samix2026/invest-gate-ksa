@@ -359,6 +359,21 @@ Register with ZATCA for VAT (if turnover meets the threshold) and for Corporate 
 ### Step 8 — Labor and Social Insurance Registration
 Register with the Ministry of Human Resources (MHRSD) as an employer. Register all employees with GOSI. Begin managing Saudization obligations from the time of first hire.
 
+#### Labor Platforms — Mandatory Registration
+
+Two government platforms must be activated before hiring any employees:
+
+**Qiwa** (`qiwa.sa`) — operated by MHRSD. Employer registration is required before the first employee joins. Registration is free and typically activated within one business day. All private-sector employment contracts must be authenticated via Qiwa. Qiwa also tracks Nitaqat (Saudization) compliance and handles work permit applications.
+
+**Muqeem** (`muqeem.sa`) — operated by the General Directorate of Passports (Jawazat), Ministry of Interior. Used to manage Iqama (residency permit) issuance, exit visas, and re-entry visa extensions for expatriate employees. Key employer obligations via Muqeem:
+- Iqama must be issued within **90 days** of the employee's arrival in Saudi Arabia. Failure triggers penalties: SAR 500 (first offense), SAR 1,000 (second offense), then deportation proceedings.
+- **Iqama fee:** SAR 51.75 per employee per year (paid by the employer).
+- **Final exit visa fee:** SAR 70 per transaction.
+- **Exit/re-entry visa extension fee:** SAR 103 per transaction.
+- From 2026: Iqama renewal is fully digital. The physical Iqama card is replaced by the Wasil card, delivered within 5 business days of renewal.
+
+> **Verify with official sources:** Current fees and procedures for Qiwa and Muqeem are published at [qiwa.sa](https://qiwa.sa) and [muqeem.sa](https://muqeem.sa). Fee schedules are set by MOI/Jawazat and are subject to revision.
+
 ---
 
 ### Step 9 — Sector-Specific Licenses

@@ -81,10 +81,10 @@
         {
           "step_number": 9,
           "label": "Labor platform registration and Saudization review",
-          "description": "Register on the Qiwa platform and review Nitaqat (Saudization) obligations before hiring employees. The applicable Nitaqat band and minimum Saudi employee ratio depend on the business activity and workforce size.",
-          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "description": "Register as an employer on the Qiwa platform (qiwa.sa) before hiring any employees. Authenticate all employment contracts via Qiwa. Review Nitaqat (Saudization) obligations — the applicable band and minimum Saudi employee ratio depend on the business activity and workforce size. Register each expatriate employee's Iqama via Muqeem within 90 days of their arrival.",
+          "authority": { "id": "qiwa_platform", "name": "Qiwa Platform" },
           "depends_on_step": 7,
-          "notes": "Saudization obligations should be assessed before finalising the staffing plan. Confirm the applicable Nitaqat band for consulting activities via official channels."
+          "notes": "Qiwa employer registration must precede the first hire. Saudization obligations should be assessed before finalising the staffing plan. Confirm the applicable Nitaqat band for consulting activities via official channels."
         }
       ],
       "decision_points": [
@@ -112,7 +112,7 @@
         { "id": "balady", "name": "Balady (Municipal Services Portal)", "role": "Municipal operating license — authorizes physical premises operation (step 6)" },
         { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance obligations (step 7)" },
         { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, and income tax registration (step 8)" },
-        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance tracking (step 9)" }
+        { "id": "qiwa_platform", "name": "Qiwa Platform", "role": "Labor platform registration and Saudization compliance tracking (step 9)" }
       ],
       "source_dependencies": [
         { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
@@ -216,8 +216,8 @@
         {
           "step_number": 9,
           "label": "Labor platform registration and Saudization review",
-          "description": "Register on the Qiwa platform and review Nitaqat obligations before hiring employees. Confirm the applicable Saudization band for e-commerce activities.",
-          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "description": "Register as an employer on the Qiwa platform (qiwa.sa) before hiring any employees. Authenticate employment contracts via Qiwa. Review Nitaqat obligations before hiring employees. Confirm the applicable Saudization band for e-commerce activities. Register expatriate employee Iqamas via Muqeem within 90 days of arrival.",
+          "authority": { "id": "qiwa_platform", "name": "Qiwa Platform" },
           "depends_on_step": 7,
           "notes": null
         }
@@ -256,7 +256,7 @@
         { "id": "balady", "name": "Balady (Municipal Services Portal)", "role": "Municipal operating license — conditional on physical premises in Saudi Arabia (step 6)" },
         { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance (step 7)" },
         { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, income tax, and customs registration (step 8)" },
-        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance (step 9)" }
+        { "id": "qiwa_platform", "name": "Qiwa Platform", "role": "Labor platform registration and Saudization compliance (step 9)" }
       ],
       "source_dependencies": [
         { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
@@ -381,8 +381,8 @@
         {
           "step_number": 11,
           "label": "Labor platform registration and Saudization review",
-          "description": "Register on the Qiwa platform and review Nitaqat obligations. Manufacturing operations are subject to Saudization requirements; the applicable band depends on the industrial activity and workforce size.",
-          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "description": "Register as an employer on the Qiwa platform (qiwa.sa) before hiring any employees. Authenticate employment contracts via Qiwa. Review Nitaqat obligations. Manufacturing operations are subject to Saudization requirements; the applicable band depends on the industrial activity and workforce size. Register expatriate employee Iqamas via Muqeem within 90 days of arrival.",
+          "authority": { "id": "qiwa_platform", "name": "Qiwa Platform" },
           "depends_on_step": 9,
           "notes": null
         }
@@ -423,7 +423,7 @@
         { "id": "sfda", "name": "Saudi Food and Drug Authority (SFDA)", "role": "Product registration for regulated product categories (step 8, conditional)" },
         { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance (step 9)" },
         { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, income tax, and customs registration (step 10)" },
-        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance (step 11)" }
+        { "id": "qiwa_platform", "name": "Qiwa Platform", "role": "Labor platform registration and Saudization compliance (step 11)" }
       ],
       "source_dependencies": [
         { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },
@@ -533,8 +533,8 @@
         {
           "step_number": 9,
           "label": "Labor platform registration and Saudization review",
-          "description": "Register on the Qiwa platform and review Nitaqat obligations before hiring employees. Confirm the applicable Saudization band for financial services or technology activities.",
-          "authority": { "id": "qiwa", "name": "Qiwa" },
+          "description": "Register as an employer on the Qiwa platform (qiwa.sa) before hiring any employees. Authenticate employment contracts via Qiwa. Review Nitaqat obligations before hiring employees. Confirm the applicable Saudization band for financial services or technology activities. Register expatriate employee Iqamas via Muqeem within 90 days of arrival.",
+          "authority": { "id": "qiwa_platform", "name": "Qiwa Platform" },
           "depends_on_step": 7,
           "notes": null
         },
@@ -581,7 +581,7 @@
         { "id": "ministry_of_commerce", "name": "Ministry of Commerce", "role": "Commercial registration — creates the legal entity (step 5)" },
         { "id": "gosi", "name": "General Organization for Social Insurance (GOSI)", "role": "Employer registration for social insurance (step 7)" },
         { "id": "zatca", "name": "Zakat, Tax and Customs Authority (ZATCA)", "role": "VAT, zakat, and income tax registration (step 8)" },
-        { "id": "qiwa", "name": "Qiwa", "role": "Labor platform registration and Saudization compliance (step 9)" }
+        { "id": "qiwa_platform", "name": "Qiwa Platform", "role": "Labor platform registration and Saudization compliance (step 9)" }
       ],
       "source_dependencies": [
         { "dataset": "investment-licenses", "entry_id": "misa_license", "description": "Step 3 — MISA investment registration" },

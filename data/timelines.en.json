@@ -145,6 +145,34 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["misa", "entrepreneurial_license", "startup", "registration", "timelines"]
+    },
+    {
+      "id": "qiwa_employer_registration",
+      "authority_id": "qiwa_platform",
+      "process_name": "Qiwa Employer Registration",
+      "min_days": 1,
+      "max_days": 1,
+      "typical_days": 1,
+      "conditions": "Employer submits registration via qiwa.sa after obtaining a valid Commercial Registration (CR). Registration is processed electronically. No fee. Activation is typically immediate or within 1 business day. Must be completed before hiring any employees.",
+      "placeholder_reason": "Verified per qiwa.sa platform documentation (2025). Registration is immediate on the platform once CR is available. Typical processing: 1 business day for account activation. This step must precede any employment contract authentication or work permit application on the Qiwa platform.",
+      "verify_at": "https://qiwa.sa",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["qiwa", "labor_market", "employer_registration", "timelines"]
+    },
+    {
+      "id": "iqama_initial_issuance",
+      "authority_id": "muqeem_platform",
+      "process_name": "Iqama (Residency Permit) Initial Issuance",
+      "min_days": 14,
+      "max_days": 60,
+      "typical_days": 30,
+      "conditions": "Processing begins after the employee has entered Saudi Arabia on the correct visa and the employer submits the Iqama application via Muqeem. Required documents include: valid passport, entry visa, employment contract authenticated via Qiwa, GOSI registration, and medical examination clearance. Processing time varies by employee nationality, completeness of documentation, and Jawazat workload. Iqama must be issued within 90 days of the employee's arrival — late issuance triggers penalties.",
+      "placeholder_reason": "Verified approximate range based on Muqeem/Jawazat published benchmarks and HRSD employer guidance (2025). Typical: 14–30 business days for standard cases. Complex or nationality-specific cases can reach 60 days. The 90-day statutory deadline from employee arrival is the hard deadline — employers should target Iqama issuance well before this limit. Verify current benchmarks at muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "iqama", "residency_permit", "expatriate", "timelines"]
     }
   ]
 }

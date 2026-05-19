@@ -351,6 +351,66 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["misa", "entrepreneurial_license", "startup", "renewal", "fees"]
+    },
+    {
+      "id": "qiwa_employer_registration_fee",
+      "authority_id": "qiwa_platform",
+      "fee_type": "registration",
+      "description": "رسم تسجيل صاحب العمل على منصة قوى لسوق العمل. تسجيل صاحب العمل في قوى إلزامي قبل توظيف أي موظف في المملكة العربية السعودية. التسجيل مجاني.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "تأكيد مجانية التسجيل عبر منصة qiwa.sa (2025). تسجيل صاحب العمل في قوى لا يستلزم أي رسوم. إلزامي قبل التوظيف الأول. تُديره وزارة الموارد البشرية والتنمية الاجتماعية عبر qiwa.sa. رسوم امتثال نطاقات وتصاريح العمل تُحكم بشكل منفصل — يشمل هذا الإدخال تسجيل صاحب العمل الأوّلي فحسب.",
+      "verify_at": "https://qiwa.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["qiwa", "labor_market", "employer_registration", "registration", "fees"]
+    },
+    {
+      "id": "iqama_issuance_renewal_fee",
+      "authority_id": "muqeem_platform",
+      "fee_type": "issuance",
+      "description": "رسم الإقامة السنوي لكل موظف أجنبي، يتحمّله صاحب العمل الكافل. يجب استخراج الإقامة خلال 90 يوماً من وصول الموظف إلى المملكة. يسري هذا الرسم على الإصدار الأوّلي والتجديد السنوي معاً.",
+      "amount_sar": 51.75,
+      "currency": "SAR",
+      "frequency": "annual",
+      "placeholder_reason": "تأكيد: 51.75 ريالاً للموظف سنوياً وفق جدول رسوم وزارة الداخلية/الجوازات الرسمي (2025). يتحمّله صاحب العمل (الكفيل). التأخر في إصدار الإقامة (بعد 90 يوماً من وصول الموظف) يُفضي إلى غرامات: 500 ريال للمخالفة الأولى، 1000 ريال للثانية، ثم إجراءات الترحيل. تحقق من الرسوم الحالية عبر muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "iqama", "residency_permit", "issuance", "expatriate", "fees"]
+    },
+    {
+      "id": "final_exit_visa_fee",
+      "authority_id": "muqeem_platform",
+      "fee_type": "issuance",
+      "description": "رسم إصدار تأشيرة الخروج النهائي للموظف الأجنبي المغادر للمملكة بصفة دائمة. تُعالَج عبر بوابة مقيم. رسوم المعاملة الواحدة — رسم واحد لكل مغادرة موظف.",
+      "amount_sar": 70,
+      "currency": "SAR",
+      "frequency": "per_transaction",
+      "placeholder_reason": "تأكيد: 70 ريالاً للمعاملة وفق جدول رسوم وزارة الداخلية/الجوازات الرسمي (2025). يسري على مغادرة الموظف الأجنبي للمملكة نهائياً. مستقل عن تأشيرة الخروج والعودة (انظر exit_reentry_visa_extension_fee). تحقق من الرسوم الحالية عبر muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "exit_visa", "final_exit", "expatriate", "fees"]
+    },
+    {
+      "id": "exit_reentry_visa_extension_fee",
+      "authority_id": "muqeem_platform",
+      "fee_type": "other",
+      "description": "رسم تمديد تأشيرة الخروج والعودة للموظف الأجنبي المحتاج إلى السفر خارج المملكة والعودة إليها. تُعالَج عبر بوابة مقيم. رسوم المعاملة الواحدة.",
+      "amount_sar": 103,
+      "currency": "SAR",
+      "frequency": "per_transaction",
+      "placeholder_reason": "تأكيد: 103 ريالات للمعاملة وفق جدول رسوم وزارة الداخلية/الجوازات الرسمي (2025). يسري على طلبات تمديد تأشيرة الخروج والعودة للموظفين الأجانب. مستقل عن تأشيرة الخروج النهائي (انظر final_exit_visa_fee). تحقق من الرسوم الحالية عبر muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "last_reviewed": "2026-05-19",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "exit_reentry_visa", "extension", "expatriate", "fees"]
     }
   ]
 }

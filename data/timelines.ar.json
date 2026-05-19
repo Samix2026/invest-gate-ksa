@@ -145,6 +145,34 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["misa", "entrepreneurial_license", "startup", "registration", "timelines"]
+    },
+    {
+      "id": "qiwa_employer_registration",
+      "authority_id": "qiwa_platform",
+      "process_name": "تسجيل صاحب العمل في منصة قوى",
+      "min_days": 1,
+      "max_days": 1,
+      "typical_days": 1,
+      "conditions": "يُقدِّم صاحب العمل طلب التسجيل عبر qiwa.sa بعد الحصول على سجل تجاري ساري. يُعالَج التسجيل إلكترونياً. لا رسوم. التفعيل فوري في العادة أو خلال يوم عمل واحد. يجب إتمامه قبل توظيف أي موظف.",
+      "placeholder_reason": "تم التحقق وفق وثائق منصة qiwa.sa (2025). التسجيل فوري على المنصة فور توفر السجل التجاري. المعالجة المعتادة: يوم عمل واحد لتفعيل الحساب. هذه الخطوة يجب أن تسبق أي توثيق لعقد عمل أو طلب تصريح عمل على منصة قوى.",
+      "verify_at": "https://qiwa.sa",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["qiwa", "labor_market", "employer_registration", "timelines"]
+    },
+    {
+      "id": "iqama_initial_issuance",
+      "authority_id": "muqeem_platform",
+      "process_name": "إصدار الإقامة الأوّلي",
+      "min_days": 14,
+      "max_days": 60,
+      "typical_days": 30,
+      "conditions": "تبدأ المعالجة بعد دخول الموظف المملكة بتأشيرة صحيحة وتقديم صاحب العمل طلب الإقامة عبر مقيم. الوثائق المطلوبة: جواز سفر ساري، تأشيرة الدخول، عقد عمل موثَّق عبر قوى، تسجيل التأمينات الاجتماعية (جوسي)، وشهادة الفحص الطبي. تتفاوت مدة المعالجة بحسب جنسية الموظف واكتمال الوثائق وضغط العمل في الجوازات. يجب إصدار الإقامة خلال 90 يوماً من وصول الموظف — التأخر يُفضي إلى غرامات.",
+      "placeholder_reason": "تم التحقق بصورة تقريبية استناداً إلى معايير الأداء المنشورة لدى مقيم/الجوازات وإرشادات وزارة الموارد البشرية لأصحاب العمل (2025). المعتاد: 14–30 يوم عمل للحالات القياسية. الحالات المعقدة أو بحسب الجنسية قد تصل إلى 60 يوماً. الموعد النظامي النهائي 90 يوماً من وصول الموظف هو الحد الصارم — ينبغي لأصحاب العمل استهداف إصدار الإقامة قبل هذا الحد بفترة كافية. تحقق من المعايير الحالية عبر muqeem.sa.",
+      "verify_at": "https://muqeem.sa",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["muqeem", "iqama", "residency_permit", "expatriate", "timelines"]
     }
   ]
 }
