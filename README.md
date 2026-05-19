@@ -47,34 +47,28 @@ It is not a consultancy. It is not a legal service. It is a **reference framewor
 ---
 
 ## What's Inside
-invest-gate-ksa/
-├── data/                    # 9 structured bilingual JSON datasets
-│   ├── sectors.en/ar.json   # 16 sectors with Vision 2030 alignment
-│   ├── sources.en/ar.json   # 14 verified regulatory authority sources
-│   ├── source-gaps.en/ar.json  # 24 tracked data gaps
-│   ├── setup-flows.en/ar.json  # Step-by-step registration flows
-│   ├── structures.en/ar.json   # Business structure comparison
-│   ├── fees.en/ar.json      # Fee schedules (verified + draft with citations)
-│   ├── timelines.en/ar.json # Processing time estimates
-│   ├── sezs.en/ar.json      # 5 Special Economic Zones
-│   └── economic-activities  # Schema ready — data planned
-├── schemas/                 # JSON Schema Draft-07 — strict typing
-├── docs/
-│   ├── en/                  # English guides
-│   └── ar/                  # Arabic mirrors (RTL) — full bilingual parity
-├── mcp/                     # MCP server for Claude Desktop
-│   ├── invest_gate_mcp.py   # FastMCP server — 8 query tools
-│   ├── requirements.txt
-│   └── README.md
-├── .claude/commands/        # 6 slash commands for repository operations
-├── prompts/                 # AI system prompt
-├── scripts/                 # 157-check validation suite
-├── sources/                 # Citation registry
-├── templates/               # Investor checklists (planned)
-├── .github/workflows/       # CI/CD — runs on every push and PR
-├── roadmap.md
-├── CONTRIBUTING.md
-└── LICENSE
+
+| Directory / File | Contents |
+|---|---|
+| `data/` | 9 structured bilingual JSON datasets (EN + AR) |
+| `data/sectors` | 16 investment sectors with Vision 2030 alignment |
+| `data/sources` | 14 verified regulatory authority sources |
+| `data/source-gaps` | 24 tracked data gaps awaiting verification |
+| `data/setup-flows` | Step-by-step registration flows by sector |
+| `data/structures` | Business structure comparison data |
+| `data/fees` | Fee schedules — verified entries cite official sources |
+| `data/timelines` | Processing time estimates — verified against official publications |
+| `data/sezs` | 5 Special Economic Zones (KAEC, Jazan, Ras Al-Khair, Cloud, SILZ) |
+| `schemas/` | JSON Schema Draft-07 — strict typing, additionalProperties: false |
+| `docs/en/` | English guides: registration, tax, SEZs, Vision 2030, structures |
+| `docs/ar/` | Arabic mirrors (RTL) — full bilingual parity enforced |
+| `mcp/` | FastMCP server — 8 query tools for Claude Desktop integration |
+| `.claude/commands/` | 6 slash commands for daily repository operations |
+| `prompts/` | AI system prompt (bilingual, citation rules, legal disclaimer) |
+| `scripts/` | 157-check validation suite (JSON, schema, parity, cross-refs) |
+| `sources/` | Citation registry — every claim source-linked |
+| `templates/` | Investor checklists — planned |
+| `.github/workflows/` | CI/CD — validation on every push and PR |
 
 **Core coverage:**
 
