@@ -1,0 +1,37 @@
+name: PR Quality Checks
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality:
+    name: Content Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Health checks
+        run: python3 scripts/check.py
+
+      - name: Schema validation
+        run: python3 scripts/validate-data.py
+
+      - name: Bilingual parity check
+        run: python3 scripts/check-bilingual-parity.py
+
+      - name: Data entry quality
+        run: python3 scripts/check-data-quality.py
+
+      - name: Amount plausibility
+        run: python3 scripts/check-amounts.py

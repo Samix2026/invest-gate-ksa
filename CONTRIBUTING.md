@@ -60,6 +60,52 @@ Include a `last_verified` date on any document containing fees, timelines, or pr
 
 ---
 
+## Verification Standards
+
+All dataset entries follow a two-state verification model.
+
+| Status | Meaning | Requirements |
+|---|---|---|
+| `"draft"` | Content has not been independently reviewed against a live official source | Non-empty `placeholders` array; `last_verified` is a placeholder string |
+| `"verified"` | A contributor personally reviewed the live official source | Empty `placeholders` array; `last_verified` set to ISO date; `verification_method` documented |
+
+**Rules:**
+
+- Never set `verification_status: "verified"` unless you have personally reviewed the live official source (not a third-party summary or AI output).
+- Never remove a placeholder field without replacing it with a verified value.
+- Verified entries must use `templates/source-review.md` to document what was reviewed.
+- All verifiable sources must use a `.gov.sa` domain or officially recognized national authority.
+
+See `docs/en/source-verification.md` for the full workflow.
+
+---
+
+## Automated Quality Checks
+
+Every pull request runs five automated checks via GitHub Actions (`.github/workflows/pr-quality.yml`). Run them locally before submitting.
+
+| Check | Script | What it validates |
+|---|---|---|
+| Health checks | `python3 scripts/check.py` | Required files, JSON validity, dataset validation, local markdown links |
+| Schema validation | `python3 scripts/validate-data.py` | JSON Schema conformance, `official_sources` not empty, placeholder presence |
+| Bilingual parity | `python3 scripts/check-bilingual-parity.py` | EN and AR files have identical entry IDs in identical order |
+| Data entry quality | `python3 scripts/check-data-quality.py` | `draft` entries have placeholders; `verified` entries have real dates |
+| Amount plausibility | `python3 scripts/check-amounts.py` | Numeric `amount` fields do not exceed 1,000,000 SAR (catches copy-paste errors) |
+
+**To run all checks locally:**
+
+```bash
+python3 scripts/check.py
+python3 scripts/validate-data.py
+python3 scripts/check-bilingual-parity.py
+python3 scripts/check-data-quality.py
+python3 scripts/check-amounts.py
+```
+
+All five must pass before a PR can be merged.
+
+---
+
 ## How to Contribute
 
 ### For small changes (typos, broken links, updated values)
