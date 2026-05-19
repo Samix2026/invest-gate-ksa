@@ -1,7 +1,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Languages: Arabic | English](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
-![Health Checks](https://img.shields.io/badge/Health%20Checks-157%2F157-brightgreen.svg)
+![Health Checks](https://img.shields.io/badge/Health%20Checks-165%2F165-brightgreen.svg)
 
 # Invest Gate KSA
 
@@ -50,30 +50,34 @@ It is not a consultancy. It is not a legal service. It is a **reference framewor
 
 | Directory / File | Contents |
 |---|---|
-| `data/` | 9 structured bilingual JSON datasets (EN + AR) |
+| `data/` | 10 structured bilingual JSON datasets (EN + AR) |
 | `data/sectors` | 16 investment sectors with Vision 2030 alignment |
 | `data/sources` | 14 verified regulatory authority sources |
 | `data/source-gaps` | 24 tracked data gaps awaiting verification |
-| `data/setup-flows` | Step-by-step registration flows by sector |
-| `data/structures` | Business structure comparison data |
-| `data/fees` | Fee schedules — verified entries cite official sources |
-| `data/timelines` | Processing time estimates — verified against official publications |
+| `data/fees` | 24 fee entries — verified entries cite official sources |
+| `data/timelines` | 10 processing time entries — verified against official publications |
 | `data/sezs` | 5 Special Economic Zones (KAEC, Jazan, Ras Al-Khair, Cloud, SILZ) |
+| `data/setup-flows` | 4 registration flows by scenario (consulting, e-commerce, manufacturing, fintech) |
+| `data/business-structures` | 4 entity types (LLC, JSC, Branch Office, Representative Office) |
+| `data/authority-relationships` | 12 regulatory authority relationship mappings |
+| `data/investment-licenses` | 5 registration and licensing concepts in setup sequence |
 | `schemas/` | JSON Schema Draft-07 — strict typing, additionalProperties: false |
 | `docs/en/` | English guides: registration, tax, SEZs, Vision 2030, structures |
 | `docs/ar/` | Arabic mirrors (RTL) — full bilingual parity enforced |
 | `mcp/` | FastMCP server — 8 query tools for Claude Desktop integration |
 | `.claude/commands/` | 6 slash commands for daily repository operations |
 | `prompts/` | AI system prompt (bilingual, citation rules, legal disclaimer) |
-| `scripts/` | 157-check validation suite (JSON, schema, parity, cross-refs) |
+| `scripts/` | 165-check validation suite (JSON, schema, parity, cross-refs) |
 | `sources/` | Citation registry — every claim source-linked |
 | `templates/` | Investor checklists — planned |
 | `.github/workflows/` | CI/CD — validation on every push and PR |
 
-**Core coverage:**
+---
 
-- Business registration types: Standard Investment Registration, RHQ, Entrepreneurial
+## Core Coverage
+
 - Full regulatory path: MISA → CR → Chamber of Commerce → ZATCA → GOSI → Qiwa → Muqeem
+- Registration types: Standard Investment Registration, RHQ, Entrepreneurial
 - Tax framework: CIT 20% (foreign), Zakat 2.5% (Saudi/GCC), VAT 15%, WHT 5–20%
 - Special Economic Zones: KAEC, Jazan, Ras Al-Khair, Cloud Computing, SILZ (5% CIT)
 - Vision 2030 sector alignment: 16 sectors with official targets and supervising entities
@@ -86,13 +90,13 @@ It is not a consultancy. It is not a legal service. It is a **reference framewor
 
 | Phase | Progress | Status | Description |
 |---|---|---|---|
-| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 157-check validation suite |
-| Phase 2 — Knowledge Base | ████████░░ | Active | 9 datasets, 5 verified core paths, SEZs, V2030 |
+| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 165-check validation suite |
+| Phase 2 — Knowledge Base | ████████░░ | Active | 10 datasets, 5 verified core paths, SEZs, V2030 |
 | Phase 3 — AI Workflows | ██████████ | Complete | System prompt, 8 MCP tools |
 | Phase 4 — MCP Integration | ██████████ | Complete | Claude Desktop ready (stdio) |
 | Phase 5 — Product Layer | ░░░░░░░░░░ | Planned | — |
 
-**Verification status (2026-05-19):**
+**Verification status (2026-05-20):**
 - ✅ Verified against official sources: MISA registration, CR (MoC), Chamber of Commerce, ZATCA (CIT + VAT + WHT), GOSI, Qiwa, Muqeem, SEZs (ECZA + Official Gazette Jan 2026), Vision 2030 KPIs
 - ⚠️ Draft — pending official confirmation: RHQ registration fees, SILZ tax details
 - 📋 Planned: economic-activities dataset, investor checklist templates
@@ -131,12 +135,7 @@ See [mcp/README.md](mcp/README.md) for full setup instructions.
 
 ## Verification Methodology
 
-Every data entry carries an explicit verification status:
-- **verified** — confirmed from an official government source (.gov.sa, ECZA, Official Gazette)
-- **draft** — from credible commercial sources but not officially confirmed
-- **placeholder** — gap acknowledged, not yet researched
-
-Unverified entries are never presented as fact — they carry a disclaimer and a `verify_at` link. See [docs/en/source-verification.md](docs/en/source-verification.md) for the full workflow.
+Every data entry carries an explicit verification status: **verified** (confirmed from an official .gov.sa source or Official Gazette), **draft** (from credible sources but not officially confirmed), or **placeholder** (gap acknowledged, not yet researched). Unverified entries are never presented as fact — they carry a disclaimer and a `verify_at` link. See [docs/en/source-verification.md](docs/en/source-verification.md) for the full workflow.
 
 ---
 
@@ -160,7 +159,7 @@ Every piece of content must cite an official source. See [CONTRIBUTING.md](CONTR
 python3 scripts/check.py
 ```
 
-Runs 157 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
+Runs 165 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
 
 ---
 
