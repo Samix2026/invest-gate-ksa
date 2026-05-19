@@ -94,11 +94,13 @@ invest-gate-ksa/
 
 ## Project Status
 
-Phase 1 — Foundation        ██████████  Complete     Schemas, CI/CD, validation suite
-Phase 2 — Knowledge Base    ████████░░  Active       9 datasets, 5 verified core paths
-Phase 3 — AI Workflows      ██████████  Complete     System prompt, 8 MCP tools
-Phase 4 — MCP Integration   ██████████  Complete     Claude Desktop ready (stdio)
-Phase 5 — Product Layer     ░░░░░░░░░░  Planned
+| Phase | Progress | Status | Description |
+|---|---|---|---|
+| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, validation suite |
+| Phase 2 — Knowledge Base | ████████░░ | Active | 9 datasets, 5 verified core paths |
+| Phase 3 — AI Workflows | ██████████ | Complete | System prompt, 8 MCP tools |
+| Phase 4 — MCP Integration | ██████████ | Complete | Claude Desktop ready (stdio) |
+| Phase 5 — Product Layer | ░░░░░░░░░░ | Planned | — |
 
 **Verification status as of 2026-05-18:**
 - ✅ Verified against official sources: MISA investment registration, Commercial Registration, Chamber of Commerce, ZATCA (CIT + VAT + WHT), GOSI
