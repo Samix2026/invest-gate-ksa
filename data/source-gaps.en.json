@@ -352,6 +352,42 @@
         }
       ],
       "tags": ["misa", "fees", "registration", "foreign_investment", "source_gap"]
+    },
+    {
+      "id": "rhq_fee_schedule",
+      "name": "RHQ License Fee Schedule",
+      "name_alt": "جدول رسوم رخصة المقر الإقليمي",
+      "mentioned_in_datasets": ["fees"],
+      "reason_needed": "RHQ license fee schedule — multiple commercial sources cite SAR 10,000 (year 1) + SAR 2,000/year (year 2+). Not confirmed in MISA Investor Guide 12th Ed. July 2025 or investsaudi.sa official fee table. May be suspended or revised under Investment Law 2025. Priority: high — verify via MISA RHQ Care team or e-portal.",
+      "likely_official_domain": "misa.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Contact MISA RHQ team directly or submit an inquiry via the MISA e-portal (misa.gov.sa) to obtain the current official RHQ fee schedule. Check investsaudi.sa/en/rhq for any published fee tables. If confirmed, update rhq_license_year1_fee and rhq_license_annual_fee entries in data/fees.en.json with verified amounts.",
+      "placeholders": [
+        {
+          "field": "fee_amounts",
+          "description": "The official RHQ license fee amounts are not confirmed from a government source. Commercial sources report SAR 10,000 year 1 and SAR 2,000/year from year 2, but these figures are unverified and may have been revised under the Investment Law 2025 framework.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "rhq", "regional_headquarters", "fees", "source_gap"]
+    },
+    {
+      "id": "temporary_registration",
+      "name": "MISA Temporary Registration",
+      "name_alt": "التسجيل المؤقت لدى وزارة الاستثمار",
+      "mentioned_in_datasets": ["investment-licenses"],
+      "reason_needed": "Temporary MISA registration — under the pre-2025 system MISA offered a temporary license category. Under the new Investment Registration Certificate (IRC) framework (February 2025), this pathway has not been confirmed as a distinct active track in official documentation. Verification needed directly via MISA e-portal or official investor guide update. Priority: medium — confirm whether this track still exists under new law.",
+      "likely_official_domain": "misa.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Check the MISA Investor Guide (latest edition) at misa.gov.sa for any mention of a temporary registration or interim license track under the Investment Law (Royal Decree M/19, 2024) and its Implementing Regulations (Ministerial Decision 1086, February 2025). If confirmed as active, create a data entry in data/investment-licenses.en.json and fees/timelines as appropriate.",
+      "placeholders": [
+        {
+          "field": "active_status",
+          "description": "Whether a standalone temporary registration track exists under the 2025 Investment Law framework. Under the pre-2025 system a temporary license existed. Current status is unconfirmed.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "temporary_registration", "registration", "source_gap"]
     }
   ]
 }

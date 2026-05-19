@@ -117,6 +117,34 @@
         }
       ],
       "tags": ["iqama", "residency_permit", "mhrsd", "expatriate", "timelines"]
+    },
+    {
+      "id": "rhq_license_registration",
+      "authority_id": "misa",
+      "process_name": "Regional Headquarters (RHQ) License Registration",
+      "min_days": 5,
+      "max_days": 10,
+      "typical_days": 7,
+      "conditions": "Application submitted online via MISA portal. Processing similar to standard investment registration. Mandatory RHQ activities must commence within 6 months of licensing. 3 optional activities required within 12 months. Minimum 15 full-time employees required by end of year 1, including at least 3 senior executives with prior experience at the group's global or regional headquarters. RHQ must be registered as an independent legal entity (LLC or branch). Cannot generate direct commercial revenue in Saudi Arabia — restricted to regional management, strategy, budgeting, and marketing functions.",
+      "placeholder_reason": "Verified per setupinsaudi.com and Middle East Briefing (2025). Processing: 5–10 working days via MISA portal. Eligible for 0% CIT on qualifying RHQ activities (subject to conditions — verify at investsaudi.sa). Exempt from Saudization (Nitaqat) for RHQ-specific functions. Government contract eligibility requires active RHQ license (mandatory since January 2024).",
+      "verify_at": "https://www.setupinsaudi.com/en/rhq",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "rhq", "regional_headquarters", "registration", "timelines"]
+    },
+    {
+      "id": "entrepreneurial_license_registration",
+      "authority_id": "misa",
+      "process_name": "MISA Entrepreneurial License Registration",
+      "min_days": 5,
+      "max_days": 7,
+      "typical_days": 5,
+      "conditions": "Application submitted online via MISA portal after complete documentation is gathered. No established foreign parent company required. No minimum capital for most sectors (exception: SAR 25,000 for non-sole-proprietorships established outside KSA for over 1 year). 100% foreign ownership permitted. Requires support letter from a MISA-recognized incubator, accelerator, or VC firm. Business must be innovative, tech-enabled, or high-growth and aligned with Vision 2030 sectors (FinTech, HealthTech, AI, renewable energy, tourism, healthcare). Not available for standard IT services companies or traditional microbusinesses.",
+      "placeholder_reason": "Verified per Wamda/Tawaref 2024, TASC 2025. Processing: 5–7 business days after complete documentation. Access to premium residency if startup raises SAR 400,000+ from authorized parties. Path to permanent residency if raises $4M and employs 10 staff for 1 year.",
+      "verify_at": "https://tascoutsourcing.sa/en/insights/entrepreneur-license-saudi-arabia-5-things-you-need-to-know-before-applying",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "entrepreneurial_license", "startup", "registration", "timelines"]
     }
   ]
 }

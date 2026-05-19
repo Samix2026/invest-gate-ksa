@@ -91,6 +91,8 @@ REQUIRED_FILES = [
     "data/timelines.ar.json",
     "docs/en/comparison-structures.md",
     "docs/ar/comparison-structures.md",
+    "docs/en/registration-types.md",
+    "docs/ar/registration-types.md",
 ]
 
 # Markdown link targets to skip (not local paths)
