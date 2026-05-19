@@ -46,7 +46,15 @@
         "official_sources",
         "verification_status",
         "placeholders",
-        "tags"
+        "tags",
+        "vision2030_priority",
+        "vision2030_target_en",
+        "vision2030_target_ar",
+        "fdi_target_usd_billion",
+        "supervising_vision_entity_en",
+        "supervising_vision_entity_ar",
+        "vision2030_verification_status",
+        "vision2030_verify_at"
       ],
       "additionalProperties": false,
 
@@ -136,6 +144,39 @@
           "type": "array",
           "minItems": 1,
           "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" }
+        },
+
+        "vision2030_priority": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "supporting"],
+          "description": "Priority tier in Vision 2030 National Investment Strategy"
+        },
+        "vision2030_target_en": {
+          "type": ["string", "null"],
+          "description": "Official Vision 2030 target for this sector (English)"
+        },
+        "vision2030_target_ar": {
+          "type": ["string", "null"],
+          "description": "Official Vision 2030 target for this sector (Arabic)"
+        },
+        "fdi_target_usd_billion": {
+          "type": ["number", "null"],
+          "description": "FDI target in USD billions if officially published"
+        },
+        "supervising_vision_entity_en": {
+          "type": ["string", "null"],
+          "description": "Primary Vision 2030 program or entity overseeing this sector"
+        },
+        "supervising_vision_entity_ar": {
+          "type": ["string", "null"],
+          "description": "Arabic equivalent"
+        },
+        "vision2030_verification_status": {
+          "type": "string",
+          "enum": ["verified", "draft", "not_applicable"]
+        },
+        "vision2030_verify_at": {
+          "type": ["string", "null"]
         }
 
       },

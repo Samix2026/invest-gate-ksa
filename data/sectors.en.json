@@ -81,7 +81,22 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["technology", "software", "digital", "it_services", "saas", "platforms"]
+      "tags": [
+        "technology",
+        "software",
+        "digital",
+        "it_services",
+        "saas",
+        "platforms"
+      ],
+      "vision2030_priority": "critical",
+      "vision2030_target_en": "ICT contribution: 15.6% of GDP (2025 actual). AI investment target: SAR 1.9 billion by 2027. AI GDP contribution: USD 135 billion by 2030. Saudi Arabia ranked 1st Arab country in Tortoise AI Government Strategy Index 2024.",
+      "vision2030_target_ar": "مساهمة تقنية المعلومات والاتصالات: 15.6% من الناتج المحلي الإجمالي (الفعلي 2025). هدف الاستثمار في الذكاء الاصطناعي: 1.9 مليار ريال بحلول 2027. مساهمة الذكاء الاصطناعي في الناتج المحلي: 135 مليار دولار بحلول 2030. المملكة العربية السعودية في المرتبة الاولى عربيا في مؤشر استراتيجية الحكومات للذكاء الاصطناعي لعام 2024.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "Ministry of Communications and Information Technology (MCIT) / Saudi Data and AI Authority (SDAIA) / Digital Government Authority",
+      "supervising_vision_entity_ar": "وزارة الاتصالات وتقنية المعلومات / الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا) / هيئة الحكومة الرقمية",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa"
     },
     {
       "id": "consulting",
@@ -152,7 +167,22 @@
           "verify_at": "saip.gov.sa"
         }
       ],
-      "tags": ["consulting", "advisory", "professional_services", "management", "strategy", "training"]
+      "tags": [
+        "consulting",
+        "advisory",
+        "professional_services",
+        "management",
+        "strategy",
+        "training"
+      ],
+      "vision2030_priority": "supporting",
+      "vision2030_target_en": null,
+      "vision2030_target_ar": null,
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": null,
+      "supervising_vision_entity_ar": null,
+      "vision2030_verification_status": "not_applicable",
+      "vision2030_verify_at": null
     },
     {
       "id": "ecommerce",
@@ -240,7 +270,22 @@
           "verify_at": "saip.gov.sa"
         }
       ],
-      "tags": ["ecommerce", "online_retail", "marketplace", "digital_commerce", "b2c", "b2b"]
+      "tags": [
+        "ecommerce",
+        "online_retail",
+        "marketplace",
+        "digital_commerce",
+        "b2c",
+        "b2b"
+      ],
+      "vision2030_priority": "supporting",
+      "vision2030_target_en": null,
+      "vision2030_target_ar": null,
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": null,
+      "supervising_vision_entity_ar": null,
+      "vision2030_verification_status": "not_applicable",
+      "vision2030_verify_at": null
     },
     {
       "id": "food_and_beverage",
@@ -327,7 +372,23 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["food", "beverage", "restaurant", "catering", "food_production", "food_retail", "hospitality"]
+      "tags": [
+        "food",
+        "beverage",
+        "restaurant",
+        "catering",
+        "food_production",
+        "food_retail",
+        "hospitality"
+      ],
+      "vision2030_priority": "supporting",
+      "vision2030_target_en": null,
+      "vision2030_target_ar": null,
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": null,
+      "supervising_vision_entity_ar": null,
+      "vision2030_verification_status": "not_applicable",
+      "vision2030_verify_at": null
     },
     {
       "id": "real_estate",
@@ -403,7 +464,22 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["real_estate", "property", "development", "brokerage", "property_management", "leasing"]
+      "tags": [
+        "real_estate",
+        "property",
+        "development",
+        "brokerage",
+        "property_management",
+        "leasing"
+      ],
+      "vision2030_priority": "medium",
+      "vision2030_target_en": "Increase homeownership among Saudi families to 70% by 2030 (reached 66.24% in 2025, up from 47% at launch). New Murabba project: USD 48 billion contribution to non-oil GDP, 334,000 jobs.",
+      "vision2030_target_ar": "رفع نسبة تملك الأسر السعودية للمساكن إلى 70% بحلول 2030 (بلغت 66.24% في 2025، مقارنة بـ 47% عند الإطلاق). مشروع المربع الجديد: مساهمة بـ 48 مليار دولار في الناتج المحلي غير النفطي، و334,000 وظيفة.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "Ministry of Municipal and Rural Affairs / Real Estate General Authority (REGA)",
+      "supervising_vision_entity_ar": "وزارة الشؤون البلدية والقروية / الهيئة العامة للعقارات",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa"
     },
     {
       "id": "education",
@@ -470,7 +546,22 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["education", "schools", "training", "higher_education", "edtech", "vocational"]
+      "tags": [
+        "education",
+        "schools",
+        "training",
+        "higher_education",
+        "edtech",
+        "vocational"
+      ],
+      "vision2030_priority": "supporting",
+      "vision2030_target_en": null,
+      "vision2030_target_ar": null,
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": null,
+      "supervising_vision_entity_ar": null,
+      "vision2030_verification_status": "not_applicable",
+      "vision2030_verify_at": null
     },
     {
       "id": "healthcare",
@@ -556,7 +647,23 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["healthcare", "medical", "clinics", "hospitals", "medical_devices", "pharmaceuticals", "health_technology"]
+      "tags": [
+        "healthcare",
+        "medical",
+        "clinics",
+        "hospitals",
+        "medical_devices",
+        "pharmaceuticals",
+        "health_technology"
+      ],
+      "vision2030_priority": "high",
+      "vision2030_target_en": "Expand private healthcare through public-private partnerships. Increase life expectancy from 74 to 80 years by 2030. Privatization of hospitals, clinics, and digital health services.",
+      "vision2030_target_ar": "توسيع الرعاية الصحية الخاصة من خلال الشراكات بين القطاعين العام والخاص. رفع متوسط العمر المتوقع من 74 إلى 80 عاما بحلول 2030. خصخصة المستشفيات والعيادات وخدمات الصحة الرقمية.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "Ministry of Health / Vision Realization Programs — Health Sector Transformation Program",
+      "supervising_vision_entity_ar": "وزارة الصحة / برامج تحقيق الرؤية — برنامج تحول القطاع الصحي",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa"
     },
     {
       "id": "fintech",
@@ -632,7 +739,24 @@
           "verify_at": "sama.gov.sa"
         }
       ],
-      "tags": ["fintech", "payments", "digital_banking", "lending", "insurtech", "financial_technology", "sama", "cma"]
+      "tags": [
+        "fintech",
+        "payments",
+        "digital_banking",
+        "lending",
+        "insurtech",
+        "financial_technology",
+        "sama",
+        "cma"
+      ],
+      "vision2030_priority": "critical",
+      "vision2030_target_en": "Develop advanced capital market. ICT now 15.6% of GDP (General Authority for Statistics 2025). AI contribution target: USD 135 billion to GDP by 2030.",
+      "vision2030_target_ar": "تطوير سوق رأس المال المتقدم. مساهمة تقنية المعلومات والاتصالات: 15.6% من الناتج المحلي الإجمالي (هيئة الإحصاء العامة 2025). هدف مساهمة الذكاء الاصطناعي: 135 مليار دولار في الناتج المحلي بحلول 2030.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "Saudi Central Bank (SAMA) / Capital Market Authority (CMA) / Financial Sector Development Program (FSDP)",
+      "supervising_vision_entity_ar": "البنك المركزي السعودي (ساما) / هيئة السوق المالية / برنامج تطوير القطاع المالي",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa"
     },
     {
       "id": "manufacturing",
@@ -725,7 +849,22 @@
           "verify_at": "miim.gov.sa"
         }
       ],
-      "tags": ["manufacturing", "industrial", "production", "assembly", "goods", "factory"]
+      "tags": [
+        "manufacturing",
+        "industrial",
+        "production",
+        "assembly",
+        "goods",
+        "factory"
+      ],
+      "vision2030_priority": "critical",
+      "vision2030_target_en": "Expand manufacturing under National Industrial Strategy. Domestic investment target: USD 450 billion annually by 2030. MODON oversees 37 industrial cities with SAR 415 billion total investment.",
+      "vision2030_target_ar": "توسيع التصنيع في إطار الاستراتيجية الوطنية للصناعة. هدف الاستثمار المحلي: 450 مليار دولار سنويا بحلول 2030. تشرف مدن على 37 مدينة صناعية باستثمارات إجمالية تبلغ 415 مليار ريال.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "Ministry of Industry and Mineral Resources / Saudi Industrial Property Authority (MODON) / SIDF",
+      "supervising_vision_entity_ar": "وزارة الصناعة والثروة المعدنية / الهيئة السعودية للمدن الصناعية ومناطق التقنية (مدن) / صندوق التنمية الصناعية السعودي",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa/en/explore-more/national-investment-strategy/"
     },
     {
       "id": "industrial_services",
@@ -808,7 +947,22 @@
           "verify_at": "miim.gov.sa"
         }
       ],
-      "tags": ["industrial_services", "maintenance", "engineering_services", "industrial_logistics", "technical_services", "b2b"]
+      "tags": [
+        "industrial_services",
+        "maintenance",
+        "engineering_services",
+        "industrial_logistics",
+        "technical_services",
+        "b2b"
+      ],
+      "vision2030_priority": "supporting",
+      "vision2030_target_en": null,
+      "vision2030_target_ar": null,
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": null,
+      "supervising_vision_entity_ar": null,
+      "vision2030_verification_status": "not_applicable",
+      "vision2030_verify_at": null
     },
     {
       "id": "mining",
@@ -890,7 +1044,23 @@
           "verify_at": "miim.gov.sa"
         }
       ],
-      "tags": ["mining", "minerals", "extraction", "geology", "resources", "quarrying", "industrial"]
+      "tags": [
+        "mining",
+        "minerals",
+        "extraction",
+        "geology",
+        "resources",
+        "quarrying",
+        "industrial"
+      ],
+      "vision2030_priority": "high",
+      "vision2030_target_en": "Develop mining sector from mineral reserves valued at USD 1.3 trillion. Target: increase sector GDP contribution by USD 64 billion, reduce imports by USD 9.8 billion, create 200,000 jobs by 2030.",
+      "vision2030_target_ar": "تطوير قطاع التعدين من احتياطيات معدنية مقيمة بـ 1.3 تريليون دولار. الهدف: رفع مساهمة القطاع في الناتج المحلي بمقدار 64 مليار دولار، وخفض الاستيراد بمقدار 9.8 مليار دولار، وخلق 200,000 وظيفة بحلول 2030.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "Ministry of Industry and Mineral Resources / Ma'aden / Vision Realization Program — Industrial Sector Development",
+      "supervising_vision_entity_ar": "وزارة الصناعة والثروة المعدنية / شركة معادن / برنامج تحقيق الرؤية — تطوير القطاع الصناعي",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.state.gov/reports/2025-investment-climate-statements/saudi-arabia"
     },
     {
       "id": "tourism_and_hospitality",
@@ -973,7 +1143,23 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["tourism", "hospitality", "hotels", "travel", "tour_operators", "resorts", "vision_2030"]
+      "tags": [
+        "tourism",
+        "hospitality",
+        "hotels",
+        "travel",
+        "tour_operators",
+        "resorts",
+        "vision_2030"
+      ],
+      "vision2030_priority": "critical",
+      "vision2030_target_en": "Increase tourism contribution to 10% of GDP and attract 150 million annual visitors by 2030. Create 1.6 million jobs.",
+      "vision2030_target_ar": "رفع مساهمة السياحة إلى 10% من الناتج المحلي الإجمالي واستقطاب 150 مليون زائر سنويا بحلول 2030. توفير 1.6 مليون وظيفة.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "Ministry of Tourism / Tourism Development Fund (TDF)",
+      "supervising_vision_entity_ar": "وزارة السياحة / صندوق التنمية السياحية",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa"
     },
     {
       "id": "media_and_content",
@@ -1049,7 +1235,23 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["media", "content", "publishing", "broadcasting", "digital_media", "advertising", "streaming"]
+      "tags": [
+        "media",
+        "content",
+        "publishing",
+        "broadcasting",
+        "digital_media",
+        "advertising",
+        "streaming"
+      ],
+      "vision2030_priority": "high",
+      "vision2030_target_en": "Increase household spending on cultural and entertainment activities from 2.9% to 6% of household spending by 2030. Qiddiya entertainment hub: USD 10 billion investment.",
+      "vision2030_target_ar": "رفع الإنفاق الأسري على الأنشطة الثقافية والترفيهية من 2.9% إلى 6% من الإنفاق الأسري بحلول 2030. مشروع ترفيه قدية: استثمار بقيمة 10 مليارات دولار.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "General Entertainment Authority (GEA) / Qiddiya Investment Company",
+      "supervising_vision_entity_ar": "هيئة الترفيه / شركة قدية للاستثمار",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa"
     },
     {
       "id": "hajj_umrah_services",
@@ -1126,7 +1328,23 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["hajj", "umrah", "pilgrimage", "pilgrims", "religious_tourism", "makkah", "madinah"]
+      "tags": [
+        "hajj",
+        "umrah",
+        "pilgrimage",
+        "pilgrims",
+        "religious_tourism",
+        "makkah",
+        "madinah"
+      ],
+      "vision2030_priority": "supporting",
+      "vision2030_target_en": null,
+      "vision2030_target_ar": null,
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": null,
+      "supervising_vision_entity_ar": null,
+      "vision2030_verification_status": "not_applicable",
+      "vision2030_verify_at": null
     },
     {
       "id": "entertainment_and_events",
@@ -1209,7 +1427,78 @@
           "verify_at": "misa.gov.sa"
         }
       ],
-      "tags": ["entertainment", "events", "live_events", "cinemas", "theme_parks", "gaming", "sports_events", "venues"]
+      "tags": [
+        "entertainment",
+        "events",
+        "live_events",
+        "cinemas",
+        "theme_parks",
+        "gaming",
+        "sports_events",
+        "venues"
+      ],
+      "vision2030_priority": "high",
+      "vision2030_target_en": "Increase household spending on cultural and entertainment activities from 2.9% to 6% of household spending by 2030. Qiddiya entertainment hub: USD 10 billion investment.",
+      "vision2030_target_ar": "رفع الإنفاق الأسري على الأنشطة الثقافية والترفيهية من 2.9% إلى 6% من الإنفاق الأسري بحلول 2030. مشروع ترفيه قدية: استثمار بقيمة 10 مليارات دولار.",
+      "fdi_target_usd_billion": null,
+      "supervising_vision_entity_en": "General Entertainment Authority (GEA) / Qiddiya Investment Company",
+      "supervising_vision_entity_ar": "هيئة الترفيه / شركة قدية للاستثمار",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.vision2030.gov.sa"
+    },
+    {
+      "id": "vision2030_macro",
+      "name": "Vision 2030 — Macroeconomic Targets",
+      "name_alt": "رؤية 2030 — الأهداف الاقتصادية الكلية",
+      "short_description": "Top-level Vision 2030 economic targets applicable across all sectors.",
+      "typical_business_models": [
+        "Cross-sector Vision 2030 investment programs",
+        "Public-private partnerships (PPPs)",
+        "National Investment Strategy co-investment",
+        "Sovereign wealth fund partnerships (PIF)"
+      ],
+      "likely_authorities": [
+        {
+          "id": "misa",
+          "name": "Ministry of Investment (MISA)",
+          "role": "National investment registration and Vision 2030 investment strategy coordination"
+        }
+      ],
+      "related_license_concepts": [],
+      "regulatory_sensitivity": "standard",
+      "common_confusions": [
+        "Macro targets represent national KPIs — not sector-specific licensing requirements. Individual sector eligibility must be verified separately with MISA."
+      ],
+      "official_sources": [
+        {
+          "name": "Vision 2030 Program Management Office",
+          "role": "Annual reporting and KPI tracking",
+          "portal": "vision2030.gov.sa"
+        }
+      ],
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "vision2030_macro",
+          "description": "Macro targets from Vision 2030 Annual Report 2025 and Arab News coverage of official figures. Verify directly at vision2030.gov.sa for latest official KPIs.",
+          "verify_at": "vision2030.gov.sa"
+        }
+      ],
+      "tags": [
+        "vision_2030",
+        "macro",
+        "gdp",
+        "fdi",
+        "national_investment_strategy"
+      ],
+      "vision2030_priority": "critical",
+      "vision2030_target_en": "Real GDP: USD 1.3 trillion (2025, exceeding target). Non-oil activities: 55% of real GDP (2025). Private sector GDP: 51% (2025), target 65% by 2030. FDI stock: grew 119% since 2017 to SAR 293.3 billion (2025). FDI annual target: USD 103 billion by 2030. SME GDP contribution target: 35% by 2030 (currently 22.9%). Non-oil exports target: 50% of non-oil GDP by 2030. Unemployment: 7% achieved Q4 2024 — target met 5 years early. PIF assets: USD 909 billion (2025), target USD 2.67 trillion by 2030.",
+      "vision2030_target_ar": "الناتج المحلي الإجمالي الحقيقي: 1.3 تريليون دولار (2025، متجاوزا الهدف). الأنشطة غير النفطية: 55% من الناتج المحلي الحقيقي (2025). مساهمة القطاع الخاص في الناتج المحلي: 51% (2025)، الهدف 65% بحلول 2030. نمو مخزون الاستثمار الأجنبي المباشر: 119% منذ 2017 ليبلغ 293.3 مليار ريال (2025). هدف الاستثمار الأجنبي المباشر السنوي: 103 مليار دولار بحلول 2030. هدف مساهمة المنشآت الصغيرة والمتوسطة في الناتج المحلي: 35% بحلول 2030 (حاليا 22.9%). هدف الصادرات غير النفطية: 50% من الناتج المحلي غير النفطي بحلول 2030. البطالة: 7% تحقق في الربع الرابع 2024 — الهدف محقق قبل 5 سنوات. أصول صندوق الاستثمارات العامة: 909 مليار دولار (2025)، الهدف 2.67 تريليون دولار بحلول 2030.",
+      "fdi_target_usd_billion": 103,
+      "supervising_vision_entity_en": "Vision 2030 Program Management Office / National Investment Strategy / Ministry of Investment (MISA)",
+      "supervising_vision_entity_ar": "مكتب إدارة برنامج رؤية 2030 / الاستراتيجية الوطنية للاستثمار / وزارة الاستثمار",
+      "vision2030_verification_status": "verified",
+      "vision2030_verify_at": "https://www.arabnews.com/node/2641250/business-economy"
     }
   ]
 }

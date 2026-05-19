@@ -98,6 +98,8 @@ REQUIRED_FILES = [
     "schemas/sezs.schema.json",
     "docs/en/special-economic-zones.md",
     "docs/ar/special-economic-zones.md",
+    "docs/en/vision2030-sectors.md",
+    "docs/ar/vision2030-sectors.md",
 ]
 
 # Markdown link targets to skip (not local paths)

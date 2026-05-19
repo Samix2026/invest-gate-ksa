@@ -233,10 +233,34 @@ class SearchKnowledgeBaseInput(BaseModel):
 # ── Tools ──────────────────────────────────────────────────────────────────────
 
 
+_V2030_BADGES = {
+    "critical":   "🎯 Critical",
+    "high":       "🔵 High",
+    "medium":     "⚪ Medium",
+    "supporting": "⚪ Supporting",
+}
+
+
+def _enrich_sector(entry: dict) -> dict:
+    """Add Vision 2030 summary fields to a sector entry for display."""
+    result = dict(entry)
+    priority = entry.get("vision2030_priority")
+    if priority:
+        result["vision2030_priority_display"] = _V2030_BADGES.get(priority, priority)
+    # Drop null V2030 fields to keep output clean
+    for field in ("vision2030_target_en", "vision2030_target_ar",
+                  "supervising_vision_entity_en", "supervising_vision_entity_ar",
+                  "fdi_target_usd_billion", "vision2030_verify_at"):
+        if result.get(field) is None:
+            result.pop(field, None)
+    return result
+
+
 @mcp.tool()
 def query_sectors(params: QuerySectorsInput) -> str:
     """Query investment sectors. Returns sector data including regulatory sensitivity,
-    typical business models, relevant authorities, and common confusions."""
+    typical business models, relevant authorities, common confusions, and Vision 2030
+    priority / targets where available (🎯 Critical / 🔵 High / ⚪ Medium)."""
     data = _dataset("sectors", _valid_lang(params.lang))
     if params.sector_id:
         entry = _qd.get_by_id(data, params.sector_id)
@@ -247,7 +271,7 @@ def query_sectors(params: QuerySectorsInput) -> str:
         entries = _qd.get_by_tag(data, params.tag)
     else:
         entries = _qd.list_all(data)
-    results = [_clean(e) for e in entries]
+    results = [_enrich_sector(_clean(e)) for e in entries]
     return _respond(results if results else {"message": "No sectors matched."})
 
 
