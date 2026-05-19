@@ -390,16 +390,138 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
     sectors_data = _dataset("sectors", lang)
     sector_entry = _qd.get_by_id(sectors_data, params.sector)
 
+    fees_raw = _load_json(_FEES_PATHS[lang])
+    misa_fee = next(
+        (e for e in fees_raw.get("data", []) if e.get("id") == "misa_investment_registration_fee"),
+        None,
+    )
+
+    # foreign_individual: eligibility gate — standard MISA registration requires an
+    # established foreign company. Show the three concrete sub-paths; never default to
+    # the generic LLC entry which would imply direct access.
+    if params.investor_type == "foreign_individual":
+        is_regulated = sector_entry and sector_entry.get("regulatory_sensitivity") in (
+            "highly_regulated", "restricted"
+        )
+        if lang == "ar":
+            warning = (
+                "⚠️ تنبيه جوهري: المستثمر الفردي الأجنبي الذي لا تتوفر لديه شركة أجنبية قائمة "
+                "(سجل تجاري + قوائم مالية معتمدة من السفارة السعودية) لا يستطيع التسجيل في وزارة "
+                "الاستثمار عبر المسار الأساسي. "
+                "المصدر: دليل المستثمر — وزارة الاستثمار، الطبعة الثانية عشرة، مارس 2025، القسم 3.1.1."
+            )
+            paths: Dict[str, Any] = {
+                "path_a": {
+                    "label": "المسار أ — لديه شركة أجنبية قائمة (سنة أو أكثر)",
+                    "applicable_if": "شركة أجنبية بسجل تجاري وقوائم مالية مدققة معتمدة من السفارة السعودية",
+                    "sequence": "تسجيل الاستثمار القياسي — السجل التجاري — الغرفة التجارية — ZATCA — GOSI — قوى — مقيم",
+                    "note": "يجب أن تكون الشركة قائمة منذ سنة على الأقل مع سجل تجاري وقوائم مالية مدققة معتمدة.",
+                    "source": "دليل المستثمر — وزارة الاستثمار، الطبعة الثانية عشرة، مارس 2025، القسم 3.1.1",
+                },
+                "path_b": {
+                    "label": "المسار ب — حامل الإقامة المميزة",
+                    "applicable_if": "يحمل المستثمر إقامة مميزة سعودية",
+                    "sequence": "تسجيل الاستثمار القياسي (إعفاء من الوثائق) — السجل التجاري — الغرفة التجارية — ZATCA — GOSI — قوى — مقيم",
+                    "note": "حاملو الإقامة المميزة معفيون من تقديم السجل التجاري والقوائم المالية وفق القسم 3.1.1.",
+                    "source": "دليل المستثمر — وزارة الاستثمار، الطبعة الثانية عشرة، مارس 2025، القسم 3.1.1",
+                },
+                "path_c": {
+                    "label": "المسار ج — قطاع مبتكر أو تقني + دعم من حاضنة أو رأسمال مغامر معتمد",
+                    "applicable_if": "نشاط مبتكر أو يعتمد التقنية + خطاب دعم من جهة معتمدة لدى وزارة الاستثمار",
+                    "sequence": "تسجيل ريادي — السجل التجاري — الغرفة التجارية — ZATCA — GOSI — قوى — مقيم",
+                    "note": "يستلزم خطاب دعم من جهة معتمدة. الرسم: 2,000 ريال سعودي/سنوياً (السنوات 1–3). غير متاح للأعمال التقليدية.",
+                    "source": "دليل المستثمر — وزارة الاستثمار، الطبعة الثانية عشرة، مارس 2025، القسم 3.1.1",
+                },
+                "path_d": {
+                    "label": "لا ينطبق أي من المسارات السابقة",
+                    "guidance": (
+                        "لا يتوفر مسار مباشر حالياً عبر وزارة الاستثمار. "
+                        "الخيارات المتاحة: (1) تأسيس شركة خارج المملكة والانتظار سنة كاملة قبل التقديم، "
+                        "(2) التقديم للإقامة المميزة إذا توفرت الشروط، "
+                        "(3) إذا كان النشاط مبتكراً والحصول على دعم من حاضنة أعمال معتمدة."
+                    ),
+                    "note": "فجوة موثقة. راجع source-gaps/foreign_individual_no_company_pathway.",
+                },
+            }
+            sector_note = (
+                f"قطاع '{params.sector}' يستلزم ترخيصاً قطاعياً إضافياً بجانب تسجيل وزارة الاستثمار. "
+                "تواصل مع الجهة التنظيمية القطاعية المختصة في مرحلة مبكرة من العملية."
+            ) if is_regulated else None
+        else:
+            warning = (
+                "⚠️ IMPORTANT: Standard MISA Investment Registration requires (1) commercial "
+                "registration of the applicant's foreign establishment authenticated by the Saudi "
+                "Embassy, and (2) audited financial statements for the last fiscal year. "
+                "Foreign individuals WITHOUT an established foreign company (minimum 1 year of "
+                "operation) do NOT qualify for standard registration. "
+                "Source: MISA Investor Guide 12th Edition, March 2025, §3.1.1."
+            )
+            paths = {
+                "path_a": {
+                    "label": "Path A — Has established foreign company (1+ year)",
+                    "applicable_if": "Foreign company with CR and audited financials authenticated by Saudi Embassy",
+                    "sequence": "Standard Investment Registration → CR → Chamber of Commerce → ZATCA → GOSI → Qiwa → Muqeem",
+                    "note": "Company must have been established for at least 1 year with CR and audited financials authenticated by the Saudi Embassy.",
+                    "source": "MISA Investor Guide 12th Edition, March 2025, §3.1.1",
+                },
+                "path_b": {
+                    "label": "Path B — Premium Residency holder",
+                    "applicable_if": "Investor holds Saudi Premium Residency",
+                    "sequence": "Standard Investment Registration (documents waived) → CR → Chamber of Commerce → ZATCA → GOSI → Qiwa → Muqeem",
+                    "note": "Premium Residency holders are exempt from submitting CR and financial statements per MISA Investor Guide §3.1.1.",
+                    "source": "MISA Investor Guide 12th Edition, March 2025, §3.1.1",
+                },
+                "path_c": {
+                    "label": "Path C — Innovative/tech sector + VC or incubator backing",
+                    "applicable_if": "Business is innovative/tech-enabled and investor has support letter from MISA-recognized entity",
+                    "sequence": "Entrepreneurial Registration → CR → Chamber of Commerce → ZATCA → GOSI → Qiwa → Muqeem",
+                    "note": "Requires support letter from MISA-recognized entity. Fee: SAR 2,000/year (years 1-3). Not available for traditional businesses.",
+                    "source": "MISA Investor Guide 12th Edition, March 2025, §3.1.1",
+                },
+                "path_d": {
+                    "label": "Path D — None of the above apply",
+                    "guidance": (
+                        "No direct MISA pathway currently available. "
+                        "Options: (1) Establish a foreign company and wait 1 full year before applying. "
+                        "(2) Apply for Saudi Premium Residency if eligible. "
+                        "(3) If the business is innovative and you can secure incubator/VC backing, "
+                        "consider Entrepreneurial Registration."
+                    ),
+                    "note": "This is a documented limitation. See source-gaps/foreign_individual_no_company_pathway.",
+                },
+            }
+            sector_note = (
+                f"Sector '{params.sector}' requires additional sectoral licensing beyond "
+                "standard investment registration. Contact the relevant sectoral authority "
+                "early in the process."
+            ) if is_regulated else None
+
+        path: Dict[str, Any] = {
+            "investor_context": {
+                "sector": params.sector,
+                "has_parent_company": params.has_parent_company,
+                "investor_type": params.investor_type,
+            },
+            "eligibility_warning": warning,
+            "registration_paths": paths,
+            "sector_overview": (
+                _clean(sector_entry)
+                if sector_entry
+                else {"_note": f"Sector '{params.sector}' not found in dataset."}
+            ),
+            "misa_registration_fee": _clean(misa_fee) if misa_fee else None,
+        }
+        if sector_note:
+            path["sector_note"] = sector_note
+        return _respond(path)
+
+    # General path for all other investor types
     flows_data = _dataset("setup-flows", lang)
     related_flows = _qd.get_by_related_sector(flows_data, params.sector)
 
     struct_data = _qs.DataLoader.load(lang=lang)
     all_structs = _qs.list_all(struct_data)
-    if params.investor_type == "foreign_individual":
-        # Standard Investment Registration (LLC) is the only applicable path.
-        # Branch requires an existing foreign parent; RHQ requires a multinational.
-        relevant_structs = [e for e in all_structs if e["id"] == "llc"]
-    elif params.investor_type == "foreign_company":
+    if params.investor_type == "foreign_company":
         # Foreign company can establish a new LLC presence or extend via Branch.
         relevant_structs = [
             e for e in all_structs
@@ -416,12 +538,6 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
         relevant_structs = [
             e for e in all_structs if e["id"] != "representative_office"
         ]
-
-    fees_raw = _load_json(_FEES_PATHS[lang])
-    misa_fee = next(
-        (e for e in fees_raw.get("data", []) if e.get("id") == "misa_investment_registration_fee"),
-        None,
-    )
 
     notes: List[str] = []
 
@@ -447,8 +563,7 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
             "may also be an option. Verify eligibility at investsaudi.sa."
         )
 
-    # Sectoral note: surface the additional licensing layer only — never explain why
-    # other registration types don't apply.
+    # Sectoral note: surface the additional licensing layer only.
     if sector_entry and sector_entry.get("regulatory_sensitivity") in (
         "highly_regulated", "restricted"
     ):
@@ -458,7 +573,7 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
             "early in the process."
         )
 
-    path = {
+    result: Dict[str, Any] = {
         "investor_context": {
             "sector": params.sector,
             "has_parent_company": params.has_parent_company,
@@ -474,7 +589,7 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
         "misa_registration_fee": _clean(misa_fee) if misa_fee else None,
         "pathway_notes": notes,
     }
-    return _respond(path)
+    return _respond(result)
 
 
 @mcp.tool()

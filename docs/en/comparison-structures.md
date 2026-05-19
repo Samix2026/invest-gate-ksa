@@ -45,6 +45,13 @@ All information below is sourced from the `business-structures` dataset entries.
 
 > **Note on Joint Stock Company (JSC):** The JSC (`joint_stock_company`) is a fourth structure available to larger enterprises, regulated-sector businesses, and companies intending to list on the Saudi Exchange (Tadawul). It is not included in this comparison because it is not a typical starting structure for foreign investors establishing an initial operating presence. See `business-structures/joint_stock_company` for details.
 
+> **\* Foreign individual without established foreign company — standard registration not available.** Three options:
+> (1) **Entrepreneurial Registration** — if the business is innovative/tech-enabled and the investor holds a support letter from a MISA-recognized incubator, accelerator, or VC.
+> (2) **Obtain Saudi Premium Residency** — holders are exempt from the commercial registration and financial statement requirements per §3.1.1.
+> (3) **Establish a foreign company first** — minimum 1 year of operation with authenticated commercial registration and audited financials required before applying for standard MISA registration.
+>
+> Source: MISA Investor Guide 12th Edition, March 2025, Section 3.1.1.
+
 ---
 
 ## 2. Minimum Capital

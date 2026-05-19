@@ -442,6 +442,24 @@
         }
       ],
       "tags": ["ecza", "sez", "qualifying_activities", "permitted_sectors", "source_gap"]
+    },
+    {
+      "id": "foreign_individual_no_company_pathway",
+      "name": "Foreign Individual Without Established Company — No Direct MISA Pathway",
+      "name_alt": "المستثمر الفردي الأجنبي بدون شركة قائمة — لا مسار مباشر لدى وزارة الاستثمار",
+      "mentioned_in_datasets": ["business-structures", "setup-flows"],
+      "reason_needed": "No confirmed official pathway exists for a foreign individual without an established foreign company (minimum 1 year, with authenticated commercial registration and audited financial statements) to register with MISA under the standard framework. The three available exceptions confirmed in MISA Investor Guide 12th Ed. (March 2025, §3.1.1) are: (1) Premium Residency holder — documents waived; (2) GCC national — direct CR with Ministry of Commerce, no MISA required; (3) Entrepreneurial Registration — for innovative/tech businesses with MISA-recognized VC/incubator support letter only. Verify with MISA directly whether any new individual-investor pathway has been introduced under the Investment Law 2024 executive regulations. Priority: high — this is a common investor profile that encounters a dead end when attempting standard registration.",
+      "likely_official_domain": "misa.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Review the latest edition of the MISA Investor Guide at misa.gov.sa, specifically Section 3.1.1 (or equivalent section in the current edition). Check whether a direct individual-investor registration track has been introduced under the Investment Law (Royal Decree M/19, 2024) and its Implementing Regulations (Ministerial Decision 1086, February 2025). If a new pathway exists, document it in data/business-structures.en.json and data/investment-licenses.en.json and update data/setup-flows.en.json accordingly.",
+      "placeholders": [
+        {
+          "field": "individual_investor_pathway_2024_onward",
+          "description": "Whether any direct registration pathway for foreign individuals (without an established foreign company) has been created under the Investment Law 2024 framework. As of MISA Investor Guide 12th Edition (March 2025), no such pathway was identified beyond Premium Residency, GCC nationality, and Entrepreneurial Registration.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["misa", "foreign_individual", "registration", "eligibility", "no_company", "source_gap"]
     }
   ]
 }

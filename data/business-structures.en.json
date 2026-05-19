@@ -44,7 +44,7 @@
         "applicable": true,
         "condition": "required_for_foreign_investors",
         "condition_for_local_investors": "not_applicable",
-        "notes": "Foreign investors must obtain a MISA investment registration before registering commercially. The registration is activity-specific. Local (Saudi/GCC) investors register directly with the Ministry of Commerce without a MISA registration.",
+        "notes": "Foreign investors must obtain a MISA investment registration before registering commercially. The registration is activity-specific. Local (Saudi/GCC) investors register directly with the Ministry of Commerce without a MISA registration. ⚠️ ELIGIBILITY (verified: MISA Investor Guide 12th Ed., March 2025, §3.1.1): Standard MISA Investment Registration requires (1) commercial registration of the applicant's foreign establishment authenticated by the Saudi Embassy, and (2) audited financial statements for the last fiscal year. Foreign individuals WITHOUT an established foreign company (minimum 1 year of operation) do NOT qualify for standard registration. Available paths for individuals: (a) Has established foreign company (1+ year, CR + audited financials authenticated) → standard path; (b) Holds Saudi Premium Residency → documents waived; (c) Innovative/tech business with MISA-recognized VC/incubator support letter → Entrepreneurial Registration only. GCC nationals may register directly with the Ministry of Commerce without a MISA registration.",
         "verify_at": "misa.gov.sa"
       },
       "registration_body": {

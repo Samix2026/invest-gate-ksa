@@ -34,6 +34,15 @@ Key characteristics:
 - A MISA investment registration is a prerequisite to commercial registration for foreign investors
 - Registration fee determined by MISA post-approval — amount varies by activity type and is not published in advance
 
+> **⚠️ Important — Who qualifies for standard registration:**
+> Standard MISA Investment Registration requires a copy of the commercial registration of the applicant's foreign establishment, authenticated by the Saudi Embassy, plus audited financial statements for the last fiscal year.
+>
+> **Foreign individuals without an established foreign company do NOT qualify for standard registration.**
+>
+> Eligible applicants: foreign companies (established 1+ year), Premium Residency holders (documents waived), GCC nationals.
+>
+> Source: MISA Investor Guide 12th Edition, Section 3.1.1 (March 2025)
+
 For the full setup sequence, see [docs/en/company-setup-overview.md](./company-setup-overview.md).
 
 ---
@@ -66,6 +75,9 @@ The RHQ program was launched in 2021 and allows multinational companies to estab
 ### 3. Entrepreneurial License
 
 The Entrepreneurial License is a MISA pathway for foreign entrepreneurs and innovative startups to launch a company directly in Saudi Arabia — without requiring an established foreign parent company or high capital. It is part of Saudi Arabia's Vision 2030 startup ecosystem.
+
+> **Who should consider Entrepreneurial Registration:**
+> This is the primary pathway for foreign individuals who do not have an established foreign company but wish to launch an innovative business in Saudi Arabia. Requirements: support letter from a MISA-recognized incubator, accelerator, or VC fund. Not suitable for traditional businesses, retail, or most regulated sectors (healthcare, real estate, financial services).
 
 **Who it is for:** Foreign entrepreneurs and innovative startups meeting eligibility criteria below.
 
