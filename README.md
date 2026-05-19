@@ -50,39 +50,62 @@ The repository is also designed from the ground up to grow into an **AI assistan
 
 ```
 invest-gate-ksa/
+├── data/              # 9 structured bilingual JSON datasets
+│   ├── sectors        # Investment sectors with V2030 alignment
+│   ├── sources        # 13 regulatory authority sources
+│   ├── source-gaps    # Tracked data gaps awaiting verification
+│   ├── setup-flows    # Step-by-step registration flows by sector
+│   ├── structures     # Business structure comparison data
+│   ├── fees           # Fee schedules (verified + draft with citations)
+│   ├── timelines      # Processing time estimates (verified sources)
+│   └── economic-activities  # Schema ready — data planned
+├── schemas/           # JSON Schema Draft-07 — all datasets strictly typed
 ├── docs/
-│   ├── en/          # English guides: structures, licensing, zones, operations
-│   └── ar/          # Arabic guides (RTL): mirrors all English content
-├── data/            # Structured JSON: fees, timelines, sectors, agencies
-├── templates/       # Checklists and document guides for investors
-├── prompts/         # AI system prompts and MCP tool definitions
-├── sources/         # Citation registry — every source indexed here
-├── roadmap.md       # Full development roadmap
-├── CONTRIBUTING.md  # How to contribute
-└── LICENSE          # MIT License
+│   ├── en/            # English guides: registration types, tax, setup, comparison
+│   └── ar/            # Arabic mirrors (RTL) — full bilingual parity enforced
+├── mcp/               # MCP server for Claude Desktop integration
+│   ├── invest_gate_mcp.py   # FastMCP server — 8 query tools
+│   ├── requirements.txt
+│   └── README.md      # Setup instructions + Claude Desktop config
+├── prompts/           # AI system prompts
+│   └── system-prompt-base.md
+├── scripts/           # Validation and query utilities (143-check health suite)
+├── sources/           # Citation registry — every claim source-linked
+├── templates/         # Investor checklists and document guides
+├── .github/workflows/ # CI/CD — validation runs on every push and PR
+├── roadmap.md
+├── CONTRIBUTING.md
+└── LICENSE
 ```
 
-**Core topics covered (in progress):**
+**Core topics covered:**
 
-- Business structures available to foreign investors
-- Licensing and registration processes (MISA, CR, municipal)
-- Key regulatory bodies and what they govern
-- Special Economic Zones and Vision 2030 programs
-- Labor, banking, and operational requirements
+- Business registration types for foreign investors (Standard, RHQ, Entrepreneurial)
+- MISA investment registration process and Investment Registration Certificate (IRC)
+- Commercial Registration (CR) — unified single CR under April 2025 law
+- Key regulatory bodies and what they govern (MISA, MoC, ZATCA, GOSI, SAMA, CMA)
+- Tax obligations: CIT 20% (foreign), Zakat 2.5% (Saudi/GCC), VAT 15%, WHT 5–20%
+- Fee schedules with verification status — verified entries cite official sources
+- Processing timelines verified against official government publications
+- Special Economic Zones and Vision 2030 sector priorities
+- Labor, Saudization (Nitaqat), and operational requirements
 
 ---
 
 ## Project Status
 
-```
-Phase 1 — Foundation        ██████████  Completed    v0.1 published
-Phase 2 — Knowledge Base    ███░░░░░░░  In Progress  datasets + flows
-Phase 3 — AI Workflows      ░░░░░░░░░░  Planned
-Phase 4 — MCP Integration   ░░░░░░░░░░  Planned
+Phase 1 — Foundation        ██████████  Complete     Schemas, CI/CD, validation suite
+Phase 2 — Knowledge Base    ████████░░  Active       9 datasets, 5 verified core paths
+Phase 3 — AI Workflows      ██████████  Complete     System prompt, 8 MCP tools
+Phase 4 — MCP Integration   ██████████  Complete     Claude Desktop ready (stdio)
 Phase 5 — Product Layer     ░░░░░░░░░░  Planned
-```
 
-See [roadmap.md](roadmap.md) for the full plan and task breakdown.
+**Verification status as of 2026-05-18:**
+- ✅ Verified against official sources: MISA investment registration, Commercial Registration, Chamber of Commerce, ZATCA (CIT + VAT + WHT), GOSI
+- ⚠️ Draft — pending official confirmation: RHQ registration fees
+- 📋 Planned: economic-activities dataset, investor checklist templates
+
+See [roadmap.md](roadmap.md) for the full task breakdown.
 
 ---
 
@@ -107,6 +130,36 @@ python3 scripts/check.py
 ```
 
 Verifies required files, JSON validity, dataset schema validation, alias integrity, and local markdown link resolution. Exits `0` on full pass — useful to run before opening a pull request.
+
+---
+
+## MCP Server — Claude Desktop Integration
+
+This repository includes a ready-to-use MCP server that connects Claude Desktop
+directly to the knowledge base for conversational querying.
+
+**Install:**
+```bash
+pip3 install -r mcp/requirements.txt
+```
+
+**Configure Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json`):
+```json
+{
+  "mcpServers": {
+    "invest-gate-ksa": {
+      "command": "python3",
+      "args": ["/absolute/path/to/invest-gate-ksa/mcp/invest_gate_mcp.py"]
+    }
+  }
+}
+```
+
+**Available tools:** `query_sectors` · `query_authorities` · `query_setup_flows` ·
+`query_fees` · `query_timelines` · `query_structures` · `get_investor_path` ·
+`search_knowledge_base`
+
+See [mcp/README.md](mcp/README.md) for full setup instructions.
 
 ---
 
