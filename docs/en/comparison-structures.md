@@ -118,6 +118,10 @@ The following decision tree uses five questions to guide toward the most appropr
 
 ---
 
+> **SEZ Option:** Investors in manufacturing, logistics, maritime, or cloud computing should evaluate establishing in a Special Economic Zone (SEZ) before choosing a mainland structure. Industrial SEZs (KAEC, Jazan, Ras Al-Khair) offer 5% CIT for 20 years vs. 20% mainland, 0% withholding tax, and customs exemptions — but activities are restricted to within the zone. See [Special Economic Zones →](special-economic-zones.md)
+
+---
+
 ## 5. Setup Flow Links
 
 | Structure | Conceptual Setup Flow |

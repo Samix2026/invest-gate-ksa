@@ -1,0 +1,267 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "invest-gate-ksa/schemas/sezs.schema.json",
+  "title": "Special Economic Zones Dataset — Invest Gate KSA",
+  "description": "Validates sezs.en.json and sezs.ar.json. Records structured data about Saudi Arabia's Special Economic Zones (SEZs) governed by ECZA. All tax incentive figures are per ECZA official publications and Ministerial Resolution No. 468 (Official Gazette, 16 January 2026) unless marked draft.",
+  "type": "object",
+  "required": ["meta", "data"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "meta": {
+      "type": "object",
+      "required": ["title", "description", "language", "last_verified"],
+      "additionalProperties": false,
+      "properties": {
+        "title":         { "type": "string", "minLength": 1 },
+        "description":   { "type": "string", "minLength": 1 },
+        "language":      { "type": "string", "enum": ["en", "ar"] },
+        "last_verified": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "data": {
+      "type": "array",
+      "minItems": 0,
+      "items": { "$ref": "#/definitions/sez_entry" }
+    }
+
+  },
+
+  "definitions": {
+
+    "placeholder": {
+      "type": "object",
+      "required": ["field", "description", "verify_at"],
+      "additionalProperties": false,
+      "properties": {
+        "field":       { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "verify_at":   { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "sez_entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "name_en",
+        "name_ar",
+        "location_en",
+        "location_ar",
+        "area_km2",
+        "governing_authority",
+        "target_sectors",
+        "tax_cit_rate_percent",
+        "tax_cit_duration_years",
+        "tax_wht_rate_percent",
+        "tax_vat_intrazone_percent",
+        "tax_customs_capital_equipment_percent",
+        "foreign_ownership_percent",
+        "nitaqat_exemption",
+        "nitaqat_exemption_years",
+        "anchor_infrastructure",
+        "strategic_advantage_en",
+        "strategic_advantage_ar",
+        "verification_status",
+        "placeholder_reason",
+        "placeholders",
+        "verify_at",
+        "notes_en",
+        "notes_ar",
+        "tags"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Stable machine-readable identifier. Must be identical across language files."
+        },
+
+        "name_en": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Official English name of the SEZ."
+        },
+
+        "name_ar": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Official Arabic name of the SEZ."
+        },
+
+        "location_en": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Geographic location description in English."
+        },
+
+        "location_ar": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Geographic location description in Arabic."
+        },
+
+        "area_km2": {
+          "oneOf": [
+            { "type": "number", "minimum": 0 },
+            { "type": "null" }
+          ],
+          "description": "Zone area in square kilometres. Null for virtual zones (e.g., Cloud Computing SEZ)."
+        },
+
+        "governing_authority": {
+          "type": "string",
+          "minLength": 1,
+          "description": "ID of the primary governing authority. For all current Saudi SEZs this is 'ecza'."
+        },
+
+        "target_sectors": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Sectors that the SEZ is designed to attract."
+        },
+
+        "tax_cit_rate_percent": {
+          "oneOf": [
+            { "type": "number", "minimum": 0, "maximum": 100 },
+            { "type": "null" }
+          ],
+          "description": "Applicable CIT rate within the SEZ as a percentage. Null when not applicable or when the zone uses a structural framework rather than a reduced rate (e.g., Cloud Computing SEZ)."
+        },
+
+        "tax_cit_duration_years": {
+          "oneOf": [
+            { "type": "number", "minimum": 0 },
+            { "type": "null" }
+          ],
+          "description": "Duration in years for which the preferential CIT rate applies. Null when tax_cit_rate_percent is null or when duration is not officially confirmed."
+        },
+
+        "tax_wht_rate_percent": {
+          "oneOf": [
+            { "type": "number", "minimum": 0, "maximum": 100 },
+            { "type": "null" }
+          ],
+          "description": "Withholding tax rate on profit repatriation within the SEZ. Null when not applicable or unconfirmed."
+        },
+
+        "tax_vat_intrazone_percent": {
+          "oneOf": [
+            { "type": "number", "minimum": 0, "maximum": 100 },
+            { "type": "null" }
+          ],
+          "description": "VAT rate on intra-zone goods transactions. Null when not applicable or unconfirmed. Note: goods moving from SEZ to Saudi mainland are subject to standard mainland VAT rates."
+        },
+
+        "tax_customs_capital_equipment_percent": {
+          "oneOf": [
+            { "type": "number", "minimum": 0, "maximum": 100 },
+            { "type": "null" }
+          ],
+          "description": "Customs duty rate on capital equipment and production inputs imported into the SEZ. Null when not applicable or unconfirmed."
+        },
+
+        "foreign_ownership_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Maximum permitted foreign ownership percentage. 100 means full foreign ownership is permitted."
+        },
+
+        "nitaqat_exemption": {
+          "type": "boolean",
+          "description": "Whether Saudization (Nitaqat) requirements are relaxed for entities in this SEZ. True indicates relaxed requirements during qualifying periods."
+        },
+
+        "nitaqat_exemption_years": {
+          "oneOf": [
+            { "type": "number", "minimum": 0 },
+            { "type": "null" }
+          ],
+          "description": "Number of years for which Nitaqat requirements are relaxed. Null when case-by-case, not officially confirmed, or not applicable."
+        },
+
+        "anchor_infrastructure": {
+          "type": "array",
+          "minItems": 0,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Key physical infrastructure that defines or anchors the zone."
+        },
+
+        "strategic_advantage_en": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Primary strategic advantage of the zone in English."
+        },
+
+        "strategic_advantage_ar": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Primary strategic advantage of the zone in Arabic."
+        },
+
+        "verification_status": {
+          "type": "string",
+          "enum": ["verified", "draft", "placeholder"],
+          "description": "verified: all key fields confirmed from ECZA official sources or Official Gazette. draft: primary data from credible commercial sources, pending ECZA confirmation."
+        },
+
+        "placeholder_reason": {
+          "type": "string",
+          "minLength": 1,
+          "description": "For verified entries: records the official source and verification method. For draft entries: explains what needs confirmation and why."
+        },
+
+        "placeholders": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/placeholder" },
+          "description": "Specific fields awaiting verification. Required to be non-empty when verification_status is 'draft'."
+        },
+
+        "verify_at": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Official URL where the data in this entry should be verified."
+        },
+
+        "notes_en": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Important caveats, restrictions, or context in English."
+        },
+
+        "notes_ar": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Important caveats, restrictions, or context in Arabic."
+        },
+
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        }
+
+      },
+
+      "if": {
+        "properties": { "verification_status": { "const": "draft" } },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": { "placeholders": { "minItems": 1 } }
+      }
+
+    }
+
+  }
+}

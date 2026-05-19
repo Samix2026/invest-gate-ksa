@@ -28,7 +28,8 @@ This directory holds structured, machine-readable data derived from official sou
 | `fees.ar.json` | Official government fees — Arabic | Draft |
 | `timelines.en.json` | Estimated processing durations for key procedures — English | Draft |
 | `timelines.ar.json` | Estimated processing durations — Arabic | Draft |
-| `zones.json` | Economic zones, locations, and key incentives | Planned |
+| `sezs.en.json` | Special Economic Zones: tax incentives, sectors, infrastructure (ECZA) — English | Draft/Verified |
+| `sezs.ar.json` | Special Economic Zones — Arabic | Draft/Verified |
 | `ownership_limits.json` | Foreign ownership thresholds by sector | Planned |
 
 ---

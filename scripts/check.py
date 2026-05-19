@@ -93,6 +93,11 @@ REQUIRED_FILES = [
     "docs/ar/comparison-structures.md",
     "docs/en/registration-types.md",
     "docs/ar/registration-types.md",
+    "data/sezs.en.json",
+    "data/sezs.ar.json",
+    "schemas/sezs.schema.json",
+    "docs/en/special-economic-zones.md",
+    "docs/ar/special-economic-zones.md",
 ]
 
 # Markdown link targets to skip (not local paths)

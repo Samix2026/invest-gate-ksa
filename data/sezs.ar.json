@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "title": "المناطق الاقتصادية الخاصة — المملكة العربية السعودية",
+    "description": "بيانات منظمة عن المناطق الاقتصادية الخاصة في المملكة العربية السعودية التي تشرف عليها هيئة المدن الاقتصادية والمناطق الخاصة. ارقام الحوافز الضريبية مستقاة من منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468 (الجريدة الرسمية، 16 يناير 2026) ما لم يُشر الى خلاف ذلك.",
+    "language": "ar",
+    "last_verified": "2026-05-19"
+  },
+  "data": [
+    {
+      "id": "kaec_sez",
+      "name_en": "King Abdullah Economic City Special Economic Zone",
+      "name_ar": "المنطقة الاقتصادية الخاصة بمدينة الملك عبدالله الاقتصادية",
+      "location_en": "Rabigh, Red Sea coast, Makkah Province",
+      "location_ar": "رابغ، ساحل البحر الاحمر، منطقة مكة المكرمة",
+      "area_km2": 60,
+      "governing_authority": "ecza",
+      "target_sectors": [
+        "advanced_manufacturing",
+        "logistics",
+        "pharmaceuticals",
+        "automotive",
+        "food_processing"
+      ],
+      "tax_cit_rate_percent": 5,
+      "tax_cit_duration_years": 20,
+      "tax_wht_rate_percent": 0,
+      "tax_vat_intrazone_percent": 0,
+      "tax_customs_capital_equipment_percent": 0,
+      "foreign_ownership_percent": 100,
+      "nitaqat_exemption": true,
+      "nitaqat_exemption_years": 5,
+      "anchor_infrastructure": [
+        "ميناء الملك عبدالله",
+        "المنطقة الصناعية بمدينة الملك عبدالله الاقتصادية"
+      ],
+      "strategic_advantage_en": "Red Sea coastal access with dedicated port infrastructure enabling direct sea freight for manufacturing and export operations.",
+      "strategic_advantage_ar": "امكانية الوصول الى ساحل البحر الاحمر مع بنية تحتية مخصصة للميناء تتيح الشحن البحري المباشر لعمليات التصنيع والتصدير.",
+      "verification_status": "verified",
+      "placeholder_reason": "تم التحقق من منشورات هيئة المدن الاقتصادية والمناطق الخاصة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026. ضريبة الدخل 5% لمدة 20 عاما، الاستقطاع في المنبع 0%، ضريبة القيمة المضافة داخل المنطقة 0%، جمارك المعدات الراسمالية 0%، ملكية اجنبية كاملة 100%، إعفاء نطاقات 5 سنوات.",
+      "placeholders": [],
+      "verify_at": "https://ecza.gov.sa",
+      "notes_en": "5% CIT applies to all entities regardless of ownership nationality (Saudi, GCC, or foreign) — the opposite of mainland Saudi Arabia where Saudi and GCC entities pay Zakat and foreign entities pay CIT at 20%. Commercial activities and sales are restricted to within the zone; goods moved to the Saudi mainland trigger standard mainland tax and customs rates. Source: ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026.",
+      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية (سعودية او خليجية او اجنبية)، عكس البر الرئيسي حيث تسري الزكاة على الكيانات السعودية والخليجية وضريبة الدخل بنسبة 20% على الكيانات الاجنبية. الانشطة التجارية والمبيعات مقيدة داخل المنطقة، والبضائع المنقولة الى البر الرئيسي تخضع لمعدلات الضرائب والجمارك المعيارية. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026.",
+      "tags": ["sez", "manufacturing", "logistics", "verified", "red_sea", "kaec"]
+    },
+    {
+      "id": "jazan_sez",
+      "name_en": "Jazan Special Economic Zone",
+      "name_ar": "المنطقة الاقتصادية الخاصة بجازان",
+      "location_en": "Jazan City for Primary and Downstream Industries, Jazan Region, southwest Saudi Arabia",
+      "location_ar": "مدينة جازان للصناعات الاولية والتحويلية، منطقة جازان، جنوب غرب المملكة العربية السعودية",
+      "area_km2": 24.6,
+      "governing_authority": "ecza",
+      "target_sectors": [
+        "food_processing",
+        "metals",
+        "glass",
+        "basic_chemicals",
+        "petrochemicals"
+      ],
+      "tax_cit_rate_percent": 5,
+      "tax_cit_duration_years": 20,
+      "tax_wht_rate_percent": 0,
+      "tax_vat_intrazone_percent": 0,
+      "tax_customs_capital_equipment_percent": 0,
+      "foreign_ownership_percent": 100,
+      "nitaqat_exemption": true,
+      "nitaqat_exemption_years": 5,
+      "anchor_infrastructure": [
+        "ميناء جازان",
+        "مدينة جازان للصناعات الاولية والتحويلية"
+      ],
+      "strategic_advantage_en": "Adjacent to established heavy industrial city with Red Sea southern route port access and proximity to African and Asian markets.",
+      "strategic_advantage_ar": "مجاورة لمدينة صناعية ثقيلة راسخة مع الوصول الى ميناء الطريق الجنوبي للبحر الاحمر والقرب من الاسواق الافريقية والاسيوية.",
+      "verification_status": "verified",
+      "placeholder_reason": "تم التحقق من منشورات هيئة المدن الاقتصادية والمناطق الخاصة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026. ضريبة الدخل 5% لمدة 20 عاما، الاستقطاع في المنبع 0%، ضريبة القيمة المضافة داخل المنطقة 0%، جمارك المعدات الراسمالية 0%، ملكية اجنبية كاملة 100%، إعفاء نطاقات 5 سنوات.",
+      "placeholders": [],
+      "verify_at": "https://ecza.gov.sa",
+      "notes_en": "5% CIT applies to all entities regardless of ownership nationality. Jazan SEZ overlaps with the existing Jazan City for Primary and Downstream Industries (JCPDI) industrial complex — investors should confirm zone boundaries with ECZA. Source: ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026.",
+      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية. تتداخل المنطقة الاقتصادية الخاصة بجازان مع مجمع مدينة جازان للصناعات الاولية والتحويلية القائم، وينبغي للمستثمرين التاكد من حدود المنطقة مع الهيئة. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026.",
+      "tags": ["sez", "manufacturing", "petrochemicals", "food_processing", "verified", "red_sea", "jazan"]
+    },
+    {
+      "id": "ras_al_khair_sez",
+      "name_en": "Ras Al-Khair Special Economic Zone",
+      "name_ar": "المنطقة الاقتصادية الخاصة برأس الخير",
+      "location_en": "Ras Al-Khair Industrial City, Eastern Province, Arabian Gulf coast",
+      "location_ar": "المدينة الصناعية برأس الخير، المنطقة الشرقية، ساحل الخليج العربي",
+      "area_km2": 20.0,
+      "governing_authority": "ecza",
+      "target_sectors": [
+        "maritime_industries",
+        "mining_services",
+        "minerals_processing",
+        "offshore_equipment"
+      ],
+      "tax_cit_rate_percent": 5,
+      "tax_cit_duration_years": 20,
+      "tax_wht_rate_percent": 0,
+      "tax_vat_intrazone_percent": 0,
+      "tax_customs_capital_equipment_percent": 0,
+      "foreign_ownership_percent": 100,
+      "nitaqat_exemption": true,
+      "nitaqat_exemption_years": 5,
+      "anchor_infrastructure": [
+        "المدينة الصناعية برأس الخير",
+        "ميناء الملك فهد الصناعي (مجاور)"
+      ],
+      "strategic_advantage_en": "Proximity to Saudi Arabia's primary mining and minerals corridor with Arabian Gulf coast access and established industrial infrastructure for maritime and offshore sectors.",
+      "strategic_advantage_ar": "القرب من الممر الرئيسي للتعدين والمعادن في المملكة مع الوصول الى ساحل الخليج العربي والبنية التحتية الصناعية الراسخة لقطاعي الصناعات البحرية والخدمات البحرية.",
+      "verification_status": "verified",
+      "placeholder_reason": "تم التحقق من منشورات هيئة المدن الاقتصادية والمناطق الخاصة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026. ضريبة الدخل 5% لمدة 20 عاما، الاستقطاع في المنبع 0%، ضريبة القيمة المضافة داخل المنطقة 0%، جمارك المعدات الراسمالية 0%، ملكية اجنبية كاملة 100%، إعفاء نطاقات 5 سنوات. رقم المساحة تقريبي (20 كم2).",
+      "placeholders": [],
+      "verify_at": "https://ecza.gov.sa",
+      "notes_en": "5% CIT applies to all entities regardless of ownership nationality. Area figure (20 km²) is approximate; confirm exact zone boundaries with ECZA. Source: ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026.",
+      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية. رقم المساحة (20 كم2) تقريبي؛ يرجى التاكد من الحدود الدقيقة للمنطقة مع الهيئة. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026.",
+      "tags": ["sez", "maritime", "mining", "verified", "eastern_province", "gulf"]
+    },
+    {
+      "id": "cloud_computing_sez",
+      "name_en": "Cloud Computing Special Economic Zone",
+      "name_ar": "المنطقة الاقتصادية الخاصة للحوسبة السحابية",
+      "location_en": "Virtual zone administered from Riyadh; no defined physical boundary",
+      "location_ar": "منطقة افتراضية تدار من الرياض؛ لا حدود جغرافية محددة",
+      "area_km2": null,
+      "governing_authority": "ecza",
+      "target_sectors": [
+        "cloud_computing",
+        "data_centers",
+        "ai_infrastructure",
+        "digital_services"
+      ],
+      "tax_cit_rate_percent": null,
+      "tax_cit_duration_years": null,
+      "tax_wht_rate_percent": null,
+      "tax_vat_intrazone_percent": null,
+      "tax_customs_capital_equipment_percent": null,
+      "foreign_ownership_percent": 100,
+      "nitaqat_exemption": false,
+      "nitaqat_exemption_years": null,
+      "anchor_infrastructure": [
+        "منظومة الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)",
+        "البنية التحتية البحثية لمدينة الملك عبدالعزيز للعلوم والتقنية"
+      ],
+      "strategic_advantage_en": "OECD-aligned structural regulatory framework enabling global cloud operators to establish Saudi-registered entities with IP protections and tailored data governance rules.",
+      "strategic_advantage_ar": "اطار تنظيمي هيكلي متوافق مع معايير منظمة التعاون الاقتصادي والتنمية يمكن مشغلي الحوسبة السحابية العالميين من تاسيس كيانات مسجلة في المملكة مع حماية الملكية الفكرية وقواعد حوكمة البيانات المخصصة.",
+      "verification_status": "verified",
+      "placeholder_reason": "تم التحقق من منشورات هيئة المدن الاقتصادية والمناطق الخاصة الرسمية. تعمل هذه المنطقة وفق اطار هيكلي متوافق مع منظمة التعاون الاقتصادي والتنمية ولا توفر معدل ضريبة دخل مخفضا او اعفاءات من الاستقطاع او ضريبة القيمة المضافة او الجمارك. حقول الضرائب فارغة لعدم انطباق هذه الحوافز لا لعدم التاكد.",
+      "placeholders": [],
+      "verify_at": "https://ecza.gov.sa",
+      "notes_en": "IMPORTANT: This zone is structurally different from KAEC, Jazan, Ras Al-Khair, and SILZ. No discounted CIT rate applies — standard Saudi CIT (20%) applies to entities in this zone. No WHT exemption, no intra-zone VAT exemption, no customs exemption on capital equipment. The benefit is a tailored OECD-aligned regulatory framework for cloud computing operators: IP protections, data handling rules, and regulatory clarity for cross-border digital services. Do not compare with industrial SEZ tax incentives.",
+      "notes_ar": "تنبيه: تختلف هذه المنطقة هيكليا عن مناطق كاك وجازان ورأس الخير وسيلز. لا تطبق ضريبة دخل مخفضة، اذ تسري ضريبة الدخل السعودية المعيارية (20%) على الكيانات في هذه المنطقة. لا اعفاء من الاستقطاع في المنبع، ولا اعفاء من ضريبة القيمة المضافة داخل المنطقة، ولا اعفاء جمركي على المعدات الراسمالية. الميزة هي اطار تنظيمي مصمم خصيصا لمشغلي الحوسبة السحابية: حماية الملكية الفكرية وقواعد معالجة البيانات والوضوح التنظيمي للخدمات الرقمية العابرة للحدود. لا تقارن بالحوافز الضريبية للمناطق الاقتصادية الصناعية.",
+      "tags": ["sez", "cloud_computing", "digital", "verified", "virtual", "riyadh"]
+    },
+    {
+      "id": "silz",
+      "name_en": "Special Integrated Logistics Zone (SILZ)",
+      "name_ar": "المنطقة اللوجستية المتكاملة الخاصة",
+      "location_en": "King Khalid International Airport logistics corridor, Riyadh",
+      "location_ar": "ممر الخدمات اللوجستية بمطار الملك خالد الدولي، الرياض",
+      "area_km2": 3.0,
+      "governing_authority": "ecza",
+      "target_sectors": [
+        "logistics",
+        "freight_forwarding",
+        "ecommerce_fulfillment",
+        "supply_chain",
+        "air_cargo"
+      ],
+      "tax_cit_rate_percent": null,
+      "tax_cit_duration_years": null,
+      "tax_wht_rate_percent": null,
+      "tax_vat_intrazone_percent": null,
+      "tax_customs_capital_equipment_percent": null,
+      "foreign_ownership_percent": 100,
+      "nitaqat_exemption": true,
+      "nitaqat_exemption_years": null,
+      "anchor_infrastructure": [
+        "مطار الملك خالد الدولي",
+        "محطة الشحن الجوي بالرياض"
+      ],
+      "strategic_advantage_en": "Co-located with Riyadh's primary international airport, enabling same-day air cargo processing and e-commerce fulfillment for the Saudi and Gulf market.",
+      "strategic_advantage_ar": "ملاصقة لمطار الرياض الدولي الرئيسي مما يتيح معالجة الشحن الجوي في اليوم ذاته وتنفيذ طلبات التجارة الالكترونية للسوق السعودية والخليجية.",
+      "verification_status": "draft",
+      "placeholder_reason": "تفاصيل الحوافز الضريبية للمنطقة اللوجستية المتكاملة الخاصة مبلغ عنها من مصادر تجارية بوصفها مماثلة لسائر المناطق (5% ضريبة دخل) لكنها لم تؤكد مباشرة من المصدر الرسمي للهيئة. للتحقق: https://ecza.gov.sa",
+      "placeholders": [
+        {
+          "field": "tax_cit_rate_percent",
+          "description": "مبلغ من مصادر تجارية بانه 5% مماثلا لمناطق الهيئة الاخرى لكن لم يؤكد من المصدر الرسمي او الجريدة الرسمية. جميع حقول الحوافز الضريبية (معدل ضريبة الدخل، المدة، الاستقطاع، ضريبة القيمة المضافة، الجمارك) غير مؤكدة وحددت بقيمة فارغة في انتظار التحقق.",
+          "verify_at": "https://ecza.gov.sa"
+        }
+      ],
+      "verify_at": "https://ecza.gov.sa",
+      "notes_en": "Tax incentive details (CIT rate, WHT, customs, VAT) are reported by commercial sources as matching the standard ECZA SEZ framework (5% CIT, 0% WHT) but have not been confirmed from the ECZA official source or Official Gazette. All tax fields are null pending verification. Area converted from approximately 32 million sq ft (approx. 3.0 km²) as reported by commercial sources.",
+      "notes_ar": "تفاصيل الحوافز الضريبية (ضريبة الدخل والاستقطاع في المنبع والجمارك وضريبة القيمة المضافة) مبلغ عنها من مصادر تجارية بوصفها مماثلة لاطار المنطقة الاقتصادية الخاصة المعياري للهيئة (5% ضريبة دخل، 0% استقطاع) لكنها لم تؤكد من المصدر الرسمي او الجريدة الرسمية. جميع حقول الضرائب فارغة في انتظار التحقق. المساحة محولة من نحو 32 مليون قدم مربع (نحو 3.0 كم2) كما افادت المصادر التجارية.",
+      "tags": ["sez", "logistics", "ecommerce", "draft", "riyadh", "airport"]
+    }
+  ]
+}

@@ -433,6 +433,29 @@
           "verify_at": "zatca.gov.sa/en/e-participation/PublicData/Pages/Open-Data-Domains.aspx"
         }
       ]
+    },
+    {
+      "id": "ecza",
+      "name": "Economic Cities and Special Zones Authority (ECZA)",
+      "name_alt": "هيئة المدن الاقتصادية والمناطق الخاصة",
+      "authority_type": "government_authority",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "ecza.gov.sa",
+      "documentation_sections": [
+        "Special Economic Zone regulations and investor guides",
+        "Zone-specific incentive frameworks",
+        "Investment application and licensing procedures",
+        "Ministerial resolutions and implementing regulations"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "2026-05-19",
+      "verification_method": "Reviewed ECZA official website and Ministerial Resolution No. 468 (Official Gazette, 16 January 2026) confirming SEZ tax incentive framework: 5% CIT for 20 years, 0% WHT, 0% intra-zone VAT, 0% customs on capital equipment, 100% foreign ownership, 5-year Nitaqat relaxation.",
+      "tags": ["ecza", "sez", "special_economic_zones", "tax_incentives", "manufacturing", "logistics"],
+      "notes": "Sole governing authority for all five Saudi Special Economic Zones (SEZs): King Abdullah Economic City SEZ, Jazan SEZ, Ras Al-Khair SEZ, Cloud Computing SEZ, and Special Integrated Logistics Zone (SILZ). The foundational legal basis for SEZ tax incentives is Ministerial Resolution No. 468, published in the Official Gazette on 16 January 2026. Key distinction: all entities in industrial SEZs pay CIT (not Zakat) regardless of ownership nationality — opposite of mainland Saudi Arabia.",
+      "verification_status": "verified",
+      "placeholders": []
     }
   ]
 }

@@ -110,6 +110,14 @@ DATASETS = [
         "check_aliases": False,
         "check_sources": False,  # timelines reference authorities by authority_id, not via official_sources
     },
+    {
+        "name":          "sezs",
+        "schema_path":   os.path.join(ROOT, "schemas", "sezs.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "sezs.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "sezs.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # sezs reference authorities via governing_authority, not official_sources
+    },
 ]
 
 

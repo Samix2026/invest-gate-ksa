@@ -388,6 +388,60 @@
         }
       ],
       "tags": ["misa", "temporary_registration", "registration", "source_gap"]
+    },
+    {
+      "id": "silz_tax_incentive",
+      "name": "SILZ Tax Incentive Framework",
+      "name_alt": "إطار الحوافز الضريبية للمنطقة اللوجستية المتكاملة الخاصة",
+      "mentioned_in_datasets": ["sezs"],
+      "reason_needed": "Tax incentive details for the Special Integrated Logistics Zone (SILZ) at King Khalid International Airport have not been confirmed from the ECZA official source or the Official Gazette. Commercial sources report the incentives as matching the standard ECZA SEZ framework (5% CIT for 20 years, 0% WHT, 0% customs on capital equipment, 0% intra-zone VAT), but this has not been verified.",
+      "likely_official_domain": "ecza.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Check ecza.gov.sa for the SILZ-specific investor guide or resolution. Look for the Ministerial Resolution implementing SILZ regulations (separate from or included in Resolution No. 468 of January 2026). Confirm: CIT rate, duration, WHT rate, VAT status, customs treatment.",
+      "placeholders": [
+        {
+          "field": "tax_cit_rate_percent",
+          "description": "Reported as 5% matching other ECZA zones but not confirmed from official source.",
+          "verify_at": "ecza.gov.sa"
+        }
+      ],
+      "tags": ["ecza", "silz", "tax_incentives", "logistics", "source_gap"]
+    },
+    {
+      "id": "sez_land_rental_rates",
+      "name": "SEZ Land Rental Rate Schedule",
+      "name_alt": "جدول أسعار إيجار الأراضي في المناطق الاقتصادية الخاصة",
+      "mentioned_in_datasets": ["sezs"],
+      "reason_needed": "Land rental and lease rates within Saudi Special Economic Zones (KAEC, Jazan, Ras Al-Khair, SILZ) are not publicly documented by ECZA. Commercial sources reference competitive pricing but no official schedule has been published. This is relevant to investors modeling total occupancy cost within an SEZ.",
+      "likely_official_domain": "ecza.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Check ecza.gov.sa investor guides and individual zone development entity websites (e.g., KAEC developer site) for any published land lease schedules. Note that rates may be negotiated case-by-case rather than published as a fixed schedule.",
+      "placeholders": [
+        {
+          "field": "land_lease_rate_sar_per_sqm",
+          "description": "No official land lease rate schedule for SEZs has been confirmed from ECZA or zone development authority publications.",
+          "verify_at": "ecza.gov.sa"
+        }
+      ],
+      "tags": ["ecza", "sez", "land_costs", "lease_rates", "source_gap"]
+    },
+    {
+      "id": "sez_qualifying_activities",
+      "name": "SEZ Zone-Specific Qualifying Activities Lists",
+      "name_alt": "قوائم الأنشطة المؤهلة الخاصة بكل منطقة اقتصادية خاصة",
+      "mentioned_in_datasets": ["sezs"],
+      "reason_needed": "ECZA publishes zone-specific lists of qualifying activities (permitted sectors and business activities) for each SEZ. The full approved-activity lists for all five zones have not been incorporated into this dataset. Investors must verify that their specific business activity is on the permitted list for a given zone before relying on SEZ incentives.",
+      "likely_official_domain": "ecza.gov.sa",
+      "verification_status": "draft",
+      "next_verification_step": "Review the zone-specific investor guides at ecza.gov.sa for each SEZ. Look for an approved activities list or 'permitted business activities' annex. Cross-reference with the MISA approved-activities list to understand overlap. Document the list for each zone as a structured dataset field.",
+      "placeholders": [
+        {
+          "field": "qualifying_activities_list",
+          "description": "Zone-specific approved business activities lists have not been verified and documented for any of the five SEZs.",
+          "verify_at": "ecza.gov.sa"
+        }
+      ],
+      "tags": ["ecza", "sez", "qualifying_activities", "permitted_sectors", "source_gap"]
     }
   ]
 }
