@@ -71,7 +71,12 @@ Entries that have not been independently verified against a live official source
 
 Fee entries where the amount is not published in advance (e.g. the MISA investment registration fee) suppress `amount_sar` from the output — the `_note` field explains the actual fee structure.
 
-## Bilingual Support
+## Language
+
+> **Language:** All tools default to English (`lang="en"`).
+> Pass `lang="ar"` to receive Arabic responses.
+> The server auto-detects Arabic input and responds accordingly
+> when using conversational interfaces like Claude Desktop.
 
 All tools accept a `lang` parameter (`"en"` or `"ar"`). Passing `lang: "ar"` returns data from the Arabic dataset files.
 
