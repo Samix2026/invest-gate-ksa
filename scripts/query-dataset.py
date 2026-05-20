@@ -48,33 +48,45 @@ from typing import Dict, List, Optional
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATASETS: Dict[str, Dict[str, str]] = {
+    "authority-relationships": {
+        "en": os.path.join(ROOT, "data", "authority-relationships.en.json"),
+        "ar": os.path.join(ROOT, "data", "authority-relationships.ar.json"),
+    },
     "business-structures": {
         "en": os.path.join(ROOT, "data", "business-structures.en.json"),
         "ar": os.path.join(ROOT, "data", "business-structures.ar.json"),
+    },
+    "fees": {
+        "en": os.path.join(ROOT, "data", "fees.en.json"),
+        "ar": os.path.join(ROOT, "data", "fees.ar.json"),
     },
     "investment-licenses": {
         "en": os.path.join(ROOT, "data", "investment-licenses.en.json"),
         "ar": os.path.join(ROOT, "data", "investment-licenses.ar.json"),
     },
-    "sources": {
-        "en": os.path.join(ROOT, "data", "sources.en.json"),
-        "ar": os.path.join(ROOT, "data", "sources.ar.json"),
-    },
     "sectors": {
         "en": os.path.join(ROOT, "data", "sectors.en.json"),
         "ar": os.path.join(ROOT, "data", "sectors.ar.json"),
+    },
+    "setup-flows": {
+        "en": os.path.join(ROOT, "data", "setup-flows.en.json"),
+        "ar": os.path.join(ROOT, "data", "setup-flows.ar.json"),
+    },
+    "sezs": {
+        "en": os.path.join(ROOT, "data", "sezs.en.json"),
+        "ar": os.path.join(ROOT, "data", "sezs.ar.json"),
     },
     "source-gaps": {
         "en": os.path.join(ROOT, "data", "source-gaps.en.json"),
         "ar": os.path.join(ROOT, "data", "source-gaps.ar.json"),
     },
-    "authority-relationships": {
-        "en": os.path.join(ROOT, "data", "authority-relationships.en.json"),
-        "ar": os.path.join(ROOT, "data", "authority-relationships.ar.json"),
+    "sources": {
+        "en": os.path.join(ROOT, "data", "sources.en.json"),
+        "ar": os.path.join(ROOT, "data", "sources.ar.json"),
     },
-    "setup-flows": {
-        "en": os.path.join(ROOT, "data", "setup-flows.en.json"),
-        "ar": os.path.join(ROOT, "data", "setup-flows.ar.json"),
+    "timelines": {
+        "en": os.path.join(ROOT, "data", "timelines.en.json"),
+        "ar": os.path.join(ROOT, "data", "timelines.ar.json"),
     },
 }
 
@@ -235,6 +247,22 @@ def get_by_related_sector(data: dict, sector_id: str) -> List[dict]:
     ]
 
 
+def get_by_keyword(data: dict, keyword: str) -> List[dict]:
+    """Return all entries where keyword appears (case-insensitive) in any string value."""
+    kw = keyword.lower()
+
+    def _matches(value) -> bool:
+        if isinstance(value, str):
+            return kw in value.lower()
+        if isinstance(value, list):
+            return any(_matches(v) for v in value)
+        if isinstance(value, dict):
+            return any(_matches(v) for v in value.values())
+        return False
+
+    return [e for e in data.get("data", []) if _matches(e)]
+
+
 # ── Formatting layer ──────────────────────────────────────────────────────────
 
 def _hr() -> str:
@@ -264,18 +292,23 @@ def _entry_name(entry: dict) -> str:
     """Return a display name for a list row.
 
     Falls back gracefully for entries without a top-level 'name' field
-    (e.g. authority-relationships) by constructing 'from_id → to_id'.
+    (e.g. authority-relationships, sezs, fees).
     """
     if entry.get("name"):
         return entry["name"]
+    if entry.get("name_en"):
+        return entry["name_en"]
+    if entry.get("process_name"):
+        return entry["process_name"]
     from_auth = entry.get("from_authority")
     if from_auth:
         from_id = from_auth.get("id", "")
         to_auth  = entry.get("to_authority")
         to_id    = to_auth.get("id", "") if to_auth else "—"
         return f"{from_id} → {to_id}"
-    desc = entry.get("conceptual_description", "")
-    return desc
+    # fees use description; truncate to keep table readable
+    desc = entry.get("description") or entry.get("conceptual_description", "")
+    return desc[:60] if desc else ""
 
 
 def fmt_list_table(entries: List[dict], title: str) -> str:
@@ -416,17 +449,23 @@ def _build_parser() -> argparse.ArgumentParser:
               python3 scripts/query-dataset.py --dataset investment-licenses --id misa_license
               python3 scripts/query-dataset.py --dataset investment-licenses --tag misa
               python3 scripts/query-dataset.py --dataset business-structures --list
+              python3 scripts/query-dataset.py --dataset fees --list
+              python3 scripts/query-dataset.py --dataset sezs --list
+              python3 scripts/query-dataset.py --dataset timelines --list
+              python3 scripts/query-dataset.py --dataset all --keyword MISA --lang en
         """),
     )
+    _dataset_choices = sorted(DATASETS) + ["all"]
     parser.add_argument(
         "--dataset",
         required=True,
-        choices=sorted(DATASETS),
+        choices=_dataset_choices,
         metavar="DATASET",
-        help=f"Dataset to query: {', '.join(sorted(DATASETS))}",
+        help=f"Dataset to query: {', '.join(_dataset_choices)}. Use 'all' with --keyword.",
     )
     parser.add_argument(
-        "--lang", choices=["en", "ar"], default="en",
+        "--lang", "--language", choices=["en", "ar"], default="en",
+        dest="lang",
         metavar="LANG",
         help="Dataset language: en (default) or ar",
     )
@@ -471,13 +510,50 @@ def _build_parser() -> argparse.ArgumentParser:
         "--related-sector", metavar="SECTOR",
         help="Filter setup-flows entries by related_sectors membership (e.g. fintech, manufacturing, ecommerce)",
     )
+    action.add_argument(
+        "--keyword", metavar="KEYWORD",
+        help="Full-text keyword search across all string fields. Use --dataset all to search every dataset.",
+    )
     return parser
 
 
 def main() -> None:
     parser = _build_parser()
     args = parser.parse_args()
+
+    # --dataset all is only valid with --keyword
+    if args.dataset == "all":
+        if not args.keyword:
+            _die("--dataset all requires --keyword")
+        total = 0
+        for ds_name in sorted(DATASETS):
+            data = DataLoader.load(ds_name, args.lang)
+            matches = get_by_keyword(data, args.keyword)
+            if matches:
+                title = (
+                    f"Keyword: '{args.keyword}'  in {ds_name}  ({args.lang})"
+                    f"  —  {len(matches)} match(es)"
+                )
+                print(fmt_list_table(matches, title))
+                total += len(matches)
+        if total == 0:
+            print(f"No entries found matching keyword '{args.keyword}' in any dataset.")
+            sys.exit(1)
+        return
+
     data = DataLoader.load(args.dataset, args.lang)
+
+    if args.keyword:
+        matches = get_by_keyword(data, args.keyword)
+        if not matches:
+            print(f"No entries found matching keyword '{args.keyword}'.")
+            sys.exit(1)
+        title = (
+            f"Keyword: '{args.keyword}'  —  {len(matches)} match(es)"
+            f"  ({args.dataset}, {args.lang})"
+        )
+        print(fmt_list_table(matches, title))
+        return
 
     if args.list:
         entries = list_all(data)

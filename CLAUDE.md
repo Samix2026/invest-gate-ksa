@@ -212,7 +212,7 @@ python3 scripts/query-structures.py --list
 python3 scripts/query-structures.py --id llc
 python3 scripts/query-structures.py --tag foreign_ownership
 
-# Any dataset
+# Any dataset (--lang / --language both accepted)
 python3 scripts/query-dataset.py --dataset sources --lang en --list
 python3 scripts/query-dataset.py --dataset investment-licenses --lang ar --id misa_license
 python3 scripts/query-dataset.py --dataset sources --lang en --tag ministry
@@ -227,6 +227,10 @@ python3 scripts/query-dataset.py --dataset authority-relationships --sector fint
 python3 scripts/query-dataset.py --dataset setup-flows --list
 python3 scripts/query-dataset.py --dataset setup-flows --id fintech_market_entry
 python3 scripts/query-dataset.py --dataset setup-flows --related-sector manufacturing
+python3 scripts/query-dataset.py --dataset fees --lang en --list
+python3 scripts/query-dataset.py --dataset timelines --lang en --list
+python3 scripts/query-dataset.py --dataset sezs --lang en --list
+python3 scripts/query-dataset.py --dataset all --keyword "MISA" --lang en
 ```
 
 ---

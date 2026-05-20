@@ -1,7 +1,12 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Languages: Arabic | English](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
-![Health Checks](https://img.shields.io/badge/Health%20Checks-165%2F165-brightgreen.svg)
+![Languages](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
+![Health Checks](https://img.shields.io/badge/Health%20Checks-166%2F166-brightgreen.svg)
+![Datasets](https://img.shields.io/badge/Datasets-10-blue.svg)
+![Fees](https://img.shields.io/badge/Fee%20Entries-24-blue.svg)
+![Sources](https://img.shields.io/badge/Verified%20Sources-14-green.svg)
+![MCP Ready](https://img.shields.io/badge/MCP-Ready-8A2BE2.svg)
+![AI Ready](https://img.shields.io/badge/AI-Ready-FF6B35.svg)
+![Last Updated](https://img.shields.io/badge/Updated-May%202026-orange.svg)
 
 # Invest Gate KSA
 
@@ -34,6 +39,151 @@ It is not a consultancy. It is not a legal service. It is a **reference framewor
 
 ---
 
+## Quick Start
+
+#### Option A — Query the datasets directly (CLI)
+
+```bash
+# Clone
+git clone https://github.com/Samix2026/invest-gate-ksa.git
+cd invest-gate-ksa
+
+# Install
+pip3 install -r scripts/requirements.txt
+
+# Query fee schedule
+python3 scripts/query-dataset.py --dataset fees --lang en --list
+
+# Query sectors (Arabic)
+python3 scripts/query-dataset.py --dataset sectors --lang ar --list
+
+# Query Special Economic Zones
+python3 scripts/query-dataset.py --dataset sezs --lang en --list
+
+# Search across all datasets
+python3 scripts/query-dataset.py --dataset all --keyword "MISA" --lang en
+```
+
+#### Option B — Connect to Claude Desktop (MCP)
+
+```bash
+pip3 install -r mcp/requirements.txt
+```
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "invest-gate-ksa": {
+      "command": "python3",
+      "args": ["/absolute/path/to/invest-gate-ksa/mcp/invest_gate_mcp.py"]
+    }
+  }
+}
+```
+
+Restart Claude Desktop. Then ask:
+- "What are the steps to register a company in Saudi Arabia as a foreign investor?"
+- "ما رسوم التسجيل في وزارة الاستثمار؟"
+- "What are the tax obligations for a foreign company in Saudi Arabia?"
+
+#### Option C — Use the data directly in your project
+
+```python
+import json
+
+with open('data/fees.en.json') as f:
+    fees = json.load(f)
+
+for entry in fees['data']:
+    if entry.get('verification_status') == 'verified' and entry.get('amount_sar', 0) != 0:
+        print(f"{entry['id']}: SAR {entry['amount_sar']} ({entry.get('frequency', '')})")
+```
+
+---
+
+## Example Output
+
+**Fee schedule query** (`--dataset fees --lang en --list`):
+
+```
+fees  (en)  —  24 entries
+────────────────────────────────────────────────────────────────────────────────
+  ID                                NAME                          STATUS
+────────────────────────────────────────────────────────────────────────────────
+  misa_investment_registration_fee  Fee charged by the Ministry … verified
+  misa_activity_amendment_fee       Fee charged by the Ministry … verified
+  misa_ownership_amendment_fee      Fee charged by the Ministry … verified
+  misa_annual_renewal_fee           Fee for the annual update of… verified
+  misa_property_approval_fee        Fee charged by the Ministry … verified
+  misa_registration_cancellation_fe Fee charged by the Ministry … verified
+  commercial_registration_issuance_ Fee charged by the Ministry … verified
+  branch_commercial_registration_fe Historical entry — Branch Co… verified
+  chamber_of_commerce_fee           Annual mandatory Chamber of … verified
+  gosi_employer_registration_fee    Fee, if any, charged by the … draft
+  zatca_vat_registration_fee        Fee, if any, charged by the … draft
+  cit_corporate_income_tax          Corporate Income Tax (CIT) c… verified
+  zakat_saudi_gcc_shareholders      Zakat is an annual Islamic l… verified
+  wht_withholding_tax               Withholding Tax (WHT) charge… verified
+  municipal_license_riyadh_fee      Fee charged by the local mun… draft
+  saudization_certificate_fee       Fee, if any, charged by the … draft
+  rhq_license_year1_fee             Fee for the first year of a … draft
+  rhq_license_annual_fee            Annual renewal fee for a Reg… draft
+  entrepreneurial_license_fee_y1_3  Reduced MISA Entrepreneurial… verified
+  entrepreneurial_license_fee_y4_5  MISA Entrepreneurial License… verified
+  qiwa_employer_registration_fee    Fee for registering as an em… verified
+  iqama_issuance_renewal_fee        Annual Iqama (residency perm… verified
+  final_exit_visa_fee               Fee for issuing a final exit… verified
+  exit_reentry_visa_extension_fee   Fee for extending an exit/re… verified
+────────────────────────────────────────────────────────────────────────────────
+  24 entry/entries
+```
+
+**Sector query, Arabic** (`--dataset sectors --lang ar --list`):
+
+```
+sectors  (ar)  —  16 entries
+────────────────────────────────────────────────────────────────────────────────
+  ID                                NAME                          STATUS
+────────────────────────────────────────────────────────────────────────────────
+  technology                        التقنية                       draft
+  consulting                        الاستشارات والخدمات المهنية   draft
+  ecommerce                         التجارة الإلكترونية           draft
+  food_and_beverage                 الأغذية والمشروبات            draft
+  real_estate                       العقارات                      draft
+  education                         التعليم                       draft
+  healthcare                        الرعاية الصحية                draft
+  fintech                           التقنية المالية (فينتك)       draft
+  manufacturing                     التصنيع                       draft
+  industrial_services               الخدمات الصناعية              draft
+  mining                            التعدين والموارد المعدنية     draft
+  tourism_and_hospitality           السياحة والضيافة              draft
+  media_and_content                 الإعلام والمحتوى              draft
+  hajj_umrah_services               خدمات الحج والعمرة            draft
+  entertainment_and_events          الترفيه والفعاليات            draft
+────────────────────────────────────────────────────────────────────────────────
+  16 entry/entries
+```
+
+**SEZ query** (`--dataset sezs --lang en --list`):
+
+```
+sezs  (en)  —  5 entries
+────────────────────────────────────────────────────────────────────────────────
+  ID                                NAME                          STATUS
+────────────────────────────────────────────────────────────────────────────────
+  kaec_sez                          King Abdullah Economic City … verified
+  jazan_sez                         Jazan Special Economic Zone   verified
+  ras_al_khair_sez                  Ras Al-Khair Special Economi… verified
+  cloud_computing_sez               Cloud Computing Special Econ… verified
+  silz                              Special Integrated Logistics… draft
+────────────────────────────────────────────────────────────────────────────────
+  5 entry/entries
+```
+
+---
+
 ## Who This Is For
 
 | Audience | How they use it |
@@ -43,6 +193,31 @@ It is not a consultancy. It is not a legal service. It is a **reference framewor
 | Researchers and academics | Source-linked overview of the Saudi investment framework |
 | Developers | Knowledge base for building investment-related tools and AI assistants |
 | Translators and bilingual professionals | Arabic-English alignment of business and regulatory terminology |
+
+---
+
+## Use Cases
+
+**For developers:**
+- Build an investment guidance chatbot for Saudi Arabia
+- Power an AI agent with structured regulatory data
+- Integrate via MCP with Claude Desktop or any MCP-compatible client
+
+**For founders and investors:**
+- Understand the full regulatory path before engaging consultants
+- Compare business structures (LLC vs Branch vs RHQ)
+- Verify fee estimates against official sources
+
+**For researchers:**
+- Structured, bilingual, source-linked regulatory dataset
+- Tracks data gaps explicitly — 25 source gaps documented
+- Versioned via Git with full change history
+
+**For AI/LLM builders:**
+- 10 JSON datasets with strict schema (Draft-07)
+- Bilingual EN/AR with ID parity enforcement
+- MCP server with 8 tools — plug into any MCP-compatible agent
+- System prompt included for out-of-the-box AI assistant deployment
 
 ---
 
@@ -67,7 +242,7 @@ It is not a consultancy. It is not a legal service. It is a **reference framewor
 | `mcp/` | FastMCP server — 8 query tools for Claude Desktop integration |
 | `.claude/commands/` | 6 slash commands for daily repository operations |
 | `prompts/` | AI system prompt (bilingual, citation rules, legal disclaimer) |
-| `scripts/` | 165-check validation suite (JSON, schema, parity, cross-refs) |
+| `scripts/` | 166-check validation suite (JSON, schema, parity, cross-refs) |
 | `sources/` | Citation registry — every claim source-linked |
 | `templates/` | Investor checklists — planned |
 | `.github/workflows/` | CI/CD — validation on every push and PR |
@@ -90,7 +265,7 @@ It is not a consultancy. It is not a legal service. It is a **reference framewor
 
 | Phase | Progress | Status | Description |
 |---|---|---|---|
-| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 165-check validation suite |
+| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 166-check validation suite |
 | Phase 2 — Knowledge Base | ████████░░ | Active | 10 datasets, 5 verified core paths, SEZs, V2030 |
 | Phase 3 — AI Workflows | ██████████ | Complete | System prompt, 8 MCP tools |
 | Phase 4 — MCP Integration | ██████████ | Complete | Claude Desktop ready (stdio) |
@@ -159,7 +334,7 @@ Every piece of content must cite an official source. See [CONTRIBUTING.md](CONTR
 python3 scripts/check.py
 ```
 
-Runs 165 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
+Runs 166 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
 
 ---
 
