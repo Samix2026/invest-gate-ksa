@@ -1,6 +1,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Languages](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![Health Checks](https://img.shields.io/badge/Health%20Checks-166%2F166-brightgreen.svg)
+![Health Checks](https://img.shields.io/badge/Health%20Checks-168%2F168-brightgreen.svg)
 ![Datasets](https://img.shields.io/badge/Datasets-10-blue.svg)
 ![Fees](https://img.shields.io/badge/Fee%20Entries-24-blue.svg)
 ![Sources](https://img.shields.io/badge/Verified%20Sources-14-green.svg)
@@ -9,6 +9,16 @@
 ![Last Updated](https://img.shields.io/badge/Updated-May%202026-orange.svg)
 
 # Invest Gate KSA
+
+## Architecture
+
+> How a question becomes a verified answer
+
+![Architecture](assets/diagrams/architecture.svg)
+
+The investor asks in Arabic or English → Claude Desktop routes through 8 MCP tools →
+the server queries 10 bilingual datasets → every response cites its official source
+with a verification status (✓ verified from .gov.sa / ⚠ draft from commercial source).
 
 <p align="center">
   <img src="assets/images/repo-cover.png" alt="Invest Gate KSA Cover" width="100%">

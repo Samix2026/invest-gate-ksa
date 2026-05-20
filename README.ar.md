@@ -5,13 +5,23 @@
 
 ![الرخصة: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![اللغات](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![فحوصات الصحة](https://img.shields.io/badge/Health%20Checks-166%2F166-brightgreen.svg)
+![فحوصات الصحة](https://img.shields.io/badge/Health%20Checks-168%2F168-brightgreen.svg)
 ![مجموعات البيانات](https://img.shields.io/badge/Datasets-10-blue.svg)
 ![ادخالات الرسوم](https://img.shields.io/badge/Fee%20Entries-24-blue.svg)
 ![المصادر الموثقة](https://img.shields.io/badge/Verified%20Sources-14-green.svg)
 ![جاهز للـ MCP](https://img.shields.io/badge/MCP-Ready-8A2BE2.svg)
 ![جاهز للذكاء الاصطناعي](https://img.shields.io/badge/AI-Ready-FF6B35.svg)
 ![اخر تحديث](https://img.shields.io/badge/Updated-May%202026-orange.svg)
+
+## المعمارية
+
+> كيف يتحول السؤال إلى إجابة موثقة
+
+![Architecture](assets/diagrams/architecture.svg)
+
+المستثمر يسأل بالعربي أو الإنجليزي ← Claude Desktop يوجه عبر 8 أدوات MCP ←
+الخادم يستعلم 10 مجموعات بيانات ثنائية اللغة ← كل إجابة تستشهد بمصدرها الرسمي
+مع حالة التحقق (✓ موثق من .gov.sa / ⚠ مسودة من مصدر تجاري).
 
 **قاعدة معرفية مفتوحة المصدر وثنائية اللغة، تساعد المستثمرين الاجانب على فهم كيفية تاسيس الاعمال وادارتها في المملكة العربية السعودية.**
 
