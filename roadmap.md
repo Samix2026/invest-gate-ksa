@@ -73,6 +73,24 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 
 ---
 
+## Open Issues — Help Wanted
+
+The following data gaps are tracked as GitHub Issues and need community help:
+
+| Priority | Issue | Dataset | How to help |
+|---|---|---|---|
+| 🔴 High | [RHQ fee schedule](https://github.com/Samix2026/invest-gate-ksa/issues/2) | fees | Verify from MISA official source |
+| 🔴 High | [SILZ tax incentives](https://github.com/Samix2026/invest-gate-ksa/issues/3) | sezs | Verify from ECZA official source |
+| 🔴 High | [SEZ qualifying activities](https://github.com/Samix2026/invest-gate-ksa/issues/4) | sezs | Document from ecza.gov.sa |
+| 🔴 High | [MISA fee amounts by activity](https://github.com/Samix2026/invest-gate-ksa/issues/5) | fees | Obtain from MISA e-portal |
+| 🔴 High | [Foreign individual pathway](https://github.com/Samix2026/invest-gate-ksa/issues/6) | structures | Confirm from MISA Investment Law 2024 regs |
+| 🟡 Medium | [Economic activities dataset](https://github.com/Samix2026/invest-gate-ksa/issues/8) | economic-activities | Populate from MISA activity list |
+| 🟢 Good first issue | [AR translation review](https://github.com/Samix2026/invest-gate-ksa/issues/7) | docs/ar | Arabic speakers welcome |
+
+See [all open issues →](https://github.com/Samix2026/invest-gate-ksa/issues)
+
+---
+
 ## Out of Scope (by design)
 
 - Legal advice or jurisdiction-specific opinions
