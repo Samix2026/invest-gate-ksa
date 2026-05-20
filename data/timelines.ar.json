@@ -173,6 +173,20 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["muqeem", "iqama", "residency_permit", "expatriate", "timelines"]
+    },
+    {
+      "id": "strategic_investor_program_classification",
+      "authority_id": "misa",
+      "process_name": "تصنيف برنامج المستثمر الاستراتيجي",
+      "min_days": 5,
+      "max_days": 5,
+      "typical_days": 5,
+      "conditions": "مدة المعالجة بعد تقديم الطلب مكتملا. الأهلية: الشركات المسجلة في برامج حكومية بارزة، والشركات الاستراتيجية (وطنية أو أجنبية)، أو الشركات غير المسجلة بعد في المملكة. يُستحق سداد الرسم خلال 30 يوما من إشعار الموافقة على التصنيف.",
+      "placeholder_reason": "تم التحقق وفق دليل المستثمر لوزارة الاستثمار، الطبعة الثانية عشرة، مارس 2025، القسم 3.3.1 (misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf). مدة المعالجة: 5 أيام عمل بعد تقديم الطلب مكتملا.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "strategic_investor", "classification", "timelines"]
     }
   ]
 }

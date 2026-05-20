@@ -456,6 +456,67 @@
       "notes": "Sole governing authority for all five Saudi Special Economic Zones (SEZs): King Abdullah Economic City SEZ, Jazan SEZ, Ras Al-Khair SEZ, Cloud Computing SEZ, and Special Integrated Logistics Zone (SILZ). The foundational legal basis for SEZ tax incentives is Ministerial Resolution No. 468, published in the Official Gazette on 16 January 2026. Key distinction: all entities in industrial SEZs pay CIT (not Zakat) regardless of ownership nationality — opposite of mainland Saudi Arabia.",
       "verification_status": "verified",
       "placeholders": []
+    },
+    {
+      "id": "miza_program",
+      "name": "Miza Program — MISA Value-Added Services",
+      "name_alt": "برنامج ميزة — خدمات وزارة الاستثمار ذات القيمة المضافة",
+      "authority_type": "government_portal",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "investsaudi.sa",
+      "documentation_sections": [
+        "Miza program registration and portal access",
+        "Communication and Events portfolio",
+        "Talent Solutions portfolio",
+        "Market Entry Support portfolio",
+        "Legal, Tax, and Compliance Services",
+        "Market Analysis portfolio",
+        "Real Estate Services portfolio",
+        "Financial and Accounting Services portfolio",
+        "Digital and Technology Services portfolio",
+        "Ongoing Investor Support portfolio",
+        "Concierge and Logistics Services portfolio",
+        "Marketing and Public Relations portfolio",
+        "Investor Alignment portfolio"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "2026-05-20",
+      "verification_method": "Reviewed MISA Investor Guide, 12th Edition, March 2025, Section 3.3.2 (misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf)",
+      "tags": ["misa", "miza", "value_added_services", "post_registration", "free", "portal"],
+      "notes": "Free value-added services program for local and foreign investors under the National Investment Strategy. Provides access to private sector business service providers via a regulated electronic portal. 12 service portfolios covering: Communication and Events, Talent Solutions, Market Entry Support, Legal/Tax/Compliance, Market Analysis, Real Estate, Financial and Accounting, Digital and Technology, Ongoing Investor Support, Concierge and Logistics, Marketing and PR, and Investor Alignment. Registration fee: SAR 0 (confirmed free). Register via MISA website (investsaudi.sa). Processing time depends on service type. Available to both local and foreign investors. Source: MISA Investor Guide 12th Edition, March 2025, §3.3.2.",
+      "verification_status": "verified",
+      "placeholders": []
+    },
+    {
+      "id": "strategic_investor_program",
+      "name": "Strategic Investor Program — MISA",
+      "name_alt": "برنامج المستثمر الاستراتيجي — وزارة الاستثمار",
+      "authority_type": "government_portal",
+      "jurisdiction": "Saudi Arabia (national)",
+      "official_website": "investsaudi.sa",
+      "documentation_sections": [
+        "Strategic Investor Program application and classification",
+        "Investment opportunity development support",
+        "Specialized economic sector data and reports",
+        "Legislative and regulatory advisory",
+        "Professional and operational license facilitation",
+        "Industrial and economic zone guidance",
+        "Visa and Saudization consultation",
+        "Premium residency facilitation",
+        "Dedicated relationship manager assignment",
+        "Government program membership and event access"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "official_portal",
+      "last_verified": "2026-05-20",
+      "verification_method": "Reviewed MISA Investor Guide, 12th Edition, March 2025, Section 3.3.1 (misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf)",
+      "tags": ["misa", "strategic_investor", "premium_support", "post_registration", "portal"],
+      "notes": "Premium support program for national and foreign companies meeting eligibility criteria. Aims to enhance the investment environment and create new opportunities. Key benefits: dedicated relationship manager, premium residency facilitation, legislative and regulatory advisory, professional and operational license facilitation, investment opportunity development support, specialized sector data and reports tailored to foreign countries, guidance on industrial and economic zones, consultation on visa and Saudization requirements, and priority access to events and decision-makers. Eligibility: companies registered in prominent government programs, companies with strategic economic impact (national or foreign registered with MISA, or companies not yet registered in the Kingdom). Fee: determined by MISA upon classification approval, payable within 30 days of notification — may be zero for some classifications. Processing: 5 working days after complete application submission. Portal: investsaudi.sa. Source: MISA Investor Guide 12th Edition, March 2025, §3.3.1.",
+      "verification_status": "verified",
+      "placeholders": []
     }
   ]
 }

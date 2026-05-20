@@ -496,6 +496,25 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
                 "early in the process."
             ) if is_regulated else None
 
+        if lang == "ar":
+            post_reg = (
+                "## خدمات ما بعد التسجيل\n"
+                "**برنامج ميزة** (مجاني): وصول لـ 12 محفظة خدمية تشمل دعم دخول السوق والمواهب "
+                "والاستشارات القانونية والخدمات الرقمية. التسجيل عبر: investsaudi.sa\n"
+                "**برنامج المستثمر الاستراتيجي**: دعم متميز مع مدير علاقات مخصص وتسهيل الإقامة "
+                "المميزة والاستشارات التشريعية. حسب الأهلية. التقديم عبر: investsaudi.sa"
+            )
+        else:
+            post_reg = (
+                "## Post-Registration Support\n"
+                "**Miza Program** (free): Access 12 service portfolios including market entry "
+                "support, talent solutions, legal advisory, and digital services. "
+                "Register at: investsaudi.sa\n"
+                "**Strategic Investor Program**: Premium support with dedicated relationship "
+                "manager, premium residency facilitation, and legislative advisory. "
+                "Eligibility-based. Apply at: investsaudi.sa"
+            )
+
         path: Dict[str, Any] = {
             "investor_context": {
                 "sector": params.sector,
@@ -510,6 +529,7 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
                 else {"_note": f"Sector '{params.sector}' not found in dataset."}
             ),
             "misa_registration_fee": _clean(misa_fee) if misa_fee else None,
+            "post_registration_support": post_reg,
         }
         if sector_note:
             path["sector_note"] = sector_note
@@ -573,6 +593,25 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
             "early in the process."
         )
 
+    if lang == "ar":
+        post_reg = (
+            "## خدمات ما بعد التسجيل\n"
+            "**برنامج ميزة** (مجاني): وصول لـ 12 محفظة خدمية تشمل دعم دخول السوق والمواهب "
+            "والاستشارات القانونية والخدمات الرقمية. التسجيل عبر: investsaudi.sa\n"
+            "**برنامج المستثمر الاستراتيجي**: دعم متميز مع مدير علاقات مخصص وتسهيل الإقامة "
+            "المميزة والاستشارات التشريعية. حسب الأهلية. التقديم عبر: investsaudi.sa"
+        )
+    else:
+        post_reg = (
+            "## Post-Registration Support\n"
+            "**Miza Program** (free): Access 12 service portfolios including market entry "
+            "support, talent solutions, legal advisory, and digital services. "
+            "Register at: investsaudi.sa\n"
+            "**Strategic Investor Program**: Premium support with dedicated relationship "
+            "manager, premium residency facilitation, and legislative advisory. "
+            "Eligibility-based. Apply at: investsaudi.sa"
+        )
+
     result: Dict[str, Any] = {
         "investor_context": {
             "sector": params.sector,
@@ -588,6 +627,7 @@ def get_investor_path(params: GetInvestorPathInput) -> str:
         "related_setup_flows": [_clean(e) for e in related_flows],
         "misa_registration_fee": _clean(misa_fee) if misa_fee else None,
         "pathway_notes": notes,
+        "post_registration_support": post_reg,
     }
     return _respond(result)
 

@@ -100,6 +100,8 @@ REQUIRED_FILES = [
     "docs/ar/special-economic-zones.md",
     "docs/en/vision2030-sectors.md",
     "docs/ar/vision2030-sectors.md",
+    "docs/en/post-registration-services.md",
+    "docs/ar/post-registration-services.md",
 ]
 
 # Markdown link targets to skip (not local paths)

@@ -173,6 +173,20 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["muqeem", "iqama", "residency_permit", "expatriate", "timelines"]
+    },
+    {
+      "id": "strategic_investor_program_classification",
+      "authority_id": "misa",
+      "process_name": "Strategic Investor Program Classification",
+      "min_days": 5,
+      "max_days": 5,
+      "typical_days": 5,
+      "conditions": "Processing time after complete application submission. Eligibility: companies registered in prominent government programs, strategic companies (national or foreign), or companies not yet registered in the Kingdom. Fee payable within 30 days of classification approval notification.",
+      "placeholder_reason": "Verified per MISA Investor Guide, 12th Edition, March 2025, Section 3.3.1 (misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf). Processing: 5 working days after complete application submission.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "strategic_investor", "classification", "timelines"]
     }
   ]
 }

@@ -411,6 +411,36 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["muqeem", "exit_reentry_visa", "extension", "expatriate", "fees"]
+    },
+    {
+      "id": "miza_registration_fee",
+      "authority_id": "misa",
+      "fee_type": "registration",
+      "description": "Registration fee for the Miza Program — MISA's value-added services platform providing access to 12 service portfolios for local and foreign investors. Confirmed free of charge.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "Confirmed free — no fee for Miza program registration. Access to 12 service portfolios via MISA electronic portal including market entry support, talent solutions, legal advisory, and digital services. Source: MISA Investor Guide 12th Ed. §3.3.2, verified 2026-05-20.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf",
+      "last_reviewed": "2026-05-20",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "miza", "registration", "free", "post_registration", "fees"]
+    },
+    {
+      "id": "strategic_investor_program_fee",
+      "authority_id": "misa",
+      "fee_type": "registration",
+      "description": "Classification fee for the Strategic Investor Program — MISA's premium support program for companies meeting eligibility criteria. Fee is determined by MISA upon classification approval and is not published in advance.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "Fee determined by MISA upon classification approval. Payable within 30 days of notification. May be zero for some classifications. Not published in advance — confirm via investsaudi.sa Strategic Investor portal. Source: MISA Investor Guide 12th Ed. §3.3.1, verified 2026-05-20.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf",
+      "last_reviewed": "2026-05-20",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "strategic_investor", "registration", "post_registration", "fees"]
     }
   ]
 }

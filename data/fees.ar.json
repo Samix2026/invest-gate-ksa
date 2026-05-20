@@ -411,6 +411,36 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["muqeem", "exit_reentry_visa", "extension", "expatriate", "fees"]
+    },
+    {
+      "id": "miza_registration_fee",
+      "authority_id": "misa",
+      "fee_type": "registration",
+      "description": "رسم التسجيل في برنامج ميزة — منصة الخدمات ذات القيمة المضافة التابعة لوزارة الاستثمار، توفر وصولا إلى 12 محفظة خدمية للمستثمرين المحليين والأجانب. مؤكد مجاني.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "مؤكد مجاني — لا رسوم للتسجيل في برنامج ميزة. وصول إلى 12 محفظة خدمية عبر البوابة الإلكترونية لوزارة الاستثمار تشمل دعم دخول السوق وحلول المواهب والاستشارات القانونية والخدمات الرقمية. المصدر: دليل المستثمر الطبعة الثانية عشرة القسم 3.3.2، تم التحقق 2026-05-20.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf",
+      "last_reviewed": "2026-05-20",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "miza", "registration", "free", "post_registration", "fees"]
+    },
+    {
+      "id": "strategic_investor_program_fee",
+      "authority_id": "misa",
+      "fee_type": "registration",
+      "description": "رسم تصنيف برنامج المستثمر الاستراتيجي — برنامج الدعم المتميز التابع لوزارة الاستثمار للشركات المستوفية لمعايير الأهلية. يُحدَّد الرسم من قِبَل وزارة الاستثمار بعد الموافقة على التصنيف ولا يُنشَر مسبقا.",
+      "amount_sar": 0,
+      "currency": "SAR",
+      "frequency": "one_time",
+      "placeholder_reason": "الرسم يُحدَّد من قِبَل وزارة الاستثمار بعد الموافقة على التصنيف. يُستحق السداد خلال 30 يوما من الإشعار. قد يكون صفرا في بعض التصنيفات. غير منشور مسبقا — تحقق عبر بوابة برنامج المستثمر الاستراتيجي على investsaudi.sa. المصدر: دليل المستثمر الطبعة الثانية عشرة القسم 3.3.1، تم التحقق 2026-05-20.",
+      "verify_at": "https://misa.gov.sa/app/uploads/2025/03/Investor-Guide.pdf",
+      "last_reviewed": "2026-05-20",
+      "verification_status": "verified",
+      "placeholders": [],
+      "tags": ["misa", "strategic_investor", "registration", "post_registration", "fees"]
     }
   ]
 }
