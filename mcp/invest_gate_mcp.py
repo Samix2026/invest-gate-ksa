@@ -62,6 +62,11 @@ _TIMELINES_PATHS: Dict[str, str] = {
     "ar": str(ROOT / "data" / "timelines.ar.json"),
 }
 
+_SEZS_PATHS: Dict[str, str] = {
+    "en": str(ROOT / "data" / "sezs.en.json"),
+    "ar": str(ROOT / "data" / "sezs.ar.json"),
+}
+
 _JSON_CACHE: Dict[str, dict] = {}
 
 # ── Shared helpers ─────────────────────────────────────────────────────────────
@@ -219,6 +224,14 @@ class GetInvestorPathInput(BaseModel):
     lang: str = Field("en", description="Language: 'en' or 'ar'")
 
 
+class QuerySezsInput(BaseModel):
+    sez_id: Optional[str] = Field(
+        None, description="SEZ ID (e.g. 'kaec_sez', 'jazan_sez', 'ras_al_khair_sez', 'cloud_computing_sez', 'silz')"
+    )
+    tag: Optional[str] = Field(None, description="Tag to filter by (e.g. 'verified', 'logistics', 'maritime')")
+    lang: str = Field("en", description="Language: 'en' or 'ar'")
+
+
 class SearchKnowledgeBaseInput(BaseModel):
     query: str = Field(..., description="Search text to look for across datasets")
     datasets: Optional[List[str]] = Field(
@@ -226,7 +239,7 @@ class SearchKnowledgeBaseInput(BaseModel):
         description=(
             "Datasets to search (default: all). Options: "
             "business-structures, investment-licenses, sources, sectors, "
-            "source-gaps, authority-relationships, setup-flows, fees, timelines"
+            "source-gaps, authority-relationships, setup-flows, fees, timelines, sezs"
         ),
     )
     lang: str = Field("en", description="Language: 'en' or 'ar'")
@@ -358,6 +371,25 @@ def query_timelines(params: QueryTimelinesInput) -> str:
 
     results = [_clean(e) for e in entries]
     return _respond(results if results else {"message": "No timeline entries matched."})
+
+
+@mcp.tool()
+def query_sezs(params: QuerySezsInput) -> str:
+    """Query Saudi Arabia's Special Economic Zones (SEZs): KAEC, Jazan, Ras Al-Khair,
+    Cloud Computing SEZ, and SILZ. Returns tax incentives, qualifying activities,
+    anchor infrastructure, and key distinctions between zones.
+    All data is informational only — verify with ECZA and official sources."""
+    lang = _valid_lang(params.lang)
+    raw = _load_json(_SEZS_PATHS[lang])
+    entries: list = raw.get("data", [])
+
+    if params.sez_id:
+        entries = [e for e in entries if e.get("id") == params.sez_id]
+    elif params.tag:
+        entries = [e for e in entries if params.tag in e.get("tags", [])]
+
+    results = [_clean(e) for e in entries]
+    return _respond(results if results else {"message": "No SEZ entries matched."})
 
 
 @mcp.tool()
@@ -650,15 +682,18 @@ def search_knowledge_base(params: SearchKnowledgeBaseInput) -> str:
         "authority-relationships",
         "setup-flows",
     ]
-    targets = params.datasets or (_CORE + ["fees", "timelines"])
+    targets = params.datasets or (_CORE + ["fees", "timelines", "sezs"])
     core_targets = [d for d in targets if d in _CORE]
     want_fees = "fees" in targets
     want_timelines = "timelines" in targets
+    want_sezs = "sezs" in targets
 
     _SEARCH_FIELDS = [
         "id", "name", "description", "notes", "title", "label",
         "conceptual_description", "process_name", "placeholder_reason",
         "short_description",
+        "name_en", "name_ar", "notes_en", "notes_ar",
+        "strategic_advantage_en", "strategic_advantage_ar",
     ]
 
     def _hits(entry: dict) -> bool:
@@ -666,7 +701,14 @@ def search_knowledge_base(params: SearchKnowledgeBaseInput) -> str:
             val = entry.get(field)
             if isinstance(val, str) and query in val.lower():
                 return True
-        return any(query in t.lower() for t in entry.get("tags", []))
+        if any(query in t.lower() for t in entry.get("tags", [])):
+            return True
+        return any(
+            query in item.lower()
+            for field in ("qualifying_activities",)
+            for item in entry.get(field, [])
+            if isinstance(item, str)
+        )
 
     results: Dict[str, list] = {}
 
@@ -690,6 +732,12 @@ def search_knowledge_base(params: SearchKnowledgeBaseInput) -> str:
         matched = [_clean(e) for e in raw.get("data", []) if _hits(e)][:limit]
         if matched:
             results["timelines"] = matched
+
+    if want_sezs:
+        raw = _load_json(_SEZS_PATHS[lang])
+        matched = [_clean(e) for e in raw.get("data", []) if _hits(e)][:limit]
+        if matched:
+            results["sezs"] = matched
 
     if not results:
         return _respond({"message": f"No results found for: '{params.query}'"})

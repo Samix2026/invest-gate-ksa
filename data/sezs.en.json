@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Special Economic Zones — Saudi Arabia",
-    "description": "Structured data about Saudi Arabia's Special Economic Zones (SEZs) governed by the Economic Cities and Special Zones Authority (ECZA). Tax incentive figures are per ECZA official publications and Ministerial Resolution No. 468 (Official Gazette, 16 January 2026) unless marked draft.",
+    "description": "Structured data about Saudi Arabia's Special Economic Zones (SEZs) governed by the Economic Cities and Special Zones Authority (ECZA). Tax incentive figures are per ECZA official publications and Cabinet Decision No. 468/1447 (Official Gazette, 16 January 2026) unless marked draft. SILZ operates under a distinct framework from industrial SEZs — see SILZ entry notes.",
     "language": "en",
-    "last_verified": "2026-05-19"
+    "last_verified": "2026-05-21"
   },
   "data": [
     {
@@ -33,14 +33,23 @@
         "King Abdullah Port",
         "King Abdullah Economic City industrial zone"
       ],
+      "qualifying_activities": [
+        "Automobile supply chain and assembly",
+        "Consumer goods manufacturing",
+        "Electronic light manufacturing",
+        "Pharmaceutical manufacturing",
+        "Medical technology (MedTech)",
+        "Logistics and warehousing",
+        "ICT and technology services"
+      ],
       "strategic_advantage_en": "Red Sea coastal access with dedicated port infrastructure enabling direct sea freight for manufacturing and export operations.",
       "strategic_advantage_ar": "إمكانية الوصول إلى ساحل البحر الأحمر مع بنية تحتية مخصصة للميناء تتيح الشحن البحري المباشر لعمليات التصنيع والتصدير.",
       "verification_status": "verified",
-      "placeholder_reason": "Verified from ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026. CIT 5% for 20 years, WHT 0%, intra-zone VAT 0%, customs on capital equipment 0%, 100% foreign ownership, Nitaqat relaxation 5 years.",
+      "placeholder_reason": "Verified from ECZA official publications and Cabinet Decision No. 468/1447, Official Gazette 16 January 2026. CIT 5% for 20 years, WHT 0%, intra-zone VAT 0%, customs on capital equipment 0%, 100% foreign ownership, Nitaqat relaxation 5 years. Qualifying activities sourced from ECZA zone-specific investor guides and Aurifer Tax (March 2026).",
       "placeholders": [],
       "verify_at": "https://ecza.gov.sa",
-      "notes_en": "5% CIT applies to all entities regardless of ownership nationality (Saudi, GCC, or foreign) — the opposite of mainland Saudi Arabia where Saudi and GCC entities pay Zakat and foreign entities pay CIT at 20%. Commercial activities and sales are restricted to within the zone; goods moved to the Saudi mainland trigger standard mainland tax and customs rates. Source: ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026.",
-      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية (سعودية او خليجية او اجنبية)، عكس البر الرئيسي حيث تسري الزكاة على الكيانات السعودية والخليجية وضريبة الدخل بنسبة 20% على الكيانات الاجنبية. الانشطة التجارية والمبيعات مقيدة داخل المنطقة، والبضائع المنقولة الى البر الرئيسي تخضع لمعدلات الضرائب والجمارك المعيارية. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026.",
+      "notes_en": "5% CIT applies to all entities regardless of ownership nationality (Saudi, GCC, or foreign) — the opposite of mainland Saudi Arabia where Saudi and GCC entities pay Zakat and foreign entities pay CIT at 20%. Commercial activities and sales are restricted to within the zone; goods moved to the Saudi mainland trigger standard mainland tax and customs rates. Detailed activity codes require direct verification with ECZA for specific business types. Source: ECZA official publications and Cabinet Decision No. 468/1447, Official Gazette 16 January 2026.",
+      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية (سعودية او خليجية او اجنبية)، عكس البر الرئيسي حيث تسري الزكاة على الكيانات السعودية والخليجية وضريبة الدخل بنسبة 20% على الكيانات الاجنبية. الانشطة التجارية والمبيعات مقيدة داخل المنطقة، والبضائع المنقولة الى البر الرئيسي تخضع لمعدلات الضرائب والجمارك المعيارية. رموز الانشطة التفصيلية تستلزم التحقق المباشر مع الهيئة لانواع الاعمال المحددة. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468/1447، الجريدة الرسمية 16 يناير 2026.",
       "tags": ["sez", "manufacturing", "logistics", "verified", "red_sea", "kaec"]
     },
     {
@@ -70,14 +79,22 @@
         "Jazan Port",
         "Jazan City for Primary and Downstream Industries"
       ],
+      "qualifying_activities": [
+        "Food processing and packaging",
+        "Metals conversion and processing",
+        "Mineral transformation",
+        "Petrochemical processing",
+        "Logistics and distribution",
+        "Trade gateway to African markets"
+      ],
       "strategic_advantage_en": "Adjacent to established heavy industrial city with Red Sea southern route port access and proximity to African and Asian markets.",
       "strategic_advantage_ar": "مجاورة لمدينة صناعية ثقيلة راسخة مع الوصول الى ميناء الطريق الجنوبي للبحر الاحمر والقرب من الاسواق الافريقية والاسيوية.",
       "verification_status": "verified",
-      "placeholder_reason": "Verified from ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026. CIT 5% for 20 years, WHT 0%, intra-zone VAT 0%, customs on capital equipment 0%, 100% foreign ownership, Nitaqat relaxation 5 years.",
+      "placeholder_reason": "Verified from ECZA official publications and Cabinet Decision No. 468/1447, Official Gazette 16 January 2026. CIT 5% for 20 years, WHT 0%, intra-zone VAT 0%, customs on capital equipment 0%, 100% foreign ownership, Nitaqat relaxation 5 years. Qualifying activities sourced from ECZA zone-specific investor guides and Aurifer Tax (March 2026).",
       "placeholders": [],
       "verify_at": "https://ecza.gov.sa",
-      "notes_en": "5% CIT applies to all entities regardless of ownership nationality. Jazan SEZ overlaps with the existing Jazan City for Primary and Downstream Industries (JCPDI) industrial complex — investors should confirm zone boundaries with ECZA. Source: ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026.",
-      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية. تتداخل المنطقة الاقتصادية الخاصة بجازان مع مجمع مدينة جازان للصناعات الاولية والتحويلية القائم، وينبغي للمستثمرين التأكد من حدود المنطقة مع الهيئة. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026.",
+      "notes_en": "5% CIT applies to all entities regardless of ownership nationality. Jazan SEZ overlaps with the existing Jazan City for Primary and Downstream Industries (JCPDI) industrial complex — investors should confirm zone boundaries with ECZA. Detailed activity codes require direct verification with ECZA for specific business types. Source: ECZA official publications and Cabinet Decision No. 468/1447, Official Gazette 16 January 2026.",
+      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية. تتداخل المنطقة الاقتصادية الخاصة بجازان مع مجمع مدينة جازان للصناعات الاولية والتحويلية القائم، وينبغي للمستثمرين التأكد من حدود المنطقة مع الهيئة. رموز الانشطة التفصيلية تستلزم التحقق المباشر مع الهيئة لانواع الاعمال المحددة. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468/1447، الجريدة الرسمية 16 يناير 2026.",
       "tags": ["sez", "manufacturing", "petrochemicals", "food_processing", "verified", "red_sea", "jazan"]
     },
     {
@@ -106,14 +123,23 @@
         "Ras Al-Khair Industrial City",
         "King Fahd Industrial Port (nearby)"
       ],
+      "qualifying_activities": [
+        "Shipbuilding",
+        "Ship repair and maintenance (MRO)",
+        "Offshore drilling platform maintenance",
+        "Maritime services",
+        "Mining beneficiation and processing",
+        "Aluminum processing",
+        "Heavy manufacturing"
+      ],
       "strategic_advantage_en": "Proximity to Saudi Arabia's primary mining and minerals corridor with Arabian Gulf coast access and established industrial infrastructure for maritime and offshore sectors.",
       "strategic_advantage_ar": "القرب من الممر الرئيسي للتعدين والمعادن في المملكة مع الوصول الى ساحل الخليج العربي والبنية التحتية الصناعية الراسخة لقطاعي الصناعات البحرية والخدمات البحرية.",
       "verification_status": "verified",
-      "placeholder_reason": "Verified from ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026. CIT 5% for 20 years, WHT 0%, intra-zone VAT 0%, customs on capital equipment 0%, 100% foreign ownership, Nitaqat relaxation 5 years. Area figure is approximate (20 km²); exact boundary dimensions available from ECZA.",
+      "placeholder_reason": "Verified from ECZA official publications and Cabinet Decision No. 468/1447, Official Gazette 16 January 2026. CIT 5% for 20 years, WHT 0%, intra-zone VAT 0%, customs on capital equipment 0%, 100% foreign ownership, Nitaqat relaxation 5 years. Area figure is approximate (20 km²); exact boundary dimensions available from ECZA. Qualifying activities sourced from ECZA zone-specific investor guides and King & Spalding (March 2026).",
       "placeholders": [],
       "verify_at": "https://ecza.gov.sa",
-      "notes_en": "5% CIT applies to all entities regardless of ownership nationality. Area figure (20 km²) is approximate; confirm exact zone boundaries with ECZA. Source: ECZA official publications and Ministerial Resolution No. 468, Official Gazette 16 January 2026.",
-      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية. رقم المساحة (20 كم2) تقريبي؛ يرجى التأكد من الحدود الدقيقة للمنطقة مع الهيئة. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468، الجريدة الرسمية 16 يناير 2026.",
+      "notes_en": "5% CIT applies to all entities regardless of ownership nationality. Area figure (20 km²) is approximate; confirm exact zone boundaries with ECZA. Detailed activity codes require direct verification with ECZA for specific business types. Source: ECZA official publications and Cabinet Decision No. 468/1447, Official Gazette 16 January 2026.",
+      "notes_ar": "تطبق ضريبة الدخل بنسبة 5% على جميع الكيانات بصرف النظر عن جنسية الملكية. رقم المساحة (20 كم2) تقريبي؛ يرجى التأكد من الحدود الدقيقة للمنطقة مع الهيئة. رموز الانشطة التفصيلية تستلزم التحقق المباشر مع الهيئة لانواع الاعمال المحددة. المصدر: منشورات الهيئة الرسمية وقرار مجلس الوزراء رقم 468/1447، الجريدة الرسمية 16 يناير 2026.",
       "tags": ["sez", "maritime", "mining", "verified", "eastern_province", "gulf"]
     },
     {
@@ -142,10 +168,17 @@
         "Saudi Data and AI Authority (SDAIA) ecosystem",
         "KACST research infrastructure"
       ],
+      "qualifying_activities": [
+        "Cloud computing services",
+        "Data centre operations",
+        "Cybersecurity services",
+        "AI and digital infrastructure",
+        "Software and platform services"
+      ],
       "strategic_advantage_en": "OECD-aligned structural regulatory framework enabling global cloud operators to establish Saudi-registered entities with IP protections and tailored data governance rules.",
       "strategic_advantage_ar": "اطار تنظيمي هيكلي متوافق مع معايير منظمة التعاون الاقتصادي والتنمية يمكن مشغلي الحوسبة السحابية العالميين من تاسيس كيانات مسجلة في المملكة مع حماية الملكية الفكرية وقواعد حوكمة البيانات المخصصة.",
       "verification_status": "verified",
-      "placeholder_reason": "Verified from ECZA official publications. This zone operates under an OECD-aligned structural framework — it does not offer a discounted CIT rate or WHT/VAT/customs exemptions. Tax fields are null because these incentives are not applicable, not because they are unconfirmed.",
+      "placeholder_reason": "Verified from ECZA official publications. This zone operates under an OECD-aligned structural framework — it does not offer a discounted CIT rate or WHT/VAT/customs exemptions. Tax fields are null because these incentives are not applicable, not because they are unconfirmed. Qualifying activities sourced from ECZA official publications.",
       "placeholders": [],
       "verify_at": "https://ecza.gov.sa",
       "notes_en": "IMPORTANT: This zone is structurally different from KAEC, Jazan, Ras Al-Khair, and SILZ. No discounted CIT rate applies — standard Saudi CIT (20%) applies to entities in this zone. No WHT exemption, no intra-zone VAT exemption, no customs exemption on capital equipment. The benefit is a tailored OECD-aligned regulatory framework for cloud computing operators: IP protections, data handling rules, and regulatory clarity for cross-border digital services. Do not compare with industrial SEZ tax incentives.",
@@ -165,35 +198,40 @@
         "freight_forwarding",
         "ecommerce_fulfillment",
         "supply_chain",
-        "air_cargo"
+        "air_cargo",
+        "consumer_electronics",
+        "pharmaceuticals"
       ],
-      "tax_cit_rate_percent": null,
-      "tax_cit_duration_years": null,
-      "tax_wht_rate_percent": null,
-      "tax_vat_intrazone_percent": null,
-      "tax_customs_capital_equipment_percent": null,
+      "tax_cit_rate_percent": 0,
+      "tax_cit_duration_years": 50,
+      "tax_wht_rate_percent": 0,
+      "tax_vat_intrazone_percent": 0,
+      "tax_customs_capital_equipment_percent": 0,
       "foreign_ownership_percent": 100,
       "nitaqat_exemption": true,
-      "nitaqat_exemption_years": null,
+      "nitaqat_exemption_years": 5,
       "anchor_infrastructure": [
         "King Khalid International Airport",
         "Riyadh air cargo terminal"
       ],
-      "strategic_advantage_en": "Co-located with Riyadh's primary international airport, enabling same-day air cargo processing and e-commerce fulfillment for the Saudi and Gulf market.",
-      "strategic_advantage_ar": "ملاصقة لمطار الرياض الدولي الرئيسي مما يتيح معالجة الشحن الجوي في اليوم ذاته وتنفيذ طلبات التجارة الالكترونية للسوق السعودية والخليجية.",
-      "verification_status": "draft",
-      "placeholder_reason": "Tax incentive details for SILZ reported by commercial sources as matching other SEZs (5% CIT) but not confirmed directly from ECZA official source. Verify at: https://ecza.gov.sa",
-      "placeholders": [
-        {
-          "field": "tax_cit_rate_percent",
-          "description": "Reported by commercial sources as 5% matching other ECZA zones but not confirmed from ECZA official source or Official Gazette. All tax incentive fields (CIT rate, duration, WHT, VAT, customs) are unconfirmed and set to null pending verification.",
-          "verify_at": "https://ecza.gov.sa"
-        }
+      "qualifying_activities": [
+        "Maintenance, repair, processing, and assembly of goods",
+        "Sorting, packing, repacking, trading, and distribution",
+        "Importing, exporting, and re-exporting goods",
+        "Value-added logistics services",
+        "After-sales services",
+        "Recycling and electronic waste management",
+        "Simple manufacturing processes"
       ],
-      "verify_at": "https://ecza.gov.sa",
-      "notes_en": "Tax incentive details (CIT rate, WHT, customs, VAT) are reported by commercial sources as matching the standard ECZA SEZ framework (5% CIT, 0% WHT) but have not been confirmed from the ECZA official source or Official Gazette. All tax fields are null pending verification. Area converted from approximately 32 million sq ft (approx. 3.0 km²) as reported by commercial sources.",
-      "notes_ar": "تفاصيل الحوافز الضريبية (ضريبة الدخل والاستقطاع في المنبع والجمارك وضريبة القيمة المضافة) مبلغ عنها من مصادر تجارية بوصفها مماثلة لاطار المنطقة الاقتصادية الخاصة المعياري للهيئة (5% ضريبة دخل، 0% استقطاع) لكنها لم تؤكد من المصدر الرسمي او الجريدة الرسمية. جميع حقول الضرائب فارغة في انتظار التحقق. المساحة محولة من نحو 32 مليون قدم مربع (نحو 3.0 كم2) كما افادت المصادر التجارية.",
-      "tags": ["sez", "logistics", "ecommerce", "draft", "riyadh", "airport"]
+      "strategic_advantage_en": "Co-located with Riyadh's primary international airport, enabling same-day air cargo processing, regional distribution, and e-commerce fulfillment for the Saudi and Gulf market. First occupant: Apple Inc (regional distribution center).",
+      "strategic_advantage_ar": "ملاصقة لمطار الرياض الدولي الرئيسي مما يتيح معالجة الشحن الجوي في اليوم ذاته والتوزيع الاقليمي وتنفيذ طلبات التجارة الالكترونية للسوق السعودية والخليجية. اول مستأجر: شركة أبل (مركز توزيع اقليمي).",
+      "verification_status": "verified",
+      "placeholder_reason": "SILZ operates under a distinct framework from industrial SEZs. CIT: 0% for 50 years (not 5% for 20 years) per ZATCA SILZ Guideline published 10 December 2023 and ECZA regulations effective April 2026. Regulatory authority for licensing: GACA (General Authority of Civil Aviation), not ECZA. First operational SEZ — Apple Inc was first occupant. Key condition: investor must provide logistics services and have presence in at least 3 countries regionally or globally. Sources: ZATCA SILZ Guideline (Dec 2023) + EY Tax Alert + Aurifer Tax (Mar 2026) + Cabinet Decision No. 468/1447.",
+      "placeholders": [],
+      "verify_at": "https://www.ey.com/en_gl/technical/tax-alerts/saudi-arabia-issues-guideline-for-special-integrated-logistics-z",
+      "notes_en": "CRITICAL DISTINCTION: SILZ offers 0% CIT for 50 years — NOT 5% for 20 years as in industrial zones (KAEC, Jazan, Ras Al-Khair). Regulatory authority for licensing is GACA (General Authority of Civil Aviation), not ECZA. Investor must have presence in at least 3 countries regionally or globally to qualify. Goods exiting zone to Saudi mainland are subject to standard customs and VAT. No share capital requirements. No restrictions on profit repatriation or capital movement. WHT: 0% during tax holiday period. VAT and customs: suspended for goods within zone and transferred from ports. Target sectors: consumer electronics, computer products, pharmaceuticals, aviation technology, luxury goods, supply chain and distribution. Regulatory framework: Cabinet Decision No. 468/1447, effective 16 April 2026 (90 days after Official Gazette publication). Sources: ZATCA SILZ Guideline (10 December 2023), EY Tax Alert, Aurifer Tax (March 2026).",
+      "notes_ar": "تمييز جوهري: سيلز تقدم 0% ضريبة دخل لمدة 50 عاماً — لا 5% لـ 20 عاماً كما في المناطق الصناعية (كاك وجازان ورأس الخير). الجهة التنظيمية للترخيص هي هيئة الطيران المدني لا هيئة المدن الاقتصادية والمناطق الخاصة. يجب ان يكون للمستثمر تواجد في 3 دول على الاقل اقليميا او دوليا للتأهل. البضائع الخارجة من المنطقة الى البر الرئيسي السعودي تخضع للجمارك وضريبة القيمة المضافة المعيارية. لا متطلبات لراس المال. لا قيود على اعادة الارباح او حركة راس المال. الاستقطاع في المنبع: 0% خلال فترة الاعفاء. ضريبة القيمة المضافة والجمارك: معلقة للبضائع داخل المنطقة والمنقولة من الموانئ. القطاعات المستهدفة: الكترونيات المستهلك، منتجات الحاسب، الصيدلانيات، تقنية الطيران، السلع الفاخرة، سلاسل الامداد والتوزيع. الاطار التنظيمي: قرار مجلس الوزراء رقم 468/1447، ساري من 16 ابريل 2026 (90 يوما بعد نشر الجريدة الرسمية). المصادر: دليل هيئة الزكاة والضريبة والجمارك للمنطقة اللوجستية المتكاملة الخاصة (10 ديسمبر 2023)، EY Tax Alert، Aurifer Tax (مارس 2026).",
+      "tags": ["sez", "logistics", "ecommerce", "verified", "riyadh", "airport", "gaca", "silz"]
     }
   ]
 }
