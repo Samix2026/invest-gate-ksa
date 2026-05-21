@@ -67,6 +67,11 @@ _SEZS_PATHS: Dict[str, str] = {
     "ar": str(ROOT / "data" / "sezs.ar.json"),
 }
 
+_ACTIVITIES_PATHS: Dict[str, str] = {
+    "en": str(ROOT / "data" / "economic-activities.en.json"),
+    "ar": str(ROOT / "data" / "economic-activities.ar.json"),
+}
+
 _JSON_CACHE: Dict[str, dict] = {}
 
 # ── Shared helpers ─────────────────────────────────────────────────────────────
@@ -232,6 +237,23 @@ class QuerySezsInput(BaseModel):
     lang: str = Field("en", description="Language: 'en' or 'ar'")
 
 
+class QueryActivitiesInput(BaseModel):
+    keyword: Optional[str] = Field(
+        None,
+        description="Search text matched against activity name, short description, and notes (both EN and AR).",
+    )
+    isic4_code: Optional[str] = Field(
+        None, description="Filter by 4-digit ISIC4 class code (e.g. '7020', '6201', '8621')."
+    )
+    foreign_ownership_allowed: Optional[bool] = Field(
+        None, description="Filter by ownership openness: true = open to foreign investment, false = restricted/excluded."
+    )
+    regulatory_sensitivity: Optional[str] = Field(
+        None, description="Filter by regulatory burden: 'low', 'medium', or 'high'."
+    )
+    lang: str = Field("en", description="Language: 'en' or 'ar'")
+
+
 class SearchKnowledgeBaseInput(BaseModel):
     query: str = Field(..., description="Search text to look for across datasets")
     datasets: Optional[List[str]] = Field(
@@ -239,7 +261,7 @@ class SearchKnowledgeBaseInput(BaseModel):
         description=(
             "Datasets to search (default: all). Options: "
             "business-structures, investment-licenses, sources, sectors, "
-            "source-gaps, authority-relationships, setup-flows, fees, timelines, sezs"
+            "source-gaps, authority-relationships, setup-flows, fees, timelines, sezs, economic-activities"
         ),
     )
     lang: str = Field("en", description="Language: 'en' or 'ar'")
@@ -390,6 +412,46 @@ def query_sezs(params: QuerySezsInput) -> str:
 
     results = [_clean(e) for e in entries]
     return _respond(results if results else {"message": "No SEZ entries matched."})
+
+
+@mcp.tool()
+def query_activities(params: QueryActivitiesInput) -> str:
+    """Query economic activities relevant to foreign investors in Saudi Arabia.
+    Returns ISIC4 classification, foreign ownership allowance, ownership limits,
+    regulatory sensitivity, relevant authorities, and common investor confusions.
+    Covers open activities (100% foreign ownership), restricted activities, and
+    excluded activities (reserved for Saudi nationals). Informational only —
+    verify current approved-activities list with MISA before relying on this data."""
+    lang = _valid_lang(params.lang)
+    raw = _load_json(_ACTIVITIES_PATHS[lang])
+    entries: list = raw.get("data", [])
+
+    if params.isic4_code:
+        entries = [
+            e for e in entries
+            if e.get("classification", {}).get("isic4", {}).get("class") == params.isic4_code
+        ]
+    if params.foreign_ownership_allowed is not None:
+        entries = [
+            e for e in entries
+            if e.get("foreign_ownership_allowed") == params.foreign_ownership_allowed
+        ]
+    if params.regulatory_sensitivity:
+        entries = [
+            e for e in entries
+            if e.get("regulatory_sensitivity") == params.regulatory_sensitivity
+        ]
+    if params.keyword:
+        kw = params.keyword.lower()
+        _kw_fields = ("name", "name_alt", "short_description", "notes")
+        entries = [
+            e for e in entries
+            if any(kw in str(e.get(f, "")).lower() for f in _kw_fields)
+            or any(kw in t.lower() for t in e.get("tags", []))
+        ]
+
+    results = [_clean(e) for e in entries]
+    return _respond(results if results else {"message": "No activity entries matched."})
 
 
 @mcp.tool()
@@ -682,14 +744,15 @@ def search_knowledge_base(params: SearchKnowledgeBaseInput) -> str:
         "authority-relationships",
         "setup-flows",
     ]
-    targets = params.datasets or (_CORE + ["fees", "timelines", "sezs"])
+    targets = params.datasets or (_CORE + ["fees", "timelines", "sezs", "economic-activities"])
     core_targets = [d for d in targets if d in _CORE]
     want_fees = "fees" in targets
     want_timelines = "timelines" in targets
     want_sezs = "sezs" in targets
+    want_activities = "economic-activities" in targets
 
     _SEARCH_FIELDS = [
-        "id", "name", "description", "notes", "title", "label",
+        "id", "name", "name_alt", "description", "notes", "title", "label",
         "conceptual_description", "process_name", "placeholder_reason",
         "short_description",
         "name_en", "name_ar", "notes_en", "notes_ar",
@@ -738,6 +801,12 @@ def search_knowledge_base(params: SearchKnowledgeBaseInput) -> str:
         matched = [_clean(e) for e in raw.get("data", []) if _hits(e)][:limit]
         if matched:
             results["sezs"] = matched
+
+    if want_activities:
+        raw = _load_json(_ACTIVITIES_PATHS[lang])
+        matched = [_clean(e) for e in raw.get("data", []) if _hits(e)][:limit]
+        if matched:
+            results["economic-activities"] = matched
 
     if not results:
         return _respond({"message": f"No results found for: '{params.query}'"})

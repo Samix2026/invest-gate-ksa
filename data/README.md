@@ -30,7 +30,8 @@ This directory holds structured, machine-readable data derived from official sou
 | `timelines.ar.json` | Estimated processing durations — Arabic | Draft |
 | `sezs.en.json` | Special Economic Zones: tax incentives, sectors, infrastructure (ECZA) — English | Draft/Verified |
 | `sezs.ar.json` | Special Economic Zones — Arabic | Draft/Verified |
-| `ownership_limits.json` | Foreign ownership thresholds by sector | Planned |
+| `economic-activities.en.json` | Economic activities: ISIC4 classification, foreign ownership limits, regulatory sensitivity — English | Draft/Verified |
+| `economic-activities.ar.json` | Economic activities — Arabic | Draft/Verified |
 
 ---
 

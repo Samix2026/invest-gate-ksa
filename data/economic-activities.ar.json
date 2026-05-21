@@ -1,0 +1,999 @@
+{
+  "meta": {
+    "title": "الأنشطة الاقتصادية — المملكة العربية السعودية (منظور الاستثمار الأجنبي)",
+    "description": "بيانات منظمة عن الأنشطة الاقتصادية ذات الصلة بالمستثمرين الأجانب في المملكة العربية السعودية. تغطي التصنيف وفق ISIC4 وحدود الملكية الأجنبية والحساسية التنظيمية والجهات المختصة. جميع الإدخالات تستند إلى قائمة الأنشطة المعتمدة من وزارة الاستثمار وقائمة الأنشطة المستثناة في نظام الاستثمار. البيانات للأغراض التعريفية فقط — لا تمثل توجيهاً قانونياً أو إجرائياً.",
+    "language": "ar",
+    "last_verified": "2026-05-21"
+  },
+  "data": [
+    {
+      "id": "management_consulting",
+      "name": "أنشطة الاستشارات الإدارية",
+      "name_alt": "Management Consulting Activities",
+      "short_description": "خدمات استشارية استراتيجية وتشغيلية للمنظمات. مفتوح لملكية أجنبية بنسبة 100% وفق قائمة الأنشطة المعتمدة من وزارة الاستثمار.",
+      "classification": {
+        "isic4": {
+          "section": "M",
+          "division": "70",
+          "group": "702",
+          "class": "7020",
+          "label": "Management consultancy activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "مؤكد في قائمة الأنشطة المعتمدة من وزارة الاستثمار للملكية الأجنبية بنسبة 100%. كود النشاط الوطني السعودي لم يُتحقق منه بعد."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["consulting"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "لا يستلزم الاستشار الإداري ترخيصاً مهنياً إضافياً سوى تسجيل وزارة الاستثمار والسجل التجاري.",
+        "رسوم الاستشارات المدفوعة من كيان سعودي لمستشار أجنبي في الخارج تخضع لضريبة استقطاع بنسبة 20% — وهذا التزام على الكيان السعودي الدافع لا على شركة الاستشارات المسجلة في المملكة."
+      ],
+      "notes": "لا يوجد حد أدنى لرأس المال محدد لنشاط الاستشارات الإدارية. المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (approved activities for foreign investment). Activity confirmed on approved list for 100% foreign ownership. ISIC4 code 7020 matched against UN ISIC Rev.4 classification.",
+      "placeholders": [],
+      "tags": ["professional_services", "consulting", "verified", "low_regulatory", "section_m"]
+    },
+    {
+      "id": "it_consulting",
+      "name": "استشارات الحاسوب وإدارة مرافق تقنية المعلومات",
+      "name_alt": "Computer Consultancy and IT Facilities Management",
+      "short_description": "خدمات الاستشارات التقنية وتخطيط البنية التحتية لتقنية المعلومات وإدارة المرافق. مفتوح لملكية أجنبية بنسبة 100%.",
+      "classification": {
+        "isic4": {
+          "section": "J",
+          "division": "62",
+          "group": "620",
+          "class": "6202",
+          "label": "Computer consultancy and computer facilities management activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "مؤكد في قائمة الأنشطة المعتمدة من وزارة الاستثمار للملكية الأجنبية بنسبة 100%. كود النشاط الوطني السعودي لم يُتحقق منه بعد."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["consulting", "technology"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "استشارات تقنية المعلومات (6202) وبرمجة الحاسوب (6201) صنفان منفصلان في ISIC4. كلاهما مفتوح لملكية أجنبية بنسبة 100% لكن قد يكون لكل منهما كود نشاط وطني سعودي مختلف.",
+        "خدمات الاستشارات في أمن المعلومات تندرج ضمن استشارات تقنية المعلومات لأغراض التصنيف، لكن قد تستلزم تصاريح إضافية للأعمال الموجهة للجهات الحكومية."
+      ],
+      "notes": "المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. ISIC4 code 6202 matched against UN ISIC Rev.4.",
+      "placeholders": [],
+      "tags": ["technology", "consulting", "verified", "low_regulatory", "section_j"]
+    },
+    {
+      "id": "accounting_services",
+      "name": "أنشطة المحاسبة ومسك الدفاتر والمراجعة",
+      "name_alt": "Accounting, Bookkeeping and Auditing Activities",
+      "short_description": "خدمات المحاسبة المهنية ومسك الدفاتر والمراجعة الخارجية القانونية والاستشارات الضريبية. قد تستلزم أنشطة المراجعة اعتراف هيئة المحاسبين والمراجعين السعوديين.",
+      "classification": {
+        "isic4": {
+          "section": "M",
+          "division": "69",
+          "group": "692",
+          "class": "6920",
+          "label": "Accounting, bookkeeping and auditing activities; tax consultancy",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["consulting"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_commerce",
+          "name": "وزارة التجارة",
+          "role": "السجل التجاري والترخيص المهني لشركات المحاسبة"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "المراجعة القانونية (المراجعة الخارجية للقوائم المالية) تشترط حصول الممارسين على اعتراف هيئة المحاسبين والمراجعين السعوديين (هيئة SOCPA). المؤهلات الأجنبية تخضع للتقييم من قِبَل الهيئة.",
+        "المحاسبة الإدارية العامة ومسك الدفاتر لها حواجز تنظيمية أدنى من المراجعة القانونية. تأكد من النشاط الفرعي المحدد قبل التقديم."
+      ],
+      "notes": "هيئة المحاسبين والمراجعين السعوديين هي الجهة المهنية المختصة بأنشطة المراجعة في المملكة. كود النشاط الوطني وحالة الظهور في قائمة وزارة الاستثمار لم يُتحققا بعد.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.activity_code",
+          "description": "كود النشاط الوطني السعودي لأنشطة المحاسبة والمراجعة لم يُتحقق منه بعد مقابل قائمة الأنشطة المعتمدة من وزارة الاستثمار.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كانت المحاسبة والمراجعة مدرجة في قائمة وزارة الاستثمار للملكية الأجنبية بنسبة 100%، وما إذا كان اعتراف هيئة SOCPA شرطاً مسبقاً لتسجيل وزارة الاستثمار.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["professional_services", "accounting", "draft", "medium_regulatory", "section_m"]
+    },
+    {
+      "id": "software_development",
+      "name": "أنشطة برمجة الحاسوب",
+      "name_alt": "Computer Programming Activities",
+      "short_description": "تطوير البرامج وتطبيقات الحاسوب والبرمجيات المخصصة. مفتوح لملكية أجنبية بنسبة 100% وفق قائمة الأنشطة المعتمدة من وزارة الاستثمار.",
+      "classification": {
+        "isic4": {
+          "section": "J",
+          "division": "62",
+          "group": "620",
+          "class": "6201",
+          "label": "Computer programming activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "مؤكد في قائمة الأنشطة المعتمدة من وزارة الاستثمار للملكية الأجنبية بنسبة 100%. كود النشاط الوطني السعودي لم يُتحقق منه بعد."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["technology"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "برمجة الحاسوب (6201) واستشارات تقنية المعلومات (6202) صنفان منفصلان. شركة تطوير المنتجات البرمجية تندرج تحت 6201؛ الشركة الاستشارية في تقنية المعلومات تندرج تحت 6202.",
+        "تطوير تطبيقات الجوال ومنصات SaaS والبرامج المؤسسية جميعها مشمولة ضمن برمجة الحاسوب لأغراض التصنيف."
+      ],
+      "notes": "المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. ISIC4 code 6201 matched against UN ISIC Rev.4.",
+      "placeholders": [],
+      "tags": ["technology", "software", "verified", "low_regulatory", "section_j"]
+    },
+    {
+      "id": "data_processing",
+      "name": "أنشطة معالجة البيانات والاستضافة",
+      "name_alt": "Data Processing and Hosting Activities",
+      "short_description": "معالجة البيانات والاستضافة السحابية والخدمات المُدارة والبنية التحتية التقنية ذات الصلة. على الأرجح مفتوح لملكية أجنبية بنسبة 100%.",
+      "classification": {
+        "isic4": {
+          "section": "J",
+          "division": "63",
+          "group": "631",
+          "class": "6311",
+          "label": "Data processing, hosting and related activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["technology"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "مشغلو مراكز البيانات (البنية التحتية المادية) ومزودو الخدمات السحابية (البرمجية) كلاهما يندرج تحت ISIC 6311 لكن قد تكون لهما متطلبات تنظيمية سعودية متمايزة.",
+        "المنطقة الاقتصادية الخاصة للحوسبة السحابية (هيئة المدن الاقتصادية والمناطق الخاصة) توفر إطاراً تنظيمياً مخصصاً لمشغلي الحوسبة السحابية — راجع مجموعة بيانات المناطق الاقتصادية الخاصة للتفاصيل."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني السعودي لم يُتحققا بعد مقابل المصدر الرسمي.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كانت معالجة البيانات والاستضافة مدرجة في قائمة وزارة الاستثمار للملكية الأجنبية بنسبة 100%، وما إذا كانت لوائح هيئة البيانات والذكاء الاصطناعي (سدايا) تفرض متطلبات إضافية.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["technology", "data", "draft", "low_regulatory", "section_j"]
+    },
+    {
+      "id": "fintech_services",
+      "name": "خدمات التقنية المالية",
+      "name_alt": "Financial Technology (FinTech) Services",
+      "short_description": "الخدمات المالية المدعومة بالتقنية كالمدفوعات ومنصات الإقراض وأدوات الاستثمار. مفتوح لملكية أجنبية بنسبة 100% مع ترخيص من ساما أو هيئة السوق المالية وفقاً لنوع النشاط.",
+      "classification": {
+        "isic4": {
+          "section": "K",
+          "division": "64",
+          "group": "649",
+          "class": "6499",
+          "label": "Other financial service activities, n.e.c.",
+          "alignment_note": "FinTech spans multiple ISIC4 classes depending on the specific product. ISIC 6499 is the closest single-class match for technology-enabled financial intermediation that does not fit lending (6492) or insurance (65xx). Payment services may also map to 6619."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "مؤكد في قائمة الأنشطة المعتمدة من وزارة الاستثمار. الجهة الترخيصية (ساما أو هيئة السوق المالية) تعتمد على نوع منتج التقنية المالية. كود النشاط الوطني السعودي لم يُتحقق منه بعد."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["fintech", "technology"],
+      "likely_authorities": [
+        {
+          "id": "sama",
+          "name": "البنك المركزي السعودي (ساما)",
+          "role": "الجهة الترخيصية لخدمات الدفع ومنصات الإقراض والمنتجات المجاورة للخدمات المصرفية؛ تشغيل بيئة الاختبار التنظيمي للتقنية المالية"
+        },
+        {
+          "id": "cma",
+          "name": "هيئة السوق المالية",
+          "role": "الجهة الترخيصية لمنصات الاستثمار والمستشارين الآليين ومنتجات التقنية المالية في أسواق رأس المال"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "ساما تُرخص خدمات الدفع والإقراض والشراء الآجل والمنتجات المجاورة للخدمات المصرفية. هيئة السوق المالية تُرخص منصات الاستثمار والتمويل الجماعي بالحصص وأدوات أسواق رأس المال. التقديم إلى الجهة الخاطئة يؤدي إلى الرفض.",
+        "بيئة الاختبار التنظيمي لساما تتيح الاختبار دون ترخيص كامل. وهي لا تُغني عن تسجيل وزارة الاستثمار — كلاهما مطلوب.",
+        "تداول العملات المشفرة والأصول الرقمية خاضع لتنظيم منفصل وقد يستلزم موافقات إضافية تتجاوز ترخيص ساما أو هيئة السوق المالية."
+      ],
+      "notes": "المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00. بيئة الاختبار التنظيمي لساما: fintech.sa.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. SAMA/CMA licensing requirement documented. ISIC4 code 6499 is a partial-match alignment — noted in alignment_note.",
+      "placeholders": [],
+      "tags": ["fintech", "technology", "verified", "high_regulatory", "section_k"]
+    },
+    {
+      "id": "private_clinic",
+      "name": "أنشطة الممارسة الطبية العامة",
+      "name_alt": "General Medical Practice Activities",
+      "short_description": "عيادات طبية عامة خاصة ومرافق رعاية صحية خارجية. مفتوح لملكية أجنبية بنسبة 100% مع ترخيصين مزدوجين من وزارة الاستثمار ووزارة الصحة.",
+      "classification": {
+        "isic4": {
+          "section": "Q",
+          "division": "86",
+          "group": "862",
+          "class": "8621",
+          "label": "General medical practice activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "مؤكد في قائمة الأنشطة المعتمدة من وزارة الاستثمار. ترخيص المنشأة من وزارة الصحة وتراخيص الممارسين الأفراد من وزارة الصحة أو الهيئة السعودية للتخصصات الصحية مطلوبة إضافةً إلى تسجيل وزارة الاستثمار."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["healthcare"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_health",
+          "name": "وزارة الصحة",
+          "role": "ترخيص منشأة الرعاية الصحية مطلوب لجميع العيادات والمراكز الطبية الخاصة"
+        },
+        {
+          "id": "scfhs",
+          "name": "الهيئة السعودية للتخصصات الصحية",
+          "role": "تقييم وترخيص الممارسين الصحيين الأفراد؛ تقييم الدرجات الطبية الأجنبية"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "الترخيص المزدوج إلزامي: (1) تسجيل الاستثمار في وزارة الاستثمار للكيان الشركاتي، (2) ترخيص المنشأة من وزارة الصحة للعيادة ذاتها. تسجيل وزارة الاستثمار لا يُغني عن ترخيص وزارة الصحة.",
+        "يجب أن يحمل الممارسون الأفراد تراخيص من وزارة الصحة أو الهيئة السعودية للتخصصات الصحية بصرف النظر عن وضع الشركة لدى وزارة الاستثمار. المؤهلات الطبية الأجنبية تخضع للتقييم من قِبَل الهيئة.",
+        "المنشآت على مستوى المستشفيات لها متطلبات إضافية تتجاوز مستوى العيادات — تأكد مع وزارة الصحة من فئة المنشأة المنطبقة."
+      ],
+      "notes": "المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. Dual MoH + MISA licensing requirement documented.",
+      "placeholders": [],
+      "tags": ["healthcare", "medical", "verified", "high_regulatory", "section_q"]
+    },
+    {
+      "id": "dental_practice",
+      "name": "أنشطة ممارسة طب الأسنان",
+      "name_alt": "Dental Practice Activities",
+      "short_description": "عيادات الأسنان الخاصة وخدمات طب الأسنان المتخصصة. على الأرجح مفتوح لملكية أجنبية بنسبة 100% مع نفس متطلبات الترخيص المزدوج للممارسة الطبية العامة.",
+      "classification": {
+        "isic4": {
+          "section": "Q",
+          "division": "86",
+          "group": "862",
+          "class": "8623",
+          "label": "Dental practice activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["healthcare"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_health",
+          "name": "وزارة الصحة",
+          "role": "ترخيص منشأة طب الأسنان مطلوب لعيادات الأسنان الخاصة"
+        },
+        {
+          "id": "scfhs",
+          "name": "الهيئة السعودية للتخصصات الصحية",
+          "role": "ترخيص الممارسين أطباء الأسنان الأفراد؛ تقييم مؤهلات طب الأسنان الأجنبية"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "لطب الأسنان نفس هيكل الترخيص المزدوج الخاص بالممارسة الطبية العامة: تسجيل وزارة الاستثمار (الشركة) وترخيص منشأة وزارة الصحة (العيادة). تأكد من فئة الترخيص المحددة مع وزارة الصحة.",
+        "أطباء الأسنان المتخصصون (تقويم الأسنان، جراحة الفم) قد يحتاجون إلى اعتراف تخصصي إضافي من الهيئة السعودية للتخصصات الصحية يتجاوز ترخيص طبيب الأسنان العام."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار لطب الأسنان تحديداً لم تُؤكد بعد. مُفترض مفتوح بالقياس على الممارسة الطبية العامة (8621) المؤكدة في القائمة المعتمدة.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كانت ممارسة طب الأسنان مدرجة تحديداً في قائمة وزارة الاستثمار للملكية الأجنبية بنسبة 100%.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["healthcare", "dental", "draft", "high_regulatory", "section_q"]
+    },
+    {
+      "id": "higher_education",
+      "name": "التعليم العالي",
+      "name_alt": "Higher Education",
+      "short_description": "الجامعات والكليات ومؤسسات التعليم العالي الخاصة. مفتوح لملكية أجنبية بنسبة 100% مع ترخيص من وزارة التعليم.",
+      "classification": {
+        "isic4": {
+          "section": "P",
+          "division": "85",
+          "group": "853",
+          "class": "8530",
+          "label": "Higher education",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["education"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_education",
+          "name": "وزارة التعليم",
+          "role": "ترخيص مؤسسات التعليم العالي الخاصة؛ الإشراف على المناهج والاعتماد"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "ترخيص وزارة التعليم إلزامي ويسبق أي نشاط تشغيلي — تسجيل وزارة الاستثمار وحده لا يُجيز التدريس أو منح الدرجات العلمية.",
+        "الاعتماد منفصل عن الترخيص. ترخيص وزارة التعليم يُتيح التشغيل؛ الاعتراف بالدرجات العلمية يستلزم الاعتماد من هيئة تقويم التعليم والتدريب (إتقان)."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد. متطلبات تنظيمية مختلفة تنطبق على الجامعات الأجنبية التي تُنشئ حرماً سعودياً مقارنةً بإنشاء جامعة خاصة سعودية مسجلة محلياً.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان التعليم العالي مدرجاً في قائمة وزارة الاستثمار وما هي شروط الملكية المنطبقة.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["education", "higher_education", "draft", "high_regulatory", "section_p"]
+    },
+    {
+      "id": "vocational_training",
+      "name": "التعليم التقني والمهني",
+      "name_alt": "Technical and Vocational Education",
+      "short_description": "مراكز التدريب التقني الخاصة ومزودو التعليم المهني. على الأرجح مفتوح لملكية أجنبية بنسبة 100% مع ترخيص قطاعي.",
+      "classification": {
+        "isic4": {
+          "section": "P",
+          "division": "85",
+          "group": "853",
+          "class": "8532",
+          "label": "Technical and vocational secondary education",
+          "alignment_note": "ISIC 8532 covers secondary-level vocational education. Post-secondary vocational training centres may also map to ISIC 8559 (other education n.e.c.). The Saudi classification may treat these differently."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["education"],
+      "likely_authorities": [
+        {
+          "id": "tvtc",
+          "name": "المؤسسة العامة للتدريب التقني والمهني",
+          "role": "اعتماد مراكز التدريب التقني والمهني الخاصة والإشراف عليها"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "مراكز التدريب المهني قد تخضع لإشراف المؤسسة العامة للتدريب التقني والمهني بدلاً من وزارة التعليم أو بالإضافة إليها. الجهة الترخيصية المنطبقة تعتمد على نوع البرنامج.",
+        "خدمات التدريب المؤسسي والتطوير المهني بين الشركات (B2B) لها متطلبات تنظيمية مختلفة عن البرامج المهنية المعتمدة التي تُصدر شهادات."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد. اعتماد المؤسسة العامة للتدريب التقني والمهني غالباً مطلوب للشهادات المعترف بها رسمياً.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان التدريب المهني مدرجاً في قائمة وزارة الاستثمار وأي جهة (وزارة التعليم أو المؤسسة العامة للتدريب التقني والمهني) تُصدر الترخيص التشغيلي.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["education", "vocational", "draft", "medium_regulatory", "section_p"]
+    },
+    {
+      "id": "wholesale_trade_general",
+      "name": "تجارة الجملة غير المتخصصة",
+      "name_alt": "Non-Specialised Wholesale Trade",
+      "short_description": "تجارة الجملة العامة لمجموعة متنوعة من البضائع. مفتوح لملكية أجنبية بنسبة 100% مع اشتراط سنوات تشغيلية سابقة خارج المملكة.",
+      "classification": {
+        "isic4": {
+          "section": "G",
+          "division": "46",
+          "group": "469",
+          "class": "4690",
+          "label": "Non-specialised wholesale trade",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "مؤكد في قائمة الأنشطة المعتمدة من وزارة الاستثمار. يُشترط سجل تشغيلي لمدة 2 سنة على الأقل خارج المملكة قبل التسجيل. تنطبق متطلبات نطاقات السعودة."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["ecommerce"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "يُشترط حد أدنى 2 سنة من السجل التشغيلي كشركة خارج المملكة قبل تسجيل وزارة الاستثمار لتجارة الجملة. الشركة الأجنبية المؤسسة حديثاً لا تستوفي هذا الشرط.",
+        "متطلبات نطاقات السعودة لشركات تجارة الجملة تستوجب أن تكون نسبة معينة من الموظفين من المواطنين السعوديين — النسبة الدقيقة تعتمد على نطاق الشركة."
+      ],
+      "notes": "المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00. كود النشاط الوطني السعودي لم يُتحقق منه بعد.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership with 2-year prior operating history condition.",
+      "placeholders": [],
+      "tags": ["trade", "wholesale", "verified", "low_regulatory", "section_g"]
+    },
+    {
+      "id": "ecommerce_retail",
+      "name": "البيع بالتجزئة عبر الانترنت",
+      "name_alt": "Retail Sale via Internet",
+      "short_description": "عمليات التجارة الإلكترونية والبيع بالتجزئة عبر الإنترنت. مفتوح لملكية أجنبية بنسبة 100% مع ترخيص تجارة إلكترونية من وزارة التجارة.",
+      "classification": {
+        "isic4": {
+          "section": "G",
+          "division": "47",
+          "group": "479",
+          "class": "4791",
+          "label": "Retail sale via Internet",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "مؤكد في قائمة الأنشطة المعتمدة من وزارة الاستثمار. ترخيص التجارة الإلكترونية من وزارة التجارة مطلوب إضافةً إلى تسجيل وزارة الاستثمار. المنصة يجب أن تمتثل لنظام حماية المستهلك السعودي."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["ecommerce"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_commerce",
+          "name": "وزارة التجارة",
+          "role": "ترخيص التجارة الإلكترونية والإشراف على الامتثال لنظام حماية المستهلك"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "ترخيص التجارة الإلكترونية من وزارة التجارة مطلوب إضافةً إلى تسجيل وزارة الاستثمار والسجل التجاري. ترخيص وزارة التجارة يُنظم العملية التجارية الإلكترونية ذاتها.",
+        "التجارة الإلكترونية العابرة للحدود (الشحن للمستهلكين السعوديين من الخارج دون كيان سعودي) نموذج مختلف. تسجيل وزارة الاستثمار ينطبق على كيان سعودي مسجل يُشغل منصة تجارة إلكترونية سعودية."
+      ],
+      "notes": "المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00. كود النشاط الوطني السعودي لم يُتحقق منه بعد.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. Ministry of Commerce e-commerce licence requirement documented.",
+      "placeholders": [],
+      "tags": ["ecommerce", "retail", "verified", "low_regulatory", "section_g"]
+    },
+    {
+      "id": "food_manufacturing",
+      "name": "تصنيع منتجات غذائية اخرى",
+      "name_alt": "Manufacture of Other Food Products",
+      "short_description": "تصنيع منتجات غذائية متنوعة غير مصنفة في موضع آخر. يستلزم ترخيص منشأة من الهيئة العامة للغذاء والدواء؛ شهادة الحلال مطلوبة للمنتجات المنطبقة.",
+      "classification": {
+        "isic4": {
+          "section": "C",
+          "division": "10",
+          "group": "108",
+          "class": "1089",
+          "label": "Manufacture of other food products n.e.c.",
+          "alignment_note": "ISIC 1089 covers residual food manufacturing. More specific codes (e.g. 1050 dairy, 1061 grain milling, 1071 bakery) may be more appropriate depending on the specific product."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["food_and_beverage", "manufacturing"],
+      "likely_authorities": [
+        {
+          "id": "sfda",
+          "name": "الهيئة العامة للغذاء والدواء",
+          "role": "ترخيص منشأة تصنيع الغذاء؛ تسجيل المنتجات؛ الامتثال للحلال والتسمية"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "ترخيص منشأة الهيئة العامة للغذاء والدواء إلزامي ويجب الحصول عليه قبل بدء الإنتاج. تسجيل وزارة الاستثمار والسجل التجاري لا يُجيزان تصنيع الغذاء.",
+        "شهادة الحلال مطلوبة لجميع منتجات اللحوم والدواجن ومستحسنة لفئات الغذاء الأخرى المباعة في السوق السعودي.",
+        "كود ISIC 1089 كود متبقٍّ — تحقق من كود ISIC4 الأكثر تحديداً وكود النشاط الوطني السعودي المقابل لفئة منتجك الغذائي المحددة."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد. يجب تأكيد متطلبات وجداول الهيئة العامة للغذاء والدواء في sfda.gov.sa.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان تصنيع الغذاء مدرجاً في قائمة وزارة الاستثمار للملكية الأجنبية بنسبة 100% وما إذا كانت متطلبات رأس المال الأدنى أو المنشأة منطبقة.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "classification.isic4.class",
+          "description": "كود ISIC 1089 كود متبقٍّ. تأكد من كود ISIC4 الأكثر تحديداً لفئة المنتج الغذائي للمستثمر.",
+          "verify_at": "stats.gov.sa"
+        }
+      ],
+      "tags": ["manufacturing", "food", "draft", "medium_regulatory", "section_c"]
+    },
+    {
+      "id": "pharmaceutical_manufacturing",
+      "name": "تصنيع المستحضرات الصيدلانية",
+      "name_alt": "Manufacture of Pharmaceutical Products",
+      "short_description": "تصنيع المستحضرات الصيدلانية الأساسية والتحضيرات الصيدلانية. قطاع شديد التنظيم — شهادة GMP وترخيص المنشأة من الهيئة العامة للغذاء والدواء إلزاميان.",
+      "classification": {
+        "isic4": {
+          "section": "C",
+          "division": "21",
+          "group": "210",
+          "class": "2100",
+          "label": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["healthcare", "manufacturing"],
+      "likely_authorities": [
+        {
+          "id": "sfda",
+          "name": "الهيئة العامة للغذاء والدواء",
+          "role": "ترخيص منشأة التصنيع الصيدلاني؛ التفتيش على ممارسات التصنيع الجيدة وإصدار شهادتها؛ تسجيل المنتجات"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "شهادة ممارسات التصنيع الجيدة (GMP) من الهيئة العامة للغذاء والدواء متطلب قانوني — لا علامة جودة. لا يمكن بدء الإنتاج دونها.",
+        "كل منتج دوائي يجب تسجيله منفرداً لدى الهيئة قبل بيعه في المملكة، مستقلاً عن ترخيص المنشأة.",
+        "الأجهزة الطبية والأدوية لها مسارات تنظيمية منفصلة في الهيئة. تأكد من المسار الصحيح لفئة منتجك."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد. التصنيع الدوائي قطاع أولوية في أهداف توطين الرعاية الصحية ضمن رؤية 2030. الجداول الزمنية لترخيص الهيئة العامة للغذاء والدواء طويلة — يجب احتسابها في تخطيط المشروع.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان التصنيع الدوائي مدرجاً في قائمة وزارة الاستثمار للملكية الأجنبية بنسبة 100% وما هي متطلبات رأس المال أو المنشأة المنطبقة.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["manufacturing", "pharmaceutical", "healthcare", "draft", "high_regulatory", "section_c"]
+    },
+    {
+      "id": "construction_buildings",
+      "name": "انشاء المباني",
+      "name_alt": "Construction of Buildings",
+      "short_description": "أنشطة إنشاء المباني السكنية وغير السكنية. مفتوح لملكية أجنبية بنسبة 100% وفق متطلبات وزارة الاستثمار والسجل التجاري المعيارية.",
+      "classification": {
+        "isic4": {
+          "section": "F",
+          "division": "41",
+          "group": "410",
+          "class": "4100",
+          "label": "Construction of buildings",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["manufacturing", "industrial_services"],
+      "likely_authorities": [
+        {
+          "id": "balady",
+          "name": "بلدي (وزارة الشؤون البلدية والقروية)",
+          "role": "الترخيص التشغيلي البلدي وتصاريح البناء"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "تصاريح البناء (الصادرة لكل مشروع من بلدي) منفصلة عن السجل التجاري وتسجيل الاستثمار في وزارة الاستثمار لشركة المقاولات.",
+        "مشاريع البنية التحتية الكبرى قد تستلزم موافقات إضافية من وزارة النقل أو وزارة الطاقة حسب نوع المشروع."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد. تنطبق متطلبات نطاقات السعودة على شركات المقاولات.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان إنشاء المباني مدرجاً في قائمة وزارة الاستثمار وما هي متطلبات رأس المال الأدنى أو درجة المقاول المنطبقة.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["construction", "buildings", "draft", "medium_regulatory", "section_f"]
+    },
+    {
+      "id": "real_estate_development",
+      "name": "أنشطة العقارات بالممتلكات المملوكة او المستأجرة",
+      "name_alt": "Real Estate Activities with Own or Leased Property",
+      "short_description": "التطوير العقاري وشراء وبيع وتأجير العقارات. مفتوح لملكية أجنبية بنسبة 100% مع قيود جوهرية على تملك العقار في مكة المكرمة والمدينة المنورة.",
+      "classification": {
+        "isic4": {
+          "section": "L",
+          "division": "68",
+          "group": "681",
+          "class": "6810",
+          "label": "Real estate activities with own or leased property",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["real_estate"],
+      "likely_authorities": [
+        {
+          "id": "rega",
+          "name": "الهيئة العامة للعقار",
+          "role": "ترخيص المطورين العقاريين والوسطاء؛ تنظيم القطاع"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "يُحظر على الأجانب غير الخليجيين والشركات تملك العقارات في مكة المكرمة والمدينة المنورة. هذا القيد ينطبق على العقار ذاته بصرف النظر عن هيكل ملكية الشركة.",
+        "رسوم الأراضي البيضاء تنطبق على قطع الأراضي الحضرية غير المطورة — احتسبها في جدوى استراتيجيات حيازة الأراضي.",
+        "الوساطة العقارية (6820) لها متطلبات ترخيص مختلفة من الهيئة العامة للعقار مقارنةً بالتطوير العقاري (6810). تأكد من فئة الترخيص الصحيحة."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد. ترخيص المطور العقاري من الهيئة العامة للعقار مطلوب إضافةً إلى تسجيل وزارة الاستثمار والسجل التجاري.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان التطوير العقاري مدرجاً في قائمة وزارة الاستثمار للملكية الأجنبية بنسبة 100% وما هي متطلبات رأس المال والقيود الجغرافية المنطبقة.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["real_estate", "property", "draft", "high_regulatory", "section_l"]
+    },
+    {
+      "id": "freight_transport_road",
+      "name": "نقل البضائع بالطريق",
+      "name_alt": "Freight Transport by Road",
+      "short_description": "خدمات نقل البضائع بالشاحنات والشحن البري. على الأرجح مفتوح لملكية أجنبية بنسبة 100% مع ترخيص من هيئة النقل العام السعودية.",
+      "classification": {
+        "isic4": {
+          "section": "H",
+          "division": "49",
+          "group": "492",
+          "class": "4923",
+          "label": "Freight transport by road",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["industrial_services"],
+      "likely_authorities": [
+        {
+          "id": "transport_authority",
+          "name": "هيئة النقل العامة",
+          "role": "ترخيص خدمات النقل لناقلي البضائع"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "ترخيص النقل من هيئة النقل العامة مطلوب إضافةً إلى تسجيل وزارة الاستثمار. ترخيص النقل يغطي تشغيل الأسطول ويُصدر لكل فئة من المركبات.",
+        "منصات التوصيل والخدمات اللوجستية المدعومة بالتقنية قد تحمل تصنيفاً تنظيمياً مختلفاً عن مشغلي الشحن البري التقليديين."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد. تنطبق متطلبات نطاقات السعودة على قطاع النقل.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان نقل البضائع بالطريق مدرجاً في قائمة وزارة الاستثمار وما هي متطلبات الأسطول أو رأس المال المنطبقة.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["logistics", "transport", "draft", "medium_regulatory", "section_h"]
+    },
+    {
+      "id": "warehousing",
+      "name": "التخزين والمستودعات",
+      "name_alt": "Warehousing and Storage",
+      "short_description": "أنشطة التخزين والمستودعات المبردة وتخزين البضائع العامة. تشمل العمليات داخل المناطق الحرة والمدن اللوجستية.",
+      "classification": {
+        "isic4": {
+          "section": "H",
+          "division": "52",
+          "group": "521",
+          "class": "5210",
+          "label": "Warehousing and storage",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["industrial_services"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "التخزين داخل المنطقة اللوجستية المتكاملة الخاصة (سيلز) في مطار الملك خالد الدولي يخضع لإشراف هيئة المدن الاقتصادية والمناطق الخاصة وهيئة الطيران المدني — نظام تنظيمي مختلف عن التخزين في البر الرئيسي. راجع مجموعة بيانات المناطق الاقتصادية الخاصة.",
+        "التخزين المبرد (سلسلة التبريد) قد يستلزم امتثال الهيئة العامة للغذاء والدواء لتخزين الغذاء والمستحضرات الصيدلانية."
+      ],
+      "notes": "حالة الإدراج في قائمة وزارة الاستثمار وكود النشاط الوطني لم يُتحققا بعد.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "ما إذا كان التخزين مدرجاً في قائمة وزارة الاستثمار وما هي متطلبات رأس المال أو المنشأة المنطبقة.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["logistics", "warehousing", "draft", "low_regulatory", "section_h"]
+    },
+    {
+      "id": "oil_gas_exploration",
+      "name": "استخراج النفط الخام",
+      "name_alt": "Extraction of Crude Petroleum",
+      "short_description": "استخراج وانتاج النفط الخام. محجوز حصرياً لأرامكو السعودية والجهات الحكومية. لا يُسمح بالاستثمار الأجنبي في إنتاج النفط.",
+      "classification": {
+        "isic4": {
+          "section": "B",
+          "division": "06",
+          "group": "061",
+          "class": "0610",
+          "label": "Extraction of crude petroleum",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": false,
+          "alignment_note": "مستثنى من الاستثمار الأجنبي وفق قائمة الأنشطة المستثناة في نظام الاستثمار. محجوز لأرامكو السعودية والجهات الحكومية."
+        }
+      },
+      "foreign_ownership_allowed": false,
+      "ownership_limit_percent": 0,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["mining"],
+      "likely_authorities": [],
+      "related_license_concepts": [],
+      "common_confusions": [
+        "أنشطة النفط والغاز المنبثقة — التكرير ومعالجة البتروكيماويات وتوزيع الوقود — لا تخضع لهذا القيد وقد تكون متاحة للمستثمرين الأجانب مع تسجيل وزارة الاستثمار.",
+        "خدمات حقول النفط (خدمات الحفر وصيانة الآبار وتوريد المعدات النفطية) فئة نشاط مستقلة لا يشملها هذا القيد.",
+        "القيد ينطبق تحديداً على الاستخراج والإنتاج. الخدمات الاستشارية والهندسية للقطاع الطاقوي غير مقيدة."
+      ],
+      "notes": "محجوز لأرامكو السعودية والجهات الحكومية وفق قائمة الأنشطة المستثناة في نظام الاستثمار. المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (list of excluded activities). Activity confirmed as reserved for Saudi Aramco and government entities — not open to foreign investment.",
+      "placeholders": [],
+      "tags": ["extractive", "oil_gas", "restricted", "excluded", "verified", "high_regulatory", "section_b"]
+    },
+    {
+      "id": "hajj_umrah_services",
+      "name": "خدمات الحج والعمرة",
+      "name_alt": "Hajj and Umrah Services",
+      "short_description": "تنظيم وتقديم خدمات رحلات الحج والعمرة. محجوز للمواطنين السعوديين فقط وفق قائمة الأنشطة المستثناة في نظام الاستثمار.",
+      "classification": {
+        "isic4": {
+          "section": "S",
+          "division": "91",
+          "group": "910",
+          "class": "9109",
+          "label": "Other activities of membership organisations n.e.c.",
+          "alignment_note": "Approximate alignment only. Hajj and Umrah services have no direct ISIC4 class. ISIC 9109 is the closest structural match for religiously-oriented service organisations. The Saudi national classification has a dedicated code for this activity."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": false,
+          "alignment_note": "مستثنى من الاستثمار الأجنبي وفق قائمة الأنشطة المستثناة في نظام الاستثمار. محجوز للمواطنين السعوديين."
+        }
+      },
+      "foreign_ownership_allowed": false,
+      "ownership_limit_percent": 0,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["hajj_umrah_services"],
+      "likely_authorities": [],
+      "related_license_concepts": [],
+      "common_confusions": [
+        "خدمات السياحة والضيافة الموجهة للحجاج (الفنادق والنقل والتموين) لا تخضع لهذا القيد — تلك الأنشطة في فئات ISIC4 مختلفة ومتاحة للاستثمار الأجنبي.",
+        "الخدمات التقنية الداعمة لعمليات الحج والعمرة (المنصات الرقمية وبرامج إدارة الحشود) أيضاً لا تخضع لهذا القيد.",
+        "القيد ينطبق على التقديم المباشر لبرامج رحلات الحج والعمرة، لا على المنظومة الضيافية الأوسع حول الحج."
+      ],
+      "notes": "محجوز للمواطنين السعوديين وفق قائمة الأنشطة المستثناة في نظام الاستثمار. المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (list of excluded activities). Activity confirmed as reserved for Saudi nationals.",
+      "placeholders": [],
+      "tags": ["hajj_umrah", "restricted", "excluded", "verified", "high_regulatory", "section_s"]
+    },
+    {
+      "id": "recruitment_agencies",
+      "name": "أنشطة وكالات توظيف العمالة",
+      "name_alt": "Activities of Employment Placement Agencies",
+      "short_description": "أنشطة وكالات توظيف العمالة المنزلية والوافدة. مقتصرة على المواطنين السعوديين — لا تُتاح للاستثمار الأجنبي.",
+      "classification": {
+        "isic4": {
+          "section": "N",
+          "division": "78",
+          "group": "781",
+          "class": "7810",
+          "label": "Activities of employment placement agencies",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": false,
+          "alignment_note": "مستثنى من الاستثمار الأجنبي وفق قائمة الأنشطة المستثناة في نظام الاستثمار. وكالات استقدام العمالة المنزلية مقتصرة على المواطنين السعوديين."
+        }
+      },
+      "foreign_ownership_allowed": false,
+      "ownership_limit_percent": 0,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["consulting"],
+      "likely_authorities": [],
+      "related_license_concepts": [],
+      "common_confusions": [
+        "خدمات البحث التنفيذي واستقطاب الكفاءات المهنية فئة نشاط مستقلة عن وكالات استقدام العمالة المنزلية. القيد يستهدف وكالات توظيف العمالة المنزلية تحديداً — تأكد من التصنيف المنطبق لخدمات الاستقطاب التنفيذي.",
+        "خدمات الاستعانة بمصادر خارجية للموارد البشرية والعمالة المؤقتة (ISIC 7820) قد تنطوي على شروط ملكية مختلفة عن وكالات التوظيف (7810)."
+      ],
+      "notes": "مقتصرة على المواطنين السعوديين وفق قائمة الأنشطة المستثناة في نظام الاستثمار. المصدر: دليل المستثمر — وزارة الاستثمار، الإصدار الثاني عشر، مارس 2025، القسم 05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (list of excluded activities). Domestic worker recruitment agencies confirmed as restricted to Saudi nationals.",
+      "placeholders": [],
+      "tags": ["recruitment", "restricted", "excluded", "verified", "high_regulatory", "section_n"]
+    }
+  ]
+}

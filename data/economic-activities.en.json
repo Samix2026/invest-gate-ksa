@@ -1,0 +1,999 @@
+{
+  "meta": {
+    "title": "Economic Activities — Saudi Arabia (Foreign Investment Perspective)",
+    "description": "Structured data on economic activities relevant to foreign investors in Saudi Arabia. Covers ISIC4 classification, foreign ownership limits, regulatory sensitivity, and relevant authorities. All entries reference the MISA approved activities list and Investment Law excluded activities list. Activity data is informational only — not legal or procedural guidance.",
+    "language": "en",
+    "last_verified": "2026-05-21"
+  },
+  "data": [
+    {
+      "id": "management_consulting",
+      "name": "Management Consulting Activities",
+      "name_alt": "أنشطة الاستشارات الإدارية",
+      "short_description": "Strategic and operational advisory services to organisations. Open to 100% foreign ownership per MISA approved activities list.",
+      "classification": {
+        "isic4": {
+          "section": "M",
+          "division": "70",
+          "group": "702",
+          "class": "7020",
+          "label": "Management consultancy activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "Confirmed on MISA approved activities list for 100% foreign ownership. Saudi national activity code not yet verified."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["consulting"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "No professional license beyond MISA registration and commercial registration is required for management consulting.",
+        "Consulting fees paid by a Saudi entity to a foreign consultant abroad are subject to 20% withholding tax — this is an obligation of the paying Saudi entity, not of a consulting company registered in Saudi Arabia."
+      ],
+      "notes": "No minimum capital requirement specified for management consulting. Source: MISA Investor Guide 12th Edition, March 2025, §05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (approved activities for foreign investment). Activity confirmed on approved list for 100% foreign ownership. ISIC4 code 7020 matched against UN ISIC Rev.4 classification.",
+      "placeholders": [],
+      "tags": ["professional_services", "consulting", "verified", "low_regulatory", "section_m"]
+    },
+    {
+      "id": "it_consulting",
+      "name": "Computer Consultancy and IT Facilities Management",
+      "name_alt": "استشارات الحاسوب وإدارة مرافق تقنية المعلومات",
+      "short_description": "Technical advisory, IT infrastructure planning, and facilities management services. Open to 100% foreign ownership.",
+      "classification": {
+        "isic4": {
+          "section": "J",
+          "division": "62",
+          "group": "620",
+          "class": "6202",
+          "label": "Computer consultancy and computer facilities management activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "Confirmed on MISA approved activities list for 100% foreign ownership. Saudi national activity code not yet verified."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["consulting", "technology"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "IT consulting (ISIC 6202) and computer programming (ISIC 6201) are separate ISIC4 classes. Both are open to 100% foreign ownership but may have different Saudi national activity codes.",
+        "Cybersecurity advisory services fall under IT consulting for classification purposes but may require additional clearances for government-facing work."
+      ],
+      "notes": "Source: MISA Investor Guide 12th Edition, March 2025, §05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. ISIC4 code 6202 matched against UN ISIC Rev.4.",
+      "placeholders": [],
+      "tags": ["technology", "consulting", "verified", "low_regulatory", "section_j"]
+    },
+    {
+      "id": "accounting_services",
+      "name": "Accounting, Bookkeeping and Auditing Activities",
+      "name_alt": "أنشطة المحاسبة ومسك الدفاتر والمراجعة",
+      "short_description": "Professional accounting, bookkeeping, statutory audit, and tax consultancy services. Audit activities may require Saudi CPA recognition.",
+      "classification": {
+        "isic4": {
+          "section": "M",
+          "division": "69",
+          "group": "692",
+          "class": "6920",
+          "label": "Accounting, bookkeeping and auditing activities; tax consultancy",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["consulting"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "Commercial registration and professional licensing for accounting firms"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Statutory audit (external auditing of financial statements) requires practitioners to hold SOCPA (Saudi Organisation for Chartered and Professional Accountants) recognition. Foreign CPA credentials must be evaluated by SOCPA.",
+        "General bookkeeping and management accounting have lower regulatory barriers than statutory audit. Confirm the specific sub-activity before applying."
+      ],
+      "notes": "SOCPA is the relevant professional body for auditing in Saudi Arabia. Saudi national activity code and MISA approved-list status not yet verified. Source basis: MISA Investor Guide 12th Edition scope, but specific accounting sub-activity status requires direct verification.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.activity_code",
+          "description": "Saudi national activity code for accounting and auditing not yet verified against MISA approved activities list.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether accounting/auditing appears on the MISA approved activities list for 100% foreign ownership, and whether SOCPA professional recognition is a pre-condition for MISA registration.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["professional_services", "accounting", "draft", "medium_regulatory", "section_m"]
+    },
+    {
+      "id": "software_development",
+      "name": "Computer Programming Activities",
+      "name_alt": "أنشطة برمجة الحاسوب",
+      "short_description": "Software development, application programming, and custom software design. Open to 100% foreign ownership per MISA approved activities list.",
+      "classification": {
+        "isic4": {
+          "section": "J",
+          "division": "62",
+          "group": "620",
+          "class": "6201",
+          "label": "Computer programming activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "Confirmed on MISA approved activities list for 100% foreign ownership. Saudi national activity code not yet verified."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["technology"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Computer programming (6201) and IT consultancy (6202) are distinct ISIC4 classes. A software house developing products falls under 6201; an IT advisory firm falls under 6202.",
+        "Mobile app development, SaaS platforms, and enterprise software are all covered under computer programming for classification purposes."
+      ],
+      "notes": "Source: MISA Investor Guide 12th Edition, March 2025, §05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. ISIC4 code 6201 matched against UN ISIC Rev.4.",
+      "placeholders": [],
+      "tags": ["technology", "software", "verified", "low_regulatory", "section_j"]
+    },
+    {
+      "id": "data_processing",
+      "name": "Data Processing and Hosting Activities",
+      "name_alt": "أنشطة معالجة البيانات والاستضافة",
+      "short_description": "Data processing, cloud hosting, managed services, and related technical infrastructure. Likely open to 100% foreign ownership.",
+      "classification": {
+        "isic4": {
+          "section": "J",
+          "division": "63",
+          "group": "631",
+          "class": "6311",
+          "label": "Data processing, hosting and related activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["technology"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Data centre operators (physical infrastructure) and cloud service providers (software-defined) both fall under ISIC 6311 but may have distinct Saudi regulatory requirements.",
+        "The Cloud Computing Special Economic Zone (ECZA) offers a tailored regulatory framework for cloud operators — see the sezs dataset for details."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified against the live official source.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether data processing and hosting appears on the MISA approved activities list for 100% foreign ownership, and whether separate SDAIA data-handling regulations apply.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["technology", "data", "draft", "low_regulatory", "section_j"]
+    },
+    {
+      "id": "fintech_services",
+      "name": "Financial Technology (FinTech) Services",
+      "name_alt": "خدمات التقنية المالية",
+      "short_description": "Technology-enabled financial services including payments, lending platforms, and investment tools. Open to 100% foreign ownership with SAMA or CMA licence depending on activity type.",
+      "classification": {
+        "isic4": {
+          "section": "K",
+          "division": "64",
+          "group": "649",
+          "class": "6499",
+          "label": "Other financial service activities, n.e.c.",
+          "alignment_note": "FinTech spans multiple ISIC4 classes depending on the specific product. ISIC 6499 is the closest single-class match for technology-enabled financial intermediation that does not fit lending (6492) or insurance (65xx). Payment services may also map to 6619."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "Confirmed on MISA approved activities list. Licensing authority (SAMA vs CMA) depends on the specific FinTech product. Saudi national activity code not yet verified."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["fintech", "technology"],
+      "likely_authorities": [
+        {
+          "id": "sama",
+          "name": "Saudi Central Bank (SAMA)",
+          "role": "Licensing authority for payment services, lending platforms, and banking-adjacent FinTech products; operates the FinTech Regulatory Sandbox"
+        },
+        {
+          "id": "cma",
+          "name": "Capital Market Authority (CMA)",
+          "role": "Licensing authority for investment platforms, robo-advisors, and capital-market FinTech products"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "SAMA licenses payment services, lending, buy-now-pay-later, and banking-adjacent products. CMA licenses investment platforms, crowdfunding (equity), and capital-market tools. The wrong regulator applied to will result in rejection.",
+        "The SAMA FinTech Regulatory Sandbox allows testing without a full licence. This is not a substitute for MISA registration — both are required.",
+        "Cryptocurrency and digital asset trading is regulated separately and may require additional approvals beyond SAMA or CMA licensing."
+      ],
+      "notes": "Source: MISA Investor Guide 12th Edition, March 2025, §05.00. SAMA FinTech Regulatory Sandbox: fintech.sa. CMA crowdfunding and robo-advisory frameworks are separately published by CMA.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership with SAMA/CMA licensing requirement. ISIC4 code 6499 is a partial-match alignment — noted in alignment_note.",
+      "placeholders": [],
+      "tags": ["fintech", "technology", "verified", "high_regulatory", "section_k"]
+    },
+    {
+      "id": "private_clinic",
+      "name": "General Medical Practice Activities",
+      "name_alt": "أنشطة الممارسة الطبية العامة",
+      "short_description": "Private general medical clinics and outpatient healthcare facilities. Open to 100% foreign ownership with dual MISA and Ministry of Health licences.",
+      "classification": {
+        "isic4": {
+          "section": "Q",
+          "division": "86",
+          "group": "862",
+          "class": "8621",
+          "label": "General medical practice activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "Confirmed on MISA approved activities list. Facility licence from Ministry of Health and individual practitioner licences from MoH or SCFHS are required in addition to MISA registration."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["healthcare"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_health",
+          "name": "Ministry of Health",
+          "role": "Healthcare facility licence required for all private clinics and medical centres"
+        },
+        {
+          "id": "scfhs",
+          "name": "Saudi Commission for Health Specialties (SCFHS)",
+          "role": "Evaluation and licensing of individual healthcare practitioners; foreign medical degrees evaluated by SCFHS"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Dual licensing is mandatory: (1) MISA investment registration for the corporate entity, (2) Ministry of Health facility licence for the clinic itself. The MISA registration does not substitute for the MoH licence.",
+        "Individual practitioners must hold licences from MoH or SCFHS regardless of the company's MISA status. Foreign medical degrees must be evaluated by SCFHS before a practitioner licence is issued.",
+        "Hospital-level facilities have additional requirements beyond clinic-level — confirm with MoH for the applicable facility category."
+      ],
+      "notes": "Source: MISA Investor Guide 12th Edition, March 2025, §05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. Dual MoH + MISA licensing requirement documented.",
+      "placeholders": [],
+      "tags": ["healthcare", "medical", "verified", "high_regulatory", "section_q"]
+    },
+    {
+      "id": "dental_practice",
+      "name": "Dental Practice Activities",
+      "name_alt": "أنشطة ممارسة طب الأسنان",
+      "short_description": "Private dental clinics and specialist dental services. Likely open to 100% foreign ownership with the same dual-licensing requirements as general medical practice.",
+      "classification": {
+        "isic4": {
+          "section": "Q",
+          "division": "86",
+          "group": "862",
+          "class": "8623",
+          "label": "Dental practice activities",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["healthcare"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_health",
+          "name": "Ministry of Health",
+          "role": "Dental facility licence required for private dental clinics"
+        },
+        {
+          "id": "scfhs",
+          "name": "Saudi Commission for Health Specialties (SCFHS)",
+          "role": "Individual dental practitioner licensing; foreign dental degrees evaluated by SCFHS"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Dental practice has the same dual-licensing structure as general medical practice: MISA registration (corporate) and MoH facility licence (clinic). Confirm the specific licence category with MoH.",
+        "Dental specialists (orthodontists, oral surgeons) may require additional SCFHS specialisation recognition beyond a general dental practitioner licence."
+      ],
+      "notes": "MISA approved-list status for dental practice specifically not yet confirmed. Assumed open by analogy with general medical practice (ISIC 8621) which is confirmed on the approved list.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether dental practice specifically appears on the MISA approved activities list for 100% foreign ownership.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["healthcare", "dental", "draft", "high_regulatory", "section_q"]
+    },
+    {
+      "id": "higher_education",
+      "name": "Higher Education",
+      "name_alt": "التعليم العالي",
+      "short_description": "Private universities, colleges, and higher education institutions. Open to 100% foreign ownership with Ministry of Education licence.",
+      "classification": {
+        "isic4": {
+          "section": "P",
+          "division": "85",
+          "group": "853",
+          "class": "8530",
+          "label": "Higher education",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["education"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_education",
+          "name": "Ministry of Education",
+          "role": "Licence required for all private higher education institutions; curriculum and accreditation oversight"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Ministry of Education licence is mandatory and precedes any operational activity — MISA registration alone does not authorise teaching or degree-granting.",
+        "Accreditation is separate from licensing. A Ministry of Education licence allows operation; degree recognition requires accreditation from the National Commission for Academic Accreditation and Assessment (NCAAA)."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified. Regulatory requirements for foreign universities establishing Saudi campuses differ from establishing a Saudi-incorporated private university.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether higher education appears on the MISA approved activities list and what ownership conditions apply.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["education", "higher_education", "draft", "high_regulatory", "section_p"]
+    },
+    {
+      "id": "vocational_training",
+      "name": "Technical and Vocational Education",
+      "name_alt": "التعليم التقني والمهني",
+      "short_description": "Private technical training centres and vocational education providers. Likely open to 100% foreign ownership with sector-specific licensing.",
+      "classification": {
+        "isic4": {
+          "section": "P",
+          "division": "85",
+          "group": "853",
+          "class": "8532",
+          "label": "Technical and vocational secondary education",
+          "alignment_note": "ISIC 8532 covers secondary-level vocational education. Post-secondary vocational training centres may also map to ISIC 8559 (other education n.e.c.). The Saudi classification may treat these differently."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["education"],
+      "likely_authorities": [
+        {
+          "id": "tvtc",
+          "name": "Technical and Vocational Training Corporation (TVTC)",
+          "role": "Accreditation and oversight of private technical and vocational training centres"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Vocational training centres may be regulated by TVTC rather than (or in addition to) the Ministry of Education. The applicable regulator depends on the programme type.",
+        "Corporate training and professional development services (B2B) have different regulatory requirements from accredited vocational programmes that issue credentials."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified. TVTC accreditation is likely required for publicly-recognised credentials.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether vocational training appears on the MISA approved activities list and which authority (MoE or TVTC) issues the operational licence.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["education", "vocational", "draft", "medium_regulatory", "section_p"]
+    },
+    {
+      "id": "wholesale_trade_general",
+      "name": "Non-Specialised Wholesale Trade",
+      "name_alt": "تجارة الجملة غير المتخصصة",
+      "short_description": "General wholesale trade of a variety of goods. Open to 100% foreign ownership with a prior operating history requirement outside Saudi Arabia.",
+      "classification": {
+        "isic4": {
+          "section": "G",
+          "division": "46",
+          "group": "469",
+          "class": "4690",
+          "label": "Non-specialised wholesale trade",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "Confirmed on MISA approved activities list. Minimum 2 years of operating history outside Saudi Arabia required before registration. Saudization (Nitaqat) requirements apply."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["ecommerce"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "A minimum of 2 years operating history as a company outside Saudi Arabia is required before MISA registration for wholesale trade. A newly-incorporated foreign company does not qualify.",
+        "Saudization (Nitaqat) requirements for wholesale trade mean that a minimum percentage of employees must be Saudi nationals — the exact percentage depends on the company's Nitaqat band."
+      ],
+      "notes": "Source: MISA Investor Guide 12th Edition, March 2025, §05.00. Saudi national activity code not yet verified.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership with 2-year prior operating history condition.",
+      "placeholders": [],
+      "tags": ["trade", "wholesale", "verified", "low_regulatory", "section_g"]
+    },
+    {
+      "id": "ecommerce_retail",
+      "name": "Retail Sale via Internet",
+      "name_alt": "البيع بالتجزئة عبر الانترنت",
+      "short_description": "E-commerce and online retail operations. Open to 100% foreign ownership with an e-commerce licence from the Ministry of Commerce.",
+      "classification": {
+        "isic4": {
+          "section": "G",
+          "division": "47",
+          "group": "479",
+          "class": "4791",
+          "label": "Retail sale via Internet",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": true,
+          "alignment_note": "Confirmed on MISA approved activities list. E-commerce licence from Ministry of Commerce is required in addition to MISA registration. Platform must comply with Saudi Consumer Protection Law."
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["ecommerce"],
+      "likely_authorities": [
+        {
+          "id": "ministry_of_commerce",
+          "name": "Ministry of Commerce",
+          "role": "E-commerce licence and Consumer Protection Law compliance oversight"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "An e-commerce licence from the Ministry of Commerce is required in addition to MISA registration and commercial registration. The Ministry of Commerce licence governs the online retail operation itself.",
+        "Cross-border e-commerce (shipping to Saudi consumers from abroad without a Saudi entity) is a separate model. MISA registration applies to a Saudi-registered entity operating a Saudi e-commerce platform."
+      ],
+      "notes": "Source: MISA Investor Guide 12th Edition, March 2025, §05.00. Saudi national activity code not yet verified.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00. Activity confirmed on approved list for 100% foreign ownership. Ministry of Commerce e-commerce licence requirement documented.",
+      "placeholders": [],
+      "tags": ["ecommerce", "retail", "verified", "low_regulatory", "section_g"]
+    },
+    {
+      "id": "food_manufacturing",
+      "name": "Manufacture of Other Food Products",
+      "name_alt": "تصنيع منتجات غذائية اخرى",
+      "short_description": "Manufacturing of processed food products not classified elsewhere. SFDA facility licence required; halal certification required for applicable products.",
+      "classification": {
+        "isic4": {
+          "section": "C",
+          "division": "10",
+          "group": "108",
+          "class": "1089",
+          "label": "Manufacture of other food products n.e.c.",
+          "alignment_note": "ISIC 1089 covers residual food manufacturing. More specific codes (e.g. 1050 dairy, 1061 grain milling, 1071 bakery) may be more appropriate depending on the specific product."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["food_and_beverage", "manufacturing"],
+      "likely_authorities": [
+        {
+          "id": "sfda",
+          "name": "Saudi Food and Drug Authority (SFDA)",
+          "role": "Food manufacturing facility licence; product registration; halal and labelling compliance"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "SFDA facility licence is mandatory and must be obtained before production begins. MISA registration and commercial registration do not authorise food production.",
+        "Halal certification is required for all meat and poultry products and recommended for other food categories sold in the Saudi market.",
+        "ISIC 1089 is a residual code — verify the correct more-specific ISIC4 class and corresponding Saudi activity code for your specific product category."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified. SFDA licensing timeline and requirements should be confirmed at sfda.gov.sa.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether food manufacturing appears on the MISA approved activities list for 100% foreign ownership and whether minimum capital requirements apply.",
+          "verify_at": "misa.gov.sa"
+        },
+        {
+          "field": "classification.isic4.class",
+          "description": "ISIC 1089 is a residual code. Confirm the more specific ISIC4 class for the investor's food product category.",
+          "verify_at": "stats.gov.sa"
+        }
+      ],
+      "tags": ["manufacturing", "food", "draft", "medium_regulatory", "section_c"]
+    },
+    {
+      "id": "pharmaceutical_manufacturing",
+      "name": "Manufacture of Pharmaceutical Products",
+      "name_alt": "تصنيع المستحضرات الصيدلانية",
+      "short_description": "Manufacture of pharmaceutical preparations and basic pharmaceutical products. Highly regulated — SFDA GMP certification and facility licence mandatory.",
+      "classification": {
+        "isic4": {
+          "section": "C",
+          "division": "21",
+          "group": "210",
+          "class": "2100",
+          "label": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["healthcare", "manufacturing"],
+      "likely_authorities": [
+        {
+          "id": "sfda",
+          "name": "Saudi Food and Drug Authority (SFDA)",
+          "role": "Pharmaceutical manufacturing facility licence; GMP inspection and certification; product registration"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Good Manufacturing Practice (GMP) certification from SFDA is a legal requirement — not a quality mark. Production cannot begin without it.",
+        "Each pharmaceutical product must be individually registered with SFDA before it may be sold in Saudi Arabia, separate from the facility licence.",
+        "Medical devices and pharmaceuticals have separate regulatory tracks at SFDA. Confirm the correct track for your product category."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified. Pharmaceutical manufacturing is a priority sector under Vision 2030 healthcare localisation targets. SFDA licensing timeline is substantial — factor into project planning.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether pharmaceutical manufacturing appears on the MISA approved activities list for 100% foreign ownership and what capital or facility conditions apply.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["manufacturing", "pharmaceutical", "healthcare", "draft", "high_regulatory", "section_c"]
+    },
+    {
+      "id": "construction_buildings",
+      "name": "Construction of Buildings",
+      "name_alt": "انشاء المباني",
+      "short_description": "Construction of residential and non-residential buildings. Open to 100% foreign ownership subject to standard MISA and commercial registration requirements.",
+      "classification": {
+        "isic4": {
+          "section": "F",
+          "division": "41",
+          "group": "410",
+          "class": "4100",
+          "label": "Construction of buildings",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["manufacturing", "industrial_services"],
+      "likely_authorities": [
+        {
+          "id": "balady",
+          "name": "Balady (Ministry of Municipal and Rural Affairs)",
+          "role": "Municipal operating licence and building permits"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "Building permits (issued per project by Balady) are separate from the commercial registration and MISA investment registration for the construction company.",
+        "Large-scale infrastructure construction projects may require additional approvals from the Ministry of Transport or Ministry of Energy depending on project type."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified. Saudization requirements for construction companies apply.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether construction of buildings appears on the MISA approved activities list and what minimum capital or contracting-grade requirements apply.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["construction", "buildings", "draft", "medium_regulatory", "section_f"]
+    },
+    {
+      "id": "real_estate_development",
+      "name": "Real Estate Activities with Own or Leased Property",
+      "name_alt": "أنشطة العقارات بالممتلكات المملوكة او المستأجرة",
+      "short_description": "Real estate development, buying, selling, and leasing of property. Open to 100% foreign ownership with significant restrictions on property ownership in Makkah and Madinah.",
+      "classification": {
+        "isic4": {
+          "section": "L",
+          "division": "68",
+          "group": "681",
+          "class": "6810",
+          "label": "Real estate activities with own or leased property",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["real_estate"],
+      "likely_authorities": [
+        {
+          "id": "rega",
+          "name": "Real Estate General Authority (REGA)",
+          "role": "Real estate developer and broker licencing; sector regulation"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "Non-GCC foreign nationals and companies are prohibited from owning real estate in Makkah and Madinah. This restriction applies to the property itself regardless of the company's ownership structure.",
+        "The White Land Tax applies to undeveloped urban plots — factor this into feasibility for land-holding strategies.",
+        "Real estate brokerage (ISIC 6820) has different REGA licensing requirements from real estate development (6810). Confirm the correct licence category."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified. REGA real estate developer licence is required in addition to MISA and CR.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether real estate development appears on the MISA approved activities list for 100% foreign ownership and what capital requirements and geographic restrictions apply.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["real_estate", "property", "draft", "high_regulatory", "section_l"]
+    },
+    {
+      "id": "freight_transport_road",
+      "name": "Freight Transport by Road",
+      "name_alt": "نقل البضائع بالطريق",
+      "short_description": "Road freight and haulage services. Likely open to 100% foreign ownership with a Saudi Transport Authority licence.",
+      "classification": {
+        "isic4": {
+          "section": "H",
+          "division": "49",
+          "group": "492",
+          "class": "4923",
+          "label": "Freight transport by road",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "medium",
+      "related_sectors": ["industrial_services"],
+      "likely_authorities": [
+        {
+          "id": "transport_authority",
+          "name": "Saudi Transport General Authority (SATAA)",
+          "role": "Transport service licence for freight carriers"
+        }
+      ],
+      "related_license_concepts": ["misa_license", "commercial_registration"],
+      "common_confusions": [
+        "A transport licence from SATAA is required in addition to MISA registration. The transport licence covers the fleet operation and is issued per vehicle category.",
+        "Last-mile delivery and logistics platforms (technology-enabled) may have a different regulatory classification than traditional road freight operators."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified. Saudization requirements for transport sector apply.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether road freight transport appears on the MISA approved activities list and what vehicle fleet or capital requirements apply.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["logistics", "transport", "draft", "medium_regulatory", "section_h"]
+    },
+    {
+      "id": "warehousing",
+      "name": "Warehousing and Storage",
+      "name_alt": "التخزين والمستودعات",
+      "short_description": "Warehousing, cold storage, and general goods storage. Includes operations within free zones and logistics parks.",
+      "classification": {
+        "isic4": {
+          "section": "H",
+          "division": "52",
+          "group": "521",
+          "class": "5210",
+          "label": "Warehousing and storage",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": null,
+          "alignment_note": null
+        }
+      },
+      "foreign_ownership_allowed": true,
+      "ownership_limit_percent": 100,
+      "regulatory_sensitivity": "low",
+      "related_sectors": ["industrial_services"],
+      "likely_authorities": [],
+      "related_license_concepts": ["misa_license", "commercial_registration", "municipality_license"],
+      "common_confusions": [
+        "Warehousing within the Special Integrated Logistics Zone (SILZ) at King Khalid International Airport is governed by ECZA and GACA — a distinct regulatory regime from mainland warehousing. See the sezs dataset.",
+        "Temperature-controlled (cold chain) warehousing may require SFDA compliance for food and pharmaceutical storage."
+      ],
+      "notes": "MISA approved-list status and Saudi national activity code not yet verified.",
+      "verification_status": "draft",
+      "last_verified": null,
+      "verification_method": null,
+      "placeholders": [
+        {
+          "field": "classification.saudi.on_misa_approved_list",
+          "description": "Whether warehousing appears on the MISA approved activities list and what capital or facility conditions apply.",
+          "verify_at": "misa.gov.sa"
+        }
+      ],
+      "tags": ["logistics", "warehousing", "draft", "low_regulatory", "section_h"]
+    },
+    {
+      "id": "oil_gas_exploration",
+      "name": "Extraction of Crude Petroleum",
+      "name_alt": "استخراج النفط الخام",
+      "short_description": "Extraction and production of crude oil. Reserved exclusively for Saudi Aramco and government entities. Not open to foreign investment.",
+      "classification": {
+        "isic4": {
+          "section": "B",
+          "division": "06",
+          "group": "061",
+          "class": "0610",
+          "label": "Extraction of crude petroleum",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": false,
+          "alignment_note": "Excluded from foreign investment per the Investment Law list of excluded activities. Reserved for Saudi Aramco and government entities."
+        }
+      },
+      "foreign_ownership_allowed": false,
+      "ownership_limit_percent": 0,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["mining"],
+      "likely_authorities": [],
+      "related_license_concepts": [],
+      "common_confusions": [
+        "Downstream oil and gas activities — refining, petrochemical processing, fuel distribution — are NOT subject to this restriction and may be accessible to foreign investors with MISA registration.",
+        "Oil field services (drilling services, well maintenance, oilfield equipment supply) are a distinct activity category not covered by this restriction.",
+        "The restriction applies specifically to crude extraction and production. Energy sector consulting and engineering services are not restricted."
+      ],
+      "notes": "Reserved for Saudi Aramco and government entities per the Investment Law excluded activities list. Source: MISA Investor Guide 12th Edition, March 2025, §05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (list of excluded activities). Activity confirmed as reserved for Saudi Aramco and government entities — not open to foreign investment.",
+      "placeholders": [],
+      "tags": ["extractive", "oil_gas", "restricted", "excluded", "verified", "high_regulatory", "section_b"]
+    },
+    {
+      "id": "hajj_umrah_services",
+      "name": "Hajj and Umrah Services",
+      "name_alt": "خدمات الحج والعمرة",
+      "short_description": "Organisation and provision of Hajj and Umrah pilgrimage services. Reserved for Saudi nationals only per the Investment Law excluded activities list.",
+      "classification": {
+        "isic4": {
+          "section": "S",
+          "division": "91",
+          "group": "910",
+          "class": "9109",
+          "label": "Other activities of membership organisations n.e.c.",
+          "alignment_note": "Approximate alignment only. Hajj and Umrah services have no direct ISIC4 class. ISIC 9109 is the closest structural match for religiously-oriented service organisations. The Saudi national classification has a dedicated code for this activity."
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": false,
+          "alignment_note": "Excluded from foreign investment per the Investment Law list of excluded activities. Reserved for Saudi nationals."
+        }
+      },
+      "foreign_ownership_allowed": false,
+      "ownership_limit_percent": 0,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["hajj_umrah_services"],
+      "likely_authorities": [],
+      "related_license_concepts": [],
+      "common_confusions": [
+        "Tourism and hospitality services serving pilgrims (hotels, transport, catering) are NOT subject to this restriction — those activities are in different ISIC4 classes and are open to foreign investment.",
+        "Technology services supporting Hajj and Umrah operations (digital platforms, crowd management software) are also not subject to this restriction.",
+        "The restriction applies to the direct provision of Hajj and Umrah pilgrimage programmes, not to the broader hospitality ecosystem around the pilgrimage."
+      ],
+      "notes": "Reserved for Saudi nationals per the Investment Law excluded activities list. Source: MISA Investor Guide 12th Edition, March 2025, §05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (list of excluded activities). Activity confirmed as reserved for Saudi nationals.",
+      "placeholders": [],
+      "tags": ["hajj_umrah", "restricted", "excluded", "verified", "high_regulatory", "section_s"]
+    },
+    {
+      "id": "recruitment_agencies",
+      "name": "Activities of Employment Placement Agencies",
+      "name_alt": "أنشطة وكالات توظيف العمالة",
+      "short_description": "Domestic worker and employment placement agency operations. Restricted to Saudi nationals — not open to foreign investment.",
+      "classification": {
+        "isic4": {
+          "section": "N",
+          "division": "78",
+          "group": "781",
+          "class": "7810",
+          "label": "Activities of employment placement agencies",
+          "alignment_note": null
+        },
+        "saudi": {
+          "activity_code": null,
+          "activity_name_en": null,
+          "activity_name_ar": null,
+          "on_misa_approved_list": false,
+          "alignment_note": "Excluded from foreign investment per the Investment Law list of excluded activities. Domestic worker recruitment agencies restricted to Saudi nationals."
+        }
+      },
+      "foreign_ownership_allowed": false,
+      "ownership_limit_percent": 0,
+      "regulatory_sensitivity": "high",
+      "related_sectors": ["consulting"],
+      "likely_authorities": [],
+      "related_license_concepts": [],
+      "common_confusions": [
+        "Executive search and headhunting services (placing professional staff) are a distinct activity category from domestic worker placement agencies. The restriction targets domestic worker recruitment agencies specifically — confirm the applicable classification for executive search.",
+        "HR outsourcing and temporary staffing services (ISIC 7820) may have different ownership conditions from placement agencies (7810)."
+      ],
+      "notes": "Restricted to Saudi nationals per the Investment Law excluded activities list. Source: MISA Investor Guide 12th Edition, March 2025, §05.00.",
+      "verification_status": "verified",
+      "last_verified": "2026-05-21",
+      "verification_method": "Reviewed MISA Investor Guide 12th Edition, March 2025, §05.00 (list of excluded activities). Domestic worker recruitment agencies confirmed as restricted to Saudi nationals.",
+      "placeholders": [],
+      "tags": ["recruitment", "restricted", "excluded", "verified", "high_regulatory", "section_n"]
+    }
+  ]
+}

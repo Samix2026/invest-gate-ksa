@@ -128,6 +128,24 @@
           }
         },
 
+        "foreign_ownership_allowed": {
+          "type": ["boolean", "null"],
+          "description": "Whether foreign investors may hold any ownership stake in this activity. false = reserved for Saudi nationals or specific categories. null = not yet verified."
+        },
+
+        "ownership_limit_percent": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Maximum foreign ownership percentage permitted (0–100). 100 = no restriction. 0 = excluded from foreign investment. null = not yet verified."
+        },
+
+        "regulatory_sensitivity": {
+          "type": ["string", "null"],
+          "enum": ["low", "medium", "high", null],
+          "description": "Assessment of regulatory burden for this specific activity: low = standard MISA + CR only; medium = sector-specific license required; high = specialized regulatory approval, professional licensing, or restricted-sector rules apply."
+        },
+
         "related_sectors": {
           "type": "array",
           "description": "IDs of sector entries (from data/sectors.*.json) that this activity falls within. An activity may map to more than one sector.",

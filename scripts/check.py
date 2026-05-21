@@ -102,6 +102,8 @@ REQUIRED_FILES = [
     "docs/ar/vision2030-sectors.md",
     "docs/en/post-registration-services.md",
     "docs/ar/post-registration-services.md",
+    "data/economic-activities.en.json",
+    "data/economic-activities.ar.json",
 ]
 
 # Markdown link targets to skip (not local paths)

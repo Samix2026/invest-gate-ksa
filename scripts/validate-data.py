@@ -118,6 +118,14 @@ DATASETS = [
         "check_aliases": False,
         "check_sources": False,  # sezs reference authorities via governing_authority, not official_sources
     },
+    {
+        "name":          "economic-activities",
+        "schema_path":   os.path.join(ROOT, "schemas", "economic-activities.schema.json"),
+        "en_path":       os.path.join(ROOT, "data",    "economic-activities.en.json"),
+        "ar_path":       os.path.join(ROOT, "data",    "economic-activities.ar.json"),
+        "check_aliases": False,
+        "check_sources": False,  # activities reference authorities via likely_authorities, not official_sources
+    },
 ]
 
 
