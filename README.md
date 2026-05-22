@@ -356,6 +356,9 @@ Runs 166 checks: required files, JSON validity, schema validation, alias integri
 - [Special Economic Zones →](docs/en/special-economic-zones.md)
 - [Vision 2030 Sector Guide →](docs/en/vision2030-sectors.md)
 - [Tax Obligations →](docs/en/company-setup-overview.md)
+- [Saudization (Nitaqat) Guide →](docs/en/nitaqat-saudization.md)
+- [Corporate Banking Guide →](docs/en/corporate-banking.md)
+- [Tax Compliance Guide →](docs/en/tax-compliance.md)
 - [Source Verification →](docs/en/source-verification.md)
 - [Sources Index →](sources/index.md)
 

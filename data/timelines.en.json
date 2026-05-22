@@ -187,6 +187,26 @@
       "verification_status": "verified",
       "placeholders": [],
       "tags": ["misa", "strategic_investor", "classification", "timelines"]
+    },
+    {
+      "id": "corporate_bank_account_opening",
+      "authority_id": "misa",
+      "process_name": "Corporate Bank Account Opening",
+      "min_days": 7,
+      "max_days": 28,
+      "typical_days": 14,
+      "conditions": "Timeline varies by bank and KYC complexity. Foreign-owned companies typically require additional due diligence compared to Saudi-owned entities. All prerequisites must be complete before the bank visit: active MISA IRC, valid CR, National Address, GM Iqama. Inactive accounts risk dormancy — maintain regular transactions after activation. Timeline is an estimate from practitioner experience; no single SAMA-published benchmark exists for foreign-entity onboarding. Verify with the chosen bank and SAMA at sama.gov.sa.",
+      "placeholder_reason": "No single official SAMA-published benchmark for foreign-entity bank account opening. Estimated range of 7-28 business days based on multiple 2025-2026 practitioner sources. Verify with the chosen bank directly.",
+      "verify_at": "https://www.sama.gov.sa",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "min_days, max_days, typical_days",
+          "description": "Bank account opening timelines for foreign-owned companies are not published by a single authority. Each SAMA-regulated bank sets its own KYC and onboarding standards. The range of 7-28 days reflects practitioner experience across multiple banks and entity types in 2025-2026. Verify current processing benchmarks with your chosen bank and SAMA.",
+          "verify_at": "sama.gov.sa"
+        }
+      ],
+      "tags": ["banking", "corporate_account", "sama", "timelines", "foreign_investment"]
     }
   ]
 }

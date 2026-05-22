@@ -104,6 +104,12 @@ REQUIRED_FILES = [
     "docs/ar/post-registration-services.md",
     "data/economic-activities.en.json",
     "data/economic-activities.ar.json",
+    "docs/en/nitaqat-saudization.md",
+    "docs/ar/nitaqat-saudization.md",
+    "docs/en/corporate-banking.md",
+    "docs/ar/corporate-banking.md",
+    "docs/en/tax-compliance.md",
+    "docs/ar/tax-compliance.md",
 ]
 
 # Markdown link targets to skip (not local paths)
@@ -233,8 +239,10 @@ def run_markdown_links() -> tuple:
             fails += 1
             continue
 
-        # Strip inline code spans so example links inside backticks aren't checked
-        content_no_code = re.sub(r"`[^`\n]*`", "", content)
+        # Strip fenced code blocks (``` ... ```) then inline spans — example
+        # links inside code blocks are not real local-file references.
+        content_no_fenced = re.sub(r"```.*?```", "", content, flags=re.DOTALL)
+        content_no_code = re.sub(r"`[^`\n]*`", "", content_no_fenced)
         targets = _LINK_RE.findall(content_no_code)
         for raw_target in targets:
             # Skip external and anchor-only links
