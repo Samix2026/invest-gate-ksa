@@ -56,6 +56,10 @@ DATASETS: Dict[str, Dict[str, str]] = {
         "en": os.path.join(ROOT, "data", "business-structures.en.json"),
         "ar": os.path.join(ROOT, "data", "business-structures.ar.json"),
     },
+    "economic-activities": {
+        "en": os.path.join(ROOT, "data", "economic-activities.en.json"),
+        "ar": os.path.join(ROOT, "data", "economic-activities.ar.json"),
+    },
     "fees": {
         "en": os.path.join(ROOT, "data", "fees.en.json"),
         "ar": os.path.join(ROOT, "data", "fees.ar.json"),
