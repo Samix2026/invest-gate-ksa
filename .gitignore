@@ -1,0 +1,6 @@
+# Agent infrastructure
+.agents/
+.claude/skills/
+skills-lock.json
+.DS_Store
+.python-version
