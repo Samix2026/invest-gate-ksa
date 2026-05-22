@@ -1,6 +1,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Languages](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![Health Checks](https://img.shields.io/badge/Health%20Checks-168%2F168-brightgreen.svg)
+![Health Checks](https://img.shields.io/badge/Health%20Checks-184%2F184-brightgreen.svg)
 ![Datasets](https://img.shields.io/badge/Datasets-10-blue.svg)
 ![Fees](https://img.shields.io/badge/Fee%20Entries-24-blue.svg)
 ![Sources](https://img.shields.io/badge/Verified%20Sources-14-green.svg)
@@ -252,7 +252,7 @@ sezs  (en)  —  5 entries
 | `mcp/` | FastMCP server — 8 query tools for Claude Desktop integration |
 | `.claude/commands/` | 6 slash commands for daily repository operations |
 | `prompts/` | AI system prompt (bilingual, citation rules, legal disclaimer) |
-| `scripts/` | 166-check validation suite (JSON, schema, parity, cross-refs) |
+| `scripts/` | 184-check validation suite (JSON, schema, parity, cross-refs) |
 | `sources/` | Citation registry — every claim source-linked |
 | `templates/` | Investor checklists — planned |
 | `.github/workflows/` | CI/CD — validation on every push and PR |
@@ -275,7 +275,7 @@ sezs  (en)  —  5 entries
 
 | Phase | Progress | Status | Description |
 |---|---|---|---|
-| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 166-check validation suite |
+| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 184-check validation suite |
 | Phase 2 — Knowledge Base | ████████░░ | Active | 10 datasets, 5 verified core paths, SEZs, V2030 |
 | Phase 3 — AI Workflows | ██████████ | Complete | System prompt, 8 MCP tools |
 | Phase 4 — MCP Integration | ██████████ | Complete | Claude Desktop ready (stdio) |
@@ -344,7 +344,7 @@ Every piece of content must cite an official source. See [CONTRIBUTING.md](CONTR
 python3 scripts/check.py
 ```
 
-Runs 166 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
+Runs 184 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
 
 ---
 
