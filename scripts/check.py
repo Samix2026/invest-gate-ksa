@@ -110,6 +110,11 @@ REQUIRED_FILES = [
     "docs/ar/corporate-banking.md",
     "docs/en/tax-compliance.md",
     "docs/ar/tax-compliance.md",
+    "docs/en/commercial-registration.md",
+    "docs/ar/commercial-registration.md",
+    "templates/llc-checklist.md",
+    "templates/branch-checklist.md",
+    "templates/misa-documents.md",
 ]
 
 # Markdown link targets to skip (not local paths)

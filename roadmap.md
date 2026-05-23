@@ -14,7 +14,7 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 - [x] Contributing guidelines
 - [x] License
 - [x] CLAUDE.md — AI assistant context file
-- [ ] Initial `data/agencies.json` — regulatory body registry
+- [x] `data/sources.{en,ar}.json` — regulatory body registry (supersedes planned `agencies.json`)
 
 ---
 
@@ -23,28 +23,35 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 **Goal:** Populate the repository with accurate, source-linked documentation covering the most common investor needs.
 
 **English Docs (`docs/en/`)**
-- [ ] Overview of the Saudi investment landscape
-- [ ] Guide: Business structures for foreign investors
-- [ ] Guide: MISA investment registration — types and process
-- [ ] Guide: Commercial registration (CR)
-- [ ] Guide: Special Economic Zones
-- [ ] Guide: Saudization (Nitaqat) requirements
-- [ ] Guide: Corporate banking basics
-- [ ] Guide: VAT and Zakat overview
+- [x] Overview of the Saudi investment landscape (`company-setup-overview.md`)
+- [x] Guide: Business structures for foreign investors (`comparison-structures.md`)
+- [x] Guide: MISA investment registration — types and process (`registration-types.md`)
+- [x] Guide: Commercial registration (CR) (`commercial-registration.md` — April 2025 Royal Decree M/83, single national CR, Ejari, fees, timeline)
+- [x] Guide: Special Economic Zones (`special-economic-zones.md`)
+- [x] Guide: Saudization (Nitaqat) requirements (`nitaqat-saudization.md`)
+- [x] Guide: Corporate banking basics (`corporate-banking.md`)
+- [x] Guide: VAT and Zakat overview (`tax-compliance.md`)
 
 **Arabic Docs (`docs/ar/`)**
-- [ ] Mirror of all English guides in Arabic
+- [x] Mirror of all English guides in Arabic (14 files, exact match with `docs/en/`)
 
 **Structured Data (`data/`)**
-- [x] `sectors.json` — sector context, likely authorities, regulatory sensitivity (8 initial sectors; open/restricted classification requires official verification)
-- [ ] `fees.json` — official government fees
-- [ ] `timelines.json` — typical processing durations
-- [ ] `zones.json` — economic zones
+- [x] `sectors.{en,ar}.json` — sector context, likely authorities, regulatory sensitivity (16 sectors)
+- [x] `business-structures.{en,ar}.json` — entity types for foreign investors (4 types)
+- [x] `investment-licenses.{en,ar}.json` — registration and licensing concepts (5 entries)
+- [x] `sources.{en,ar}.json` — official Saudi government sources (16 entries)
+- [x] `source-gaps.{en,ar}.json` — known data gaps awaiting official verification (23 entries)
+- [x] `authority-relationships.{en,ar}.json` — conceptual relationships between regulatory bodies (12 entries)
+- [x] `setup-flows.{en,ar}.json` — conceptual setup flows for common investor scenarios (4 flows)
+- [x] `fees.{en,ar}.json` — official government fees (26 entries)
+- [x] `timelines.{en,ar}.json` — typical processing durations (12 entries)
+- [x] `sezs.{en,ar}.json` — special economic zones (5 zones, all verified)
+- [x] `economic-activities.{en,ar}.json` — MISA-recognized economic activities (21 entries; 10 verified, 11 draft)
 
 **Templates (`templates/`)**
-- [ ] LLC setup checklist
-- [ ] Branch office checklist
-- [ ] MISA document list
+- [x] LLC setup checklist (`templates/llc-checklist.md`)
+- [x] Branch office checklist (`templates/branch-checklist.md`)
+- [x] MISA document list (`templates/misa-documents.md`)
 
 ---
 
@@ -52,11 +59,11 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 
 **Goal:** Make the repository usable as an AI knowledge base and MCP server.
 
+- [x] Basic MCP server scaffold (`mcp/invest_gate_mcp.py` — 9 tools, FastMCP)
 - [ ] Base system prompt for an Invest Gate KSA assistant
 - [ ] RAG prompt templates
 - [ ] MCP tool definitions (`prompts/mcp-tool-definitions.json`)
 - [ ] Embedding-ready document format (chunked, metadata-tagged)
-- [ ] Basic MCP server scaffold (Node.js or Python)
 - [ ] Integration guide for Claude and other LLMs
 
 ---
@@ -84,8 +91,6 @@ The following data gaps are tracked as GitHub Issues and need community help:
 | 🔴 High | [SEZ qualifying activities](https://github.com/Samix2026/invest-gate-ksa/issues/4) | sezs | Document from ecza.gov.sa |
 | 🔴 High | [MISA fee amounts by activity](https://github.com/Samix2026/invest-gate-ksa/issues/5) | fees | Obtain from MISA e-portal |
 | 🔴 High | [Foreign individual pathway](https://github.com/Samix2026/invest-gate-ksa/issues/6) | structures | Confirm from MISA Investment Law 2024 regs |
-| 🟡 Medium | [Economic activities dataset](https://github.com/Samix2026/invest-gate-ksa/issues/8) | economic-activities | Populate from MISA activity list |
-| 🟢 Good first issue | [AR translation review](https://github.com/Samix2026/invest-gate-ksa/issues/7) | docs/ar | Arabic speakers welcome |
 
 See [all open issues →](https://github.com/Samix2026/invest-gate-ksa/issues)
 
