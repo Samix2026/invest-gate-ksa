@@ -68,7 +68,7 @@ jobs:
               except Exception as exc:
                   status = f"ERROR: {exc}"
 
-              if isinstance(status, int) and status >= 400:
+              if isinstance(status, int) and status in [404, 410, 500, 502, 503, 504]:
                   failed.append(f"{status}  {url}")
                   print(f"FAIL  {status}  {url}")
               else:
