@@ -2,7 +2,7 @@
 """
 Invest Gate KSA — MCP Server (FastMCP / stdio transport)
 
-Exposes 8 tools for querying the invest-gate-ksa knowledge base.
+Exposes 10 tools for querying the invest-gate-ksa knowledge base.
 All responses include a legal disclaimer; unverified entries carry a
 verification warning so the caller knows exactly what to confirm.
 

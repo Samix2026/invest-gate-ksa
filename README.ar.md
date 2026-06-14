@@ -5,13 +5,13 @@
 
 ![الرخصة: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![اللغات](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![فحوصات الصحة](https://img.shields.io/badge/Health%20Checks-184%2F184-brightgreen.svg)
-![مجموعات البيانات](https://img.shields.io/badge/Datasets-10-blue.svg)
-![ادخالات الرسوم](https://img.shields.io/badge/Fee%20Entries-24-blue.svg)
-![المصادر الموثقة](https://img.shields.io/badge/Verified%20Sources-14-green.svg)
+![فحوصات الصحة](https://img.shields.io/badge/Health%20Checks-188%2F188-brightgreen.svg)
+![مجموعات البيانات](https://img.shields.io/badge/Datasets-11-blue.svg)
+![ادخالات الرسوم](https://img.shields.io/badge/Fee%20Entries-26-blue.svg)
+![المصادر](https://img.shields.io/badge/Sources-16-green.svg)
 ![جاهز للـ MCP](https://img.shields.io/badge/MCP-Ready-8A2BE2.svg)
 ![جاهز للذكاء الاصطناعي](https://img.shields.io/badge/AI-Ready-FF6B35.svg)
-![اخر تحديث](https://img.shields.io/badge/Updated-May%202026-orange.svg)
+![اخر تحديث](https://img.shields.io/badge/Updated-June%202026-orange.svg)
 
 ## المعمارية
 
@@ -27,9 +27,9 @@
 > تُنشر الصفحة التفاعلية تلقائيا عبر GitHub Pages. ويمكن أيضا
 > [عرض الكود المصدري](assets/interactive/repo-explainer.html).
 
-المستثمر يسأل بالعربي أو الإنجليزي ← Claude Desktop يوجه عبر 8 أدوات MCP ←
-الخادم يستعلم 10 مجموعات بيانات ثنائية اللغة ← كل إجابة تستشهد بمصدرها الرسمي
-مع حالة التحقق (✓ موثق من .gov.sa / ⚠ مسودة من مصدر تجاري).
+المستثمر يسأل بالعربي أو الإنجليزي ← Claude Desktop يوجه عبر 10 أدوات MCP ←
+الخادم يستعلم 11 مجموعة بيانات ثنائية اللغة ← كل إجابة تستشهد بمصدرها الرسمي
+مع حالة التحقق (✓ موثق من مصدر رسمي / ⚠ مسودة في انتظار التحقق).
 
 **قاعدة معرفية مفتوحة المصدر وثنائية اللغة، تساعد المستثمرين الاجانب على فهم كيفية تاسيس الاعمال وادارتها في المملكة العربية السعودية.**
 
@@ -54,7 +54,7 @@
 
 ليس استشارة. وليس خدمة قانونية. بل هو **اطار مرجعي** — مصمم ليكون دقيقا وقابلا للتتبع ومفيدا كنقطة انطلاق قبل التعاقد مع المتخصصين.
 
-كما يصمم المستودع من الاساس ليتطور الى **مساعد ذكاء اصطناعي وخادم MCP**، بحيث يمكن الاستفسار عن المعرفة ذاتها باسلوب حواري.
+ويتضمن المستودع **خادم MCP عاملا وموجها أساسيا للذكاء الاصطناعي**، بحيث يمكن الاستفسار عن المعرفة ذاتها بأسلوب حواري.
 
 ---
 
@@ -124,33 +124,11 @@ for entry in fees['data']:
 
 ## مثال على المخرجات
 
-**استعلام جدول الرسوم** (`--dataset fees --lang en --list`):
+**استعلام جدول الرسوم** (`--dataset fees --lang en --list`) يعرض حاليا:
 
 ```
-fees  (en)  —  24 entries
-────────────────────────────────────────────────────────────────────────────────
-  ID                                NAME                          STATUS
-────────────────────────────────────────────────────────────────────────────────
-  misa_investment_registration_fee  Fee charged by the Ministry … verified
-  misa_activity_amendment_fee       Fee charged by the Ministry … verified
-  misa_ownership_amendment_fee      Fee charged by the Ministry … verified
-  misa_annual_renewal_fee           Fee for the annual update of… verified
-  misa_property_approval_fee        Fee charged by the Ministry … verified
-  misa_registration_cancellation_fe Fee charged by the Ministry … verified
-  commercial_registration_issuance_ Fee charged by the Ministry … verified
-  branch_commercial_registration_fe Historical entry — Branch Co… verified
-  chamber_of_commerce_fee           Annual mandatory Chamber of … verified
-  cit_corporate_income_tax          Corporate Income Tax (CIT) c… verified
-  zakat_saudi_gcc_shareholders      Zakat is an annual Islamic l… verified
-  wht_withholding_tax               Withholding Tax (WHT) charge… verified
-  entrepreneurial_license_fee_y1_3  Reduced MISA Entrepreneurial… verified
-  entrepreneurial_license_fee_y4_5  MISA Entrepreneurial License… verified
-  qiwa_employer_registration_fee    Fee for registering as an em… verified
-  iqama_issuance_renewal_fee        Annual Iqama (residency perm… verified
-  final_exit_visa_fee               Fee for issuing a final exit… verified
-  exit_reentry_visa_extension_fee   Fee for extending an exit/re… verified
-────────────────────────────────────────────────────────────────────────────────
-  24 entry/entries
+fees  (en)  —  26 entries
+20 verified · 6 draft
 ```
 
 **استعلام القطاعات بالعربية** (`--dataset sectors --lang ar --list`):
@@ -223,13 +201,13 @@ sezs  (en)  —  5 entries
 
 **للباحثين:**
 - مجموعة بيانات تنظيمية منظمة، ثنائية اللغة، مرتبطة بالمصادر
-- تتبع صريح لفجوات البيانات — 25 فجوة بيانات موثقة
+- تتبع صريح لفجوات البيانات — 23 فجوة بيانات موثقة
 - محفوظة في Git مع سجل تغييرات كامل
 
 **لبناة حلول الذكاء الاصطناعي:**
-- 10 مجموعات بيانات JSON بمخطط صارم (Draft-07)
+- 11 مجموعة بيانات JSON بمخطط صارم (Draft-07)
 - ثنائية اللغة EN/AR مع فرض تكافؤ المعرفات
-- خادم MCP بـ 8 ادوات — قابل للتوصيل بأي وكيل متوافق مع MCP
+- خادم MCP بـ 10 ادوات — قابل للتوصيل بأي وكيل متوافق مع MCP
 - موجه نظام مدرج لنشر مساعد ذكاء اصطناعي جاهز فورا
 
 ---
@@ -238,13 +216,14 @@ sezs  (en)  —  5 entries
 
 | المجلد / الملف | المحتوى |
 |---|---|
-| `data/` | 10 مجموعات بيانات ثنائية اللغة (EN + AR) |
+| `data/` | 11 مجموعة بيانات ثنائية اللغة (EN + AR) |
 | `data/sectors` | 16 قطاع استثماري مع توافق رؤية 2030 |
-| `data/sources` | 14 مصدرا من الجهات التنظيمية الرسمية الموثقة |
-| `data/source-gaps` | 24 فجوة بيانات متتبعة في انتظار التحقق |
-| `data/fees` | 24 ادخال رسوم — الادخالات الموثقة تستشهد بالمصادر الرسمية |
-| `data/timelines` | 10 ادخالات للمدد الزمنية — موثقة من منشورات رسمية |
+| `data/sources` | 16 ادخال مصدر — 5 موثقة و11 مسودة |
+| `data/source-gaps` | 23 فجوة بيانات متتبعة في انتظار التحقق |
+| `data/fees` | 26 ادخال رسوم — 20 موثقة و6 مسودة |
+| `data/timelines` | 12 ادخال مدة زمنية — 8 موثقة و4 مسودة |
 | `data/sezs` | 5 مناطق اقتصادية خاصة (KAEC، جازان، راس الخير، السحابية، SILZ) |
+| `data/economic-activities` | 21 نشاطا اقتصاديا — 10 موثقة و11 مسودة |
 | `data/setup-flows` | 4 مسارات تسجيل حسب السيناريو (استشارات، تجارة الكترونية، تصنيع، تقنية مالية) |
 | `data/business-structures` | 4 انواع كيانات قانونية (ذ.م.م، شركة مساهمة، فرع، مكتب تمثيل) |
 | `data/authority-relationships` | 12 خريطة علاقات بين الجهات التنظيمية |
@@ -252,12 +231,12 @@ sezs  (en)  —  5 entries
 | `schemas/` | JSON Schema Draft-07 — تنظيم صارم، additionalProperties: false |
 | `docs/en/` | ادلة انجليزية: التسجيل، الضرائب، SEZs، رؤية 2030، الهياكل |
 | `docs/ar/` | نظائر عربية (RTL) — تكافؤ ثنائي اللغة مطبق بالكامل |
-| `mcp/` | خادم FastMCP — 8 ادوات استعلام لتكامل Claude Desktop |
+| `mcp/` | خادم FastMCP — 10 ادوات استعلام لتكامل Claude Desktop |
 | `.claude/commands/` | 6 اوامر slash للعمليات اليومية على المستودع |
 | `prompts/` | موجه نظام الذكاء الاصطناعي (ثنائي اللغة، قواعد الاستشهاد، اخلاء المسؤولية) |
-| `scripts/` | مجموعة فحص 184 نقطة (JSON، المخططات، التكافؤ، المراجع المتقاطعة) |
+| `scripts/` | مجموعة فحص 188 نقطة (JSON، المخططات، التكافؤ، المراجع المتقاطعة) |
 | `sources/` | سجل الاستشهادات — كل ادعاء مرتبط بمصدره |
-| `templates/` | قوائم مراجعة للمستثمرين — مخطط لها |
+| `templates/` | قوائم مراجعة للشركة ذات المسؤولية المحدودة والفرع ووثائق MISA والتحقق من المصادر |
 | `.github/workflows/` | CI/CD — التحقق عند كل push وطلب دمج |
 
 ---
@@ -278,16 +257,16 @@ sezs  (en)  —  5 entries
 
 | المرحلة | التقدم | الحالة | الوصف |
 |---|---|---|---|
-| المرحلة 1 — الاساس | ██████████ | مكتملة | الهيكل، المخططات، مجموعة 184 فحص |
-| المرحلة 2 — قاعدة المعرفة | ████████░░ | جارية | 10 مجموعات بيانات، مناطق SEZ، رؤية 2030 |
-| المرحلة 3 — سير عمل الذكاء | ██████████ | مكتملة | موجه نظام الذكاء الاصطناعي، 8 ادوات MCP |
+| المرحلة 1 — الاساس | ██████████ | مكتملة | الهيكل، المخططات، مجموعة 188 فحص |
+| المرحلة 2 — قاعدة المعرفة | ████████░░ | جارية | 11 مجموعة بيانات، ادلة ثنائية اللغة، مناطق SEZ، رؤية 2030 |
+| المرحلة 3 — سير عمل الذكاء | ██████████ | مكتملة | موجه نظام الذكاء الاصطناعي، 10 ادوات MCP |
 | المرحلة 4 — تكامل MCP | ██████████ | مكتملة | جاهز لـ Claude Desktop |
-| المرحلة 5 — طبقة المنتج | ░░░░░░░░░░ | مخطط له | — |
+| المرحلة 5 — طبقة المنتج | ██████░░░░ | جارية | خريطة النظام التفاعلية منشورة عبر GitHub Pages |
 
-**حالة التحقق (2026-05-20):**
+**لقطة حالة المستودع (2026-06-14):**
 - ✅ موثق من مصادر رسمية: تسجيل MISA، السجل التجاري، الغرفة التجارية، ZATCA، GOSI، قوى، مقيم، SEZs (ECZA + الجريدة الرسمية يناير 2026)، مؤشرات رؤية 2030
 - ⚠️ مسودة — يحتاج تاكيدا رسميا: رسوم تسجيل RHQ، تفاصيل SILZ الضريبية
-- 📋 مخطط له: مجموعة بيانات الانشطة الاقتصادية، قوالب قوائم المراجعة
+- 📋 التالي: توثيق الانشطة المسودة ورسوم RHQ وتفاصيل SILZ
 
 راجع [roadmap.md](roadmap.md) للخطة الكاملة.
 
@@ -299,8 +278,8 @@ sezs  (en)  —  5 entries
 
 **ما نحتاجه اكثر ما يكون الان:**
 - مبالغ رسوم موثقة من مصادر رسمية (خاصة RHQ وSILZ)
-- مجموعة بيانات الانشطة الاقتصادية (رموز نشاط MISA مع احكام الملكية الاجنبية)
-- قوالب قوائم مراجعة للمستثمرين (ذ.م.م، فرع، وثائق MISA)
+- التحقق من 11 ادخال نشاط اقتصادي ما زال في حالة مسودة
+- توسيع سيناريوهات المستثمرين وقوائم المراجعة
 - تصحيحات لاي معلومات متقادمة
 
 كل محتوى يجب ان يستشهد بمصدر رسمي. راجع [CONTRIBUTING.md](CONTRIBUTING.md) للاطلاع على الارشادات الكاملة.
@@ -313,7 +292,7 @@ sezs  (en)  —  5 entries
 python3 scripts/check.py
 ```
 
-يشغل 184 فحصا: الملفات المطلوبة، صحة JSON، التحقق من المخططات، سلامة الاسماء البديلة، سلامة المراجع المتقاطعة، التكافؤ الثنائي. يخرج بالرمز `0` عند النجاح الكامل.
+يشغل 188 فحصا: الملفات المطلوبة، صحة JSON، التحقق من المخططات، سلامة الاسماء البديلة، سلامة المراجع المتقاطعة، التكافؤ الثنائي. يخرج بالرمز `0` عند النجاح الكامل.
 
 ---
 
@@ -321,7 +300,7 @@ python3 scripts/check.py
 
 يتضمن هذا المستودع خادم MCP جاهزا يربط Claude Desktop مباشرة بقاعدة المعرفة.
 
-**الادوات المتاحة:** استعلام القطاعات · استعلام الجهات التنظيمية · مسارات التاسيس · الرسوم · المدد الزمنية · الهياكل القانونية · مسار المستثمر · البحث الشامل
+**الادوات المتاحة:** استعلام القطاعات · استعلام الجهات التنظيمية · مسارات التاسيس · الرسوم · المدد الزمنية · المناطق الاقتصادية الخاصة · الانشطة الاقتصادية · الهياكل القانونية · مسار المستثمر · البحث الشامل
 
 راجع [mcp/README.md](mcp/README.md) لتعليمات الاعداد الكاملة.
 

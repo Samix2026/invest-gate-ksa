@@ -58,7 +58,7 @@ Each JSON file should follow this pattern:
 
 All datasets with a corresponding JSON Schema can be validated with the project's validation script.
 
-**Requirements:** Python 3.7+ and the `jsonschema` package.
+**Requirements:** Python 3.10+ and the `jsonschema` package.
 
 ```bash
 # Install dependency
@@ -79,7 +79,7 @@ The script enforces the following rules:
 
 Exit code `0` means all checks passed. Exit code `1` means at least one check failed, with details printed to stdout. Suitable for use in CI pipelines.
 
-JSON Schemas live at `schemas/` — one per dataset: `business-structures`, `investment-licenses`, `sources`, `sectors`, `source-gaps`, `authority-relationships`, `setup-flows`.
+JSON Schemas live at `schemas/` — one per dataset: `business-structures`, `investment-licenses`, `sources`, `sectors`, `source-gaps`, `authority-relationships`, `setup-flows`, `fees`, `timelines`, `sezs`, and `economic-activities`.
 
 ---
 

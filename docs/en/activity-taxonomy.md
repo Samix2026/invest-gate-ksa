@@ -1,14 +1,14 @@
-# Economic Activity Taxonomy — Foundation Layer
+# Economic Activity Taxonomy
 
-> **Disclaimer:** This document is for general informational and architectural purposes only. It describes the classification framework that will underpin future datasets in this repository — not regulatory guidance. No activity codes, ownership determinations, or licensing claims appear here. Verify all regulatory requirements with official Saudi government sources.
+> **Disclaimer:** This document is for general informational and architectural purposes only. It explains the classification framework used by this repository — not regulatory guidance. Dataset entries may be incomplete or draft. Verify all regulatory requirements with official Saudi government sources.
 
 ---
 
 ## Purpose
 
-This document establishes the conceptual and architectural foundation for a future economic activities dataset in this repository. It explains what activity classification is, why it matters for investors, how ISIC4 relates to the Saudi national classification, and how this layer fits into the broader data model.
+This document explains the conceptual and architectural foundation of the economic activities dataset. It covers why activity classification matters, how ISIC4 relates to the Saudi national classification, and how activities connect to the broader data model.
 
-No activity data has been added yet. The companion schema (`schemas/economic-activities.schema.json`) defines what a future dataset entry will look like. This document explains the reasoning behind that design.
+The companion dataset contains 21 bilingual entries: 10 verified and 11 draft. Its schema is defined in `schemas/economic-activities.schema.json`.
 
 ---
 
@@ -65,7 +65,7 @@ For foreign investors in Saudi Arabia, the specific activity code is not a burea
 
 ## Sectors vs. Activities
 
-The `data/sectors.*.json` dataset in this repository contains 11 entries: broad groupings like "Technology", "Healthcare", "Manufacturing", and "Fintech". These sector entries serve as orientation guides — they describe the typical regulatory landscape, common business models, and key authorities for a broad area of investment.
+The `data/sectors.*.json` dataset in this repository contains 16 entries: broad groupings like "Technology", "Healthcare", "Manufacturing", and "Fintech". These sector entries serve as orientation guides — they describe the typical regulatory landscape, common business models, and key authorities for a broad area of investment.
 
 Activities are a different level of granularity. A single sector entry may encompass dozens or hundreds of individual activities, each with its own official name, code, and potentially distinct regulatory treatment.
 
@@ -76,7 +76,7 @@ The relationship between sectors and activities in this repository is intended t
 - **Sectors provide strategic orientation** — useful for investors asking "is this the right broad area for my business?"
 - **Activities provide operational precision** — required for investors asking "exactly what am I registering for, and what does that require?"
 
-The future activity dataset will link each activity to one or more sector entries via the `related_sectors` field, enabling navigation in both directions: from sector to activities, and from activity to sector context.
+The activity dataset links each activity to one or more sector entries via the `related_sectors` field, enabling navigation in both directions: from sector to activities, and from activity to sector context.
 
 ---
 
@@ -94,17 +94,17 @@ Free-text activity descriptions — arbitrary phrases describing what a business
 
 ---
 
-## Future Dataset Plans
+## Current Dataset Capabilities
 
-The economic activities dataset, once populated, is planned to support the following mappings:
+The economic activities dataset supports the following mappings:
 
-**Activity → Sector:** Each activity will link to one or more sector entries in `data/sectors.*.json`, enabling a user who starts from a sector to drill down to specific activities, and a user who starts from an activity to navigate to sector-level regulatory context.
+**Activity → Sector:** Each activity links to one or more sector entries in `data/sectors.*.json`, enabling a user who starts from a sector to drill down to specific activities, and a user who starts from an activity to navigate to sector-level regulatory context.
 
-**Activity → Authorities:** Each activity will identify the regulatory authorities relevant specifically to that activity, complementing the broader authority coverage in the sector entries. This supports activity-level queries of the form "what authorities are involved when registering to do X?"
+**Activity → Authorities:** Each activity identifies likely regulatory authorities, complementing the broader authority coverage in the sector entries. This supports activity-level queries of the form "what authorities are involved when registering to do X?"
 
-**Activity → License Concepts:** Each activity will link to the relevant license concepts in `data/investment-licenses.*.json` — MISA investment registration, commercial registration, municipal license, and so on — with any activity-specific notes that differ from the general description.
+**Activity → License Concepts:** Each activity links to relevant concepts in `data/investment-licenses.*.json` — MISA investment registration, commercial registration, municipal licensing, and related steps.
 
-**Activity-level verification notes:** Some activities have specific points of confusion, historical classification changes, or regulatory edge cases that do not arise at the sector level. These will be captured in the `common_confusions` and `notes` fields of each activity entry.
+**Activity-level verification notes:** Specific ambiguities, classification changes, and regulatory edge cases are captured in the `common_confusions`, `notes`, and `placeholders` fields.
 
 The goal is to enable queries at activity granularity — "I want to do X: what is the setup path, which authorities are involved, and what are the common mistakes?" — rather than relying solely on sector-level orientation.
 
@@ -112,7 +112,7 @@ The goal is to enable queries at activity granularity — "I want to do X: what 
 
 ## Schema Design Notes
 
-The schema at `schemas/economic-activities.schema.json` establishes the field structure for future activity entries. Key design decisions:
+The schema at `schemas/economic-activities.schema.json` establishes the field structure for activity entries. Key design decisions:
 
 **Dual classification fields.** Each entry carries both an `isic4` object (section, division, group, class, label, alignment note) and a `saudi` object (activity code, official Arabic name, official English name, MISA approved list status, alignment note). These are kept separate because the mapping between them is not always direct. All sub-fields are nullable to allow draft entries to be created before full classification research is complete.
 
@@ -126,4 +126,4 @@ The schema at `schemas/economic-activities.schema.json` establishes the field st
 
 ## Status
 
-No activity data has been added to this repository. This document and `schemas/economic-activities.schema.json` define the foundation layer. Activity data will be added in a future development phase after the source verification workflow for activity classification is established. See [roadmap.md](../../roadmap.md) for the development plan.
+The bilingual dataset currently contains 21 entries: 10 verified and 11 draft. Draft entries retain explicit placeholders until their classification and regulatory details are confirmed from official sources. See [roadmap.md](../../roadmap.md) for the remaining work.
