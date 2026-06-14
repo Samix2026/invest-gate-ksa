@@ -54,9 +54,9 @@ Each JSON file should follow this pattern:
 
 ---
 
-## Field-level provenance (`business-structures`, `investment-licenses`)
+## Field-level provenance (`business-structures`, `investment-licenses`, `fees`, `timelines`)
 
-Entries in these two datasets may carry two **optional** provenance properties so
+Entries in these datasets may carry two **optional** provenance properties so
 that per-field verification state is structured and queryable (rather than buried
 in free-text `notes`):
 

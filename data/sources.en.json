@@ -517,6 +517,34 @@
       "notes": "Premium support program for national and foreign companies meeting eligibility criteria. Aims to enhance the investment environment and create new opportunities. Key benefits: dedicated relationship manager, premium residency facilitation, legislative and regulatory advisory, professional and operational license facilitation, investment opportunity development support, specialized sector data and reports tailored to foreign countries, guidance on industrial and economic zones, consultation on visa and Saudization requirements, and priority access to events and decision-makers. Eligibility: companies registered in prominent government programs, companies with strategic economic impact (national or foreign registered with MISA, or companies not yet registered in the Kingdom). Fee: determined by MISA upon classification approval, payable within 30 days of notification — may be zero for some classifications. Processing: 5 working days after complete application submission. Portal: investsaudi.sa. Source: MISA Investor Guide 12th Edition, March 2025, §3.3.1.",
       "verification_status": "verified",
       "placeholders": []
+    },
+    {
+      "id": "gcc_unified_vat_agreement",
+      "name": "Unified Agreement for VAT of the Cooperation Council for the Arab States of the Gulf",
+      "name_alt": "الاتفاقية الموحدة لضريبة القيمة المضافة لدول مجلس التعاون لدول الخليج العربية",
+      "authority_type": "gcc_instrument_adopted_by_ksa",
+      "jurisdiction": "GCC instrument adopted by Saudi Arabia (national)",
+      "official_website": "zatca.gov.sa",
+      "documentation_sections": [
+        "Mandatory VAT registration threshold (Article 50)",
+        "Voluntary VAT registration threshold (Article 51)",
+        "Common VAT framework for GCC Member States"
+      ],
+      "languages_supported": ["ar", "en"],
+      "update_frequency_estimate": null,
+      "reliability_level": "primary_official",
+      "last_verified": "2026-06-14",
+      "verification_method": "Reviewed the Agreement text and its publication page on zatca.gov.sa on 2026-06-14 (Pages/VATUnifiedAgreement.aspx; document at /ar/RulesRegulations/Taxes/Documents/GCC VAT Agreement.pdf). The page records adoption by KSA via Royal Decree No. M/51 dated 3/5/1438H, published in Umm Al-Qura issue 4667 dated 24/7/1438H. Confirmed Art. 50(2) (mandatory threshold SAR 375,000) and Art. 51(3) (voluntary threshold = 50% of mandatory, i.e. SAR 187,500).",
+      "tags": ["vat", "tax", "gcc", "primary_law", "zatca", "ksa_adopted"],
+      "notes": "GCC treaty establishing the common VAT framework, adopted by the Kingdom by Royal Decree No. M/51 dated 3/5/1438H and published on zatca.gov.sa. Citable under the narrow GCC-instrument carve-out (KSA-adopted and .gov.sa-hosted). It is the primary source for the SAR 375,000 mandatory and SAR 187,500 voluntary VAT registration thresholds, which the Saudi VAT Implementing Regulations reference rather than restate.",
+      "verification_status": "draft",
+      "placeholders": [
+        {
+          "field": "update_frequency_estimate",
+          "description": "How frequently the Agreement text or its hosted copy on zatca.gov.sa is updated has not been independently verified. The Agreement permits the Ministerial Committee to amend the Mandatory Registration Threshold after three years in force (Art. 50(2)); whether any amendment has occurred should be checked at zatca.gov.sa.",
+          "verify_at": "zatca.gov.sa"
+        }
+      ]
     }
   ]
 }

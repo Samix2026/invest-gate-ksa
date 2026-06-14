@@ -167,17 +167,24 @@
         }
       ],
       "verification_status": "draft",
-      "placeholders": [
+      "verification_method": "Reviewed the Unified Agreement for VAT of the Cooperation Council for the Arab States of the Gulf, as published on zatca.gov.sa, on 2026-06-14. The Agreement was adopted by KSA via Royal Decree No. M/51 dated 3/5/1438H (per the zatca.gov.sa publication page). The Saudi VAT Implementing Regulations set the registration mechanism but defer the threshold figures to this Agreement, which is citable under the KSA-adopted GCC-instrument carve-out. The Zakat / corporate-income-tax applicability question is outside VAT-law scope and remains an open placeholder.",
+      "field_verifications": [
         {
           "field": "mandatory_threshold",
-          "description": "The SAR figure for the mandatory VAT registration threshold is NOT stated in the Saudi VAT Implementing Regulations; those Regulations defer it to 'the Mandatory Registration Threshold detailed in the Agreement' (Arts. 3-4). The numeral (reportedly SAR 375,000) is set in the GCC Unified VAT Agreement, Art. 50(2) — a GCC instrument, not a Saudi .gov.sa regulation — so it is not recorded as a verified value here. To verify from a Saudi official source, confirm whether ZATCA states the SAR amount directly in a Saudi regulation, board resolution, or the VAT Law on zatca.gov.sa.",
-          "verify_at": "zatca.gov.sa"
+          "value_summary": "Mandatory VAT registration threshold: SAR 375,000 of annual supplies.",
+          "source": "Unified Agreement for VAT of the GCC, Art. 50(2); adopted by KSA via Royal Decree No. M/51 (3/5/1438H); published on zatca.gov.sa (source id: gcc_unified_vat_agreement)",
+          "citation": "Art. 50(2): 'The Mandatory Registration Threshold shall be SAR 375,000 (or its equivalent in the GCC State currencies). The Ministerial Committee has the right to amend The Mandatory Registration Threshold after it has been in force for three years.'",
+          "verified_on": "2026-06-14"
         },
         {
           "field": "voluntary_threshold",
-          "description": "The SAR figure for the voluntary VAT registration threshold is likewise NOT stated in the Saudi VAT Implementing Regulations, which defer to the GCC Unified VAT Agreement. The Agreement sets it at 50% of the mandatory threshold (Art. 51(3); reportedly SAR 187,500) — a GCC instrument, not a Saudi .gov.sa regulation. To verify from a Saudi official source, confirm whether ZATCA states the SAR amount directly on zatca.gov.sa.",
-          "verify_at": "zatca.gov.sa"
-        },
+          "value_summary": "Voluntary VAT registration threshold: SAR 187,500 (50% of the mandatory threshold).",
+          "source": "Unified Agreement for VAT of the GCC, Art. 51(3); adopted by KSA via Royal Decree No. M/51 (3/5/1438H); published on zatca.gov.sa (source id: gcc_unified_vat_agreement)",
+          "citation": "Art. 51(3): 'The Voluntary Registration Threshold is 50% of the Mandatory Registration Threshold.' (50% of SAR 375,000 = SAR 187,500.)",
+          "verified_on": "2026-06-14"
+        }
+      ],
+      "placeholders": [
         {
           "field": "zakat_vs_cit_applicability",
           "description": "Whether a specific entity is subject to Zakat, corporate income tax, or both depends on ownership structure and applicable regulations. Verify the applicable tax regime with ZATCA.",
