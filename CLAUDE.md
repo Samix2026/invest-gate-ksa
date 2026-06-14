@@ -246,6 +246,12 @@ See `docs/en/source-verification.md` for the full workflow. Use `templates/sourc
 
 `"verified"` status requires: empty `placeholders` array, `last_verified` set to an ISO date, `verification_method` documented, no unresolved source conflicts.
 
+**Field-level provenance (`business-structures`, `investment-licenses`).** These two datasets support two optional entry properties that let individual fields be verified and cited independently of the entry's overall status:
+- `verification_method` — string; what official text was reviewed.
+- `field_verifications` — array of `{field, value_summary, source, citation, verified_on}` objects; one per confirmed field, with the official source and a verbatim `citation`.
+
+An entry may carry `field_verifications` for confirmed fields while still being `draft` because an unrelated `placeholder` remains open. Both are optional; the schemas keep `additionalProperties: false`. Financial values (capital amounts, fee/threshold figures) must quote the official source verbatim in `citation`, and any number must trace to a `.gov.sa` domain or officially recognized national authority — not a third-party or supranational instrument standing alone. See `data/README.md` for the field shape.
+
 ---
 
 ## Development Phases
