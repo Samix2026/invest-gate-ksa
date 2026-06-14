@@ -2,13 +2,13 @@
 name = "invest-gate-ksa"
 version = "0.1.0"
 description = "Bilingual knowledge base for foreign investors in Saudi Arabia"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 dependencies = [
     "jsonschema>=3.2.0",
 ]
 
 [project.urls]
-Repository = "https://github.com/invest-gate-ksa/invest-gate-ksa"
+Repository = "https://github.com/Samix2026/invest-gate-ksa"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

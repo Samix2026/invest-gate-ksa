@@ -6,7 +6,7 @@ This file provides context for AI assistants (Claude Code, MCP clients, RAG syst
 
 ## What This Repository Is
 
-**Invest Gate KSA** is a bilingual (Arabic/English), open-source knowledge repository about investing and doing business in Saudi Arabia. It is structured for both human contributors and AI consumption. The long-term goal is to serve as the knowledge base for an MCP server and conversational AI assistant.
+**Invest Gate KSA** is a bilingual (Arabic/English), open-source knowledge repository about investing and doing business in Saudi Arabia. It is structured for both human contributors and AI consumption, and includes a working FastMCP server plus an interactive GitHub Pages system map.
 
 **What it is:** A structured reference framework for foreign investors — accurate, source-linked, and auditable.
 
@@ -41,18 +41,12 @@ invest-gate-ksa/
 ├── LICENSE
 │
 ├── data/                  ← structured JSON datasets
-│   ├── business-structures.en.json
-│   ├── business-structures.ar.json
-│   ├── investment-licenses.en.json
-│   ├── investment-licenses.ar.json
-│   ├── sources.en.json
-│   ├── sources.ar.json
+│   ├── *.en.json          ← 11 English datasets
+│   ├── *.ar.json          ← 11 Arabic mirrors
 │   └── README.md          ← dataset index and schema convention
 │
 ├── schemas/               ← JSON Schema Draft-07 for each dataset
-│   ├── business-structures.schema.json
-│   ├── investment-licenses.schema.json
-│   └── sources.schema.json
+│   └── *.schema.json      ← 11 strict dataset schemas
 │
 ├── docs/
 │   ├── en/                ← English narrative documentation
@@ -65,6 +59,7 @@ invest-gate-ksa/
 │       └── source-verification.md
 │
 ├── templates/             ← fill-in forms for contributors
+│   ├── *-checklist.md     ← investor setup checklists
 │   └── source-review.md   ← verification review record template
 │
 ├── sources/
@@ -74,7 +69,14 @@ invest-gate-ksa/
 │   └── query-examples.md  ← example CLI query commands
 │
 ├── prompts/
-│   └── README.md          ← AI prompt and MCP tool definitions (planned)
+│   ├── README.md
+│   └── system-prompt-base.md
+│
+├── mcp/
+│   └── invest_gate_mcp.py ← FastMCP server with 10 tools
+│
+├── assets/interactive/
+│   └── repo-explainer.html ← interactive system map
 │
 └── scripts/
     ├── check.py            ← project health check (4 suites)
@@ -121,7 +123,7 @@ Key fields: `issuing_authority` (object with `id`, `name`, `portal`), `applies_t
 
 Query: `python3 scripts/query-dataset.py --dataset investment-licenses --lang en --list`
 
-### `sources` (10 entries)
+### `sources` (16 entries)
 
 Official Saudi government bodies, authorities, and platforms relevant to investors: MISA, Ministry of Commerce, ZATCA, MHRSD, GOSI, Saudi Business Center, Balady, Qiwa, Muqeem, Absher Business.
 
@@ -131,7 +133,7 @@ Key fields: `authority_type` (enum), `jurisdiction`, `official_website`, `docume
 
 Query: `python3 scripts/query-dataset.py --dataset sources --lang en --authority-type government_ministry`
 
-### `sectors` (15 entries)
+### `sectors` (16 entries)
 
 Investment sectors relevant to foreign investors: technology, consulting, ecommerce, food_and_beverage, real_estate, education, healthcare, fintech, manufacturing, industrial_services, mining, tourism_and_hospitality, media_and_content, hajj_umrah_services, entertainment_and_events.
 
@@ -202,7 +204,7 @@ Runs four suites: required files, JSON validity, dataset validation (delegates t
 python3 scripts/validate-data.py
 ```
 
-Validates all three datasets against their JSON Schemas. Also checks: `official_sources` not empty (where applicable), `placeholders` present when `draft`, ID parity between EN and AR files. Exits `0` on full pass.
+Validates all 11 datasets against their JSON Schemas. Also checks: `official_sources` not empty (where applicable), `placeholders` present when `draft`, ID parity between EN and AR files. Exits `0` on full pass.
 
 ### Querying
 
@@ -252,12 +254,13 @@ See `docs/en/source-verification.md` for the full workflow. Use `templates/sourc
 
 | Phase | Status |
 |---|---|
-| 1 — Foundation (repo structure, datasets, validation, verification workflow) | Nearly complete |
+| 1 — Foundation (repo structure, datasets, validation, verification workflow) | Complete |
 | 2 — Core Content (bilingual guides, additional datasets) | In progress |
-| 3 — AI Integration (system prompts, RAG templates, MCP server) | Planned |
-| 4 — Community (review cadence, translation workflow, automated checks) | Planned |
+| 3 — AI Integration (system prompt, MCP server, future RAG templates) | Active |
+| 4 — Community (automated checks, issue templates, review cadence) | Active |
+| 5 — Product Layer (interactive map, public data explorer) | Active |
 
-The Phase 3 MCP server will expose the datasets as queryable tools. The `prompts/` directory is the planned location for system prompts and MCP tool definitions.
+The MCP server currently exposes 10 queryable tools. The `prompts/` directory contains the base system prompt; RAG templates and standalone MCP tool definitions remain planned.
 
 ---
 

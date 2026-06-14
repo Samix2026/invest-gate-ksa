@@ -1,6 +1,6 @@
 # Invest Gate KSA — MCP Server
 
-FastMCP server exposing 8 tools for querying the invest-gate-ksa knowledge base over stdio transport.
+FastMCP server exposing 10 tools for querying the invest-gate-ksa knowledge base over stdio transport.
 
 ## Requirements
 
@@ -22,14 +22,14 @@ Add the following block to your Claude Desktop config file.
   "mcpServers": {
     "invest_gate_ksa": {
       "command": "python3",
-      "args": ["/ABSOLUTE/PATH/TO/your-invest-gate-ksa/mcp/invest_gate_mcp.py"],
+      "args": ["/ABSOLUTE/PATH/TO/invest-gate-ksa/mcp/invest_gate_mcp.py"],
       "env": {}
     }
   }
 }
 ```
 
-Replace `/ABSOLUTE/PATH/TO/your-invest-gate-ksa` with the actual path on your system. On macOS you can run `pwd` inside the repository root to get the path.
+Replace `/ABSOLUTE/PATH/TO/invest-gate-ksa` with the actual path on your system. On macOS you can run `pwd` inside the repository root to get the path.
 
 Restart Claude Desktop after saving the config.
 
@@ -42,6 +42,8 @@ Restart Claude Desktop after saving the config.
 | `query_setup_flows` | Query conceptual setup flows for investment scenarios |
 | `query_fees` | Query government fees (unverified amounts show a source to verify) |
 | `query_timelines` | Query processing timelines for registration and licensing |
+| `query_sezs` | Query Special Economic Zones and their verification status |
+| `query_activities` | Query economic activities by code, sector, authority, or keyword |
 | `query_structures` | Query legal entity structures (LLC, JSC, Branch, Rep Office) |
 | `get_investor_path` | Cross-dataset overview for a sector, parent company status, and investor type |
 | `search_knowledge_base` | Full-text search across one or more datasets |
@@ -75,9 +77,6 @@ Fee entries where the amount is not published in advance (e.g. the MISA investme
 
 > **Language:** All tools default to English (`lang="en"`).
 > Pass `lang="ar"` to receive Arabic responses.
-> The server auto-detects Arabic input and responds accordingly
-> when using conversational interfaces like Claude Desktop.
-
 All tools accept a `lang` parameter (`"en"` or `"ar"`). Passing `lang: "ar"` returns data from the Arabic dataset files.
 
 ## Data Status

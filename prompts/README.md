@@ -15,11 +15,11 @@ This directory contains:
 
 ---
 
-## Planned Prompts
+## Prompt Assets
 
 | File | Description | Status |
 |------|-------------|--------|
-| `system-prompt-base.md` | Core system prompt for an Invest Gate KSA assistant | Planned |
+| `system-prompt-base.md` | Core system prompt for an Invest Gate KSA assistant | Available |
 | `query-business-structure.md` | Prompt for comparing entity types | Planned |
 | `query-registration-steps.md` | Prompt for walking through registration processes | Planned |
 | `query-sector-eligibility.md` | Prompt for checking foreign ownership rules by sector | Planned |
@@ -42,4 +42,4 @@ All prompts in this directory must:
 
 ## MCP Server
 
-The `mcp-tool-definitions.json` file will define tools for a future MCP server that exposes this repository as a structured context provider for Claude and other AI systems.
+The working MCP server is implemented in `mcp/invest_gate_mcp.py` and currently exposes 10 tools. A standalone `mcp-tool-definitions.json` export remains planned for clients that need static tool schemas.

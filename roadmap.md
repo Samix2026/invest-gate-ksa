@@ -4,7 +4,7 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 
 ---
 
-## Phase 1 — Foundation (Current)
+## Phase 1 — Foundation (Complete)
 
 **Goal:** Establish the repository structure and contribution framework.
 
@@ -33,7 +33,7 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 - [x] Guide: VAT and Zakat overview (`tax-compliance.md`)
 
 **Arabic Docs (`docs/ar/`)**
-- [x] Mirror of all English guides in Arabic (14 files, exact match with `docs/en/`)
+- [x] Mirror of all English guides in Arabic (15 files, exact match with `docs/en/`)
 
 **Structured Data (`data/`)**
 - [x] `sectors.{en,ar}.json` — sector context, likely authorities, regulatory sensitivity (16 sectors)
@@ -59,8 +59,8 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 
 **Goal:** Make the repository usable as an AI knowledge base and MCP server.
 
-- [x] Basic MCP server scaffold (`mcp/invest_gate_mcp.py` — 9 tools, FastMCP)
-- [ ] Base system prompt for an Invest Gate KSA assistant
+- [x] MCP server (`mcp/invest_gate_mcp.py` — 10 tools, FastMCP)
+- [x] Base system prompt for an Invest Gate KSA assistant
 - [ ] RAG prompt templates
 - [ ] MCP tool definitions (`prompts/mcp-tool-definitions.json`)
 - [ ] Embedding-ready document format (chunked, metadata-tagged)
@@ -72,11 +72,23 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 
 **Goal:** Establish ongoing quality and community processes.
 
-- [ ] Automated link-checking for official sources
+- [x] Automated link-checking for official sources
 - [ ] Versioning policy (content snapshots with dates)
 - [ ] Review cadence (quarterly content audit)
 - [ ] Translation workflow for keeping EN and AR in sync
-- [ ] Issue templates for reporting outdated information
+- [x] Issue templates for reporting outdated information
+
+---
+
+## Phase 5 — Product Layer
+
+**Goal:** Make the knowledge architecture easier to understand and explore.
+
+- [x] Interactive system map
+- [x] Automated GitHub Pages deployment
+- [x] Arabic/English interface with Invest Saudi-inspired visual language
+- [ ] Search and filtering interface for public datasets
+- [ ] Hosted API or managed MCP endpoint
 
 ---
 

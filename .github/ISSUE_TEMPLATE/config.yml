@@ -2,7 +2,7 @@ blank_issues_enabled: false
 
 contact_links:
   - name: Official Sources Registry
-    url: https://github.com/samialmohaimeed/your-invest-gate-ksa/blob/main/sources/index.md
+    url: https://github.com/Samix2026/invest-gate-ksa/blob/main/sources/index.md
     about: Check the sources registry before opening a verification issue.
   - name: MISA Investor Guide
     url: https://misa.gov.sa
