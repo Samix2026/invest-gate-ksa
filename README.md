@@ -14,8 +14,6 @@
 
 > How a question becomes a verified answer
 
-![Architecture](assets/diagrams/architecture.svg)
-
 ### Interactive System Map
 
 Explore how an investor question moves through the MCP tools, bilingual datasets,
