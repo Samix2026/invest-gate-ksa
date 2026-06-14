@@ -54,6 +54,33 @@ Each JSON file should follow this pattern:
 
 ---
 
+## Field-level provenance (`business-structures`, `investment-licenses`, `fees`, `timelines`)
+
+Entries in these datasets may carry two **optional** provenance properties so
+that per-field verification state is structured and queryable (rather than buried
+in free-text `notes`):
+
+- `verification_method` — string. Free text describing what official source text
+  was reviewed for the entry.
+- `field_verifications` — array of objects, one per individually confirmed field:
+
+```json
+{
+  "field": "minimum_capital",
+  "value_summary": "Minimum issued capital SAR 500,000; at least one quarter paid up on incorporation.",
+  "source": "Companies Law, Royal Decree No. M/132 (2022), official English translation by the Bureau of Experts at the Council of Ministers (misa.gov.sa)",
+  "citation": "Art. 59: 'The issued capital of a joint-stock company shall not be less than five hundred thousand riyals and its paid-up capital upon incorporation shall not be less than a quarter of said capital.'",
+  "verified_on": "2026-06-14"
+}
+```
+
+These fields are optional and do **not** change an entry's `verification_status`.
+An entry may record `field_verifications` for confirmed fields while remaining
+`draft` because it still has open `placeholders`. The schemas keep
+`additionalProperties: false`; unknown keys are still rejected.
+
+---
+
 ## Validation
 
 All datasets with a corresponding JSON Schema can be validated with the project's validation script.

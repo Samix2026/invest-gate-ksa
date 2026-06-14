@@ -167,17 +167,24 @@
         }
       ],
       "verification_status": "draft",
-      "placeholders": [
+      "verification_method": "روجعت الاتفاقية الموحدة لضريبة القيمة المضافة لدول مجلس التعاون، كما نُشرت على zatca.gov.sa، بتاريخ 2026-06-14. اعتمدت المملكة الاتفاقية بالمرسوم الملكي رقم م/51 وتاريخ 3/5/1438هـ (وفق صفحة النشر على zatca.gov.sa). تنص اللائحة التنفيذية السعودية لضريبة القيمة المضافة على آلية التسجيل لكنها تحيل أرقام الحدود إلى هذه الاتفاقية القابلة للاستشهاد بموجب الاستثناء الخاص بأدوات مجلس التعاون المعتمدة من المملكة. ومسألة خضوع الكيان للزكاة أو ضريبة دخل الشركات خارج نطاق نظام ضريبة القيمة المضافة وتبقى حقلا مؤجلا.",
+      "field_verifications": [
         {
           "field": "mandatory_threshold",
-          "description": "الحد الأدنى الحالي الإلزامي للتسجيل في ضريبة القيمة المضافة استناداً إلى الإمدادات الخاضعة للضريبة سنوياً. يُحدَّد بموجب نظام وقد يتغير — تحقق من المبلغ الحالي مع زاتكا.",
-          "verify_at": "zatca.gov.sa"
+          "value_summary": "الحد الإلزامي للتسجيل في ضريبة القيمة المضافة: 375,000 ريال من الإمدادات السنوية.",
+          "source": "الاتفاقية الموحدة لضريبة القيمة المضافة لدول مجلس التعاون، المادة 50(2)؛ المعتمدة من المملكة بالمرسوم الملكي رقم م/51 (3/5/1438هـ)؛ المنشورة على zatca.gov.sa (معرف المصدر: gcc_unified_vat_agreement)",
+          "citation": "Art. 50(2): 'The Mandatory Registration Threshold shall be SAR 375,000 (or its equivalent in the GCC State currencies). The Ministerial Committee has the right to amend The Mandatory Registration Threshold after it has been in force for three years.'",
+          "verified_on": "2026-06-14"
         },
         {
           "field": "voluntary_threshold",
-          "description": "الحد الأدنى الحالي للتسجيل الطوعي الذي يقل عن الحد الإلزامي. تحقق مع زاتكا.",
-          "verify_at": "zatca.gov.sa"
-        },
+          "value_summary": "الحد الطوعي للتسجيل في ضريبة القيمة المضافة: 187,500 ريال (50% من الحد الإلزامي).",
+          "source": "الاتفاقية الموحدة لضريبة القيمة المضافة لدول مجلس التعاون، المادة 51(3)؛ المعتمدة من المملكة بالمرسوم الملكي رقم م/51 (3/5/1438هـ)؛ المنشورة على zatca.gov.sa (معرف المصدر: gcc_unified_vat_agreement)",
+          "citation": "Art. 51(3): 'The Voluntary Registration Threshold is 50% of the Mandatory Registration Threshold.' (50% of SAR 375,000 = SAR 187,500.)",
+          "verified_on": "2026-06-14"
+        }
+      ],
+      "placeholders": [
         {
           "field": "zakat_vs_cit_applicability",
           "description": "مدى خضوع كيان بعينه للزكاة أو ضريبة الدخل على الشركات أو كليهما يتوقف على هيكل ملكيته والأنظمة المطبقة. تحقق من النظام الضريبي المنطبق مع زاتكا.",

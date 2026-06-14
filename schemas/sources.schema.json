@@ -44,7 +44,8 @@
             "government_authority",
             "government_organization",
             "government_portal",
-            "government_platform"
+            "government_platform",
+            "gcc_instrument_adopted_by_ksa"
           ]
         },
         "jurisdiction":             { "type": "string" },

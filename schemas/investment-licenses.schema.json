@@ -95,6 +95,26 @@
         "tags": {
           "type": "array",
           "items": { "type": "string" }
+        },
+        "verification_method": {
+          "type": "string",
+          "description": "Optional. Free text describing what official source text was reviewed for this entry."
+        },
+        "field_verifications": {
+          "type": "array",
+          "description": "Optional. One object per individually confirmed field, providing structured, queryable per-field provenance. An entry may carry field_verifications while remaining draft if it still has open placeholders.",
+          "items": {
+            "type": "object",
+            "required": ["field", "value_summary", "source", "citation", "verified_on"],
+            "additionalProperties": false,
+            "properties": {
+              "field":         { "type": "string" },
+              "value_summary": { "type": "string" },
+              "source":        { "type": "string" },
+              "citation":      { "type": "string" },
+              "verified_on":   { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+            }
+          }
         }
       },
       "if": {

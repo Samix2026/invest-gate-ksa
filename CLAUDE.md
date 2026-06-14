@@ -23,6 +23,7 @@ These constraints apply to all content generation, editing, and responses in thi
 - **No fabricated URLs.** Do not construct or guess URLs for government portals. Record only domains confirmed from official sources.
 - **No speculative requirements.** Do not add "typically" or "usually" language around procedural steps unless directly supported by cited sources.
 - **Official sources only.** All factual claims must trace to a `.gov.sa` domain or an officially recognized national authority. Third-party summaries, consultant guides, and news articles are not citable sources.
+- **GCC instruments adopted by KSA (narrow carve-out).** A Gulf Cooperation Council (GCC) instrument is citable as a primary source **only if both** of the following hold: (a) the Kingdom has formally adopted it by Royal Decree, **and** (b) it is published on a Saudi `.gov.sa` domain. The sole confirmed example is the **Unified Agreement for VAT of the Cooperation Council for the Arab States of the Gulf** (adopted by KSA via Royal Decree No. M/51 dated 3/5/1438H), published on `zatca.gov.sa`. When citing such an instrument, record the GCC article quoted, the KSA adoption decree, and the `.gov.sa` host. This carve-out is exhaustive and does **not** extend to consultant guides, news articles, third-party summaries, or any GCC instrument not adopted by KSA and not hosted on a `.gov.sa` domain.
 - **Placeholder discipline.** Any field that cannot be verified must contain a `placeholder` entry, not a guess.
 - **Educational tone.** Describe processes and structures; do not advise on which option to choose.
 - **Bilingual parity.** Every English document and dataset entry must have a corresponding Arabic equivalent with the same IDs, same structure, and the same verification status.
@@ -129,7 +130,7 @@ Official Saudi government bodies, authorities, and platforms relevant to investo
 
 Key fields: `authority_type` (enum), `jurisdiction`, `official_website`, `documentation_sections`, `reliability_level` (enum), `notes`.
 
-`authority_type` values: `government_ministry`, `government_authority`, `government_organization`, `government_portal`, `government_platform`.
+`authority_type` values: `government_ministry`, `government_authority`, `government_organization`, `government_portal`, `government_platform`, `gcc_instrument_adopted_by_ksa` (a GCC legal instrument adopted by KSA by Royal Decree and published on a `.gov.sa` domain — see the GCC instruments carve-out in Content Constraints).
 
 Query: `python3 scripts/query-dataset.py --dataset sources --lang en --authority-type government_ministry`
 
@@ -247,6 +248,12 @@ All dataset entries are `"draft"` until a contributor personally reviews the liv
 See `docs/en/source-verification.md` for the full workflow. Use `templates/source-review.md` when updating a `verification_status` field.
 
 `"verified"` status requires: empty `placeholders` array, `last_verified` set to an ISO date, `verification_method` documented, no unresolved source conflicts.
+
+**Field-level provenance (`business-structures`, `investment-licenses`).** These two datasets support two optional entry properties that let individual fields be verified and cited independently of the entry's overall status:
+- `verification_method` — string; what official text was reviewed.
+- `field_verifications` — array of `{field, value_summary, source, citation, verified_on}` objects; one per confirmed field, with the official source and a verbatim `citation`.
+
+An entry may carry `field_verifications` for confirmed fields while still being `draft` because an unrelated `placeholder` remains open. Both are optional; the schemas keep `additionalProperties: false`. Financial values (capital amounts, fee/threshold figures) must quote the official source verbatim in `citation`, and any number must trace to a `.gov.sa` domain or officially recognized national authority — not a third-party or supranational instrument standing alone. See `data/README.md` for the field shape.
 
 ---
 

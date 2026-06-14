@@ -73,20 +73,27 @@
         }
       ],
       "verification_status": "draft",
+      "verification_method": "Reviewed the Companies Law (Royal Decree No. M/132, 2022), official English translation by the Bureau of Experts at the Council of Ministers, obtained from misa.gov.sa, on 2026-06-14. Confirmed the LLC formation and capital provisions (Arts. 156, 157, 174). Sector-level foreign-ownership eligibility (a dynamic MISA activity list) remains open — see placeholders.",
+      "field_verifications": [
+        {
+          "field": "shareholder_requirements",
+          "value_summary": "An LLC is incorporated by one or more natural or legal persons; a single-person LLC is permitted; the Law sets no maximum number of partners.",
+          "source": "Companies Law, Royal Decree No. M/132 (2022), official English translation by the Bureau of Experts at the Council of Ministers (misa.gov.sa)",
+          "citation": "Art. 156: 'A limited liability company is a company incorporated by one or more natural or legal persons.' Art. 157(1): 'The incorporation of a limited liability company by a single person or the transfer of all of its interests to a single person shall entail the following: ...'",
+          "verified_on": "2026-06-14"
+        },
+        {
+          "field": "minimum_capital",
+          "value_summary": "No statutory minimum capital for an LLC; partners determine the company's capital in the articles of incorporation.",
+          "source": "Companies Law, Royal Decree No. M/132 (2022), official English translation by the Bureau of Experts at the Council of Ministers (misa.gov.sa)",
+          "citation": "Art. 174: 'Partners shall determine the capital of the company in its articles of incorporation. Such capital shall be divided into indivisible and untradeable interests of equal value.'",
+          "verified_on": "2026-06-14"
+        }
+      ],
       "placeholders": [
         {
           "field": "ownership_type.allows_full_foreign_ownership",
           "description": "The specific list of sectors open to 100% foreign LLC ownership is governed by MISA's approved activities list and may be updated. Verify current sector eligibility before proceeding.",
-          "verify_at": "misa.gov.sa"
-        },
-        {
-          "field": "shareholder_requirements",
-          "description": "Minimum and maximum number of shareholders permitted under current Saudi Companies Law. Subject to legislative amendments.",
-          "verify_at": "mc.gov.sa"
-        },
-        {
-          "field": "minimum_capital",
-          "description": "Minimum capital requirements, if any, for an LLC — including sector-specific thresholds. Not included in this dataset to avoid stating unverified figures.",
           "verify_at": "misa.gov.sa"
         }
       ]
@@ -155,21 +162,28 @@
         }
       ],
       "verification_status": "draft",
-      "placeholders": [
+      "verification_method": "Reviewed the Companies Law (Royal Decree No. M/132, 2022), official English translation by the Bureau of Experts at the Council of Ministers, obtained from misa.gov.sa, on 2026-06-14. Confirmed JSC formation and minimum capital (Arts. 58, 59). Board composition (Art. 67) and AGM cadence (Art. 88) are confirmed but the audit committee / CMA Corporate Governance Regulations requirement for listed JSCs remains open — see placeholders.",
+      "field_verifications": [
         {
           "field": "minimum_shareholders",
-          "description": "Minimum number of founding shareholders required under current Saudi Companies Law for a JSC.",
-          "verify_at": "mc.gov.sa"
+          "value_summary": "A JSC is incorporated by one or more natural or legal persons; a single-shareholder JSC is permitted.",
+          "source": "Companies Law, Royal Decree No. M/132 (2022), official English translation by the Bureau of Experts at the Council of Ministers (misa.gov.sa)",
+          "citation": "Art. 58: 'A joint-stock company is a company incorporated by one, or more, natural or legal persons and its capital is divided into tradable shares. ... The liability of shareholders shall be limited to paying the value of the subscribed shares.'",
+          "verified_on": "2026-06-14"
         },
         {
           "field": "minimum_capital",
-          "description": "Minimum capital requirements for a JSC, including sector-specific thresholds (e.g., banking, insurance). Not included to avoid stating unverified figures.",
-          "verify_at": "misa.gov.sa"
-        },
+          "value_summary": "Minimum issued capital is SAR 500,000; at least one quarter is paid up on incorporation.",
+          "source": "Companies Law, Royal Decree No. M/132 (2022), official English translation by the Bureau of Experts at the Council of Ministers (misa.gov.sa)",
+          "citation": "Art. 59: 'The issued capital of a joint-stock company shall not be less than five hundred thousand riyals and its paid-up capital upon incorporation shall not be less than a quarter of said capital.'",
+          "verified_on": "2026-06-14"
+        }
+      ],
+      "placeholders": [
         {
           "field": "governance_requirements",
-          "description": "Specific board composition, audit committee, and AGM requirements under the Companies Law and CMA rules for JSCs.",
-          "verify_at": "mc.gov.sa"
+          "description": "Board composition and AGM cadence are confirmed in the Companies Law (board of at least three members, Art. 67; ordinary general assembly annual meeting within six months of fiscal year-end, Art. 88). The remaining unverified element is the audit committee requirement and other CMA Corporate Governance Regulations obligations applicable to listed JSCs, which could not be confirmed against the live CMA regulation text.",
+          "verify_at": "cma.gov.sa"
         }
       ]
     },

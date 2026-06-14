@@ -73,20 +73,27 @@
         }
       ],
       "verification_status": "draft",
+      "verification_method": "روجعت الترجمة الإنجليزية الرسمية لنظام الشركات (المرسوم الملكي رقم م/132، 2022) الصادرة عن هيئة الخبراء بمجلس الوزراء، والمستمدة من misa.gov.sa، بتاريخ 2026-06-14. جرى تأكيد أحكام تأسيس الشركة ذات المسؤولية المحدودة ورأس مالها (المواد 156 و157 و174). تبقى أهلية الملكية الأجنبية على مستوى القطاع (قائمة أنشطة وزارة الاستثمار المتغيرة) مفتوحة — انظر الحقول المؤجلة.",
+      "field_verifications": [
+        {
+          "field": "shareholder_requirements",
+          "value_summary": "تؤسس الشركة ذات المسؤولية المحدودة من شخص واحد أو أكثر من ذوي الصفة الطبيعية أو الاعتبارية، ويجوز تأسيسها بشخص واحد، ولا يحدد النظام حدا أقصى لعدد الشركاء.",
+          "source": "نظام الشركات، المرسوم الملكي رقم م/132 (2022)، الترجمة الإنجليزية الرسمية الصادرة عن هيئة الخبراء بمجلس الوزراء (misa.gov.sa)",
+          "citation": "Art. 156: 'A limited liability company is a company incorporated by one or more natural or legal persons.' Art. 157(1): 'The incorporation of a limited liability company by a single person or the transfer of all of its interests to a single person shall entail the following: ...'",
+          "verified_on": "2026-06-14"
+        },
+        {
+          "field": "minimum_capital",
+          "value_summary": "لا يوجد حد أدنى نظامي لرأس مال الشركة ذات المسؤولية المحدودة؛ يحدد الشركاء رأس المال في عقد التأسيس.",
+          "source": "نظام الشركات، المرسوم الملكي رقم م/132 (2022)، الترجمة الإنجليزية الرسمية الصادرة عن هيئة الخبراء بمجلس الوزراء (misa.gov.sa)",
+          "citation": "Art. 174: 'Partners shall determine the capital of the company in its articles of incorporation. Such capital shall be divided into indivisible and untradeable interests of equal value.'",
+          "verified_on": "2026-06-14"
+        }
+      ],
       "placeholders": [
         {
           "field": "ownership_type.allows_full_foreign_ownership",
           "description": "القائمة المحددة للقطاعات المفتوحة أمام الملكية الأجنبية الكاملة عبر شركة ذات مسؤولية محدودة تُحكمها قائمة الأنشطة المعتمدة لدى وزارة الاستثمار وقد تُحدَّث. تحقق من أهلية القطاع الحالية قبل المضي قدماً.",
-          "verify_at": "misa.gov.sa"
-        },
-        {
-          "field": "shareholder_requirements",
-          "description": "الحد الأدنى والأقصى لعدد الشركاء المسموح به وفق نظام الشركات السعودي الحالي. قد يخضع للتعديلات التشريعية.",
-          "verify_at": "mc.gov.sa"
-        },
-        {
-          "field": "minimum_capital",
-          "description": "الحد الأدنى لرأس المال المطلوب — إن وُجد — للشركة ذات المسؤولية المحدودة، بما فيها الحدود الخاصة بالقطاعات. لم يُدرج في هذه البيانات تفادياً للإفصاح عن أرقام غير موثّقة.",
           "verify_at": "misa.gov.sa"
         }
       ]
@@ -155,21 +162,28 @@
         }
       ],
       "verification_status": "draft",
-      "placeholders": [
+      "verification_method": "روجعت الترجمة الإنجليزية الرسمية لنظام الشركات (المرسوم الملكي رقم م/132، 2022) الصادرة عن هيئة الخبراء بمجلس الوزراء، والمستمدة من misa.gov.sa، بتاريخ 2026-06-14. جرى تأكيد تأسيس الشركة المساهمة وحدها الأدنى لرأس المال (المادتان 58 و59). تشكيل مجلس الإدارة (المادة 67) ودورية الجمعية العامة (المادة 88) مؤكدان، لكن يبقى اشتراط لجنة المراجعة ولائحة حوكمة الشركات لهيئة السوق المالية للشركات المدرجة مفتوحا — انظر الحقول المؤجلة.",
+      "field_verifications": [
         {
           "field": "minimum_shareholders",
-          "description": "الحد الأدنى لعدد المؤسسين المطلوبين وفق نظام الشركات السعودي الحالي لتأسيس شركة مساهمة.",
-          "verify_at": "mc.gov.sa"
+          "value_summary": "تؤسس الشركة المساهمة من شخص واحد أو أكثر من ذوي الصفة الطبيعية أو الاعتبارية، ويجوز تأسيسها بمساهم واحد.",
+          "source": "نظام الشركات، المرسوم الملكي رقم م/132 (2022)، الترجمة الإنجليزية الرسمية الصادرة عن هيئة الخبراء بمجلس الوزراء (misa.gov.sa)",
+          "citation": "Art. 58: 'A joint-stock company is a company incorporated by one, or more, natural or legal persons and its capital is divided into tradable shares. ... The liability of shareholders shall be limited to paying the value of the subscribed shares.'",
+          "verified_on": "2026-06-14"
         },
         {
           "field": "minimum_capital",
-          "description": "الحد الأدنى لرأس المال اللازم للشركة المساهمة، بما فيه الحدود الخاصة بالقطاعات (كالبنوك والتأمين). لم يُدرج تفادياً للإفصاح عن أرقام غير موثّقة.",
-          "verify_at": "misa.gov.sa"
-        },
+          "value_summary": "الحد الأدنى لرأس المال المصدر هو 500,000 ريال، ويدفع ربعه على الأقل عند التأسيس.",
+          "source": "نظام الشركات، المرسوم الملكي رقم م/132 (2022)، الترجمة الإنجليزية الرسمية الصادرة عن هيئة الخبراء بمجلس الوزراء (misa.gov.sa)",
+          "citation": "Art. 59: 'The issued capital of a joint-stock company shall not be less than five hundred thousand riyals and its paid-up capital upon incorporation shall not be less than a quarter of said capital.'",
+          "verified_on": "2026-06-14"
+        }
+      ],
+      "placeholders": [
         {
           "field": "governance_requirements",
-          "description": "اشتراطات تشكيل مجلس الإدارة ولجنة المراجعة والجمعية العامة السنوية وفق نظام الشركات وقواعد هيئة السوق المالية للشركات المساهمة.",
-          "verify_at": "mc.gov.sa"
+          "description": "تشكيل مجلس الإدارة ودورية الجمعية العامة مؤكدان في نظام الشركات (مجلس إدارة من ثلاثة أعضاء على الأقل، المادة 67؛ اجتماع سنوي للجمعية العامة العادية خلال ستة أشهر من نهاية السنة المالية، المادة 88). العنصر المتبقي غير المؤكد هو اشتراط لجنة المراجعة وسائر التزامات لائحة حوكمة الشركات الصادرة عن هيئة السوق المالية المطبقة على الشركات المساهمة المدرجة، والتي تعذر التحقق منها مقابل نص اللائحة الحي لهيئة السوق المالية.",
+          "verify_at": "cma.gov.sa"
         }
       ]
     },
