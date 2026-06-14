@@ -7,22 +7,52 @@
   <meta name="description" content="An interactive explanation of the Invest Gate KSA repository architecture.">
   <title>Invest Gate KSA | Interactive System Map</title>
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+    @font-face {
+      font-family: "F29LT Bukra";
+      src: url("https://investsaudi.sa/fonts/29lt-bukra-light.woff2") format("woff2");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "F29LT Bukra";
+      src: url("https://investsaudi.sa/fonts/29lt-bukra-regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "F29LT Bukra";
+      src: url("https://investsaudi.sa/fonts/29lt-bukra-medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "F29LT Bukra";
+      src: url("https://investsaudi.sa/fonts/29lt-bukra-bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
 
     :root {
-      --bg: #05100d;
-      --surface: rgba(10, 28, 23, .72);
-      --surface-2: rgba(16, 39, 32, .64);
-      --line: rgba(185, 224, 211, .14);
-      --line-hot: rgba(91, 231, 178, .48);
-      --text: #effbf6;
-      --muted: #92aaa1;
-      --green: #4ee0a7;
-      --mint: #a4f4d5;
-      --gold: #f2c66d;
-      --purple: #ae9cff;
-      --coral: #ff8d72;
-      --blue: #70b9ff;
+      --bg: #001421;
+      --surface: rgba(0, 26, 42, .82);
+      --surface-2: rgba(0, 35, 56, .72);
+      --line: rgba(255, 255, 255, .14);
+      --line-hot: rgba(0, 167, 162, .58);
+      --text: #ffffff;
+      --muted: #d4d4d4;
+      --green: #00a7a2;
+      --mint: #00bba7;
+      --gold: #ece4f0;
+      --purple: #814a98;
+      --coral: #003a5d;
+      --blue: #009692;
       --shadow: 0 30px 100px rgba(0, 0, 0, .42);
       --radius: 24px;
     }
@@ -37,10 +67,10 @@
       overflow-x: hidden;
       color: var(--text);
       background:
-        radial-gradient(circle at 10% 5%, rgba(78, 224, 167, .15), transparent 28rem),
-        radial-gradient(circle at 90% 85%, rgba(174, 156, 255, .1), transparent 34rem),
+        radial-gradient(circle at 10% 5%, rgba(0, 167, 162, .15), transparent 28rem),
+        radial-gradient(circle at 90% 85%, rgba(129, 74, 152, .1), transparent 34rem),
         var(--bg);
-      font-family: "IBM Plex Sans Arabic", "Manrope", system-ui, sans-serif;
+      font-family: "F29LT Bukra", Arial, sans-serif;
     }
 
     body::before {
@@ -50,8 +80,8 @@
       content: "";
       opacity: .17;
       background-image:
-        linear-gradient(rgba(164, 244, 213, .15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(164, 244, 213, .15) 1px, transparent 1px);
+        linear-gradient(rgba(0, 187, 167, .15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 187, 167, .15) 1px, transparent 1px);
       background-size: 52px 52px;
       mask-image: radial-gradient(ellipse at center, black, transparent 78%);
     }
@@ -62,7 +92,7 @@
       z-index: -1;
       pointer-events: none;
       content: "";
-      background: linear-gradient(115deg, transparent 0 48%, rgba(78, 224, 167, .025) 49%, transparent 50%);
+      background: linear-gradient(115deg, transparent 0 48%, rgba(0, 167, 162, .025) 49%, transparent 50%);
       background-size: 220px 220px;
     }
 
@@ -97,18 +127,18 @@
       display: grid;
       width: 44px;
       height: 44px;
-      border: 1px solid rgba(78, 224, 167, .3);
+      border: 1px solid rgba(0, 167, 162, .3);
       border-radius: 13px;
       place-items: center;
       color: var(--green);
-      background: linear-gradient(145deg, rgba(78, 224, 167, .12), rgba(78, 224, 167, .025));
-      box-shadow: inset 0 0 24px rgba(78, 224, 167, .06);
+      background: linear-gradient(145deg, rgba(0, 167, 162, .12), rgba(0, 167, 162, .025));
+      box-shadow: inset 0 0 24px rgba(0, 167, 162, .06);
     }
 
     .logo::after {
       position: absolute;
       inset: 5px;
-      border: 1px solid rgba(78, 224, 167, .12);
+      border: 1px solid rgba(0, 167, 162, .12);
       border-radius: 9px;
       content: "";
     }
@@ -150,7 +180,7 @@
       transition: .2s ease;
     }
 
-    .ghost-btn:hover { border-color: var(--line-hot); background: rgba(78, 224, 167, .06); }
+    .ghost-btn:hover { border-color: var(--line-hot); background: rgba(0, 167, 162, .06); }
 
     .hero {
       display: grid;
@@ -246,7 +276,7 @@
     }
 
     .scenario:hover { color: var(--text); background: rgba(255, 255, 255, .035); }
-    .scenario.active { color: #082018; border-color: rgba(78, 224, 167, .6); background: var(--green); font-weight: 700; }
+    .scenario.active { color: #ffffff; border-color: rgba(0, 167, 162, .6); background: var(--green); font-weight: 700; }
 
     .run-btn {
       display: flex;
@@ -254,10 +284,10 @@
       gap: 8px;
       min-height: 40px;
       padding: 0 16px;
-      border: 1px solid rgba(78, 224, 167, .42);
+      border: 1px solid rgba(0, 167, 162, .42);
       border-radius: 11px;
       color: var(--mint);
-      background: rgba(78, 224, 167, .09);
+      background: rgba(0, 167, 162, .09);
       cursor: pointer;
       white-space: nowrap;
     }
@@ -327,9 +357,9 @@
       position: relative;
       margin: 20px;
       padding: 19px;
-      border: 1px solid rgba(112, 185, 255, .22);
+      border: 1px solid rgba(0, 150, 146, .22);
       border-radius: 17px;
-      background: rgba(112, 185, 255, .055);
+      background: rgba(0, 150, 146, .055);
     }
 
     .question-card::before {
@@ -405,7 +435,7 @@
 
     .system-canvas::before, .system-canvas::after {
       position: absolute;
-      border: 1px solid rgba(78, 224, 167, .09);
+      border: 1px solid rgba(0, 167, 162, .09);
       border-radius: 50%;
       content: "";
       pointer-events: none;
@@ -502,7 +532,7 @@
       border: 2px solid var(--bg);
       border-radius: 50%;
       background: var(--green);
-      box-shadow: 0 0 18px var(--green), 0 0 40px rgba(78, 224, 167, .48);
+      box-shadow: 0 0 18px var(--green), 0 0 40px rgba(0, 167, 162, .48);
       opacity: 0;
     }
 
@@ -534,10 +564,10 @@
     .data-chip {
       flex: 0 0 auto;
       padding: 7px 9px;
-      border: 1px solid rgba(78, 224, 167, .17);
+      border: 1px solid rgba(0, 167, 162, .17);
       border-radius: 8px;
       color: #9cc8b8;
-      background: rgba(78, 224, 167, .035);
+      background: rgba(0, 167, 162, .035);
       font-family: ui-monospace, monospace;
       font-size: .55rem;
     }
@@ -564,7 +594,7 @@
       height: 18px;
       border-radius: 50%;
       place-items: center;
-      color: #062016;
+      color: #ffffff;
       background: var(--green);
       font-style: normal;
       font-size: .62rem;
@@ -576,9 +606,9 @@
     .source-card {
       margin-top: 18px;
       padding: 15px;
-      border: 1px solid rgba(242, 198, 109, .2);
+      border: 1px solid rgba(129, 74, 152, .2);
       border-radius: 14px;
-      background: rgba(242, 198, 109, .045);
+      background: rgba(129, 74, 152, .045);
     }
 
     .source-card span { display: block; margin-bottom: 8px; color: var(--gold); font-size: .6rem; text-transform: uppercase; letter-spacing: .08em; }
@@ -615,7 +645,7 @@
       background: rgba(8, 24, 19, .52);
     }
 
-    .metric strong { display: block; color: var(--mint); font-family: "Manrope", sans-serif; font-size: 1.2rem; }
+    .metric strong { display: block; color: var(--mint); font-family: "F29LT Bukra", Arial, sans-serif; font-size: 1.2rem; }
     .metric span { color: var(--muted); font-size: .63rem; }
 
     .module-tooltip {
