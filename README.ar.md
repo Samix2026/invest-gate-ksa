@@ -19,6 +19,16 @@
 
 ![Architecture](assets/diagrams/architecture.svg)
 
+### خريطة النظام التفاعلية
+
+استكشف كيف ينتقل سؤال المستثمر عبر أدوات MCP ومجموعات البيانات ثنائية اللغة
+وطبقة التحقق حتى يصل إلى إجابة مرتبطة بالمصدر.
+
+[![فتح الشرح التفاعلي](https://img.shields.io/badge/فتح-خريطة_النظام_التفاعلية-37D39A?style=for-the-badge&logo=github)](https://samix2026.github.io/invest-gate-ksa/repo-explainer.html)
+
+> تُنشر الصفحة التفاعلية تلقائيا عبر GitHub Pages. ويمكن أيضا
+> [عرض الكود المصدري](assets/interactive/repo-explainer.html).
+
 المستثمر يسأل بالعربي أو الإنجليزي ← Claude Desktop يوجه عبر 8 أدوات MCP ←
 الخادم يستعلم 10 مجموعات بيانات ثنائية اللغة ← كل إجابة تستشهد بمصدرها الرسمي
 مع حالة التحقق (✓ موثق من .gov.sa / ⚠ مسودة من مصدر تجاري).
