@@ -21,7 +21,7 @@
 Explore how an investor question moves through the MCP tools, bilingual datasets,
 verification layer, and source-linked response.
 
-[![Open Interactive Guide](https://img.shields.io/badge/Open-Interactive_System_Map-37D39A?style=for-the-badge&logo=github)](https://samix2026.github.io/invest-gate-ksa/repo-explainer.html)
+[![Open Interactive Guide](https://img.shields.io/badge/Open-Interactive_System_Map-37D39A?style=for-the-badge&logo=github)](https://samix2026.github.io/invest-gate-ksa/)
 
 > The interactive guide is deployed through GitHub Pages. You can also
 > [view its source](assets/interactive/repo-explainer.html).

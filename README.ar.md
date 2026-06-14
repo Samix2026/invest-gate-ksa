@@ -24,7 +24,7 @@
 استكشف كيف ينتقل سؤال المستثمر عبر أدوات MCP ومجموعات البيانات ثنائية اللغة
 وطبقة التحقق حتى يصل إلى إجابة مرتبطة بالمصدر.
 
-[![فتح الشرح التفاعلي](https://img.shields.io/badge/فتح-خريطة_النظام_التفاعلية-37D39A?style=for-the-badge&logo=github)](https://samix2026.github.io/invest-gate-ksa/repo-explainer.html)
+[![فتح الشرح التفاعلي](https://img.shields.io/badge/فتح-خريطة_النظام_التفاعلية-37D39A?style=for-the-badge&logo=github)](https://samix2026.github.io/invest-gate-ksa/)
 
 > تُنشر الصفحة التفاعلية تلقائيا عبر GitHub Pages. ويمكن أيضا
 > [عرض الكود المصدري](assets/interactive/repo-explainer.html).
