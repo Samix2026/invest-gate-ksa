@@ -5,3 +5,7 @@ skills-lock.json
 .DS_Store
 .python-version
 docs/superpowers/
+
+# Python
+__pycache__/
+*.pyc
