@@ -199,6 +199,14 @@ python3 scripts/check.py
 
 Runs four suites: required files, JSON validity, dataset validation (delegates to validate-data.py), and local markdown link resolution. Exits `0` on full pass. No internet required.
 
+### Counter guard
+
+```bash
+python3 scripts/check-counters.py
+```
+
+Guards every documentation counter in `README.md` / `README.ar.md` (dataset/entry counts, verified/draft breakdowns, MCP tool count, health-check count, sources count, command count) against the source of truth. It NEVER edits the README — it reports and fails. Each counter is anchored with an invisible HTML-comment marker: `<!--count:KEY-->N<!--/count-->` in body text (the `N` is the rendered number) and `<!--badge:KEY-->` next to a shields badge (the number is read strictly from the badge URL; a changed URL format is an explicit failure, not a silent skip). The guard computes counts from `data/*.json`, from `@mcp.tool()` callables in `mcp/invest_gate_mcp.py` (via `ast`), from tracked `.claude/commands/*.md`, and from `check.py`'s own total (normalised to the committed tree), then fails on any mismatch, orphan marker, or EN/AR asymmetry. **Do not hand-edit a counter without updating its marker, and never edit a marker to silence the guard instead of fixing the real number.** Runs in CI (`.github/workflows/check.yml`, `pr-quality.yml`).
+
 ### Dataset validation
 
 ```bash
@@ -282,3 +290,4 @@ When generating or editing content in this repository:
 5. **`depends_on` in investment-licenses** is conceptual only — it records which licenses typically precede others in the setup flow. It is not enforced by referential integrity checks.
 6. **The `data/README.md` Datasets table** must be updated whenever a new dataset file is added.
 7. **`check.py` REQUIRED_FILES list** must be updated whenever a new required file is added to the repository.
+8. **README counters are machine-guarded.** Every documentation counter in `README.md` / `README.ar.md` is wrapped in `<!--count:KEY-->`/`<!--badge:KEY-->` markers and verified by `scripts/check-counters.py` (run in CI). When a dataset/tool/check/source count changes, update the counter in BOTH language files (markers must stay byte-identical) — never edit a marker to silence the guard. Only documentation counters are wrapped; never wrap a verified content value (tax rates, capital figures, anything carrying a `verification_status`).
