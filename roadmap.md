@@ -59,7 +59,7 @@ This document outlines the planned development phases for the Invest Gate KSA kn
 
 **Goal:** Make the repository usable as an AI knowledge base and MCP server.
 
-- [x] Basic MCP server scaffold (`mcp/invest_gate_mcp.py` — 9 tools, FastMCP)
+- [x] Basic MCP server scaffold (`mcp/invest_gate_mcp.py` — 8 tools (+2 experimental), FastMCP)
 - [ ] Base system prompt for an Invest Gate KSA assistant
 - [ ] RAG prompt templates
 - [ ] MCP tool definitions (`prompts/mcp-tool-definitions.json`)

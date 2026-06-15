@@ -1,9 +1,9 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Languages](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![Health Checks](https://img.shields.io/badge/Health%20Checks-184%2F184-brightgreen.svg)
-![Datasets](https://img.shields.io/badge/Datasets-10-blue.svg)
-![Fees](https://img.shields.io/badge/Fee%20Entries-24-blue.svg)
-![Sources](https://img.shields.io/badge/Verified%20Sources-14-green.svg)
+![Health Checks](https://img.shields.io/badge/Health%20Checks-191%2F191-brightgreen.svg)
+![Datasets](https://img.shields.io/badge/Datasets-11-blue.svg)
+![Fees](https://img.shields.io/badge/Fee%20Entries-26-blue.svg)
+![Sources](https://img.shields.io/badge/Verified%20Sources-5%2F17-green.svg)
 ![MCP Ready](https://img.shields.io/badge/MCP-Ready-8A2BE2.svg)
 ![AI Ready](https://img.shields.io/badge/AI-Ready-FF6B35.svg)
 ![Last Updated](https://img.shields.io/badge/Updated-May%202026-orange.svg)
@@ -17,7 +17,7 @@
 ![Architecture](assets/diagrams/architecture.svg)
 
 The investor asks in Arabic or English → Claude Desktop routes through 8 MCP tools →
-the server queries 10 bilingual datasets → every response cites its official source
+the server queries 11 bilingual datasets → every response cites its official source
 with a verification status (✓ verified from .gov.sa / ⚠ draft from commercial source).
 
 <p align="center">
@@ -118,7 +118,7 @@ for entry in fees['data']:
 **Fee schedule query** (`--dataset fees --lang en --list`):
 
 ```
-fees  (en)  —  24 entries
+fees  (en)  —  26 entries
 ────────────────────────────────────────────────────────────────────────────────
   ID                                NAME                          STATUS
 ────────────────────────────────────────────────────────────────────────────────
@@ -127,9 +127,9 @@ fees  (en)  —  24 entries
   misa_ownership_amendment_fee      Fee charged by the Ministry … verified
   misa_annual_renewal_fee           Fee for the annual update of… verified
   misa_property_approval_fee        Fee charged by the Ministry … verified
-  misa_registration_cancellation_fe Fee charged by the Ministry … verified
-  commercial_registration_issuance_ Fee charged by the Ministry … verified
-  branch_commercial_registration_fe Historical entry — Branch Co… verified
+  misa_registration_cancellation_feeFee charged by the Ministry … verified
+  commercial_registration_issuance_feeFee charged by the Ministry … verified
+  branch_commercial_registration_feeHistorical entry — Branch Co… verified
   chamber_of_commerce_fee           Annual mandatory Chamber of … verified
   gosi_employer_registration_fee    Fee, if any, charged by the … draft
   zatca_vat_registration_fee        Fee, if any, charged by the … draft
@@ -146,8 +146,10 @@ fees  (en)  —  24 entries
   iqama_issuance_renewal_fee        Annual Iqama (residency perm… verified
   final_exit_visa_fee               Fee for issuing a final exit… verified
   exit_reentry_visa_extension_fee   Fee for extending an exit/re… verified
+  miza_registration_fee             Registration fee for the Miz… verified
+  strategic_investor_program_fee    Classification fee for the S… verified
 ────────────────────────────────────────────────────────────────────────────────
-  24 entry/entries
+  26 entry/entries
 ```
 
 **Sector query, Arabic** (`--dataset sectors --lang ar --list`):
@@ -172,6 +174,7 @@ sectors  (ar)  —  16 entries
   media_and_content                 الإعلام والمحتوى              draft
   hajj_umrah_services               خدمات الحج والعمرة            draft
   entertainment_and_events          الترفيه والفعاليات            draft
+  vision2030_macro                  رؤية 2030 — الأهداف الاقتصاد… draft
 ────────────────────────────────────────────────────────────────────────────────
   16 entry/entries
 ```
@@ -187,7 +190,7 @@ sezs  (en)  —  5 entries
   jazan_sez                         Jazan Special Economic Zone   verified
   ras_al_khair_sez                  Ras Al-Khair Special Economi… verified
   cloud_computing_sez               Cloud Computing Special Econ… verified
-  silz                              Special Integrated Logistics… draft
+  silz                              Special Integrated Logistics… verified
 ────────────────────────────────────────────────────────────────────────────────
   5 entry/entries
 ```
@@ -220,13 +223,13 @@ sezs  (en)  —  5 entries
 
 **For researchers:**
 - Structured, bilingual, source-linked regulatory dataset
-- Tracks data gaps explicitly — 25 source gaps documented
+- Tracks data gaps explicitly — 23 source gaps documented
 - Versioned via Git with full change history
 
 **For AI/LLM builders:**
-- 10 JSON datasets with strict schema (Draft-07)
+- 11 JSON datasets with strict schema (Draft-07)
 - Bilingual EN/AR with ID parity enforcement
-- MCP server with 8 tools — plug into any MCP-compatible agent
+- MCP server with 8 tools (+2 experimental) — plug into any MCP-compatible agent
 - System prompt included for out-of-the-box AI assistant deployment
 
 ---
@@ -235,12 +238,12 @@ sezs  (en)  —  5 entries
 
 | Directory / File | Contents |
 |---|---|
-| `data/` | 10 structured bilingual JSON datasets (EN + AR) |
+| `data/` | 11 structured bilingual JSON datasets (EN + AR) |
 | `data/sectors` | 16 investment sectors with Vision 2030 alignment |
-| `data/sources` | 14 verified regulatory authority sources |
-| `data/source-gaps` | 24 tracked data gaps awaiting verification |
-| `data/fees` | 24 fee entries — verified entries cite official sources |
-| `data/timelines` | 10 processing time entries — verified against official publications |
+| `data/sources` | 5 of 17 regulatory authority sources verified |
+| `data/source-gaps` | 23 tracked data gaps awaiting verification |
+| `data/fees` | 26 fee entries — verified entries cite official sources |
+| `data/timelines` | 12 processing time entries — verified against official publications |
 | `data/sezs` | 5 Special Economic Zones (KAEC, Jazan, Ras Al-Khair, Cloud, SILZ) |
 | `data/setup-flows` | 4 registration flows by scenario (consulting, e-commerce, manufacturing, fintech) |
 | `data/business-structures` | 4 entity types (LLC, JSC, Branch Office, Representative Office) |
@@ -249,10 +252,10 @@ sezs  (en)  —  5 entries
 | `schemas/` | JSON Schema Draft-07 — strict typing, additionalProperties: false |
 | `docs/en/` | English guides: registration, tax, SEZs, Vision 2030, structures |
 | `docs/ar/` | Arabic mirrors (RTL) — full bilingual parity enforced |
-| `mcp/` | FastMCP server — 8 query tools for Claude Desktop integration |
+| `mcp/` | FastMCP server — 8 query tools (+2 experimental) for Claude Desktop integration |
 | `.claude/commands/` | 6 slash commands for daily repository operations |
 | `prompts/` | AI system prompt (bilingual, citation rules, legal disclaimer) |
-| `scripts/` | 184-check validation suite (JSON, schema, parity, cross-refs) |
+| `scripts/` | 191-check validation suite (JSON, schema, parity, cross-refs) |
 | `sources/` | Citation registry — every claim source-linked |
 | `templates/` | Investor checklists — planned |
 | `.github/workflows/` | CI/CD — validation on every push and PR |
@@ -275,10 +278,10 @@ sezs  (en)  —  5 entries
 
 | Phase | Progress | Status | Description |
 |---|---|---|---|
-| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 184-check validation suite |
-| Phase 2 — Knowledge Base | ████████░░ | Active | 10 datasets, 5 verified core paths, SEZs, V2030 |
-| Phase 3 — AI Workflows | ██████████ | Complete | System prompt, 8 MCP tools |
-| Phase 4 — MCP Integration | ██████████ | Complete | Claude Desktop ready (stdio) |
+| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 191-check validation suite |
+| Phase 2 — Knowledge Base | ████████░░ | Active | 11 datasets, 7 verified core paths, SEZs, V2030 |
+| Phase 3 — AI Workflows | ███░░░░░░░ | Active | MCP server live (Claude Desktop, 8 tools + 2 experimental); system prompt live; RAG templates, MCP tool definitions, embedding format, and LLM integration guide pending |
+| Phase 4 — Community & Maintenance | ░░░░░░░░░░ | Planned | Link-checking, versioning policy, review cadence, translation workflow, issue templates |
 | Phase 5 — Product Layer | ░░░░░░░░░░ | Planned | — |
 
 **Verification status (2026-05-20):**
@@ -314,13 +317,21 @@ pip3 install -r mcp/requirements.txt
 **Available tools:**
 `query_sectors` · `query_authorities` · `query_setup_flows` · `query_fees` · `query_timelines` · `query_structures` · `get_investor_path` · `search_knowledge_base`
 
+**Experimental (not counted):** `query_sezs` · `query_activities`
+
 See [mcp/README.md](mcp/README.md) for full setup instructions.
 
 ---
 
 ## Verification Methodology
 
-Every data entry carries an explicit verification status: **verified** (confirmed from an official .gov.sa source or Official Gazette), **draft** (from credible sources but not officially confirmed), or **placeholder** (gap acknowledged, not yet researched). Unverified entries are never presented as fact — they carry a disclaimer and a `verify_at` link. See [docs/en/source-verification.md](docs/en/source-verification.md) for the full workflow.
+Every data entry carries an explicit verification status: **verified** (confirmed from an official .gov.sa source or Official Gazette), **draft** (from credible sources but not officially confirmed), or **placeholder** (gap acknowledged, not yet researched). Unverified entries are never presented as fact — they carry a disclaimer and a `verify_at` link.
+
+Confirmed values can also carry structured, field-level provenance through a `field_verifications` array — recording, per field, the official `source`, a verbatim `citation`, and a `verified_on` date — so individual fields can be verified independently while an entry stays `draft` until all its placeholders are resolved.
+
+Official sources are `.gov.sa` domains or officially recognized national authorities. A narrow carve-out also admits a GCC instrument as a primary source, but only if the Kingdom adopted it by Royal Decree **and** it is published on a `.gov.sa` domain — the sole confirmed example is the Unified Agreement for VAT, published on zatca.gov.sa. This does not extend to consultant guides, news articles, or third-party summaries.
+
+See [docs/en/source-verification.md](docs/en/source-verification.md) for the full workflow.
 
 ---
 
@@ -344,7 +355,7 @@ Every piece of content must cite an official source. See [CONTRIBUTING.md](CONTR
 python3 scripts/check.py
 ```
 
-Runs 184 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
+Runs 191 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
 
 ---
 
