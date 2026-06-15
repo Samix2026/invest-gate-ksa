@@ -9,3 +9,6 @@ docs/superpowers/
 # Python
 __pycache__/
 *.pyc
+
+# Local MCP config (use .mcp.json.example as template)
+.mcp.json
