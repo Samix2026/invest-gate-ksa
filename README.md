@@ -1,9 +1,9 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Languages](https://img.shields.io/badge/Languages-Arabic%20%7C%20English-green.svg)
-![Health Checks](https://img.shields.io/badge/Health%20Checks-188%2F188-brightgreen.svg)
-![Datasets](https://img.shields.io/badge/Datasets-11-blue.svg)
-![Fees](https://img.shields.io/badge/Fee%20Entries-26-blue.svg)
-![Sources](https://img.shields.io/badge/Sources-16-green.svg)
+![Health Checks](https://img.shields.io/badge/Health%20Checks-189%2F189-brightgreen.svg)<!--badge:health_checks-->
+![Datasets](https://img.shields.io/badge/Datasets-11-blue.svg)<!--badge:datasets-->
+![Fees](https://img.shields.io/badge/Fee%20Entries-26-blue.svg)<!--badge:fees-->
+![Sources](https://img.shields.io/badge/Sources-17-green.svg)<!--badge:sources_total-->
 ![MCP Ready](https://img.shields.io/badge/MCP-Ready-8A2BE2.svg)
 ![AI Ready](https://img.shields.io/badge/AI-Ready-FF6B35.svg)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202026-orange.svg)
@@ -24,8 +24,8 @@ verification layer, and source-linked response.
 > The interactive guide is deployed through GitHub Pages. You can also
 > [view its source](assets/interactive/repo-explainer.html).
 
-The investor asks in Arabic or English → Claude Desktop routes through 10 MCP tools →
-the server queries 11 bilingual datasets → every response cites its official source
+The investor asks in Arabic or English → Claude Desktop routes through <!--count:mcp_tools-->10<!--/count--> MCP tools →
+the server queries <!--count:datasets-->11<!--/count--> bilingual datasets → every response cites its official source
 with a verification status (✓ verified from an official source / ⚠ draft pending verification).
 
 <p align="center">
@@ -200,13 +200,13 @@ sezs  (en)  —  5 entries
 
 **For researchers:**
 - Structured, bilingual, source-linked regulatory dataset
-- Tracks data gaps explicitly — 23 source gaps documented
+- Tracks data gaps explicitly — <!--count:source_gaps-->23<!--/count--> source gaps documented
 - Versioned via Git with full change history
 
 **For AI/LLM builders:**
-- 11 JSON datasets with strict schema (Draft-07)
+- <!--count:datasets-->11<!--/count--> JSON datasets with strict schema (Draft-07)
 - Bilingual EN/AR with ID parity enforcement
-- MCP server with 10 tools — plug into any MCP-compatible agent
+- MCP server with <!--count:mcp_tools-->10<!--/count--> tools — plug into any MCP-compatible agent
 - System prompt included for out-of-the-box AI assistant deployment
 
 ---
@@ -215,25 +215,25 @@ sezs  (en)  —  5 entries
 
 | Directory / File | Contents |
 |---|---|
-| `data/` | 11 structured bilingual JSON datasets (EN + AR) |
-| `data/sectors` | 16 investment sectors with Vision 2030 alignment |
-| `data/sources` | 16 source registry entries — 5 verified, 11 draft |
-| `data/source-gaps` | 23 tracked data gaps awaiting verification |
-| `data/fees` | 26 fee entries — 20 verified, 6 draft |
-| `data/timelines` | 12 processing time entries — 8 verified, 4 draft |
-| `data/sezs` | 5 Special Economic Zones (KAEC, Jazan, Ras Al-Khair, Cloud, SILZ) |
-| `data/economic-activities` | 21 economic activities — 10 verified, 11 draft |
-| `data/setup-flows` | 4 registration flows by scenario (consulting, e-commerce, manufacturing, fintech) |
-| `data/business-structures` | 4 entity types (LLC, JSC, Branch Office, Representative Office) |
-| `data/authority-relationships` | 12 regulatory authority relationship mappings |
-| `data/investment-licenses` | 5 registration and licensing concepts in setup sequence |
+| `data/` | <!--count:datasets-->11<!--/count--> structured bilingual JSON datasets (EN + AR) |
+| `data/sectors` | <!--count:sectors-->16<!--/count--> investment sectors with Vision 2030 alignment |
+| `data/sources` | <!--count:sources_total-->17<!--/count--> source registry entries — <!--count:sources_verified-->5<!--/count--> verified, <!--count:sources_draft-->12<!--/count--> draft |
+| `data/source-gaps` | <!--count:source_gaps-->23<!--/count--> tracked data gaps awaiting verification |
+| `data/fees` | <!--count:fees-->26<!--/count--> fee entries — <!--count:fees_verified-->20<!--/count--> verified, <!--count:fees_draft-->6<!--/count--> draft |
+| `data/timelines` | <!--count:timelines-->12<!--/count--> processing time entries — <!--count:timelines_verified-->8<!--/count--> verified, <!--count:timelines_draft-->4<!--/count--> draft |
+| `data/sezs` | <!--count:sezs-->5<!--/count--> Special Economic Zones (KAEC, Jazan, Ras Al-Khair, Cloud, SILZ) |
+| `data/economic-activities` | <!--count:economic_activities-->21<!--/count--> economic activities — <!--count:economic_activities_verified-->10<!--/count--> verified, <!--count:economic_activities_draft-->11<!--/count--> draft |
+| `data/setup-flows` | <!--count:setup_flows-->4<!--/count--> registration flows by scenario (consulting, e-commerce, manufacturing, fintech) |
+| `data/business-structures` | <!--count:business_structures-->4<!--/count--> entity types (LLC, JSC, Branch Office, Representative Office) |
+| `data/authority-relationships` | <!--count:authority_relationships-->12<!--/count--> regulatory authority relationship mappings |
+| `data/investment-licenses` | <!--count:investment_licenses-->5<!--/count--> registration and licensing concepts in setup sequence |
 | `schemas/` | JSON Schema Draft-07 — strict typing, additionalProperties: false |
 | `docs/en/` | English guides: registration, tax, SEZs, Vision 2030, structures |
 | `docs/ar/` | Arabic mirrors (RTL) — full bilingual parity enforced |
-| `mcp/` | FastMCP server — 10 query tools for Claude Desktop integration |
-| `.claude/commands/` | 6 slash commands for daily repository operations |
+| `mcp/` | FastMCP server — <!--count:mcp_tools-->10<!--/count--> query tools for Claude Desktop integration |
+| `.claude/commands/` | <!--count:commands-->6<!--/count--> slash commands for daily repository operations |
 | `prompts/` | AI system prompt (bilingual, citation rules, legal disclaimer) |
-| `scripts/` | 188-check validation suite (JSON, schema, parity, cross-refs) |
+| `scripts/` | <!--count:health_checks-->189<!--/count-->-check validation suite (JSON, schema, parity, cross-refs) |
 | `sources/` | Citation registry — every claim source-linked |
 | `templates/` | LLC, branch, MISA document, and source-review checklists |
 | `.github/workflows/` | CI/CD — validation on every push and PR |
@@ -246,7 +246,7 @@ sezs  (en)  —  5 entries
 - Registration types: Standard Investment Registration, RHQ, Entrepreneurial
 - Tax framework: CIT 20% (foreign), Zakat 2.5% (Saudi/GCC), VAT 15%, WHT 5–20%
 - Special Economic Zones: KAEC, Jazan, Ras Al-Khair, Cloud Computing, SILZ (5% CIT)
-- Vision 2030 sector alignment: 16 sectors with official targets and supervising entities
+- Vision 2030 sector alignment: <!--count:sectors-->16<!--/count--> sectors with official targets and supervising entities
 - Fee schedules and processing timelines — verified against official sources
 - 2025 regulatory updates: new CR Law (April 2025), Investment Law (August 2024)
 
@@ -256,9 +256,9 @@ sezs  (en)  —  5 entries
 
 | Phase | Progress | Status | Description |
 |---|---|---|---|
-| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, 188-check validation suite |
-| Phase 2 — Knowledge Base | ████████░░ | Active | 11 datasets, bilingual guides, SEZs, V2030 |
-| Phase 3 — AI Workflows | ██████████ | Complete | System prompt, 10 MCP tools |
+| Phase 1 — Foundation | ██████████ | Complete | Schemas, CI/CD, <!--count:health_checks-->189<!--/count-->-check validation suite |
+| Phase 2 — Knowledge Base | ████████░░ | Active | <!--count:datasets-->11<!--/count--> datasets, bilingual guides, SEZs, V2030 |
+| Phase 3 — AI Workflows | ██████████ | Complete | System prompt, <!--count:mcp_tools-->10<!--/count--> MCP tools |
 | Phase 4 — MCP Integration | ██████████ | Complete | Claude Desktop ready (stdio) |
 | Phase 5 — Product Layer | ██████░░░░ | Active | Interactive system map published on GitHub Pages |
 
@@ -311,7 +311,7 @@ This project grows through the knowledge of people with direct, documented exper
 
 **What we need most:**
 - Verified fee amounts from official sources (especially RHQ, SILZ)
-- Verification of the 11 draft economic activity entries
+- Verification of the <!--count:economic_activities_draft-->11<!--/count--> draft economic activity entries
 - Additional investor scenarios and checklist coverage
 - Corrections to any outdated information
 
@@ -325,7 +325,7 @@ Every piece of content must cite an official source. See [CONTRIBUTING.md](CONTR
 python3 scripts/check.py
 ```
 
-Runs 188 checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
+Runs <!--count:health_checks-->189<!--/count--> checks: required files, JSON validity, schema validation, alias integrity, cross-reference integrity, bilingual parity. Exits `0` on full pass.
 
 ---
 

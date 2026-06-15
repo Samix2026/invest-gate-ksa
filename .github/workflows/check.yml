@@ -28,3 +28,6 @@ jobs:
 
       - name: Run project health check
         run: python3 scripts/check.py
+
+      - name: Guard README counters (no stale counts)
+        run: python3 scripts/check-counters.py

@@ -35,3 +35,6 @@ jobs:
 
       - name: Amount plausibility
         run: python3 scripts/check-amounts.py
+
+      - name: Counter guard (README counts in sync with data)
+        run: python3 scripts/check-counters.py
